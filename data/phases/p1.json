@@ -249,6 +249,149 @@
       },
       "states": [
         {
+          "id": "pull",
+          "label": "Pull: neutral positions",
+          "trigger": {
+            "value": "Combat starts; lasts until the Ruin III castbar starts.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "owner-replay-review"
+              },
+              {
+                "ref": "cactbot-dmu",
+                "at": "0:10"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "North of the boss, tanking it at the centre facing north.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Owner: main tank north. Convention C-01: the boss is tanked at the centre facing north."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "arena-center",
+                "description": "Loosely spread in the southern half, out of the boss's front.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-replay-review"
+                }
+              ],
+              "note": "Owner: party loosely spread in the southern half. No fixed spot; the diagram dot is illustrative."
+            }
+          },
+          "hazards": []
+        },
+        {
           "id": "cast",
           "label": "Ruin III cast",
           "trigger": {
@@ -386,7 +529,7 @@
       "ownerVerification": {
         "state": "approved",
         "date": "2026-11-07",
-        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+        "note": "Approved in chat after stage 5 review (items 34 and 40)."
       }
     },
     {
@@ -4971,29 +5114,52 @@
       "branches": [
         {
           "id": "spread",
-          "label": "Post-teleport: spread",
+          "label": "Fire resolves as spread",
           "condition": {
-            "value": "Thunder/Fire resolve as spread.",
+            "value": "Fire resolves as spread: spread markers with Fire true, or a stack marker with Fire a lie. Thunder (true or lie) is dodged separately.",
             "status": "derived",
             "sources": [
               {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "個々のマーカーがついていた場合は散開で、頭割りマーカーがついていたら頭割り。嘘の場合はその逆の処理をします。"
+              },
+              {
                 "ref": "yan-p1-tele"
+              },
+              {
+                "ref": "owner-p1-review"
+              },
+              {
+                "ref": "azurite-p1",
+                "at": "11:42"
               }
             ],
-            "note": "Yan gives a 散開/頭割り table; the true/lie decision follows the Graven Image I rule."
+            "note": "Only Fire decides spread vs stack (Graven Image I rule). Thunder is a separate true/lie line AoE to dodge in both cases. Owner, item 18 (2026-11-07): the stack is what a fake Fire spread turns into."
           }
         },
         {
           "id": "stack",
-          "label": "Post-teleport: stack",
+          "label": "Fire resolves as stack",
           "condition": {
-            "value": "Thunder/Fire resolve as stack.",
+            "value": "Fire resolves as stack: a stack marker with Fire true, or spread markers with Fire a lie (the common \"fake Fire\" case). Thunder (true or lie) is dodged separately.",
             "status": "derived",
             "sources": [
               {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "個々のマーカーがついていた場合は散開で、頭割りマーカーがついていたら頭割り。嘘の場合はその逆の処理をします。"
+              },
+              {
                 "ref": "yan-p1-tele"
+              },
+              {
+                "ref": "owner-p1-review"
+              },
+              {
+                "ref": "azurite-p1",
+                "at": "11:42"
               }
-            ]
+            ],
+            "note": "Only Fire decides spread vs stack (Graven Image I rule). Thunder is a separate true/lie line AoE to dodge in both cases. Owner, item 18 (2026-11-07): the stack is what a fake Fire spread turns into."
           }
         }
       ],
@@ -5409,6 +5575,39 @@
               "note": "Exact waymark coordinates are not given."
             }
           ]
+        },
+        {
+          "id": "confusion",
+          "label": "Confusion: teleported along the arrows",
+          "images": [
+            "yan-p1-19"
+          ],
+          "trigger": {
+            "value": "The confused players walk at the other player in their quadrant, step into the arrow between them and are teleported four times along their quadrant's arrows, using them all up. The players put to sleep stay where they are.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "azurite-p1",
+                "at": "8:40"
+              },
+              {
+                "ref": "azurite-p1",
+                "at": "10:41"
+              },
+              {
+                "ref": "owner-replay-review"
+              },
+              {
+                "ref": "yan-p1-17"
+              },
+              {
+                "ref": "yan-p1-19"
+              }
+            ],
+            "note": "Owner (2026-11-07): the confused player is forced into the arrow while trying to hit the nearby player, and is teleported four times for the length of the confusion. Yan's fixed spread puts each quadrant's two players diagonally across that quadrant's first arrow, and the four arrows of each quadrant chain into each other. The video says the confused chase and KO the closest player, and that all arrows must be taken (a P3 prerequisite)."
+          },
+          "positions": {},
+          "hazards": []
         },
         {
           "id": "final-spread",
@@ -5901,7 +6100,7 @@
       "ownerVerification": {
         "state": "approved",
         "date": "2026-11-07",
-        "note": "Approved in chat after review round 4 (items 26-28)."
+        "note": "Re-approved with the confusion step (review items 53–55)."
       }
     },
     {
@@ -6051,7 +6250,45 @@
           ]
         }
       },
-      "states": [],
+      "states": [
+        {
+          "id": "time-up",
+          "label": "Time's up: P2, or enrage",
+          "trigger": {
+            "value": "After Tele-trouncing, Kefka becomes untargetable.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu",
+                "at": "3:17"
+              },
+              {
+                "ref": "bmr-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Only if Kefka is above 14.9% HP: Light of Judgment (enrage) wipes the party. At 14.9% or below the fight moves to P2."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-timeout"
+                },
+                {
+                  "ref": "cactbot-dmu",
+                  "at": "3:22"
+                }
+              ],
+              "note": "14.9% is from Yan. The enrage cast name and time are from cactbot, which marks that line as unconfirmed (\"?\")."
+            }
+          ]
+        }
+      ],
       "resolutionOrder": [],
       "whyItWorks": {
         "value": "This is a DPS check: P2 only starts if the boss is at or below 14.9% when P1 times out.",
@@ -6073,7 +6310,7 @@
       "ownerVerification": {
         "state": "approved",
         "date": "2026-11-07",
-        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+        "note": "Approved in chat after stage 5 review (items 34 and 40)."
       }
     }
   ]

@@ -27,3 +27,34 @@ Possible future: a toggle between "pure Yan Flash" and "Yan Flash + Ikuya". Not 
 - **Yan Flash** only says 「裁きの光後、タンク強攻撃3回」 for #1 and puts （無詠唱） in the heading of #2. Yan never states #1 has a cast; the "conflict" was an over-reading of that heading.
 - **Owner:** Hyperdrive never has a castbar.
 - **Data state:** Hyperdrive #1 recognition is `source-stated` (no castbar).
+
+## Replay timing (owner decision, 2026-11-07)
+
+The replay's clock comes from **cactbot** (`cactbot-dmu`) and **BossMod Reborn** (`bmr-dmu`). Ikuya stays the only source for mitigation. Neither timing source is ever used for positions or assignments.
+
+- **Rule:** use cactbot's time when its line names the ability and BossMod Reborn agrees within 1 s. Otherwise use BossMod Reborn. If neither times a moment, it is shown as approximate ("≈"). The validator enforces this (`data/timeline/p1.json`).
+- **Agreement:** the two sources agree within 0.6 s on every P1 step they both time.
+- **Ikuya's times are read as when to press** (owner: "give Ikuya the benefit of the doubt"). A gap to the hit is not treated as an error. 14 of Ikuya's 15 events are within 1 s of the hit.
+
+## D-P1-03: Tele-trouncing trap knockback time (status: DECIDED 2026-11-07)
+
+- **Ikuya** (row 24): Double-Trouble Trap at **2:45** (165 s).
+- **BossMod Reborn:** the two knockback casts are done at **168.2 s**.
+- **cactbot:** has only an un-synced "--knockback--" note at **170.6 s**, with no ability on the line, so it counts as an estimate.
+- **Decision:** the replay shows the hit at 168.2 (BossMod Reborn). Ikuya's 2:45 is kept as the press time, 3.2 s before the hit. Milestone R3 adds ability durations, and then the validator checks that every press still lasts until the hit.
+
+## D-P1-04: Tele-trouncing arrow deal (2026-11-07)
+
+- **Yan** gives the tile layout (yan-p1-17: red frame = same arrows, blue = different) and one real deal in a status-bar screenshot (yan-p1-16).
+- **Azurite video (8:10):** one role gets two different arrows, the other two of the same. The arrows drop as teleporters when their timers run out. The video's placement ("bigger box strat") differs from Yan's; Yan wins, and only the mechanic description is used.
+- **BossMod Reborn:** confirms short- and long-timer arrows (second debuff over 8 s), with the drops about 3 s apart.
+- **Decision:** the guide and the replay use Yan's screenshot as an example deal, and a variation flips which role gets the matching pairs. Who gets which pair is random and is labelled as an example. Supersedes the "carried spots" answer for Tele-trouncing arrows (review item 38) at the owner's request.
+
+## D-P1-05: Tele-trouncing confusion and teleports (2026-11-07)
+
+- **Owner:** the confused player walks into the arrow while trying to hit the nearby player, is teleported four times while confused, and Thunder resolves soon after.
+- **Azurite video (8:40, 10:41):** the statue tethers one role to confusion (chases and KOs the closest player) and the other to sleep (small AoE). All arrows must be taken (a P3 prerequisite). Confused players sometimes ran through arrows without teleporting, and the video's group changed its movement to fix that. That is the video's strat, so it is not used.
+- **Yan:** no confusion diagram. The fixed teleport spread (yan-p1-19) puts one support and one DPS in each quadrant. The line between them crosses the first arrow of that quadrant's blue frame. The four arrows of each quadrant (yan-p1-17) chain: each one points at the next cell (NW ↑ ← ↓ ↓, NE → ↑ ← ←, SE ↓ → ↑ ↑, SW ← ↓ → →).
+- **Disagreement in the measurements:** by raw distance in Yan's picture, OT is closer to MT and D2 than to D4, and D1 is about as close to D2 as to H1. "Nearest player" would send OT, D1 and D2 at the wrong person. The guide pairs by quadrant, as the owner describes.
+- **Not from a source:** the jump length (the next cell, about 7 y; off the tiles on the fourth jump, by the average jump) and the teleport times (spread evenly over the confusion, labelled as estimates).
+- **Decision:** new "Confused" variation (tanks + healers or DPS). The confused players walk into their quadrant's first arrow and take all four arrows; the sleepers stay put.

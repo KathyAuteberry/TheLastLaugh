@@ -123,6 +123,36 @@
       "retrieved": "2026-11-07",
       "method": "Quoted by the owner in chat; page not fetched by Claude.",
       "note": "Mechanic behaviour only. Names the Tele-trouncing tether hits: Idyllic Will (small AoE + Sleep) and Indulgent Will (heavy damage + Confused)."
+    },
+    "cactbot-dmu": {
+      "source": "secondary",
+      "title": "cactbot raidboss timeline: Dancing Mad (Ultimate)",
+      "author": "OverlayPlugin/cactbot contributors",
+      "url": "https://github.com/OverlayPlugin/cactbot/blob/a13cb0172991068b5b39f80322a0d2feda1d876c/ui/raidboss/data/07-dt/ultimate/dancing_mad.txt",
+      "license": "Apache-2.0",
+      "commit": "a13cb0172991068b5b39f80322a0d2feda1d876c",
+      "committed": "2026-08-25",
+      "retrieved": "2026-11-07",
+      "method": "Read the timeline file at that commit (not stored in repo). Times are seconds from combat start, from combat logs.",
+      "note": "Replay timing ONLY: when each ability goes off. Never used for positions, assignments or mitigation. Lines marked as comments (no ability sync) are treated as estimates."
+    },
+    "bmr-dmu": {
+      "source": "secondary",
+      "title": "BossMod Reborn module: Dancing Mad (Ultimate), DMUStates.cs",
+      "author": "FFXIV-CombatReborn/BossmodReborn contributors",
+      "url": "https://github.com/FFXIV-CombatReborn/BossmodReborn/blob/d30c5441fd845ee070d39eae0c534e17859abf98/BossMod/Modules/Dawntrail/Ultimate/DMU/DMUStates.cs",
+      "license": "BSD-3-Clause",
+      "commit": "d30c5441fd845ee070d39eae0c534e17859abf98",
+      "committed": "2026-10-14",
+      "retrieved": "2026-11-07",
+      "method": "Summed the state-machine delays from combat start (not stored in repo).",
+      "note": "Replay timing ONLY. Cross-check for cactbot, and the timing source where cactbot has no synced line (Tele-trouncing trap knockback, Graviga puddles)."
+    },
+    "owner-replay-review": {
+      "source": "owner",
+      "title": "Owner feedback on the replay (R2)",
+      "date": "2026-11-07",
+      "note": "Given in chat: start the fight with neutral positions (main tank north, party loosely spread in the southern half), show the Ruin III cone only from its castbar, and fill the text-only steps with inferred diagrams."
     }
   },
   "images": {

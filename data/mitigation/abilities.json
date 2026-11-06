@@ -1,0 +1,323 @@
+{
+  "_about": "Maps Ikuya's generic terms to each job's real abilities. Names checked against the official FFXIV Job Guide (level-100 descriptions; pages mention Patch 7.5) on 2026-11-07. Owner-approved 2026-11-07 with edits (docs/review/stage4-ability-names.md). The app shows the real names for the selected job and falls back to Ikuya's term when no job is selected.",
+  "source": {
+    "title": "FINAL FANTASY XIV Job Guide",
+    "url": "https://na.finalfantasyxiv.com/jobguide/battle/",
+    "checked": "2026-11-07"
+  },
+  "owner": "approved",
+  "terms": {
+    "Party Mit": {
+      "slots": [
+        "MT",
+        "OT"
+      ],
+      "byJob": {
+        "WAR": [
+          {
+            "ability": "Shake It Off",
+            "level": 68
+          }
+        ],
+        "PLD": [
+          {
+            "ability": "Divine Veil",
+            "level": 56
+          },
+          {
+            "ability": "Passage of Arms",
+            "level": 70
+          }
+        ],
+        "DRK": [
+          {
+            "ability": "Dark Missionary",
+            "level": 66
+          }
+        ],
+        "GNB": [
+          {
+            "ability": "Heart of Light",
+            "level": 64
+          }
+        ]
+      }
+    },
+    "Party Mit (D3)": {
+      "ikuyaTerm": "Party Mit",
+      "slots": [
+        "D3"
+      ],
+      "byJob": {
+        "BRD": [
+          {
+            "ability": "Troubadour",
+            "level": 62
+          }
+        ],
+        "MCH": [
+          {
+            "ability": "Tactician",
+            "level": 56
+          }
+        ],
+        "DNC": [
+          {
+            "ability": "Shield Samba",
+            "level": 56
+          }
+        ]
+      },
+      "open": "Resolved with the D3 DPS job selector (BRD/MCH/DNC)."
+    },
+    "Buddy Mit": {
+      "slots": [
+        "MT",
+        "OT"
+      ],
+      "byJob": {
+        "WAR": [
+          {
+            "ability": "Nascent Flash",
+            "level": 76
+          }
+        ],
+        "PLD": [
+          {
+            "ability": "Intervention",
+            "level": 62
+          }
+        ],
+        "DRK": [
+          {
+            "ability": "The Blackest Night",
+            "level": 70
+          },
+          {
+            "ability": "Oblation",
+            "level": 82
+          }
+        ],
+        "GNB": [
+          {
+            "ability": "Heart of Corundum",
+            "level": 82
+          }
+        ]
+      }
+    },
+    "Kitchen Sink": {
+      "slots": [
+        "MT",
+        "OT"
+      ],
+      "byJob": {
+        "WAR": [
+          {
+            "ability": "Rampart",
+            "level": 8
+          },
+          {
+            "ability": "Damnation",
+            "level": 92
+          },
+          {
+            "ability": "Bloodwhetting",
+            "level": 82
+          },
+          {
+            "ability": "Thrill of Battle",
+            "level": 30,
+            "optional": true
+          }
+        ],
+        "PLD": [
+          {
+            "ability": "Rampart",
+            "level": 8
+          },
+          {
+            "ability": "Guardian",
+            "level": 92
+          },
+          {
+            "ability": "Holy Sheltron",
+            "level": 82
+          },
+          {
+            "ability": "Bulwark",
+            "level": 52,
+            "optional": true
+          }
+        ],
+        "DRK": [
+          {
+            "ability": "Rampart",
+            "level": 8
+          },
+          {
+            "ability": "Shadowed Vigil",
+            "level": 92
+          },
+          {
+            "ability": "The Blackest Night",
+            "level": 70
+          },
+          {
+            "ability": "Oblation",
+            "level": 82
+          },
+          {
+            "ability": "Dark Mind",
+            "level": 45
+          }
+        ],
+        "GNB": [
+          {
+            "ability": "Rampart",
+            "level": 8
+          },
+          {
+            "ability": "Great Nebula",
+            "level": 92
+          },
+          {
+            "ability": "Heart of Corundum",
+            "level": 82
+          },
+          {
+            "ability": "Camouflage",
+            "level": 6,
+            "optional": true
+          }
+        ]
+      },
+      "open": "Rampart + 40% cooldown + short cooldown(s); optional extras marked. Reprisal is not part of it (owner, 2026-11-07); Ikuya lists it separately."
+    },
+    "Invulnerability": {
+      "slots": [
+        "MT",
+        "OT"
+      ],
+      "byJob": {
+        "WAR": [
+          {
+            "ability": "Holmgang",
+            "level": 42
+          }
+        ],
+        "PLD": [
+          {
+            "ability": "Hallowed Ground",
+            "level": 50
+          }
+        ],
+        "DRK": [
+          {
+            "ability": "Living Dead",
+            "level": 50
+          }
+        ],
+        "GNB": [
+          {
+            "ability": "Superbolide",
+            "level": 50
+          }
+        ]
+      }
+    },
+    "Provoke During Castbar": {
+      "slots": [
+        "MT",
+        "OT"
+      ],
+      "allJobs": [
+        {
+          "ability": "Provoke",
+          "level": 15,
+          "note": "during the castbar"
+        }
+      ]
+    },
+    "Spreadlo": {
+      "slots": [
+        "SCH"
+      ],
+      "allJobs": [
+        {
+          "ability": "Recitation",
+          "level": 74,
+          "optional": true
+        },
+        {
+          "ability": "Adloquium",
+          "level": 30
+        },
+        {
+          "ability": "Deployment Tactics",
+          "level": 56
+        }
+      ],
+      "open": "Expansion of Ikuya's shorthand. Owner: 'probably' right (doesn't play healer); a healer should confirm.",
+      "confirmed": false
+    },
+    "Seraph": {
+      "slots": [
+        "SCH"
+      ],
+      "allJobs": [
+        {
+          "ability": "Summon Seraph",
+          "level": 80
+        },
+        {
+          "ability": "Consolation",
+          "level": 80
+        }
+      ],
+      "open": "Expansion of Ikuya's shorthand. Owner: 'probably' right (doesn't play healer); a healer should confirm.",
+      "confirmed": false
+    },
+    "Zoe Shields": {
+      "slots": [
+        "SGE"
+      ],
+      "allJobs": [
+        {
+          "ability": "Zoe",
+          "level": 56
+        },
+        {
+          "ability": "Eukrasian Prognosis II",
+          "level": 96
+        }
+      ],
+      "confirmed": false,
+      "open": "Expansion of Ikuya's shorthand. Owner: 'probably' right (doesn't play healer); a healer should confirm."
+    }
+  },
+  "alreadyRealNames": {
+    "verified": [
+      "Reprisal",
+      "Feint",
+      "Addle",
+      "Temperance",
+      "Divine Caress",
+      "Plenary Indulgence",
+      "Liturgy of the Bell",
+      "Neutral Sect",
+      "Sun Sign",
+      "Collective Unconscious",
+      "Macrocosmos",
+      "Expedient",
+      "Sacred Soil",
+      "Seraphism",
+      "Fey Illumination",
+      "Kerachole",
+      "Holos",
+      "Philosophia",
+      "Panhaima"
+    ]
+  },
+  "ownerDate": "2026-11-07"
+}

@@ -1,0 +1,1198 @@
+{
+  "phase": 1,
+  "about": "When each P1 step resolves, for the replay. Clock = seconds from combat start (cactbot InCombat line; BossMod Reborn state sums start at the same point). Timing only: positions, assignments and mitigation never come from here.",
+  "rule": "t = cactbot when it has a line naming the ability (synced or not) and BossMod Reborn agrees within 1 s; otherwise BossMod Reborn; null when neither source times the moment (shown as approximate, between its neighbours). A step is shown from the previous step’s t until its own t.",
+  "sources": [
+    "cactbot-dmu",
+    "bmr-dmu"
+  ],
+  "owner": "unreviewed",
+  "steps": {
+    "p1-revolting-ruin-iii-1/pull#0": {
+      "t": 0,
+      "source": "cactbot",
+      "ability": "Combat starts",
+      "ids": [],
+      "cactbot": {
+        "t": 0,
+        "line": "sync"
+      },
+      "bmr": 0,
+      "note": "Pre-pull positions until combat starts."
+    },
+    "p1-revolting-ruin-iii-1/pull": {
+      "t": 10.6,
+      "source": "cactbot",
+      "ability": "Revolting Ruin III castbar starts",
+      "ids": [
+        "C403"
+      ],
+      "cactbot": {
+        "t": 10.6,
+        "line": "sync"
+      },
+      "bmr": 10.1,
+      "note": "Neutral positions from the pull until the castbar; the cone appears with it.",
+      "cue": {
+        "t": -0.5,
+        "react": false,
+        "roles": [
+          "MT"
+        ],
+        "source": "owner",
+        "what": "MT runs in to pull the boss about 0.5 s before combat starts"
+      }
+    },
+    "p1-revolting-ruin-iii-1/cast": {
+      "t": 15.6,
+      "source": "cactbot",
+      "ability": "Revolting Ruin III",
+      "ids": [
+        "C403",
+        "C4E1"
+      ],
+      "cactbot": {
+        "t": 15.6,
+        "line": "sync"
+      },
+      "bmr": 15.2,
+      "until": 18.7,
+      "note": "Two hits: 15.6 and 18.7 (BMR 15.2 / 18.4)."
+    },
+    "p1-graven-image-1/tether-knockback": {
+      "t": 35.1,
+      "source": "cactbot",
+      "ability": "Pulse Wave",
+      "ids": [
+        "BAA9"
+      ],
+      "cactbot": {
+        "t": 35.1,
+        "line": "sync"
+      },
+      "bmr": 35,
+      "hedges": [
+        {
+          "t": 30,
+          "source": "bmr",
+          "groups": [
+            "fire",
+            "ice"
+          ],
+          "roles": [
+            {
+              "when": {
+                "tether": "th"
+              },
+              "roles": [
+                "MT",
+                "OT",
+                "H1",
+                "H2"
+              ]
+            },
+            {
+              "when": {
+                "tether": "dps"
+              },
+              "roles": [
+                "D1",
+                "D2",
+                "D3",
+                "D4"
+              ]
+            }
+          ],
+          "what": "Statue tether appears (BossMod Reborn: 5.1 s before Pulse Wave). The tethered group moves north, halfway between its possible pre-knockback spots"
+        }
+      ],
+      "cue": {
+        "t": 32.4,
+        "source": "bmr",
+        "what": "Mystery Magic cast starts: Kefka shows Fire and Ice (BossMod Reborn starts both on this cast)"
+      }
+    },
+    "p1-graven-image-1/spread-ice-true": {
+      "t": 38.3,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 38.3,
+        "line": "sync"
+      },
+      "bmr": 38.2,
+      "note": "Ice (Blizzard III Blowout) resolves first at 37.4; Fire at 38.3.",
+      "knockback": {
+        "from": [
+          0,
+          0.995
+        ],
+        "distance": 0.65,
+        "roles": [
+          {
+            "when": {
+              "tether": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "tether": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "source": "bmr",
+        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+      }
+    },
+    "p1-graven-image-1/spread-ice-lie": {
+      "t": 38.3,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 38.3,
+        "line": "sync"
+      },
+      "bmr": 38.2,
+      "note": "Ice (Blizzard III Blowout) resolves first at 37.4; Fire at 38.3.",
+      "knockback": {
+        "from": [
+          0,
+          0.995
+        ],
+        "distance": 0.65,
+        "roles": [
+          {
+            "when": {
+              "tether": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "tether": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "source": "bmr",
+        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+      }
+    },
+    "p1-graven-image-1/stack-ice-true": {
+      "t": 38.3,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 38.3,
+        "line": "sync"
+      },
+      "bmr": 38.2,
+      "note": "Ice (Blizzard III Blowout) resolves first at 37.4; Fire at 38.3.",
+      "knockback": {
+        "from": [
+          0,
+          0.995
+        ],
+        "distance": 0.65,
+        "roles": [
+          {
+            "when": {
+              "tether": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "tether": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "source": "bmr",
+        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+      }
+    },
+    "p1-graven-image-1/stack-ice-lie": {
+      "t": 38.3,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 38.3,
+        "line": "sync"
+      },
+      "bmr": 38.2,
+      "note": "Ice (Blizzard III Blowout) resolves first at 37.4; Fire at 38.3.",
+      "knockback": {
+        "from": [
+          0,
+          0.995
+        ],
+        "distance": 0.65,
+        "roles": [
+          {
+            "when": {
+              "tether": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "tether": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "source": "bmr",
+        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+      }
+    },
+    "p1-graven-image-1/beam-line": {
+      "t": 42.5,
+      "source": "cactbot",
+      "ability": "Wave Cannon",
+      "ids": [
+        "BAA8"
+      ],
+      "cactbot": {
+        "t": 42.5,
+        "line": "sync"
+      },
+      "bmr": 42.4
+    },
+    "p1-graven-image-1/towers": {
+      "t": 46,
+      "source": "cactbot",
+      "ability": "Explosion",
+      "ids": [
+        "BAAA"
+      ],
+      "cactbot": {
+        "t": 46,
+        "line": "sync"
+      },
+      "bmr": 46
+    },
+    "p1-graven-image-1/trap-pass": {
+      "t": 49.7,
+      "source": "cactbot",
+      "ability": "Double-trouble Trap",
+      "ids": [
+        "BAA7"
+      ],
+      "cactbot": {
+        "t": 49.7,
+        "line": "sync"
+      },
+      "bmr": 49.7
+    },
+    "p1-graven-image-1/mystery-magic": {
+      "t": 53.7,
+      "source": "cactbot",
+      "ability": "Mystery Magic (Blizzard III Blowout + Thrumming Thunder III)",
+      "ids": [
+        "BA94",
+        "BA98",
+        "BA9B",
+        "BA9F",
+        "BAA1"
+      ],
+      "cactbot": {
+        "t": 53.7,
+        "line": "sync"
+      },
+      "bmr": 53.7,
+      "knockback": {
+        "from": "nearest-holder",
+        "distance": 0.7,
+        "roles": "all-but-holders",
+        "source": "bmr",
+        "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      }
+    },
+    "p1-light-of-judgment-1/raidwide": {
+      "t": 62.7,
+      "source": "cactbot",
+      "ability": "Light of Judgment",
+      "ids": [
+        "C622"
+      ],
+      "cactbot": {
+        "t": 62.7,
+        "line": "sync"
+      },
+      "bmr": 62.8
+    },
+    "p1-hyperdrive-1/hits": {
+      "t": 65.8,
+      "source": "cactbot",
+      "ability": "Hyperdrive",
+      "ids": [
+        "C24B"
+      ],
+      "cactbot": {
+        "t": 65.8,
+        "line": "no-sync"
+      },
+      "bmr": 66,
+      "until": 69.8,
+      "note": "Three hits: 65.8, 67.8, 69.8 (BMR 66.0 / 68.1 / 70.2)."
+    },
+    "p1-graven-image-2/stack-south-1": {
+      "t": 87.2,
+      "source": "cactbot",
+      "ability": "Gravitas",
+      "ids": [
+        "BAAC"
+      ],
+      "cactbot": {
+        "t": 87.2,
+        "line": "sync"
+      },
+      "bmr": 87.7
+    },
+    "p1-graven-image-2/spread-1": {
+      "t": 91.2,
+      "source": "cactbot",
+      "ability": "Vitrophyre",
+      "ids": [
+        "BAB0"
+      ],
+      "cactbot": {
+        "t": 91.2,
+        "line": "sync"
+      },
+      "bmr": 91.8
+    },
+    "p1-graven-image-2/spread-1-dps": {
+      "t": 91.2,
+      "source": "cactbot",
+      "ability": "Vitrophyre",
+      "ids": [
+        "BAB0"
+      ],
+      "cactbot": {
+        "t": 91.2,
+        "line": "sync"
+      },
+      "bmr": 91.8
+    },
+    "p1-graven-image-2/ruin-half-room": {
+      "t": 101.1,
+      "source": "cactbot",
+      "ability": "Intemperate Will / Gravitational Wave",
+      "ids": [
+        "BAB1",
+        "BAB2"
+      ],
+      "cactbot": {
+        "t": 101.1,
+        "line": "sync"
+      },
+      "bmr": 101.6,
+      "note": "Ruin III hits at 97.1 and 100.2 during this step."
+    },
+    "p1-graven-image-2/stack-north-2": {
+      "t": 105.8,
+      "source": "cactbot",
+      "ability": "Gravitas",
+      "ids": [
+        "BAAC"
+      ],
+      "cactbot": {
+        "t": 105.8,
+        "line": "sync"
+      },
+      "bmr": 106.2
+    },
+    "p1-graven-image-2/spread-2": {
+      "t": 109.8,
+      "source": "cactbot",
+      "ability": "Vitrophyre",
+      "ids": [
+        "BAB0"
+      ],
+      "cactbot": {
+        "t": 109.8,
+        "line": "sync"
+      },
+      "bmr": 110.2,
+      "note": "The second half-room AoE follows at 114.4."
+    },
+    "p1-graven-image-2/spread-2-th": {
+      "t": 109.8,
+      "source": "cactbot",
+      "ability": "Vitrophyre",
+      "ids": [
+        "BAB0"
+      ],
+      "cactbot": {
+        "t": 109.8,
+        "line": "sync"
+      },
+      "bmr": 110.2,
+      "note": "The second half-room AoE follows at 114.4."
+    },
+    "p1-graven-image-2/trap-pass": {
+      "t": 118.1,
+      "source": "cactbot",
+      "ability": "Double-trouble Trap",
+      "ids": [
+        "BAA7"
+      ],
+      "cactbot": {
+        "t": 118.1,
+        "line": "sync"
+      },
+      "bmr": 118.5
+    },
+    "p1-graven-image-2/into-puddles#0": {
+      "t": null,
+      "source": null,
+      "ability": "Knockback lands",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Right after the knockback; neither source times it.",
+      "knockback": {
+        "from": "nearest-holder",
+        "distance": 0.7,
+        "roles": "all-but-holders",
+        "source": "bmr",
+        "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      }
+    },
+    "p1-graven-image-2/into-puddles": {
+      "t": 121.5,
+      "source": "bmr",
+      "ability": "Graviga puddles go off",
+      "ids": [],
+      "cactbot": {
+        "t": 117,
+        "line": "annotation"
+      },
+      "bmr": 121.5,
+      "note": "cactbot only marks a 6 s Gravity III pop window from 117.0; BossMod Reborn has the puddles gone at 121.5."
+    },
+    "p1-light-of-judgment-2/raidwide": {
+      "t": 132.4,
+      "source": "cactbot",
+      "ability": "Light of Judgment",
+      "ids": [
+        "C622"
+      ],
+      "cactbot": {
+        "t": 132.4,
+        "line": "sync"
+      },
+      "bmr": 132.7
+    },
+    "p1-hyperdrive-2/hits": {
+      "t": 135.6,
+      "source": "cactbot",
+      "ability": "Hyperdrive",
+      "ids": [
+        "C24B"
+      ],
+      "cactbot": {
+        "t": 135.6,
+        "line": "no-sync"
+      },
+      "bmr": 135.9,
+      "until": 139.7,
+      "note": "Three hits: 135.6, 137.7, 139.7 (BMR 135.9 / 138.0 / 140.1).",
+      "cue": {
+        "t": 121.5,
+        "source": "bmr",
+        "what": "Puddles resolved and only a raidwide comes before Hyperdrive: MT goes to the tank spot, everyone else heads south"
+      }
+    },
+    "p1-tele-trouncing/arrows#0": {
+      "t": 151.5,
+      "source": "cactbot",
+      "ability": "Tele-trouncing (cast ends)",
+      "ids": [
+        "BAB9"
+      ],
+      "cactbot": {
+        "t": 151.5,
+        "line": "sync"
+      },
+      "bmr": 152,
+      "note": "The arrow debuffs go out when the cast ends (derived: the two timers then run out at 159.4 and 162.4)."
+    },
+    "p1-tele-trouncing/arrows#1": {
+      "t": 159.4,
+      "source": "cactbot",
+      "ability": "Tele-trouncing 1",
+      "ids": [
+        "BABA"
+      ],
+      "cactbot": {
+        "t": 159.4,
+        "line": "sync"
+      },
+      "bmr": 159.8,
+      "note": "Short-timer arrows drop."
+    },
+    "p1-tele-trouncing/arrows": {
+      "t": 162.4,
+      "source": "cactbot",
+      "ability": "Tele-trouncing 2",
+      "ids": [
+        "BABA"
+      ],
+      "cactbot": {
+        "t": 162.4,
+        "line": "sync"
+      },
+      "bmr": 162.8,
+      "note": "Long-timer arrows drop (BossMod Reborn: 3.0 s after the first)."
+    },
+    "p1-tele-trouncing/trap-pass": {
+      "t": 168.2,
+      "source": "bmr",
+      "ability": "Double-trouble Trap knockback",
+      "ids": [
+        "BAA7"
+      ],
+      "cactbot": {
+        "t": 170.6,
+        "line": "annotation"
+      },
+      "bmr": 168.2,
+      "note": "cactbot only has an un-synced “--knockback--” note at 170.6; BossMod Reborn counts the two knockback casts done at 168.2."
+    },
+    "p1-tele-trouncing/tele-spread": {
+      "t": 173.4,
+      "source": "cactbot",
+      "ability": "Indulgent Will / Idyllic Will",
+      "ids": [
+        "BAB5",
+        "BAB6"
+      ],
+      "cactbot": {
+        "t": 173.4,
+        "line": "sync"
+      },
+      "bmr": 173.9,
+      "knockback": {
+        "from": "nearest-holder",
+        "distance": 0.7,
+        "roles": "all-but-holders",
+        "source": "bmr",
+        "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      }
+    },
+    "p1-tele-trouncing/confusion#0": {
+      "t": 174.7,
+      "source": "estimate",
+      "ability": "Confused player steps into the first arrow",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "cue": {
+        "t": 173.4,
+        "react": false,
+        "roles": [
+          {
+            "when": {
+              "confused": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "confused": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "source": "cactbot",
+        "what": "Confused at once: they walk at their partner, not by choice"
+      }
+    },
+    "p1-tele-trouncing/confusion#1": {
+      "t": 176.2,
+      "source": "estimate",
+      "ability": "Teleport 1",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "teleport": {
+        "source": "owner",
+        "what": "Teleported along the arrow: an instant jump, not a walk"
+      }
+    },
+    "p1-tele-trouncing/confusion#2": {
+      "t": 177.6,
+      "source": "estimate",
+      "ability": "Teleport 2",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "teleport": {
+        "source": "owner",
+        "what": "Teleported along the arrow: an instant jump, not a walk"
+      }
+    },
+    "p1-tele-trouncing/confusion#3": {
+      "t": 179.1,
+      "source": "estimate",
+      "ability": "Teleport 3",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "teleport": {
+        "source": "owner",
+        "what": "Teleported along the arrow: an instant jump, not a walk"
+      }
+    },
+    "p1-tele-trouncing/confusion": {
+      "t": 180.5,
+      "source": "estimate",
+      "ability": "Teleport 4",
+      "ids": [],
+      "cactbot": null,
+      "bmr": null,
+      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "teleport": {
+        "source": "owner",
+        "what": "Teleported along the arrow: an instant jump, not a walk"
+      }
+    },
+    "p1-tele-trouncing/final-spread": {
+      "t": 187.1,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 187.1,
+        "line": "sync"
+      },
+      "bmr": 187.5,
+      "note": "Mystery Magic (Thunder) and the gaze resolve at 186.3, Fire at 187.1.",
+      "hedges": [
+        {
+          "t": 180.5,
+          "source": "bmr",
+          "groups": [
+            "fire",
+            "thunderDir",
+            "thunderLines",
+            "thunder"
+          ],
+          "target": [
+            "p1-tele-trouncing/final-spread",
+            "p1-tele-trouncing/final-stack"
+          ],
+          "what": "Sleep and confusion wear off (BossMod Reborn); everyone heads halfway between their possible final spots"
+        }
+      ],
+      "cue": {
+        "t": 181.3,
+        "source": "cactbot",
+        "what": "Mystery Magic cast starts: Thunder and Fire are shown"
+      }
+    },
+    "p1-tele-trouncing/final-stack": {
+      "t": 187.1,
+      "source": "cactbot",
+      "ability": "Flagrant Fire III",
+      "ids": [
+        "BAA2",
+        "BAA3"
+      ],
+      "cactbot": {
+        "t": 187.1,
+        "line": "sync"
+      },
+      "bmr": 187.5,
+      "note": "Mystery Magic (Thunder) and the gaze resolve at 186.3, Fire at 187.1.",
+      "hedges": [
+        {
+          "t": 180.5,
+          "source": "bmr",
+          "groups": [
+            "fire",
+            "thunderDir",
+            "thunderLines",
+            "thunder"
+          ],
+          "target": [
+            "p1-tele-trouncing/final-spread",
+            "p1-tele-trouncing/final-stack"
+          ],
+          "what": "Sleep and confusion wear off (BossMod Reborn); everyone heads halfway between their possible final spots"
+        }
+      ],
+      "cue": {
+        "t": 181.3,
+        "source": "cactbot",
+        "what": "Mystery Magic cast starts: Thunder and Fire are shown"
+      }
+    },
+    "p1-phase-transition/time-up": {
+      "t": 197.9,
+      "source": "bmr",
+      "ability": "Kefka becomes untargetable",
+      "ids": [],
+      "cactbot": {
+        "t": 197.3,
+        "line": "annotation"
+      },
+      "bmr": 197.9,
+      "note": "cactbot only marks “--untargetable--” at 197.3 (no ability); BossMod Reborn has the boss untargetable at 197.9. Above 14.9% HP, the enrage cast starts at 197.5 and lands at about 202.4 (cactbot, unconfirmed)."
+    }
+  },
+  "casts_about": "Kefka's castbars. end = the cactbot line for the cast's own ability; length = BossMod Reborn's cast time for that ability (DMUEnums); start = end − length, or cactbot's StartsUsing line where it has one. bmrStart = BossMod Reborn's cast start where its states give one directly (cross-check). Hyperdrive has no cast. Not shown: an unnamed 3 s Kefka cast ending at 168.7 (cactbot hides it as --sync--; BossMod Reborn: 'Unknown', id C554), because its name is not known.",
+  "casts": [
+    {
+      "ability": "Revolting Ruin III",
+      "ids": [
+        "C403"
+      ],
+      "start": 10.6,
+      "end": 15.6,
+      "length": 5.0,
+      "how": "starts-using",
+      "cactbot": {
+        "t": 15.6,
+        "line": "sync"
+      },
+      "bmrStart": 10.1
+    },
+    {
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "start": 26.2,
+      "end": 29.2,
+      "length": 3.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 29.2,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Mystery Magic",
+      "ids": [
+        "BA94"
+      ],
+      "start": 32.4,
+      "end": 37.4,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 37.4,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Double-trouble Trap",
+      "ids": [
+        "BAA6"
+      ],
+      "start": 41.6,
+      "end": 44.6,
+      "length": 3.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 44.6,
+        "line": "sync"
+      },
+      "note": "The only Double-trouble Trap cast in P1: later traps are the same debuff being passed on."
+    },
+    {
+      "ability": "Mystery Magic",
+      "ids": [
+        "BA94"
+      ],
+      "start": 48.7,
+      "end": 53.7,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 53.7,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Light of Judgment",
+      "ids": [
+        "C622"
+      ],
+      "start": 57.7,
+      "end": 62.7,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 62.7,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "start": 77.0,
+      "end": 80.0,
+      "length": 3.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 80.0,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Revolting Ruin III",
+      "ids": [
+        "C403"
+      ],
+      "start": 92.1,
+      "end": 97.1,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 97.1,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Light of Judgment",
+      "ids": [
+        "C622"
+      ],
+      "start": 127.4,
+      "end": 132.4,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 132.4,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Tele-trouncing",
+      "ids": [
+        "BAB9"
+      ],
+      "start": 146.5,
+      "end": 151.5,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 151.5,
+        "line": "sync"
+      }
+    },
+    {
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "start": 160.6,
+      "end": 163.6,
+      "length": 3.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 163.6,
+        "line": "sync"
+      },
+      "bmrStart": 161.1
+    },
+    {
+      "ability": "Mystery Magic",
+      "ids": [
+        "BA94"
+      ],
+      "start": 181.3,
+      "end": 186.3,
+      "length": 5.0,
+      "how": "end-minus-length",
+      "cactbot": {
+        "t": 186.3,
+        "line": "sync"
+      },
+      "bmrStart": 181.8
+    },
+    {
+      "ability": "Light of Judgment",
+      "ids": [
+        "BABB"
+      ],
+      "start": 197.5,
+      "end": 202.4,
+      "length": 5.0,
+      "how": "starts-using",
+      "cactbot": {
+        "t": 202.4,
+        "line": "sync"
+      },
+      "note": "Enrage: only if Kefka is above 14.9% HP at the end of P1. cactbot marks this cast unconfirmed; the replay ends at 3:17.9, while it is still casting."
+    }
+  ],
+  "ticks": [
+    {
+      "id": "gi1-cast",
+      "t": 29.2,
+      "source": "cactbot",
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "cactbot": {
+        "t": 29.2,
+        "line": "sync"
+      },
+      "bmr": 29.2
+    },
+    {
+      "id": "gi1-ice",
+      "t": 37.4,
+      "source": "cactbot",
+      "ability": "Blizzard III Blowout",
+      "ids": [
+        "BA98",
+        "BA9B"
+      ],
+      "cactbot": {
+        "t": 37.4,
+        "line": "no-sync"
+      },
+      "bmr": 37.4
+    },
+    {
+      "id": "gi2-cast",
+      "t": 80,
+      "source": "cactbot",
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "cactbot": {
+        "t": 80,
+        "line": "sync"
+      },
+      "bmr": null
+    },
+    {
+      "id": "ruin2-hit1",
+      "t": 97.1,
+      "source": "cactbot",
+      "ability": "Revolting Ruin III",
+      "ids": [
+        "C403"
+      ],
+      "cactbot": {
+        "t": 97.1,
+        "line": "sync"
+      },
+      "bmr": 97.6
+    },
+    {
+      "id": "ruin2-hit2",
+      "t": 100.2,
+      "source": "cactbot",
+      "ability": "Revolting Ruin III",
+      "ids": [
+        "C4E1"
+      ],
+      "cactbot": {
+        "t": 100.2,
+        "line": "sync"
+      },
+      "bmr": 100.8
+    },
+    {
+      "id": "gi2-halfroom2",
+      "t": 114.4,
+      "source": "cactbot",
+      "ability": "Intemperate Will / Gravitational Wave",
+      "ids": [
+        "BAB1",
+        "BAB2"
+      ],
+      "cactbot": {
+        "t": 114.4,
+        "line": "sync"
+      },
+      "bmr": 114.7
+    },
+    {
+      "id": "gi3-cast",
+      "t": 163.6,
+      "source": "cactbot",
+      "ability": "Graven Image",
+      "ids": [
+        "BCF2"
+      ],
+      "cactbot": {
+        "t": 163.6,
+        "line": "sync"
+      },
+      "bmr": null
+    },
+    {
+      "id": "tele-mystery",
+      "t": 186.3,
+      "source": "cactbot",
+      "ability": "Mystery Magic (Thunder) + gaze",
+      "ids": [
+        "BA94",
+        "BA9F",
+        "BAA1",
+        "BAB3",
+        "BAB4"
+      ],
+      "cactbot": {
+        "t": 186.3,
+        "line": "sync"
+      },
+      "bmr": 186.9
+    }
+  ],
+  "end": {
+    "t": 197.9,
+    "source": "bmr",
+    "label": "Kefka becomes untargetable (end of P1)",
+    "cactbot": {
+      "t": 197.3,
+      "line": "annotation"
+    },
+    "bmr": 197.9,
+    "note": "If Kefka is above 14.9% HP here, Light of Judgment (enrage) follows at about 202.4 (cactbot, unconfirmed)."
+  },
+  "ikuya": {
+    "ik-ot-p1-0016": {
+      "at": "p1-revolting-ruin-iii-1/cast"
+    },
+    "ik-p1-0038": {
+      "at": "p1-graven-image-1/spread-ice-true"
+    },
+    "ik-p1-0043": {
+      "at": "p1-graven-image-1/beam-line"
+    },
+    "ik-p1-0050": {
+      "at": "p1-graven-image-1/trap-pass"
+    },
+    "ik-p1-0103": {
+      "at": "p1-light-of-judgment-1/raidwide"
+    },
+    "ik-ot-p1-0105": {
+      "at": "p1-hyperdrive-1/hits"
+    },
+    "ik-p1-0128": {
+      "at": "p1-graven-image-2/stack-south-1"
+    },
+    "ik-ot-p1-0138": {
+      "at": "ruin2-hit1"
+    },
+    "ik-p1-0146": {
+      "at": "p1-graven-image-2/stack-north-2"
+    },
+    "ik-p1-0158": {
+      "at": "p1-graven-image-2/trap-pass"
+    },
+    "ik-p1-0212": {
+      "at": "p1-light-of-judgment-2/raidwide"
+    },
+    "ik-ot-p1-0216": {
+      "at": "p1-hyperdrive-2/hits"
+    },
+    "ik-p1-0245": {
+      "at": "p1-tele-trouncing/trap-pass",
+      "gap": "Ikuya 2:45 is 3.2 s before the knockback (BossMod Reborn 168.2). Read as when to press, not when it hits (owner, 2026-11-07: give Ikuya the benefit of the doubt). See D-P1-03."
+    },
+    "ik-p1-0253": {
+      "at": "p1-tele-trouncing/tele-spread"
+    },
+    "ik-p1-0307": {
+      "at": "p1-tele-trouncing/final-spread"
+    }
+  },
+  "motion": {
+    "start": -3,
+    "reaction": 0.5,
+    "runSpeed": 0.3,
+    "knockbackSeconds": 0.3,
+    "note": "Replay movement (derived, not from a source): each role starts moving 0.5 s (owner: reaction time) after the moment that tells them where to go — by default when the previous step resolves — and runs at 6 y/s (base run speed; 0.3 of the 20 y arena radius per second, radius from BossMod Reborn). Until the answer is known, a role can head halfway between its possible spots (hedges). A knockback moves a role in 0.3 s."
+  }
+}

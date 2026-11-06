@@ -1,0 +1,4202 @@
+{
+  "about": "Coordinates measured from Yan Flash diagrams for drawing. Kept separate from the approved text data. Units: arena radius = 1, origin = arena centre, +x east, +y north. Every number here is derived from an image (never invented) and needs owner approval per scene.",
+  "measurement": {
+    "base": "Yan 2000x2000 diagrams share one arena: centre (1000,1000) px, playable edge radius 975 px (inside a ~20 px rim). Measured on yan-p1-06, -09, -12.",
+    "methods": {
+      "auto": "Role icon detected by colour (scripts/measure_yan.py); icon centre.",
+      "eye": "Read by eye from a 1000 px view (±0.01). Used for overlapping or faded icons.",
+      "copy": "Taken from another measured point, as noted."
+    }
+  },
+  "arena": {
+    "radius": 1,
+    "status": "derived-from-image",
+    "sources": [
+      {
+        "ref": "yan-p1-06"
+      }
+    ]
+  },
+  "waymarks": {
+    "status": "derived-from-image",
+    "sources": [
+      {
+        "ref": "yan-p1-06"
+      },
+      {
+        "ref": "yan-p1-09"
+      },
+      {
+        "ref": "yan-p1-12"
+      }
+    ],
+    "note": "Same values in all three images (±0.006).",
+    "points": {
+      "1": [
+        -0.478,
+        0.471
+      ],
+      "2": [
+        0.475,
+        0.474
+      ],
+      "3": [
+        0.476,
+        -0.47
+      ],
+      "4": [
+        -0.478,
+        -0.477
+      ],
+      "A": [
+        0,
+        0.727
+      ],
+      "B": [
+        0.733,
+        0
+      ],
+      "C": [
+        0,
+        -0.727
+      ],
+      "D": [
+        -0.728,
+        0
+      ]
+    }
+  },
+  "statue": {
+    "point": [
+      0,
+      0.995
+    ],
+    "status": "derived-from-image",
+    "sources": [
+      {
+        "ref": "yan-p1-06"
+      }
+    ],
+    "note": "P1 statue sits on the north rim in every P1 diagram."
+  },
+  "scenes": {
+    "p1-revolting-ruin-iii-1/pull": {
+      "sources": [
+        {
+          "ref": "owner-replay-review"
+        },
+        {
+          "ref": "yan-p1-11"
+        }
+      ],
+      "note": "Pre-pull: everyone south (owner; dots illustrative). MT runs in about 0.5 s before the pull and tanks north (spot copied from yan-p1-11, C-01). After the pull everyone heads to an approximate Graven Image I spot: the middle of their possible Fire/Ice spots.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.033,
+            0.318
+          ],
+          "method": "copy"
+        }
+      },
+      "shapes": [],
+      "frames": [
+        {
+          "label": "Pre-pull: everyone south",
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                -0.3
+              ],
+              "method": "loose"
+            },
+            "OT": {
+              "at": [
+                -0.22,
+                -0.4
+              ],
+              "method": "loose"
+            },
+            "D1": {
+              "at": [
+                0.1,
+                -0.45
+              ],
+              "method": "loose"
+            },
+            "D2": {
+              "at": [
+                0.3,
+                -0.4
+              ],
+              "method": "loose"
+            },
+            "H1": {
+              "at": [
+                -0.5,
+                -0.45
+              ],
+              "method": "loose"
+            },
+            "H2": {
+              "at": [
+                -0.3,
+                -0.6
+              ],
+              "method": "loose"
+            },
+            "D3": {
+              "at": [
+                0.5,
+                -0.5
+              ],
+              "method": "loose"
+            },
+            "D4": {
+              "at": [
+                0.15,
+                -0.65
+              ],
+              "method": "loose"
+            }
+          }
+        }
+      ],
+      "hedge": {
+        "target": [
+          "p1-graven-image-1/spread-ice-true",
+          "p1-graven-image-1/spread-ice-lie",
+          "p1-graven-image-1/stack-ice-true",
+          "p1-graven-image-1/stack-ice-lie"
+        ],
+        "groups": [
+          "fire",
+          "ice"
+        ],
+        "note": "Approximate Graven Image I spot: halfway between your four possible Fire/Ice spots (tanks+healers west, DPS east). Derived, not drawn by Yan."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 34, 41)."
+    },
+    "p1-revolting-ruin-iii-1/cast": {
+      "sources": [
+        {
+          "ref": "yan-p1-11"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Yan has no Ruin III #1 diagram. MT spot copied from the tank-in-cone spot in yan-p1-11 (Ruin III #2) under convention C-01 (boss faces north).",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.033,
+            0.318
+          ],
+          "method": "copy"
+        }
+      },
+      "unplaced": {
+        "OT": "Outside the cone, in range to Provoke (no fixed spot).",
+        "H1": "Not involved: stay out of the cone.",
+        "H2": "Not involved: stay out of the cone.",
+        "D1": "Not involved: stay out of the cone.",
+        "D2": "Not involved: stay out of the cone.",
+        "D3": "Not involved: stay out of the cone.",
+        "D4": "Not involved: stay out of the cone."
+      },
+      "shapes": [
+        {
+          "type": "cone",
+          "origin": [
+            0,
+            0
+          ],
+          "directionDeg": 0,
+          "angleDeg": 90,
+          "radius": 1.05,
+          "kind": "tankbuster",
+          "label": "Ruin III ×2 (90°)",
+          "source": "text"
+        }
+      ],
+      "carry": {
+        "note": "Everyone except MT stays in the south half from the pull, out of the cone."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 35, 42)."
+    },
+    "p1-graven-image-1/tether-knockback": {
+      "sources": [
+        {
+          "ref": "yan-p1-gi1"
+        },
+        {
+          "ref": "bmr-dmu"
+        },
+        {
+          "ref": "owner-replay-review"
+        }
+      ],
+      "note": "Only the tethered group is knocked back (BossMod Reborn: 13 y away from the statue, in a 20 y arena = 0.65 of the radius). Each tethered player stands where the push lands them on their next spot; if that spot is closer to the statue than the push, they hug the statue and walk back after. Everyone else goes straight to their spot. Computed from Yan's spots, not drawn by Yan.",
+      "shapes": [
+        {
+          "type": "tethers",
+          "from": "statue",
+          "targets": [
+            "MT",
+            "OT",
+            "H1",
+            "H2"
+          ],
+          "kind": "tether",
+          "label": "Statue tether on tanks+healers",
+          "when": {
+            "tether": "th"
+          }
+        },
+        {
+          "type": "tethers",
+          "from": "statue",
+          "targets": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "kind": "tether",
+          "label": "Statue tether on the DPS",
+          "when": {
+            "tether": "dps"
+          }
+        },
+        {
+          "type": "knockback",
+          "from": [
+            0,
+            0.995
+          ],
+          "through": [
+            0,
+            0
+          ],
+          "kind": "knockback",
+          "label": "Knockback 13 y away from the statue, tethered players only (BossMod Reborn)"
+        }
+      ],
+      "knockbackPrep": {
+        "from": [
+          0,
+          0.995
+        ],
+        "distance": 0.65,
+        "minGap": 0.06,
+        "roles": [
+          {
+            "when": {
+              "tether": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "tether": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "note": "Pre-knockback spot: the push lands you on your next spot (derived from Yan's spot and the 13 y knockback)."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 37, 43)."
+    },
+    "p1-graven-image-1/spread-ice-true": {
+      "image": "yan-p1-01",
+      "sources": [
+        {
+          "ref": "yan-p1-01"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.092,
+            0.492
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.361,
+            0.08
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.578,
+            0.505
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.903,
+            0.086
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.101,
+            -0.41
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.429,
+            -0.08
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.564,
+            -0.554
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.906,
+            -0.091
+          ],
+          "method": "auto"
+        }
+      },
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "danger",
+          "label": "Ice (true): shown and hits",
+          "example": true,
+          "telegraphed": true
+        },
+        {
+          "type": "spreads",
+          "radius": 0.193,
+          "kind": "spread",
+          "label": "Fire spreads"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/spread-ice-lie": {
+      "image": "yan-p1-01",
+      "sources": [
+        {
+          "ref": "yan-p1-01"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Faded icon set; read with contrast boost.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.057,
+            -0.472
+          ],
+          "method": "eye"
+        },
+        "OT": {
+          "at": [
+            -0.394,
+            -0.056
+          ],
+          "method": "eye"
+        },
+        "H1": {
+          "at": [
+            -0.502,
+            -0.554
+          ],
+          "method": "eye"
+        },
+        "H2": {
+          "at": [
+            -0.889,
+            -0.103
+          ],
+          "method": "eye"
+        },
+        "D1": {
+          "at": [
+            0.062,
+            0.476
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            0.517,
+            0.068
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            0.496,
+            0.503
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            0.887,
+            0.082
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NW",
+            "SE"
+          ],
+          "kind": "danger",
+          "label": "Real ice hit (not shown: Ice is a lie)",
+          "example": true,
+          "telegraphed": false
+        },
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "telegraph",
+          "label": "Shown ice (a lie: does not hit)",
+          "example": true
+        },
+        {
+          "type": "spreads",
+          "radius": 0.193,
+          "kind": "spread",
+          "label": "Fire spreads"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/stack-ice-true": {
+      "image": "yan-p1-02",
+      "sources": [
+        {
+          "ref": "yan-p1-02"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.212,
+            0.303
+          ],
+          "method": "auto",
+          "group": "th"
+        },
+        "OT": {
+          "at": [
+            -0.212,
+            0.303
+          ],
+          "method": "copy",
+          "group": "th"
+        },
+        "H1": {
+          "at": [
+            -0.212,
+            0.303
+          ],
+          "method": "copy",
+          "group": "th"
+        },
+        "H2": {
+          "at": [
+            -0.212,
+            0.303
+          ],
+          "method": "copy",
+          "group": "th"
+        },
+        "D1": {
+          "at": [
+            0.369,
+            -0.287
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D2": {
+          "at": [
+            0.369,
+            -0.287
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D3": {
+          "at": [
+            0.369,
+            -0.287
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D4": {
+          "at": [
+            0.369,
+            -0.287
+          ],
+          "method": "eye",
+          "group": "dps"
+        }
+      },
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "danger",
+          "label": "Ice (true): shown and hits",
+          "example": true,
+          "telegraphed": true
+        },
+        {
+          "type": "stacks",
+          "kind": "stack",
+          "label": "Fire stacks (size not shown by Yan)"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/stack-ice-lie": {
+      "image": "yan-p1-02",
+      "sources": [
+        {
+          "ref": "yan-p1-02"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Faded icon set; read with contrast boost.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.205,
+            -0.246
+          ],
+          "method": "eye",
+          "group": "th"
+        },
+        "OT": {
+          "at": [
+            -0.205,
+            -0.246
+          ],
+          "method": "eye",
+          "group": "th"
+        },
+        "H1": {
+          "at": [
+            -0.205,
+            -0.246
+          ],
+          "method": "eye",
+          "group": "th"
+        },
+        "H2": {
+          "at": [
+            -0.205,
+            -0.246
+          ],
+          "method": "eye",
+          "group": "th"
+        },
+        "D1": {
+          "at": [
+            0.318,
+            0.308
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D2": {
+          "at": [
+            0.318,
+            0.308
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D3": {
+          "at": [
+            0.318,
+            0.308
+          ],
+          "method": "eye",
+          "group": "dps"
+        },
+        "D4": {
+          "at": [
+            0.318,
+            0.308
+          ],
+          "method": "eye",
+          "group": "dps"
+        }
+      },
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NW",
+            "SE"
+          ],
+          "kind": "danger",
+          "label": "Real ice hit (not shown: Ice is a lie)",
+          "example": true,
+          "telegraphed": false
+        },
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "telegraph",
+          "label": "Shown ice (a lie: does not hit)",
+          "example": true
+        },
+        {
+          "type": "stacks",
+          "kind": "stack",
+          "label": "Fire stacks (size not shown by Yan)"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/beam-line": {
+      "image": "yan-p1-05",
+      "sources": [
+        {
+          "ref": "yan-p1-05"
+        }
+      ],
+      "positions": {
+        "H2": {
+          "at": [
+            -0.949,
+            0.024
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.695,
+            0.035
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.461,
+            0.034
+          ],
+          "method": "auto"
+        },
+        "MT": {
+          "at": [
+            -0.195,
+            0.035
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.162,
+            0.045
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.429,
+            0.043
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.685,
+            0.043
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.925,
+            0.055
+          ],
+          "method": "auto"
+        }
+      },
+      "shapes": [
+        {
+          "type": "beams",
+          "from": "statue",
+          "targets": [
+            "H2",
+            "MT",
+            "D1",
+            "D2"
+          ],
+          "width": 0.15,
+          "kind": "danger",
+          "label": "Beams (example targets: 2 supports + 2 DPS, random)",
+          "example": true
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/towers": {
+      "image": "yan-p1-06",
+      "sources": [
+        {
+          "ref": "yan-p1-06"
+        },
+        {
+          "ref": "yan-p1-05"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Tower centres = the example beam spots from yan-p1-05 (towers spawn where beams were taken).",
+      "positions": {
+        "H1": {
+          "at": [
+            -0.903,
+            -0.01
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.227,
+            0.079
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.146,
+            0.025
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.474,
+            0.008
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.472,
+            -0.123
+          ],
+          "method": "auto"
+        },
+        "MT": {
+          "at": [
+            -0.099,
+            -0.167
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.081,
+            -0.186
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.267,
+            -0.152
+          ],
+          "method": "auto"
+        }
+      },
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.949,
+              0.024
+            ],
+            [
+              -0.195,
+              0.035
+            ],
+            [
+              0.162,
+              0.045
+            ],
+            [
+              0.429,
+              0.043
+            ]
+          ],
+          "radius": 0.123,
+          "kind": "tower",
+          "label": "Towers (example spots)",
+          "example": true
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/trap-pass": {
+      "image": "yan-p1-07",
+      "sources": [
+        {
+          "ref": "yan-p1-07"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.336,
+            0
+          ],
+          "method": "auto",
+          "note": "holder; spot measured on Yan's H2 icon"
+        },
+        "D1": {
+          "at": [
+            0.311,
+            0.024
+          ],
+          "method": "auto",
+          "note": "holder; spot measured on Yan's D2 icon"
+        },
+        "OT": {
+          "at": [
+            -0.148,
+            -0.016
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.148,
+            -0.016
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.148,
+            -0.016
+          ],
+          "method": "copy"
+        },
+        "D2": {
+          "at": [
+            0.15,
+            0.01
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            0.15,
+            0.01
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            0.15,
+            0.01
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.336,
+              0
+            ],
+            [
+              0.311,
+              0.024
+            ]
+          ],
+          "radius": 0.3,
+          "kind": "stack",
+          "label": "Trap explosion + knockback (example holders)",
+          "example": true
+        },
+        {
+          "type": "knockback",
+          "from": [
+            -0.336,
+            0
+          ],
+          "through": [
+            -0.148,
+            -0.016
+          ],
+          "kind": "knockback",
+          "label": "Knockback: away from each holder, across the boss (direction only; distance not stated)",
+          "lane": -0.09
+        },
+        {
+          "type": "knockback",
+          "from": [
+            0.311,
+            0.024
+          ],
+          "through": [
+            0.15,
+            0.01
+          ],
+          "kind": "knockback",
+          "label": "",
+          "lane": -0.09
+        }
+      ],
+      "debuff": [
+        "MT",
+        "D1"
+      ],
+      "note": "Holders stand outside the target circle; everyone else stacks between holder and boss. Debuff holders follow the guide's example chain (owner, 2026-11-07): GI1 MT+D1 → H1+D3 → GI2 pass → H2+D4 → Tele-trouncing pass (last). Who gets it is random in the fight.",
+      "ownerNote": "Re-approved 2026-11-07 (item 27), including the restyled knockback arrows (item 25).",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-1/mystery-magic": {
+      "sources": [
+        {
+          "ref": "yan-p1-08"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Example spots after the dodge, read from yan-p1-08 (the dodge itself is player-adjusted). The debuff passed to one knocked-back player per group. Debuff holders follow the guide's example chain (owner, 2026-11-07): GI1 MT+D1 → H1+D3 → GI2 pass → H2+D4 → Tele-trouncing pass (last). Who gets it is random in the fight.",
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "ice2": "true"
+          },
+          "label": "Ice true: shown on NE+SW (example quadrants) and hits there.",
+          "example": true
+        },
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NW",
+            "SE"
+          ],
+          "kind": "danger",
+          "when": {
+            "ice2": "lie"
+          },
+          "label": "Ice lie: hits NW+SE, the quadrants that were not shown.",
+          "example": true
+        },
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "telegraph",
+          "when": {
+            "ice2": "lie"
+          },
+          "label": "Ice lie: shown on NE+SW (example quadrants); safe.",
+          "example": true
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunder": "true"
+          },
+          "label": "Thunder true: two NW-SE line AoEs (each 0.5 of the arena radius wide, measured from yan-p1-08), shown and hit.",
+          "example": true
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown lines are hit.",
+          "example": true
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown lines (yan-p1-08) are safe.",
+          "example": true
+        }
+      ],
+      "image": "yan-p1-08",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.082,
+            0.154
+          ],
+          "method": "eye",
+          "note": "holder stays west"
+        },
+        "D1": {
+          "at": [
+            0.16,
+            -0.041
+          ],
+          "method": "eye",
+          "note": "holder stays east"
+        },
+        "OT": {
+          "at": [
+            0.39,
+            -0.072
+          ],
+          "method": "eye"
+        },
+        "H1": {
+          "at": [
+            0.39,
+            -0.072
+          ],
+          "method": "eye"
+        },
+        "H2": {
+          "at": [
+            0.39,
+            -0.072
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            -0.123,
+            0.256
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.123,
+            0.256
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.123,
+            0.256
+          ],
+          "method": "eye"
+        }
+      },
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "ownerNote": "Approved 2026-11-07 (items 24, 27, 29, 32): Yan layout, Ice/Thunder variations, melee-uptime rule.",
+      "dodge": {
+        "margin": 0.035,
+        "maxShift": 0.8,
+        "keepSide": true,
+        "note": "Yan's spots (yan-p1-08) are for Ice true + Thunder true. For other combinations each player moves to the nearest safe spot: ranged and healers on their own side (tanks+healers east, DPS west), melee inside the boss's target ring. Those spots are derived from the drawn AoEs, not drawn by Yan.",
+        "melee": {
+          "roles": [
+            "MT",
+            "OT",
+            "D1",
+            "D2"
+          ],
+          "maxRadius": 0.3,
+          "note": "Melee (MT, OT, D1, D2) stay inside the boss's target ring (radius 0.30, measured from yan-p1-21), so they keep uptime; they may cross to the other side to do so (owner suggestion, item 29; not shown by Yan). If no safe spot exists there, they follow the general rule."
+        }
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/stack-south-1": {
+      "image": "yan-p1-09",
+      "sources": [
+        {
+          "ref": "yan-p1-09"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        },
+        "OT": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        },
+        "H1": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        },
+        "H2": {
+          "at": [
+            0.119,
+            -0.408
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            0.033,
+            -0.386
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            0.07,
+            -0.4
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "quadrants",
+          "quadrants": [
+            "NE",
+            "SW"
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "label": "Ice (Blizzard III blowout; example, true): shown and hits",
+          "example": true
+        },
+        {
+          "type": "stacks",
+          "kind": "stack",
+          "label": "Gravity-orb stack (size not shown by Yan)"
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/spread-1": {
+      "image": "yan-p1-10",
+      "sources": [
+        {
+          "ref": "yan-p1-10"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.474,
+            -0.15
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            0.427,
+            -0.15
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.488,
+            -0.796
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            0.482,
+            -0.775
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "spreads",
+          "radius": 0.24,
+          "kind": "spread",
+          "label": "Spread hits (tanks+healers here)",
+          "roles": [
+            "MT",
+            "OT",
+            "H1",
+            "H2"
+          ]
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/spread-1-dps": {
+      "sources": [
+        {
+          "ref": "yan-p1-10"
+        },
+        {
+          "ref": "yan-p1-13"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Not drawn by Yan: DPS take the tank/healer slots via the confirmed pairs MT↔D1, OT↔D2, H1↔D3, H2↔D4.",
+      "positions": {
+        "D1": {
+          "at": [
+            -0.474,
+            -0.15
+          ],
+          "method": "copy"
+        },
+        "D2": {
+          "at": [
+            0.427,
+            -0.15
+          ],
+          "method": "copy"
+        },
+        "D3": {
+          "at": [
+            -0.488,
+            -0.796
+          ],
+          "method": "copy"
+        },
+        "D4": {
+          "at": [
+            0.482,
+            -0.775
+          ],
+          "method": "copy"
+        },
+        "MT": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "copy"
+        },
+        "H2": {
+          "at": [
+            -0.006,
+            0.031
+          ],
+          "method": "copy"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "spreads",
+          "radius": 0.24,
+          "kind": "spread",
+          "label": "Spread hits (DPS here)",
+          "roles": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ]
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/ruin-half-room": {
+      "image": "yan-p1-11",
+      "sources": [
+        {
+          "ref": "yan-p1-11"
+        },
+        {
+          "ref": "ikuya-omnitank-p1"
+        }
+      ],
+      "note": "Tanks swapped from Yan's drawing per D-P1-01: OT takes the cone (Yan draws MT there).",
+      "positions": {
+        "OT": {
+          "at": [
+            -0.033,
+            0.318
+          ],
+          "method": "copy"
+        },
+        "MT": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        },
+        "H1": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        },
+        "H2": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        },
+        "D1": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.123,
+            -0.078
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            0,
+            0
+          ],
+          "directionDeg": 0,
+          "angleDeg": 90,
+          "radius": 1.05,
+          "kind": "tankbuster",
+          "label": "Ruin III ×2 on OT (90°)"
+        },
+        {
+          "type": "halfroom",
+          "fromDeg": 0,
+          "toDeg": 180,
+          "kind": "danger",
+          "label": "Half-room cleave (example: east). Unsafe side = the glowing statue side.",
+          "example": true
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/stack-north-2": {
+      "image": "yan-p1-12",
+      "sources": [
+        {
+          "ref": "yan-p1-12"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "OT": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "H1": {
+          "at": [
+            -0.066,
+            0.542
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "D1": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.03,
+            0.53
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (north)"
+        },
+        {
+          "type": "stacks",
+          "kind": "stack",
+          "label": "Gravity-orb stack (size not shown by Yan)"
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/spread-2": {
+      "image": "yan-p1-13",
+      "sources": [
+        {
+          "ref": "yan-p1-13"
+        }
+      ],
+      "positions": {
+        "D1": {
+          "at": [
+            -0.451,
+            0.205
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.421,
+            0.189
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            -0.451,
+            0.788
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.442,
+            0.787
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.005,
+            0.091
+          ],
+          "method": "auto"
+        },
+        "MT": {
+          "at": [
+            -0.03,
+            0.036
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.03,
+            0.036
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.005,
+            0.091
+          ],
+          "method": "copy"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (north)"
+        },
+        {
+          "type": "spreads",
+          "radius": 0.24,
+          "kind": "spread",
+          "label": "Spread hits (DPS here)",
+          "roles": [
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ]
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/spread-2-th": {
+      "sources": [
+        {
+          "ref": "yan-p1-13"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Not drawn by Yan: tanks/healers take the DPS slots via MT↔D1, OT↔D2, H1↔D3, H2↔D4.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.451,
+            0.205
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            0.421,
+            0.189
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.451,
+            0.788
+          ],
+          "method": "copy"
+        },
+        "H2": {
+          "at": [
+            0.442,
+            0.787
+          ],
+          "method": "copy"
+        },
+        "D1": {
+          "at": [
+            -0.02,
+            0.06
+          ],
+          "method": "copy"
+        },
+        "D2": {
+          "at": [
+            -0.02,
+            0.06
+          ],
+          "method": "copy"
+        },
+        "D3": {
+          "at": [
+            -0.02,
+            0.06
+          ],
+          "method": "copy"
+        },
+        "D4": {
+          "at": [
+            -0.02,
+            0.06
+          ],
+          "method": "copy"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (north)"
+        },
+        {
+          "type": "spreads",
+          "radius": 0.24,
+          "kind": "spread",
+          "label": "Spread hits (tanks+healers here)",
+          "roles": [
+            "MT",
+            "OT",
+            "H1",
+            "H2"
+          ]
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-graven-image-2/trap-pass": {
+      "image": "yan-p1-14",
+      "sources": [
+        {
+          "ref": "yan-p1-14"
+        }
+      ],
+      "positions": {
+        "H1": {
+          "at": [
+            -0.242,
+            0
+          ],
+          "method": "auto",
+          "note": "example holder"
+        },
+        "D3": {
+          "at": [
+            0.205,
+            0.014
+          ],
+          "method": "auto",
+          "note": "example holder"
+        },
+        "MT": {
+          "at": [
+            -0.168,
+            0.148
+          ],
+          "method": "eye"
+        },
+        "H2": {
+          "at": [
+            -0.168,
+            0.148
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.168,
+            0.148
+          ],
+          "method": "copy"
+        },
+        "D2": {
+          "at": [
+            0.145,
+            -0.167
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.145,
+            -0.167
+          ],
+          "method": "copy"
+        },
+        "D1": {
+          "at": [
+            0.145,
+            -0.167
+          ],
+          "method": "copy"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (north)"
+        },
+        {
+          "type": "knockback",
+          "from": [
+            -0.242,
+            0
+          ],
+          "through": [
+            -0.168,
+            0.148
+          ],
+          "kind": "knockback",
+          "label": "Knockback: holder blasts each group into its puddle (direction from yan-p1-14→15; arrow drawn to the puddle's far edge, exact distance not stated)",
+          "to": [
+            -0.043,
+            0.429
+          ],
+          "end": [
+            0.09,
+            0.715
+          ]
+        },
+        {
+          "type": "knockback",
+          "from": [
+            0.205,
+            0.014
+          ],
+          "through": [
+            0.145,
+            -0.167
+          ],
+          "kind": "knockback",
+          "label": "",
+          "to": [
+            -0.025,
+            -0.386
+          ],
+          "end": [
+            -0.182,
+            -0.66
+          ]
+        }
+      ],
+      "debuff": [
+        "H1",
+        "D3"
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (items 14/16); restyled knockback arrows approved (item 25)."
+    },
+    "p1-graven-image-2/into-puddles": {
+      "image": "yan-p1-15",
+      "sources": [
+        {
+          "ref": "yan-p1-15"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            -0.043,
+            0.429
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            -0.043,
+            0.429
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.043,
+            0.429
+          ],
+          "method": "copy"
+        },
+        "H2": {
+          "at": [
+            -0.043,
+            0.429
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            -0.025,
+            -0.386
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            -0.025,
+            -0.386
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.025,
+            -0.386
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.025,
+            -0.386
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              -0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (south)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.006,
+              0.488
+            ]
+          ],
+          "radius": 0.246,
+          "kind": "puddle",
+          "label": "Gravity puddle (north)"
+        }
+      ],
+      "debuff": [
+        "H2",
+        "D4"
+      ],
+      "frames": [
+        {
+          "label": "Knockback lands: groups in the puddles, holders still outside",
+          "debuff": [
+            "H2",
+            "D4"
+          ],
+          "positions": {
+            "H1": {
+              "at": [
+                -0.242,
+                0
+              ],
+              "method": "copy"
+            },
+            "D3": {
+              "at": [
+                0.205,
+                0.014
+              ],
+              "method": "copy"
+            }
+          }
+        }
+      ],
+      "note": "Yan: the knockback carries each group into Graviga, then the holder follows into the same puddle (tanks+healers north, DPS south). Debuff holders follow the guide's example chain (owner, 2026-11-07): GI1 MT+D1 → H1+D3 → GI2 pass → H2+D4 → Tele-trouncing pass (last). Who gets it is random in the fight.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-tele-trouncing/arrows": {
+      "image": "yan-p1-17",
+      "sources": [
+        {
+          "ref": "yan-p1-17"
+        },
+        {
+          "ref": "yan-p1-16"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "8:10"
+        },
+        {
+          "ref": "bmr-dmu"
+        },
+        {
+          "ref": "owner-replay-review"
+        }
+      ],
+      "shapes": [
+        {
+          "type": "tiles",
+          "frames": [
+            {
+              "colour": "red",
+              "rect": [
+                -0.777,
+                0.81,
+                -0.515,
+                0.189
+              ],
+              "arrows": [
+                "down",
+                "down"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.433,
+                0.81,
+                -0.17,
+                0.189
+              ],
+              "arrows": [
+                "left",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.162,
+                0.806,
+                0.784,
+                0.542
+              ],
+              "arrows": [
+                "left",
+                "left"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.162,
+                0.459,
+                0.784,
+                0.197
+              ],
+              "arrows": [
+                "right",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.515,
+                -0.16,
+                0.777,
+                -0.782
+              ],
+              "arrows": [
+                "up",
+                "up"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.168,
+                -0.16,
+                0.431,
+                -0.782
+              ],
+              "arrows": [
+                "down",
+                "right"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                -0.786,
+                -0.525,
+                -0.162,
+                -0.788
+              ],
+              "arrows": [
+                "right",
+                "right"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.786,
+                -0.178,
+                -0.164,
+                -0.443
+              ],
+              "arrows": [
+                "down",
+                "left"
+              ]
+            }
+          ],
+          "kind": "object",
+          "label": "Arrow tiles (Yan): red frame = same arrows, blue frame = different arrows. Faint = no arrow dropped yet."
+        }
+      ],
+      "debuff": [
+        "H2",
+        "D4"
+      ],
+      "frames": [
+        {
+          "label": "Arrow debuffs go out",
+          "positions": {}
+        },
+        {
+          "label": "First arrows drop (short timers)",
+          "positions": {}
+        }
+      ],
+      "arrowDrops": {
+        "assign": [
+          {
+            "when": {
+              "arrows": "th-different"
+            },
+            "pairs": {
+              "MT": [
+                "up",
+                "right"
+              ],
+              "OT": [
+                "right",
+                "down"
+              ],
+              "H1": [
+                "left",
+                "up"
+              ],
+              "H2": [
+                "down",
+                "left"
+              ],
+              "D1": [
+                "down",
+                "down"
+              ],
+              "D2": [
+                "right",
+                "right"
+              ],
+              "D3": [
+                "up",
+                "up"
+              ],
+              "D4": [
+                "left",
+                "left"
+              ]
+            }
+          },
+          {
+            "when": {
+              "arrows": "th-same"
+            },
+            "pairs": {
+              "MT": [
+                "down",
+                "down"
+              ],
+              "OT": [
+                "right",
+                "right"
+              ],
+              "H1": [
+                "up",
+                "up"
+              ],
+              "H2": [
+                "left",
+                "left"
+              ],
+              "D1": [
+                "up",
+                "right"
+              ],
+              "D2": [
+                "right",
+                "down"
+              ],
+              "D3": [
+                "left",
+                "up"
+              ],
+              "D4": [
+                "down",
+                "left"
+              ]
+            }
+          }
+        ],
+        "note": "Your tile cell for this example arrow pair (Yan's tile layout, yan-p1-17). The arrow drops where you stand when its timer runs out.",
+        "sources": [
+          {
+            "ref": "yan-p1-16"
+          },
+          {
+            "ref": "yan-p1-17"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "8:10"
+          }
+        ]
+      },
+      "note": "Example deal of arrow pairs, taken from Yan's status-bar screenshot (yan-p1-16): rows 2–5 (two different arrows) are read as MT, OT, H1, H2 and the four same-arrow rows as DPS, assuming the game's usual party-list order with your own row first. Which role gets the matching pairs, and who gets which pair, is random each pull (Azurite video 8:10). Debuffs go out when the Tele-trouncing cast ends (2:31.5, first step: nobody moves yet, owner round 10); the short-timer arrows drop at 2:39.4 and the long-timer ones at 2:42.4 (cactbot). With the same arrow twice, either cell can come first (Azurite video). The trap holders H2 and D4 match the 10 s debuff rows in the same screenshot.",
+      "carry": {
+        "note": "The debuffs go out while everyone still stands where Hyperdrive #2 left them: read your arrows, then walk to your frame."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 49 and 52, round 10 verdicts); recorded 2026-11-08."
+    },
+    "p1-tele-trouncing/trap-pass": {
+      "image": "yan-p1-18",
+      "sources": [
+        {
+          "ref": "yan-p1-18"
+        }
+      ],
+      "positions": {
+        "H2": {
+          "at": [
+            -0.333,
+            -0.003
+          ],
+          "method": "auto",
+          "note": "holder; spot measured on Yan's MT icon"
+        },
+        "D4": {
+          "at": [
+            0.31,
+            0.021
+          ],
+          "method": "auto",
+          "note": "holder; spot measured on Yan's D2 icon"
+        },
+        "MT": {
+          "at": [
+            -0.19,
+            0.011
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            -0.19,
+            0.011
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            -0.19,
+            0.011
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.12,
+            0
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            0.12,
+            0
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            0.12,
+            0
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "tiles",
+          "frames": [
+            {
+              "colour": "red",
+              "rect": [
+                -0.777,
+                0.81,
+                -0.515,
+                0.189
+              ],
+              "arrows": [
+                "down",
+                "down"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.433,
+                0.81,
+                -0.17,
+                0.189
+              ],
+              "arrows": [
+                "left",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.162,
+                0.806,
+                0.784,
+                0.542
+              ],
+              "arrows": [
+                "left",
+                "left"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.162,
+                0.459,
+                0.784,
+                0.197
+              ],
+              "arrows": [
+                "right",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.515,
+                -0.16,
+                0.777,
+                -0.782
+              ],
+              "arrows": [
+                "up",
+                "up"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.168,
+                -0.16,
+                0.431,
+                -0.782
+              ],
+              "arrows": [
+                "down",
+                "right"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                -0.786,
+                -0.525,
+                -0.162,
+                -0.788
+              ],
+              "arrows": [
+                "right",
+                "right"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.786,
+                -0.178,
+                -0.164,
+                -0.443
+              ],
+              "arrows": [
+                "down",
+                "left"
+              ]
+            }
+          ],
+          "kind": "object",
+          "label": "Arrow tiles: red frame = same arrows, blue frame = different arrows (follow your own arrows)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.333,
+              -0.003
+            ],
+            [
+              0.31,
+              0.021
+            ]
+          ],
+          "radius": 0.3,
+          "kind": "stack",
+          "label": "Trap explosion + knockback (example holders)",
+          "example": true
+        },
+        {
+          "type": "knockback",
+          "from": [
+            -0.333,
+            -0.003
+          ],
+          "through": [
+            -0.19,
+            0.011
+          ],
+          "kind": "knockback",
+          "label": "Knockback: away from each holder, across the boss (direction only; distance not stated)",
+          "lane": -0.09
+        },
+        {
+          "type": "knockback",
+          "from": [
+            0.31,
+            0.021
+          ],
+          "through": [
+            0.12,
+            0
+          ],
+          "kind": "knockback",
+          "label": "",
+          "lane": -0.09
+        }
+      ],
+      "debuff": [
+        "H2",
+        "D4"
+      ],
+      "note": "Last trap pass; the debuff is gone afterwards. Debuff holders follow the guide's example chain (owner, 2026-11-07): GI1 MT+D1 → H1+D3 → GI2 pass → H2+D4 → Tele-trouncing pass (last). Who gets it is random in the fight.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (items 14/16); restyled knockback arrows approved (item 25)."
+    },
+    "p1-tele-trouncing/tele-spread": {
+      "image": "yan-p1-19",
+      "sources": [
+        {
+          "ref": "yan-p1-19"
+        }
+      ],
+      "note": "yan-p1-19 is 1200 px; measured after scaling to 2000 px.",
+      "positions": {
+        "D1": {
+          "at": [
+            -0.208,
+            -0.192
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.179,
+            -0.192
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.474,
+            -0.474
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            0.463,
+            -0.467
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            -0.503,
+            0.482
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            0.462,
+            0.646
+          ],
+          "method": "eye"
+        },
+        "MT": {
+          "at": [
+            -0.205,
+            0.246
+          ],
+          "method": "eye"
+        },
+        "OT": {
+          "at": [
+            0.195,
+            0.226
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "tiles",
+          "frames": [
+            {
+              "colour": "red",
+              "rect": [
+                -0.777,
+                0.81,
+                -0.515,
+                0.189
+              ],
+              "arrows": [
+                "down",
+                "down"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.433,
+                0.81,
+                -0.17,
+                0.189
+              ],
+              "arrows": [
+                "left",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.162,
+                0.806,
+                0.784,
+                0.542
+              ],
+              "arrows": [
+                "left",
+                "left"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.162,
+                0.459,
+                0.784,
+                0.197
+              ],
+              "arrows": [
+                "right",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.515,
+                -0.16,
+                0.777,
+                -0.782
+              ],
+              "arrows": [
+                "up",
+                "up"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.168,
+                -0.16,
+                0.431,
+                -0.782
+              ],
+              "arrows": [
+                "down",
+                "right"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                -0.786,
+                -0.525,
+                -0.162,
+                -0.788
+              ],
+              "arrows": [
+                "right",
+                "right"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.786,
+                -0.178,
+                -0.164,
+                -0.443
+              ],
+              "arrows": [
+                "down",
+                "left"
+              ]
+            }
+          ],
+          "kind": "object",
+          "label": "Arrow tiles: red frame = same arrows, blue frame = different arrows (follow your own arrows)"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-tele-trouncing/confusion": {
+      "image": "yan-p1-19",
+      "sources": [
+        {
+          "ref": "azurite-p1",
+          "at": "8:40"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "10:41"
+        },
+        {
+          "ref": "yan-p1-17"
+        },
+        {
+          "ref": "yan-p1-19"
+        },
+        {
+          "ref": "bmr-dmu"
+        },
+        {
+          "ref": "owner-replay-review"
+        }
+      ],
+      "note": "Nothing here is measured from a confusion diagram: Yan has none. The first arrow, the chain and the jumps are computed from Yan's tiles (yan-p1-17) and teleport-spread spots (yan-p1-19).",
+      "positions": {},
+      "shapes": [
+        {
+          "type": "tiles",
+          "frames": [
+            {
+              "colour": "red",
+              "rect": [
+                -0.777,
+                0.81,
+                -0.515,
+                0.189
+              ],
+              "arrows": [
+                "down",
+                "down"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.433,
+                0.81,
+                -0.17,
+                0.189
+              ],
+              "arrows": [
+                "left",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.162,
+                0.806,
+                0.784,
+                0.542
+              ],
+              "arrows": [
+                "left",
+                "left"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.162,
+                0.459,
+                0.784,
+                0.197
+              ],
+              "arrows": [
+                "right",
+                "up"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                0.515,
+                -0.16,
+                0.777,
+                -0.782
+              ],
+              "arrows": [
+                "up",
+                "up"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                0.168,
+                -0.16,
+                0.431,
+                -0.782
+              ],
+              "arrows": [
+                "down",
+                "right"
+              ]
+            },
+            {
+              "colour": "red",
+              "rect": [
+                -0.786,
+                -0.525,
+                -0.162,
+                -0.788
+              ],
+              "arrows": [
+                "right",
+                "right"
+              ]
+            },
+            {
+              "colour": "blue",
+              "rect": [
+                -0.786,
+                -0.178,
+                -0.164,
+                -0.443
+              ],
+              "arrows": [
+                "down",
+                "left"
+              ]
+            }
+          ],
+          "kind": "object",
+          "label": "Arrow tiles: a used-up arrow goes dark again. Dashed line = a teleport."
+        }
+      ],
+      "frames": [
+        {
+          "label": "Confused players walk at their partner and step into the first arrow",
+          "positions": {}
+        },
+        {
+          "label": "Teleport 1",
+          "positions": {}
+        },
+        {
+          "label": "Teleport 2",
+          "positions": {}
+        },
+        {
+          "label": "Teleport 3",
+          "positions": {}
+        }
+      ],
+      "teleports": {
+        "from": "p1-tele-trouncing/tele-spread",
+        "confused": [
+          {
+            "when": {
+              "confused": "th"
+            },
+            "roles": [
+              "MT",
+              "OT",
+              "H1",
+              "H2"
+            ]
+          },
+          {
+            "when": {
+              "confused": "dps"
+            },
+            "roles": [
+              "D1",
+              "D2",
+              "D3",
+              "D4"
+            ]
+          }
+        ],
+        "hops": 4,
+        "note": "Confused: walks at the other player in their quadrant, steps into the arrow between them and is teleported along the arrows. Each jump lands on the next arrow of the quadrant; the jump length is read from Yan's tile layout, not from a source.",
+        "sources": [
+          {
+            "ref": "azurite-p1",
+            "at": "8:40"
+          },
+          {
+            "ref": "owner-replay-review"
+          }
+        ]
+      },
+      "carry": {
+        "note": "Asleep: stays on the teleport-spread spot."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 53-55, round 11 verdicts); recorded 2026-11-08."
+    },
+    "p1-tele-trouncing/final-spread": {
+      "image": "yan-p1-21",
+      "sources": [
+        {
+          "ref": "yan-p1-21"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Base spots from yan-p1-21 (fixed spread).",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.393,
+            -0.368
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            0.356,
+            -0.362
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            -0.41,
+            0.369
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            0.355,
+            0.371
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            -0.965,
+            0.229
+          ],
+          "method": "auto",
+          "alt": [
+            -0.961,
+            -0.241
+          ]
+        },
+        "D4": {
+          "at": [
+            -0.256,
+            0.956
+          ],
+          "method": "auto",
+          "alt": [
+            0.215,
+            0.96
+          ]
+        },
+        "H2": {
+          "at": [
+            0.948,
+            0.224
+          ],
+          "method": "auto",
+          "alt": [
+            0.948,
+            -0.228
+          ]
+        },
+        "H1": {
+          "at": [
+            -0.254,
+            -0.948
+          ],
+          "method": "auto",
+          "alt": [
+            0.232,
+            -0.942
+          ]
+        }
+      },
+      "shapes": [
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NW-SE lines (top pair, one over A) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NW-SE lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NW-SE lines (top pair, one over A) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NW-SE lines (bottom pair, one over C) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NW-SE lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NW-SE lines (bottom pair, one over C) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NE-SW lines (top pair, one over A) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NE-SW lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NE-SW lines (top pair, one over A) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NE-SW lines (bottom pair, one over C) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NE-SW lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NE-SW lines (bottom pair, one over C) are safe."
+        }
+      ],
+      "unmeasured": [
+        "Fire spread size for this cast"
+      ],
+      "ownerNote": "Approved 2026-11-07 (items 17, 30, 33): Thunder layouts with true/lie and derived shuffles.",
+      "dodge": {
+        "margin": 0.07,
+        "maxShift": 0.35,
+        "note": "Yan draws one example per resolution, with every spot on a band edge. Here each player steps to the nearest spot clear of where Thunder really hits; a ranged role with two candidate spots takes the one needing the smaller move, and only that one is shown. These moved spots are derived from the measured bands, not drawn by Yan. Spread distances are not checked (Fire spread size for this cast is unmeasured)."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-tele-trouncing/final-stack": {
+      "image": "yan-p1-22",
+      "sources": [
+        {
+          "ref": "yan-p1-22"
+        }
+      ],
+      "positions": {
+        "MT": {
+          "at": [
+            0.3,
+            -0.31
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            0.3,
+            -0.31
+          ],
+          "method": "copy"
+        },
+        "H1": {
+          "at": [
+            0.3,
+            -0.31
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            0.3,
+            -0.31
+          ],
+          "method": "copy"
+        },
+        "D1": {
+          "at": [
+            -0.39,
+            0.41
+          ],
+          "method": "eye"
+        },
+        "D2": {
+          "at": [
+            -0.39,
+            0.41
+          ],
+          "method": "eye"
+        },
+        "D3": {
+          "at": [
+            -0.39,
+            0.41
+          ],
+          "method": "eye"
+        },
+        "D4": {
+          "at": [
+            -0.39,
+            0.41
+          ],
+          "method": "eye"
+        }
+      },
+      "shapes": [
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NW-SE lines (top pair, one over A) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NW-SE lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NW-SE lines (top pair, one over A) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NW-SE lines (bottom pair, one over C) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NW-SE lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nwse",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nwse",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NW-SE lines (bottom pair, one over C) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NE-SW lines (top pair, one over A) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NE-SW lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "top",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NE-SW lines (top pair, one over A) are safe."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "danger",
+          "telegraphed": true,
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "true"
+          },
+          "label": "Thunder true: the shown NE-SW lines (bottom pair, one over C) hit. Width and grid measured from yan-p1-21/22."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -0.5,
+              0
+            ],
+            [
+              0.5,
+              1.2
+            ]
+          ],
+          "kind": "danger",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the stripes between the shown NE-SW lines hit."
+        },
+        {
+          "type": "bands",
+          "axis": "nesw",
+          "ranges": [
+            [
+              -1.2,
+              -0.5
+            ],
+            [
+              0,
+              0.5
+            ]
+          ],
+          "kind": "telegraph",
+          "when": {
+            "thunderDir": "nesw",
+            "thunderLines": "bottom",
+            "thunder": "lie"
+          },
+          "label": "Thunder lie: the shown NE-SW lines (bottom pair, one over C) are safe."
+        },
+        {
+          "type": "stacks",
+          "kind": "stack",
+          "label": "Fire stacks: tanks+healers at 3, DPS at 1"
+        }
+      ],
+      "ownerNote": "Approved 2026-11-07 (items 18, 30, 33): Thunder layouts with true/lie and derived shuffles.",
+      "dodge": {
+        "margin": 0.07,
+        "maxShift": 0.35,
+        "note": "Yan draws one example per resolution, with every spot on a band edge. Here each player steps to the nearest spot clear of where Thunder really hits; a ranged role with two candidate spots takes the one needing the smaller move, and only that one is shown. These moved spots are derived from the measured bands, not drawn by Yan."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "p1-light-of-judgment-1/raidwide": {
+      "sources": [
+        {
+          "ref": "yan-p1-loj1"
+        }
+      ],
+      "note": "Raidwide: no positions. Mitigate late in the cast so it also covers Hyperdrive.",
+      "positions": {},
+      "shapes": [
+        {
+          "type": "raidwide",
+          "kind": "danger",
+          "label": "Raidwide (everyone)"
+        }
+      ],
+      "carry": {
+        "note": "Raidwide: nobody needs to move."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 36)."
+    },
+    "p1-light-of-judgment-2/raidwide": {
+      "sources": [
+        {
+          "ref": "yan-p1-loj2"
+        }
+      ],
+      "note": "Raidwide: no positions. Mitigate late in the cast so it also covers Hyperdrive.",
+      "positions": {},
+      "shapes": [
+        {
+          "type": "raidwide",
+          "kind": "danger",
+          "label": "Raidwide (everyone)"
+        }
+      ],
+      "carry": {
+        "note": "Raidwide: nobody needs to move."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 36)."
+    },
+    "p1-hyperdrive-1/hits": {
+      "sources": [
+        {
+          "ref": "yan-p1-11"
+        },
+        {
+          "ref": "owner-p1-review"
+        },
+        {
+          "ref": "ikuya-omnitank-p1"
+        }
+      ],
+      "note": "No Yan diagram. OT holds aggro (Ikuya plan) and tanks the boss facing north (C-01); spot copied from the Ruin III tank spot.",
+      "positions": {
+        "OT": {
+          "at": [
+            -0.033,
+            0.318
+          ],
+          "method": "copy"
+        }
+      },
+      "unplaced": {
+        "MT": "Not the target.",
+        "H1": "Not involved.",
+        "H2": "Not involved.",
+        "D1": "Not involved.",
+        "D2": "Not involved.",
+        "D3": "Not involved.",
+        "D4": "Not involved."
+      },
+      "shapes": [
+        {
+          "type": "target",
+          "role": "OT",
+          "text": "×3",
+          "kind": "tankbuster",
+          "label": "Hyperdrive: 3 hits on OT (size not shown by any source)"
+        }
+      ],
+      "carry": {
+        "note": "Only the tank holding aggro is hit; nobody else needs to move."
+      },
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 36)."
+    },
+    "p1-hyperdrive-2/hits": {
+      "sources": [
+        {
+          "ref": "yan-p1-11"
+        },
+        {
+          "ref": "owner-p1-review"
+        },
+        {
+          "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "owner-replay-review"
+        }
+      ],
+      "note": "No Yan diagram. MT holds aggro (Ikuya plan) and tanks the boss facing north (C-01); spot copied from the Ruin III tank spot. Everyone else waits in the south half, away from MT (owner, round 10; dots illustrative, same as the pre-pull).",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.033,
+            0.318
+          ],
+          "method": "copy"
+        },
+        "OT": {
+          "at": [
+            -0.22,
+            -0.4
+          ],
+          "method": "loose"
+        },
+        "D1": {
+          "at": [
+            0.1,
+            -0.45
+          ],
+          "method": "loose"
+        },
+        "D2": {
+          "at": [
+            0.3,
+            -0.4
+          ],
+          "method": "loose"
+        },
+        "H1": {
+          "at": [
+            -0.5,
+            -0.45
+          ],
+          "method": "loose"
+        },
+        "H2": {
+          "at": [
+            -0.3,
+            -0.6
+          ],
+          "method": "loose"
+        },
+        "D3": {
+          "at": [
+            0.5,
+            -0.5
+          ],
+          "method": "loose"
+        },
+        "D4": {
+          "at": [
+            0.15,
+            -0.65
+          ],
+          "method": "loose"
+        }
+      },
+      "shapes": [
+        {
+          "type": "target",
+          "role": "MT",
+          "text": "×3",
+          "kind": "tankbuster",
+          "label": "Hyperdrive: 3 hits on MT (size not shown by any source)"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-08",
+      "ownerNote": "Approved 2026-11-08 (stage 5 review item 51)."
+    },
+    "p1-phase-transition/time-up": {
+      "sources": [
+        {
+          "ref": "yan-p1-timeout"
+        },
+        {
+          "ref": "cactbot-dmu",
+          "at": "202.4"
+        }
+      ],
+      "note": "Kefka is untargetable. At 14.9% HP or below the fight moves to P2; above it, the enrage follows (cactbot, unconfirmed).",
+      "carry": {
+        "note": "Nothing to dodge; everyone stays where the final spread/stack left them."
+      },
+      "shapes": [
+        {
+          "type": "raidwide",
+          "kind": "danger",
+          "label": "Only if Kefka is above 14.9% HP: Light of Judgment (enrage) wipes the party"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 40)."
+    }
+  },
+  "debuffChain": {
+    "name": "Double-Trouble Trap",
+    "note": "Debuff holders follow the guide's example chain (owner, 2026-11-07): GI1 MT+D1 → H1+D3 → GI2 pass → H2+D4 → Tele-trouncing pass (last). Who gets it is random in the fight.",
+    "sources": [
+      {
+        "ref": "owner-p1-review"
+      },
+      {
+        "ref": "yan-p1-14"
+      },
+      {
+        "ref": "yan-p1-15"
+      }
+    ]
+  },
+  "variations": {
+    "p1-graven-image-1": {
+      "groups": [
+        {
+          "id": "tether",
+          "label": "Statue tether (Pulse Wave)",
+          "options": [
+            {
+              "id": "th",
+              "label": "Tanks + healers"
+            },
+            {
+              "id": "dps",
+              "label": "DPS"
+            }
+          ],
+          "note": "The statue tethers either all tanks+healers or all DPS; only they are knocked back."
+        },
+        {
+          "id": "fire",
+          "label": "Fire (1st Mystery Magic)",
+          "options": [
+            {
+              "id": "spread",
+              "label": "True"
+            },
+            {
+              "id": "stack",
+              "label": "Lie"
+            }
+          ],
+          "note": "True = spread, Lie = stack. Owner (round 9): same effect as choosing spread/stack, for consistency with the other true/lie rows. This assumes Kefka shows individual spread markers here; with a stack marker the two would swap."
+        },
+        {
+          "id": "ice",
+          "label": "Ice (1st Mystery Magic)",
+          "options": [
+            {
+              "id": "true",
+              "label": "True"
+            },
+            {
+              "id": "lie",
+              "label": "Lie"
+            }
+          ]
+        },
+        {
+          "id": "ice2",
+          "label": "Ice (2nd Mystery Magic)",
+          "options": [
+            {
+              "id": "true",
+              "label": "True"
+            },
+            {
+              "id": "lie",
+              "label": "Lie"
+            }
+          ],
+          "note": "A separate cast from the first Ice; chosen on its own."
+        },
+        {
+          "id": "thunder",
+          "label": "Thunder (2nd Mystery Magic)",
+          "options": [
+            {
+              "id": "true",
+              "label": "True"
+            },
+            {
+              "id": "lie",
+              "label": "Lie"
+            }
+          ]
+        }
+      ],
+      "branches": {
+        "spread-ice-true": {
+          "fire": "spread",
+          "ice": "true"
+        },
+        "spread-ice-lie": {
+          "fire": "spread",
+          "ice": "lie"
+        },
+        "stack-ice-true": {
+          "fire": "stack",
+          "ice": "true"
+        },
+        "stack-ice-lie": {
+          "fire": "stack",
+          "ice": "lie"
+        }
+      }
+    },
+    "p1-tele-trouncing": {
+      "groups": [
+        {
+          "id": "arrows",
+          "label": "Arrow debuffs",
+          "options": [
+            {
+              "id": "th-different",
+              "label": "Tanks + healers: two different"
+            },
+            {
+              "id": "th-same",
+              "label": "Tanks + healers: two the same"
+            }
+          ],
+          "note": "One role gets two different arrows, the other two of the same (Azurite video 8:10). The pairs within a role are an example (Yan's status-bar screenshot)."
+        },
+        {
+          "id": "confused",
+          "label": "Confused",
+          "options": [
+            {
+              "id": "th",
+              "label": "Tanks + healers confused"
+            },
+            {
+              "id": "dps",
+              "label": "DPS confused"
+            }
+          ],
+          "note": "The statue tethers one role to confusion and the other to sleep (Azurite video 8:40). Yan's fixed spread puts one support and one DPS in each quadrant, so either way one player per quadrant is confused."
+        },
+        {
+          "id": "fire",
+          "label": "Fire",
+          "options": [
+            {
+              "id": "spread",
+              "label": "Spread"
+            },
+            {
+              "id": "stack",
+              "label": "Stack"
+            }
+          ],
+          "note": "How Fire resolves after reading true/lie."
+        },
+        {
+          "id": "thunderDir",
+          "label": "Thunder direction",
+          "options": [
+            {
+              "id": "nwse",
+              "label": "NW ↘ SE"
+            },
+            {
+              "id": "nesw",
+              "label": "NE ↙ SW"
+            }
+          ],
+          "note": "Direction of the lines the game shows."
+        },
+        {
+          "id": "thunderLines",
+          "label": "Thunder lines shown",
+          "options": [
+            {
+              "id": "top",
+              "label": "Top pair (over A)"
+            },
+            {
+              "id": "bottom",
+              "label": "Bottom pair (over C)"
+            }
+          ]
+        },
+        {
+          "id": "thunder",
+          "label": "Thunder",
+          "options": [
+            {
+              "id": "true",
+              "label": "True"
+            },
+            {
+              "id": "lie",
+              "label": "Lie"
+            }
+          ],
+          "note": "True: the shown lines hit. Lie: the stripes between them hit."
+        }
+      ],
+      "branches": {
+        "spread": {
+          "fire": "spread"
+        },
+        "stack": {
+          "fire": "stack"
+        }
+      }
+    }
+  },
+  "seeAlso": {
+    "p1-revolting-ruin-iii-2": [
+      "p1-graven-image-2/ruin-half-room"
+    ]
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "phase": 1,
+  "about": "Hand-authored layer on top of the generated Ikuya data (p1.ikuya.json). Holds what the sheet cannot say: which mechanic each damage event belongs to, typo aliases, and owner-facing notes. Re-running scripts/extract_ikuya.py never touches this file.",
+  "sheets": {
+    "phase": {
+      "name": "P1 | Kefka",
+      "file": "sheet6",
+      "firstRow": 8,
+      "lastRow": 28,
+      "notesCell": "D30",
+      "timeColumns": {
+        "absolute": "D",
+        "phaseRelative": "E"
+      }
+    },
+    "omnitank": {
+      "name": "Omnitank",
+      "file": "sheet15",
+      "firstRow": 8,
+      "lastRow": 14,
+      "notesCell": "D16",
+      "timeColumns": {
+        "absolute": "D"
+      }
+    }
+  },
+  "columns": {
+    "phase": {
+      "F": "MT",
+      "H": "OT",
+      "J": "WHM",
+      "L": "AST",
+      "N": "SCH",
+      "P": "SGE",
+      "R": "D1",
+      "T": "D2",
+      "V": "D3",
+      "X": "D4",
+      "Z": "Extras"
+    },
+    "omnitank": {
+      "E": "MT",
+      "I": "OT"
+    }
+  },
+  "aliases": {
+    "Serpah": "Seraph"
+  },
+  "links": {
+    "ik-ot-p1-0016": {
+      "mechanic": "p1-revolting-ruin-iii-1",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "yan-p1-ruin"
+        }
+      ],
+      "note": "Same name and targeting rule.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0038": {
+      "mechanic": "p1-graven-image-1",
+      "state": "spread-ice-true",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "0:30"
+        }
+      ],
+      "note": "First Mystery Magic = the Fire + Ice true/lie that opens Graven Image I. Applies to all four Fire/Ice branches; the link points at the first.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0043": {
+      "mechanic": "p1-graven-image-1",
+      "state": "beam-line",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "2:06"
+        }
+      ],
+      "note": "Wave Cannon = the statue's line AoEs (beams). Ikuya: targeted mitigation does not work on it, consistent with a line hit from the statue.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0050": {
+      "mechanic": "p1-graven-image-1",
+      "state": "trap-pass",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "yan-p1-gi1"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0103": {
+      "mechanic": "p1-light-of-judgment-1",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "yan-p1-loj1"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-ot-p1-0105": {
+      "mechanic": "p1-hyperdrive-1",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "yan-p1-hd1"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0128": {
+      "mechanic": "p1-graven-image-2",
+      "state": "stack-south-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Gravitas II Part I = round-1 gravity stack (owner: likely, review item 4).",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-ot-p1-0138": {
+      "mechanic": "p1-revolting-ruin-iii-2",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "yan-p1-gi2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0146": {
+      "mechanic": "p1-graven-image-2",
+      "state": "stack-north-2",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "owner-p1-review"
+        }
+      ],
+      "note": "Gravitas II Part II = round-2 gravity stack.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0158": {
+      "mechanic": "p1-graven-image-2",
+      "state": "trap-pass",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "yan-p1-gi2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0212": {
+      "mechanic": "p1-light-of-judgment-2",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "yan-p1-loj2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-ot-p1-0216": {
+      "mechanic": "p1-hyperdrive-2",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "yan-p1-hd2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0245": {
+      "mechanic": "p1-tele-trouncing",
+      "state": "trap-pass",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "yan-p1-tele"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0253": {
+      "mechanic": "p1-tele-trouncing",
+      "state": "tele-spread",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "bibikibay-week1"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "8:35"
+        }
+      ],
+      "note": "Indulgent Will = the tether hit that deals heavy damage and inflicts Confused; the other role gets Idyllic Will (small AoE + Sleep). It resolves right after the final Double-Trouble Trap expiry (2:45 → 2:53 in Ikuya), during the fixed teleport spread.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    },
+    "ik-p1-0307": {
+      "mechanic": "p1-tele-trouncing",
+      "state": "final-spread",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "11:40"
+        }
+      ],
+      "note": "Last Mystery Magic = Thunder + Fire after the gaze. Applies to both the spread and stack branches.",
+      "owner": "approved",
+      "ownerDate": "2026-11-07"
+    }
+  },
+  "decisions": {
+    "extras-check": {
+      "cell": "P1 | Kefka!Z14",
+      "decision": "ignore",
+      "note": "Lone ✔ in the Extras column on Light of Judgment #1, with no legend. Owner: probably \"use any spare mitigation\"; the guide ignores it (2026-11-07). Kept in the generated data as a raw flag."
+    }
+  },
+  "ownerReview": {
+    "state": "approved",
+    "date": "2026-11-07",
+    "scope": "All 15 links, sheet-detail items 6/8/9 and spot-checks 10-14 in docs/review/stage2-p1-mitigation.md (Ikuya v6.3)."
+  }
+}

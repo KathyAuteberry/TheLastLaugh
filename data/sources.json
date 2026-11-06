@@ -1,0 +1,295 @@
+{
+  "sources": {
+    "yan": {
+      "source": "yan",
+      "title": "ヤーン速報 — 絶妖星乱舞 攻略",
+      "url": "https://yan-flash.com/ultimate/yosei-ranbu",
+      "retrieved": "2026-11-06",
+      "pageLastUpdated": "2026-07-28T11:32+09:00",
+      "imageUrlBase": "https://yan-flash.com/api/uploads/",
+      "note": "Single server-rendered page, all phases. Fetched with plain HTTP; no client-only content observed."
+    },
+    "yan-history": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "更新履歴",
+      "note": "P1 entries: 2026-06-03 (debuff pass, 重力弾, Tele-trouncing added/spread fixed), 2026-06-05/06 (post-Tele spread and stack edited), 2026-06-12 (switched to sleep/confusion fixed variant), 2026-06-15 23:00 (post-Tele spread and stack updated), 2026-06-24 15:09 (Tele-trouncing reverted to melee-inside fixed after a hotfix)."
+    },
+    "yan-p1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "フェーズ1"
+    },
+    "yan-p1-ruin": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "ばりばりルインガ"
+    },
+    "yan-p1-gi1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "神々の像（1回目）"
+    },
+    "yan-p1-loj1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "裁きの光 (1st, P1)"
+    },
+    "yan-p1-hd1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "ハイパードライブ"
+    },
+    "yan-p1-gi2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "神々の像（2回目）"
+    },
+    "yan-p1-loj2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "裁きの光 (2nd, P1)"
+    },
+    "yan-p1-hd2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "ハイパードライブ（無詠唱）"
+    },
+    "yan-p1-tele": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "ずびずばテレポ"
+    },
+    "yan-p1-timeout": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "時間切れ"
+    },
+    "ikuya": {
+      "source": "ikuya",
+      "title": "Ikuya Mitty — DMU mitigation sheet",
+      "file": "docs/source/ikuya-mitty-v6.3.xlsx",
+      "version": "6.3 (4 Oct)",
+      "retrieved": "2026-11-06"
+    },
+    "ikuya-omnitank-p1": {
+      "source": "ikuya",
+      "parent": "ikuya",
+      "sheet": "Omnitank",
+      "range": "B6:I16",
+      "note": "Rows: Revolting Ruin III ¹ (B8, 0:16), Hyperdrive (3x) ² (B10, 1:05), Revolting Ruin III ¹ (B12, 1:38), Hyperdrive (3x) ² (B14, 2:16). Times stored as h:mm, meaning m:ss."
+    },
+    "ikuya-omnitank-p1-notes": {
+      "source": "ikuya",
+      "parent": "ikuya",
+      "sheet": "Omnitank",
+      "range": "D16",
+      "note": "¹ Revolting Ruin III targets first in enmity and retargets to second in emity when the castbar ends. ² Hyperdrive does not have a castbar and occurs immediately after Light of Judgement."
+    },
+    "ikuya-p1": {
+      "source": "ikuya",
+      "parent": "ikuya",
+      "sheet": "P1 | Kefka",
+      "range": "B6:Z30",
+      "note": "Event names used: Mystery Magic, Wave Cannon, Double-Trouble Trap, Light of Judgment, Gravitas II (Part I/II), Indulgent Will."
+    },
+    "owner-p1-mistakes": {
+      "source": "owner",
+      "title": "Owner's P1 mistake list for the Codex build",
+      "file": "docs/source/p1-mistakes.md",
+      "retrieved": "2026-11-06"
+    },
+    "owner-p1-review": {
+      "source": "owner",
+      "title": "Owner answers to docs/review/stage1-p1.md",
+      "date": "2026-11-06",
+      "note": "Given in chat; recorded in docs/review/stage1-p1.md. Round 4 (2026-11-07): Thunder rule for GI1 Mystery Magic."
+    },
+    "azurite-p1": {
+      "source": "secondary",
+      "title": "UMAD Phase 1 Guide - Dancing Mad (Ultimate)",
+      "author": "AzuriteTV",
+      "url": "https://www.youtube.com/watch?v=vKcjKQed3uo",
+      "published": "2026-06-10",
+      "retrieved": "2026-11-07",
+      "method": "yt-dlp auto-generated English subtitles (not stored in repo)",
+      "note": "NA/EU strategy. Used ONLY for how mechanics work (targets, tells, consequences), never for positions or assignments. Chapters: 0:05 Graven Image 1, 4:38 Graven Image 2, 8:15 Tele-trouncing."
+    },
+    "bibikibay-week1": {
+      "source": "secondary",
+      "title": "Dancing Mad Ultimate Week 1: Payaso Playtime",
+      "author": "bibikibay.moe",
+      "url": "https://bibikibay.moe/dancing-mad-ultimate-week-1-payaso-playtime/",
+      "retrieved": "2026-11-07",
+      "method": "Quoted by the owner in chat; page not fetched by Claude.",
+      "note": "Mechanic behaviour only. Names the Tele-trouncing tether hits: Idyllic Will (small AoE + Sleep) and Indulgent Will (heavy damage + Confused)."
+    }
+  },
+  "images": {
+    "yan-p1-01": {
+      "parent": "yan-p1-gi1",
+      "file": "1781510968909-8d03ce5c.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T17:09+09:00",
+      "caption": "散開",
+      "shows": "Spread positions. Statue at north edge. Orange quadrants NE and SW. Solid icons in NW (H1 near 1, MT west of A, H2 at D edge, OT between D and centre) and SE (D2 and D4 just south of the E-W line near B, D3 near 3, D1 just east of C-line south of centre). Faded icons show a second set of spots in the orange quadrants. Faded set (needs contrast boost to read): MT SW just west of N-S line halfway to C; OT just below E-W line between D and centre; H1 at 4; H2 at D just south; D1 NE just east of N-S line; D2 just north of E-W line halfway to B; D3 at 2; D4 at B just north."
+    },
+    "yan-p1-02": {
+      "parent": "yan-p1-gi1",
+      "file": "1781510977113-71bdc9e7.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T17:09+09:00",
+      "caption": "頭割り",
+      "shows": "Stack positions. Same quadrant pattern as yan-p1-01. Solid: tanks+healers stacked NW of centre, DPS stacked SE of centre. Faded: tanks+healers SW, DPS NE."
+    },
+    "yan-p1-03": {
+      "parent": "yan-p1-gi1",
+      "file": "1781513657007-eafc13b4.webp",
+      "size": "670x300",
+      "uploadedAt": "2026-06-15T17:54+09:00",
+      "caption": "本当",
+      "shows": "Two blue orb icons (in-game effect close-ups). Labelled 'true'."
+    },
+    "yan-p1-04": {
+      "parent": "yan-p1-gi1",
+      "file": "1781513651145-9b9d8178.webp",
+      "size": "670x300",
+      "uploadedAt": "2026-06-15T17:54+09:00",
+      "caption": "嘘",
+      "shows": "Two red orb icons with a yellow question mark. Labelled 'lie'."
+    },
+    "yan-p1-05": {
+      "parent": "yan-p1-gi1",
+      "file": "1781516414675-ca6af861.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T18:40+09:00",
+      "shows": "Party in one east-west line through the boss. West to east: H2, H1, OT, MT, [boss], D1, D2, D3, D4. Four beams fan out from the statue at the north edge."
+    },
+    "yan-p1-06": {
+      "parent": "yan-p1-gi1",
+      "file": "1781516425149-734bad43.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T18:40+09:00",
+      "shows": "Four towers (塔) on the east-west line: far west (H1 in it), just west of boss (OT in it), just east of boss (D3 in it), further east (D4 in it). MT, D1, D2 stand just south of the line; H2 south-west."
+    },
+    "yan-p1-07": {
+      "parent": "yan-p1-gi1",
+      "file": "1781516434698-c12e0630.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T18:40+09:00",
+      "shows": "Two blue circles centred west and east of boss. Debuff holders (デ) H2 (west, outer) and D2 (east, outer); tanks+healers group just west of boss, DPS group just east. Diagonal NW-SE orange bands across arena."
+    },
+    "yan-p1-08": {
+      "parent": "yan-p1-gi1",
+      "file": "1781516443506-427179a6.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T18:40+09:00",
+      "shows": "Diagonal orange bands. Cluster just NW of boss: D3 (debuff), D4, one more DPS icon whose number is hidden, and H2. D2 alone just E of boss. Further east: MT and H1 (debuff), OT not visible (likely hidden under MT). Debuff now on H1 and D3."
+    },
+    "yan-p1-09": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518487284-a649fb20.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:14+09:00",
+      "shows": "Whole party stacked south of boss, between centre and C, on the N-S line. Orange quadrants NE and SW."
+    },
+    "yan-p1-10": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518502770-c5c073e0.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:15+09:00",
+      "shows": "DPS stacked at centre. Spreads: MT between D and 4, OT between B and 3, H1 near 4 on the outer edge, H2 near 3 on the outer edge. Blue circle on the south between 4 and 3 near C."
+    },
+    "yan-p1-11": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518583357-756b175e.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:16+09:00",
+      "shows": "~90° cone pointing north from boss onto MT (MT icon labelled 1). East half orange. Rest of party (incl. OT) stacked just south-west of boss. Blue circle south."
+    },
+    "yan-p1-12": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518610919-2cdfa6be.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:16+09:00",
+      "shows": "Blue circles north (near A) and south (near C). Party stacked inside the north circle."
+    },
+    "yan-p1-13": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518703967-8ea74e98.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:18+09:00",
+      "shows": "Tanks+healers at centre. DPS spread in north half: D3 NW outer edge, D4 NE outer edge, D1 west of north circle near 1, D2 east of north circle near 2. Blue circles N and S."
+    },
+    "yan-p1-14": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518761651-77e6cc3b.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:19+09:00",
+      "shows": "Debuff holders H1 (just west of boss) and D3 (just east). MT/H2 NW of boss; D2/D4 SE of boss. Blue circles N and S."
+    },
+    "yan-p1-15": {
+      "parent": "yan-p1-gi2",
+      "file": "1781518787917-5ed2ceaf.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T19:19+09:00",
+      "shows": "Tanks+healers inside north circle, DPS inside south circle. Debuff now on a healer (north) and D4 (south)."
+    },
+    "yan-p1-16": {
+      "parent": "yan-p1-tele",
+      "file": "1780493537210-5286b4f9.webp",
+      "size": "84x282",
+      "uploadedAt": "2026-06-03T22:32+09:00",
+      "shows": "In-game status bar crop: rows of paired arrow debuffs with timers (2, 5, 21...)."
+    },
+    "yan-p1-17": {
+      "parent": "yan-p1-tele",
+      "file": "1780476493649-398c3c2d.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-03T17:48+09:00",
+      "shows": "Sixteen arrow tiles in eight framed pairs. Red frames (same arrows): NW outer ↓↓ (column west of 1), NE outer ←← (row north of 2), SE outer ↑↑ (column east of 3), SW outer →→ (row south of 4). Blue frames (different arrows): NW inner ←/↑ (column east of 1), NE inner →/↑ (row south of 2), SE inner ↓/→ (column west of 3), SW inner ↓/← (row north of 4)."
+    },
+    "yan-p1-18": {
+      "parent": "yan-p1-tele",
+      "file": "1780476939044-17801152.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-03T17:55+09:00",
+      "shows": "Same tile layout. Blue circles west and east of boss. Tanks+healers west of boss (MT debuffed), DPS east (D2 debuffed)."
+    },
+    "yan-p1-19": {
+      "parent": "yan-p1-tele",
+      "file": "1782281284180-9a0ff10d.webp",
+      "size": "1200x1200",
+      "uploadedAt": "2026-06-24T15:08+09:00",
+      "shows": "Same tile layout. Melee on inner corners of the blue frames: MT NW, OT NE, D1 SW, D2 SE. Ranged between red and blue frames: D3 NW (near 1), D4 NE (near 2), H1 SW (near 4), H2 SE (near 3)."
+    },
+    "yan-p1-20": {
+      "parent": "yan-p1-tele",
+      "file": "1781425297229-3ee196d8.webp",
+      "size": "996x1077",
+      "uploadedAt": "2026-06-14T17:21+09:00",
+      "shows": "In-game screenshot: waymarks 1-4 above glowing coloured square columns; a player at the corner of the yellow square."
+    },
+    "yan-p1-21": {
+      "parent": "yan-p1-tele",
+      "file": "1781531837057-5df70fa0.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-15T22:57+09:00",
+      "caption": "散開",
+      "shows": "Boss at centre with target ring. NW-SE orange bands. MT just inside 4, OT just inside 3, D1 just inside 1, D2 just inside 2. Ranged each shown twice on the outer edge: D4 north (either side of the statue), D3 west (above and below D), H2 east (above and below B), H1 south (either side of C). Contrast boost reveals a faint second band set at the other diagonal (NE-SW), forming a checkerboard with the bold set. Ranged candidates sit at the rim next to the dark cells; which candidate goes with which band set cannot be read reliably."
+    },
+    "yan-p1-22": {
+      "parent": "yan-p1-tele",
+      "file": "1781531849482-010711f3.webp",
+      "size": "2000x2000",
+      "caption": "頭割り",
+      "uploadedAt": "2026-06-15T22:57+09:00",
+      "shows": "NE-SW orange bands. DPS stacked at waymark 1; tanks+healers stacked just inside 3 (between 3 and boss). Contrast boost reveals a faint second band set at the other diagonal (NW-SE)."
+    }
+  },
+  "contrastCheck": {
+    "date": "2026-11-06",
+    "images": "all 22 P1 diagrams",
+    "result": "Faded layers found only in yan-p1-01, yan-p1-02 (alternate positions), yan-p1-21, yan-p1-22 (alternate Thunder bands)."
+  }
+}

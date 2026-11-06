@@ -1,0 +1,6080 @@
+{
+  "phase": 1,
+  "names": {
+    "ja": "フェーズ1",
+    "en": {
+      "value": "Phase 1: Kefka",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        }
+      ]
+    }
+  },
+  "extractedAt": "2026-11-06",
+  "sources": [
+    {
+      "ref": "yan-p1"
+    },
+    {
+      "ref": "yan-history"
+    }
+  ],
+  "notes": [
+    {
+      "value": "Use a 0-second (opener) burst. P2 has a 6:20 time limit, so bursting from 0:00 in P1 gains roughly 5-6 seconds of extra burst damage by the end, enough for one more use of a strong ability.",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "yan-p1",
+          "quoteJa": "絶妖星乱舞は0秒バースト推奨です。フェーズ2の時間切れが6分20秒のため…約5〜6秒分のバースト火力を多く稼げます。"
+        }
+      ]
+    },
+    {
+      "value": "Ikuya's 'Wave Cannon' and 'Indulgent Will' rows are linked to mechanics in data/mitigation/p1.overlay.json.",
+      "status": "unverified",
+      "sources": [
+        {
+          "ref": "ikuya-p1"
+        }
+      ],
+      "note": "Has sources but stays unverified: the match is open."
+    },
+    {
+      "value": "Unless a mechanic says otherwise, the boss is tanked at the centre facing north, by whichever tank holds aggro.",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "owner-p1-review"
+        },
+        {
+          "ref": "yan-p1-11"
+        }
+      ],
+      "note": "Owner convention 2026-11-07; see docs/STRATEGY_DECISIONS.md C-01."
+    },
+    {
+      "value": "Three P1 mechanics are prerequisites for seeing P3: keeping the Double-Trouble Trap debuff alive, soaking the Graven Image II puddles, and taking all Tele-trouncing arrows. Failing them doesn't stop P1 or P2.",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "azurite-p1",
+          "at": "3:39"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "7:30"
+        },
+        {
+          "ref": "azurite-p1",
+          "at": "11:05"
+        }
+      ],
+      "note": "Secondary source (video). Yan does not mention it."
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "p1-revolting-ruin-iii-1",
+      "phase": 1,
+      "order": 1,
+      "instance": 1,
+      "names": {
+        "ja": "ばりばりルインガ",
+        "en": {
+          "value": "Revolting Ruin III",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "yan-p1-ruin"
+            }
+          ],
+          "note": "Ikuya's targeting footnote describes the same two-hit enmity pattern as Yan's text."
+        }
+      },
+      "whatHappens": {
+        "value": "Tankbuster: 90° cone, two hits. The 1st hit targets the top-enmity player, the 2nd hit targets the 2nd-enmity player.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-ruin",
+            "quoteJa": "タンク強攻撃（90度扇範囲）1回目はヘイト1位、2回目はヘイト2位にきます。"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "0:05"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Ruin III has a castbar; OT Provokes during it.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1",
+              "quoteJa": "Provoke During Castbar"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Implied by Ikuya's \"Provoke During Castbar\"; owner agreed. Exact cast VFX not documented."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Takes both hits. The 1st hit lands on MT as top enmity; OT's mid-cast Provoke drops MT to 2nd enmity, so the 2nd hit lands on MT too.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "owner-p1-mistakes"
+            },
+            {
+              "ref": "owner-p1-review"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "0:15"
+            }
+          ],
+          "note": "No source says 'MT takes both' in so many words. Derived from the targeting rule plus Ikuya's assignments (MT kitchen sink, OT buddy mit + Provoke during castbar). Owner agreed 2026-11-06 (review items 1-2)."
+        },
+        "OT": {
+          "value": "Provoke during the castbar. Takes neither hit; ends the mechanic holding aggro.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1",
+              "quoteJa": "Buddy Mit + Provoke During Castbar"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": " Owner agreed 2026-11-06 (review items 1-2)."
+        },
+        "H1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "H2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D3": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D4": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        }
+      },
+      "states": [
+        {
+          "id": "cast",
+          "label": "Ruin III cast",
+          "trigger": {
+            "value": "Castbar starts.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "ikuya-omnitank-p1"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tanking the boss at the centre, boss facing north (cone points north).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "yan-p1-11"
+                }
+              ],
+              "note": "Default convention (owner): unless a mechanic says otherwise, the boss is tanked facing north. Matches yan-p1-11 (Ruin III cone pointing north)."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "boss",
+                "description": "Outside the cone, in range to Provoke. No fixed spot given.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "ikuya-omnitank-p1",
+                  "quoteJa": "Provoke During Castbar"
+                }
+              ],
+              "note": "No source gives an exact OT spot."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from boss on top-enmity target, then on 2nd-enmity target.",
+                "geometry": {
+                  "angleDeg": 90,
+                  "hits": 2
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-ruin"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Cast starts: MT holds top enmity.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            }
+          ]
+        },
+        {
+          "value": "OT Provokes during the castbar: OT becomes top enmity, MT 2nd.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            }
+          ]
+        },
+        {
+          "value": "Hit 1 on MT; at castbar end the 2nd hit retargets to 2nd enmity = MT.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Assumes hit 1's target is locked at cast start. Ikuya's footnote implies this but the timing is not stated outright."
+        }
+      ],
+      "whyItWorks": {
+        "value": "The provoking tank jumps to top enmity, so the retargeted 2nd hit goes to the tank who was already taking hit 1. One tank absorbs both hits with heavy mitigation, the other keeps cooldowns for Hyperdrive.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "ikuya-omnitank-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "0:15"
+          }
+        ]
+      },
+      "commonMistakes": [
+        {
+          "mistake": "Thinking the provoking tank takes the 2nd cone.",
+          "consequence": "Wrong tank saves mitigation; MT eats the 2nd hit without being ready (Codex build error #1).",
+          "claim": {
+            "value": "Provoke shifts the 2nd hit onto the original tank, not the provoker.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "owner-p1-mistakes"
+              },
+              {
+                "ref": "ikuya-omnitank-p1-notes"
+              }
+            ]
+          }
+        }
+      ],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-graven-image-1",
+      "phase": 1,
+      "order": 2,
+      "instance": 1,
+      "names": {
+        "ja": "神々の像（1回目）",
+        "en": {
+          "value": "Graven Image I",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "owner-p1-mistakes"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Name from the owner's mistake list; official English name not checked. Owner: likely correct (review item 3)."
+        }
+      },
+      "whatHappens": {
+        "value": "A tether goes to either the tanks+healers or the DPS, then the statue knocks back. Kefka's Blizzard/Fire can be true or a lie. The statue fires beams at 4 players (2 tanks/healers, 2 DPS); towers spawn where the beams landed. Double-Trouble Trap puts a pass-along debuff on 2 random players (1 tank/healer, 1 DPS). Mystery Magic (Blizzard + Thunder) follows.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-gi1",
+            "quoteJa": "タンヒラかDPSに線がつき、その後像からノックバックされます。"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "0:30"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Kefka has one ring per element. A ring with two question marks = that element is a lie; a clear ring = true. Any combination is possible.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-03"
+            },
+            {
+              "ref": "yan-p1-04"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "1:12"
+            }
+          ],
+          "note": "Yan captions the ring images 本当/嘘; the video describes the rings. Mechanic description only."
+        },
+        {
+          "value": "Fire: individual markers = spread; stack marker = stack. If Kefka is lying, do the opposite.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1",
+              "quoteJa": "個々のマーカーがついていた場合は散開で、頭割りマーカーがついていたら頭割り。嘘の場合はその逆の処理をします。"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "1:00"
+            }
+          ]
+        },
+        {
+          "value": "Blizzard: the shown area is real if true; if a lie, go stand in the shown AoE.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1",
+              "quoteJa": "ブリザガも同様で見えている範囲が本当で、嘘だとAoEを踏みにいきます。"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "1:00"
+            }
+          ]
+        },
+        {
+          "value": "Double-Trouble Trap debuff appears on 2 random players (1 tank/healer, 1 DPS) when its cast completes.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1",
+              "quoteJa": "つぎつぎトラップの詠唱完了でランダム2名（タンヒラ1名、DPS1名）にデバフがつき"
+            }
+          ]
+        },
+        {
+          "value": "Mystery Magic (2nd): Thunder = two line AoEs at 45° angles, with its own ring on Kefka. True: the lines hit. Lie: the opposite (the lines are safe).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "owner-p1-review"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "3:00"
+            },
+            {
+              "ref": "yan-p1-08"
+            }
+          ]
+        }
+      ],
+      "branches": [
+        {
+          "id": "spread-ice-true",
+          "label": "Spread, Ice true",
+          "condition": {
+            "value": "Fire resolves as spread and Blizzard is true: stay out of the shown ice.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          }
+        },
+        {
+          "id": "spread-ice-lie",
+          "label": "Spread, Ice lie",
+          "condition": {
+            "value": "Fire resolves as spread and Blizzard is a lie: stand in the shown ice omen (it is the safe area).",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          }
+        },
+        {
+          "id": "stack-ice-true",
+          "label": "Stack, Ice true",
+          "condition": {
+            "value": "Fire resolves as stack and Blizzard is true.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          }
+        },
+        {
+          "id": "stack-ice-lie",
+          "label": "Stack, Ice lie",
+          "condition": {
+            "value": "Fire resolves as stack and Blizzard is a lie.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Tank/healer group. Spread (Ice true; flip N/S if Ice lies): NW, west of A. Stack: with tanks+healers. In the beam line: 4th from west, next to the boss.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-02"
+            },
+            {
+              "ref": "yan-p1-05"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Tank/healer group. Spread (Ice true; flip N/S if Ice lies): between D and centre. In the beam line: 3rd from west.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Tank/healer group. Spread (Ice true; flip N/S if Ice lies): NW near waymark 1. In the beam line: 2nd from west.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Tank/healer group. Spread (Ice true; flip N/S if Ice lies): west edge at D. In the beam line: westernmost.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "D1": {
+          "value": "DPS group. Spread (Ice true; flip N/S if Ice lies): just east of the N-S line, south of centre. In the beam line: first east of the boss.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "D2": {
+          "value": "DPS group. Spread (Ice true; flip N/S if Ice lies): east, just south of the E-W line, inside B. In the beam line: 2nd east of the boss.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "D3": {
+          "value": "DPS group. Spread (Ice true; flip N/S if Ice lies): near waymark 3. In the beam line: 3rd east of the boss.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        },
+        "D4": {
+          "value": "DPS group. Spread (Ice true; flip N/S if Ice lies): at B edge. In the beam line: easternmost.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-01"
+            },
+            {
+              "ref": "yan-p1-05"
+            },
+            {
+              "ref": "yan-p1-02"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "tether-knockback",
+          "label": "Tether, then statue knockback",
+          "trigger": {
+            "value": "Tether appears on tanks+healers or DPS.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "knockback",
+                "description": "Knockback from the statue."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi1"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "0:38"
+                }
+              ],
+              "note": "Video: the statue taunts all supports or all DPS and knocks back everyone immediately."
+            }
+          ],
+          "objects": [
+            {
+              "value": {
+                "type": "object",
+                "description": "Statue at the north edge of the arena."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spread-ice-true",
+          "label": "Fire spread, Ice true (solid icons)",
+          "branch": "spread-ice-true",
+          "images": [
+            "yan-p1-01"
+          ],
+          "trigger": {
+            "value": "Fire resolves as spread.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:A",
+                "description": "NW quadrant, just west of A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:D",
+                "description": "Between D and centre, on/just above the E-W line.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:1",
+                "description": "NW quadrant at waymark 1.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:D",
+                "description": "West edge at D.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:C",
+                "description": "Just east of the N-S line, between centre and C.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:B",
+                "description": "East, just south of the E-W line, about halfway to B.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:3",
+                "description": "SE quadrant at waymark 3.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:B",
+                "description": "East edge at B, just south of the line.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Orange NE and SW quadrants in the example (Blizzard area)."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Orange quadrants = the shown ice omen (owner confirmed). Rule read from both icon sets: tanks+healers keep the west side, DPS the east; each group takes the north or south quadrant on its side that is safe. Example ice covers NE+SW. Owner confirmed (review item 16)."
+            }
+          ]
+        },
+        {
+          "id": "spread-ice-lie",
+          "label": "Fire spread, Ice lie (faded icons)",
+          "branch": "spread-ice-lie",
+          "images": [
+            "yan-p1-01"
+          ],
+          "trigger": {
+            "value": "Blizzard is a lie: the shown ice is safe.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "嘘だとAoEを踏みにいきます。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:C",
+                "description": "SW quadrant, just west of the N-S line, about halfway to C (N/S flip of the true spot).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:D",
+                "description": "Between D and centre, just below the E-W line.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:4",
+                "description": "SW quadrant at waymark 4.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:D",
+                "description": "West edge at D, just south of the line.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:A",
+                "description": "NE quadrant, just east of the N-S line, level with waymark 1.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:B",
+                "description": "East, just north of the E-W line, about halfway to B.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:2",
+                "description": "NE quadrant at waymark 2.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:B",
+                "description": "East edge at B, just north of the line.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Shown ice omen NE+SW (example); with a lie, these quadrants are the safe ones."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-01"
+                },
+                {
+                  "ref": "yan-p1-gi1"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Read from faded icons (low contrast; read with a contrast boost). Rule read from both icon sets: tanks+healers keep the west side, DPS the east; each group takes the north or south quadrant on its side that is safe. Example ice covers NE+SW. Owner confirmed (review item 16)."
+            }
+          ]
+        },
+        {
+          "id": "stack-ice-true",
+          "label": "Fire stack, Ice true (solid icons)",
+          "branch": "stack-ice-true",
+          "images": [
+            "yan-p1-02"
+          ],
+          "trigger": {
+            "value": "Fire resolves as stack.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, NW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, NW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, NW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, NW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, SE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, SE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, SE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, SE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Orange NE and SW quadrants in the example."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Orange quadrants = the shown ice omen (owner confirmed). Rule read from both icon sets: tanks+healers keep the west side, DPS the east; each group takes the north or south quadrant on its side that is safe. Example ice covers NE+SW. Owner confirmed (review item 16)."
+            }
+          ]
+        },
+        {
+          "id": "stack-ice-lie",
+          "label": "Fire stack, Ice lie (faded icons)",
+          "branch": "stack-ice-lie",
+          "images": [
+            "yan-p1-02"
+          ],
+          "trigger": {
+            "value": "Blizzard is a lie: the shown ice is safe.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "嘘だとAoEを踏みにいきます。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, SW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, SW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, SW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "Tank/healer stack, SW of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, NE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, NE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, NE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "arena-center",
+                "description": "DPS stack, NE of centre.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Shown ice omen NE+SW (example); with a lie, these quadrants are the safe ones."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-02"
+                },
+                {
+                  "ref": "yan-p1-gi1"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Read from faded icons. Rule read from both icon sets: tanks+healers keep the west side, DPS the east; each group takes the north or south quadrant on its side that is safe. Example ice covers NE+SW. Owner confirmed (review item 16)."
+            }
+          ]
+        },
+        {
+          "id": "beam-line",
+          "label": "Line up for statue beams",
+          "images": [
+            "yan-p1-05"
+          ],
+          "trigger": {
+            "value": "Statue beams 4 players (2 tanks/healers, 2 DPS); a tower spawns where each beam is taken.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "像からタンヒラ2人、DPS2人の計4人にビームが来るので横一列に並びます（ビームを受けた場所が塔の出現場所になる）。"
+              }
+            ]
+          },
+          "positions": {
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line through the boss, westernmost (1st from west).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, 2nd from west.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, 3rd from west.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, 4th from west, next to the boss on its west side.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, next to the boss on its east side.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, 2nd east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, 3rd east of the boss (near B).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "boss",
+                "description": "E-W line, easternmost.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-05"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "beam",
+                "description": "4 beams from the statue (north edge) to 2 tanks/healers and 2 DPS."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi1"
+                },
+                {
+                  "ref": "yan-p1-05"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "2:06"
+                }
+              ],
+              "note": "Video: beams also give a magic vulnerability and drop the tower."
+            }
+          ]
+        },
+        {
+          "id": "towers",
+          "label": "Players without a beam soak towers",
+          "images": [
+            "yan-p1-06"
+          ],
+          "trigger": {
+            "value": "Towers appear where beams were taken.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "ビームを受けていない人で塔に入る"
+              }
+            ],
+            "note": "Assignment rule (owner, consistent with yan-p1-06): towers sit at the beam spots on the west-east line; the non-beamed players, counted west to east, take the towers in the same west-to-east order (2nd non-beamed player takes the 2nd tower). Yan text only says \"players without a beam soak towers\"."
+          },
+          "positions": {
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example: far-west tower.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-06"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example: tower just west of boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-06"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example: tower just east of boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-06"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example: tower further east.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-06"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "4 towers at the beam spots; soaked by the 4 players without a beam."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "trap-pass",
+          "label": "Double-Trouble Trap: pass the debuff",
+          "images": [
+            "yan-p1-07"
+          ],
+          "trigger": {
+            "value": "Debuff timer reaches 0: explosion (stack) + knockback centred on the holder.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "効果時間0秒で自分中心に爆発（頭割り）+ノックバックがあるのでデバフ持ちはターゲットサークルの外で待機し、他はタンヒラ、DPSで分かれてノックバックと頭割りを受けます。"
+              },
+              {
+                "ref": "azurite-p1",
+                "at": "2:08"
+              }
+            ],
+            "note": "Video: the debuff lasts 5 s; on expiry it damages and knocks back nearby players, then passes to one random knocked-back player per group. Losing it (only 1-2 players hit) KOs them and it is required to see P3."
+          },
+          "positions": {
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder (tank/healer side): west, outside the target circle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder (DPS side): east, outside the target circle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group, just west of the boss, between boss and holder.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group, just west of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group, just west of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group, just east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group, just east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group, just east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "stack",
+                "description": "Explosion centred on each holder; shared by that holder's group, with knockback."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "line",
+                "description": "Thunder lines of the following Mystery Magic, drawn in advance."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Earlier \"unconfirmed\" reading now matches the owner's Thunder description."
+            }
+          ]
+        },
+        {
+          "id": "mystery-magic",
+          "label": "Trap knockback, then Mystery Magic: Blizzard + Thunder",
+          "images": [
+            "yan-p1-08"
+          ],
+          "trigger": {
+            "value": "Mystery Magic (Blizzard + Thunder); check whether Kefka is lying and resolve.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi1",
+                "quoteJa": "その後なぞなぞマジック（ブリザガ + サンダガ）が来るのでケフカの真偽を確認してギミックを処理します。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "After the trap knockback, each group is on the opposite side (tanks+healers east, DPS west); the two holders stay on their own side. Then dodge by the tells: both true → avoid Ice and Thunder; one lie → stand in that element's area while avoiding the true one; both lies → stand where Ice and Thunder overlap.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-07"
+                },
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:20"
+                }
+              ],
+              "note": "Sides match Yan yan-p1-07/08 (holders H2 west and D2 east stay; their groups land on the far side). Dodge rule from owner + video. No exact spot is given; players adjust."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Ice: two opposite intercardinal quadrants (true/lie)."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi1"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:08"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "line",
+                "description": "Thunder: two line AoEs at 45° (true/lie). Example shows NW-SE bands."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-08"
+                },
+                {
+                  "ref": "owner-p1-review"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "3:08"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Tether on tanks+healers or DPS, then statue knockback.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            }
+          ]
+        },
+        {
+          "value": "Read true/lie; resolve Fire (spread/stack) and Blizzard.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            }
+          ]
+        },
+        {
+          "value": "Line up east-west; 4 beams from the statue.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            }
+          ]
+        },
+        {
+          "value": "Non-beamed players soak the 4 towers: the nth non-beamed player from the west takes the nth tower from the west.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            },
+            {
+              "ref": "yan-p1-06"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        {
+          "value": "Double-Trouble Trap cast ends: debuff on 1 tank/healer + 1 DPS; split west/east to take stack + knockback.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            }
+          ]
+        },
+        {
+          "value": "Trap debuff expires: groups get knocked across; then Mystery Magic (Blizzard + Thunder), dodge by the tells.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-gi1"
+            },
+            {
+              "ref": "owner-p1-review"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "3:20"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "Tanks+healers always work on the west side and DPS on the east, so nobody needs a callout: Fire (its markers plus the true/lie tell) only decides spread or stack, and Ice only decides north or south on your own side. The fixed west-to-east beam line puts the 4 towers in a known row, so \"the nth player without a beam takes the nth tower\" resolves at a glance. The trap pass reuses the same split, so each holder has their own group to share the stack. The holder waits outside the target circle because the debuff's knockback should throw their group across the arena.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-gi1"
+          },
+          {
+            "ref": "yan-p1-01"
+          },
+          {
+            "ref": "yan-p1-02"
+          },
+          {
+            "ref": "yan-p1-05"
+          },
+          {
+            "ref": "yan-p1-06"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings. Knockback reason from owner."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review round 4 (items 26-28)."
+      }
+    },
+    {
+      "id": "p1-light-of-judgment-1",
+      "phase": 1,
+      "order": 3,
+      "instance": 1,
+      "names": {
+        "ja": "裁きの光",
+        "en": {
+          "value": "Light of Judgment",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-p1"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Raidwide.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-loj1",
+            "quoteJa": "全体攻撃"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "4:09"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Light of Judgment castbar; Hyperdrive follows immediately.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "ikuya-p1",
+              "quoteJa": "Use mitigation for Light of Judgement late into the castbar so it will cover Hyperdrive."
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Ikuya refers to a castbar. Owner: exact cue not important."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj1",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "raidwide",
+          "label": "Raidwide",
+          "trigger": {
+            "value": "Castbar ends; raidwide hits.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "ikuya-p1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Raidwide."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-loj1"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Raidwide, immediately followed by Hyperdrive.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "Nothing to resolve positionally. Ikuya times mitigation late in the cast so it also covers the Hyperdrive that follows immediately.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-loj1"
+          },
+          {
+            "ref": "ikuya-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-hyperdrive-1",
+      "phase": 1,
+      "order": 4,
+      "instance": 1,
+      "names": {
+        "ja": "ハイパードライブ",
+        "en": {
+          "value": "Hyperdrive",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Tankbuster, 3 hits, right after Light of Judgment.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-hd1",
+            "quoteJa": "裁きの光後、タンク強攻撃3回"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "4:15"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "No castbar; comes immediately after Light of Judgment.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "裁きの光後、タンク強攻撃3回"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "4:15"
+            }
+          ],
+          "note": "Ikuya footnote ² states it; Yan says \"after Light of Judgment\" and does not mention a cast. Owner confirmed from experience (D-P1-02)."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Not the target (OT holds aggro after Ruin III #1).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Yan does not say who takes Hyperdrive. Inferred from Ikuya: OT kitchen sinks, MT buddy mits. Owner agreed 2026-11-06 (review items 1-2)."
+        },
+        "OT": {
+          "value": "Takes all 3 hits.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "As above. Owner agreed 2026-11-06 (review items 1-2)."
+        },
+        "H1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "H2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D3": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D4": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        }
+      },
+      "states": [
+        {
+          "id": "hits",
+          "label": "3 tankbuster hits",
+          "trigger": {
+            "value": "Immediately after Light of Judgment.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-hd1"
+              },
+              {
+                "ref": "ikuya-omnitank-p1-notes"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tankbuster",
+                "description": "3 hits on the tank.",
+                "geometry": {
+                  "hits": 3
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-hd1"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Light of Judgment → 3 tankbuster hits.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-hd1"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "OT's Provoke on Ruin III #1 leaves OT holding aggro, so OT takes Hyperdrive with cooldowns still available. MT, who used the kitchen sink on Ruin III, supports with buddy mitigation.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "ikuya-omnitank-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-graven-image-2",
+      "phase": 1,
+      "order": 5,
+      "instance": 2,
+      "names": {
+        "ja": "神々の像（2回目）",
+        "en": {
+          "value": "Graven Image II",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "owner-p1-mistakes"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": " Owner: likely correct (review item 3)."
+        }
+      },
+      "whatHappens": {
+        "value": "Everyone gets a tether; tethers are split by group (tanks+healers vs DPS). Stack south for the gravity orb (重力弾). Then: bottom-right tether (as seen from the statue) spreads; top-left tether gets a gravity orb and moves to the middle. Ruin III happens with a half-room AoE. Tethers repeat (spread flipped north/south). Half-room AoE again. Double-Trouble Trap pass: tanks+healers west, DPS east; knockback into the Graviga puddles, debuff holder follows into the puddle. 2-minute burst here.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-gi2"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Check which of the two tethers you have.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2",
+              "quoteJa": "全員に線がつくので、自分はどちらの線を持っているか確認します。"
+            }
+          ]
+        },
+        {
+          "value": "Bottom-right tether (as seen facing the statue) → stack south, then spread. Top-left tether → gravity orb: stack south, then move to the middle.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2",
+              "quoteJa": "像を見て右下の線→南で頭割り後にそれぞれ散開する 像を見て左上の線→重力弾が来るので南で頭割り後に真ん中に移動する"
+            }
+          ]
+        },
+        {
+          "value": "Half-room AoE during Ruin III: read the statue effect.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2",
+              "quoteJa": "ばりばりルインガ（タンク強攻撃）中に半面AoEが来るので像のエフェクトを確認"
+            }
+          ],
+          "note": "What the statue effect looks like for each side is not described."
+        },
+        {
+          "value": "Half-room cleave: one statue side glows (right = yellow, left = purple), and each has its own sound. Stand on the side opposite the glow.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "6:06"
+            }
+          ],
+          "note": "Yan only says \"read the statue effect\"; colours and sound from the video."
+        }
+      ],
+      "branches": [
+        {
+          "id": "th-spread-first",
+          "label": "Tanks+healers spread in round 1, DPS in round 2",
+          "condition": {
+            "value": "Tanks+healers get the spread tether first.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              },
+              {
+                "ref": "yan-p1-10"
+              },
+              {
+                "ref": "yan-p1-13"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ],
+            "note": "One group gets the spread tether (bottom-right as seen from the statue) and spreads around the gravity puddle; the other gets the gravity orb, stacks, then goes to the middle. Which group is first is random; round 2 is the other group (owner, likely; not stated by Yan)."
+          }
+        },
+        {
+          "id": "dps-spread-first",
+          "label": "DPS spread in round 1, tanks+healers in round 2",
+          "condition": {
+            "value": "DPS get the spread tether first.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ],
+            "note": "One group gets the spread tether (bottom-right as seen from the statue) and spreads around the gravity puddle; the other gets the gravity orb, stacks, then goes to the middle. Which group is first is random; round 2 is the other group (owner, likely; not stated by Yan). Not drawn by Yan; slots derived from the flip rule."
+          }
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Spread slot when spreading south: between D and 4. During Ruin III #2: with the party (Provokes mid-cast).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-10"
+            },
+            {
+              "ref": "yan-p1-11"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies. Yan-only reading: yan-p1-11 shows MT in the cone. Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "OT": {
+          "value": "Spread slot when spreading south: between B and 3. During Ruin III #2: in the cone north of the boss, invuln.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-10"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies. Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "H1": {
+          "value": "Spread slot when spreading south: outer edge near 4.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-10"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "H2": {
+          "value": "Spread slot when spreading south: outer edge near 3.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-10"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "D1": {
+          "value": "Spread slot when spreading north: west of the north puddle, near 1.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-13"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "D2": {
+          "value": "Spread slot when spreading north: east of the north puddle, near 2.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-13"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "D3": {
+          "value": "Spread slot when spreading north: NW outer edge.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-13"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        },
+        "D4": {
+          "value": "Spread slot when spreading north: NE outer edge.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-13"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+        }
+      },
+      "states": [
+        {
+          "id": "stack-south-1",
+          "label": "Tethers 1: stack south",
+          "images": [
+            "yan-p1-09"
+          ],
+          "trigger": {
+            "value": "Tethers on everyone.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "線を確認し南で重力弾の頭割りをします。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Whole-party stack south of centre, on the N-S line, about halfway to C.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "arena-center",
+                "description": "Party stack south.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "stack",
+                "description": "Gravity orb (重力弾) stack, south."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "4:50"
+                }
+              ],
+              "note": "Video: the left-side tether (facing the statue) is a 2-player stack that leaves a puddle; taken solo it explodes and wipes."
+            },
+            {
+              "value": {
+                "type": "quadrants",
+                "description": "Orange NE and SW quadrants: Ice from Blizzard III blowout (true/lie, as in Graven Image I)."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-09"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "4:38"
+                }
+              ],
+              "note": "Yan draws but does not name these; the video says GI2 opens with an Ice true/lie."
+            }
+          ]
+        },
+        {
+          "id": "spread-1",
+          "label": "Tethers 1: spread / middle",
+          "branch": "th-spread-first",
+          "images": [
+            "yan-p1-10"
+          ],
+          "trigger": {
+            "value": "After the south stack.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "Spread between D and 4 (WSW).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "Spread between B and 3 (ESE).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:4",
+                "description": "Spread at the outer edge near 4.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:3",
+                "description": "Spread at the outer edge near 3.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Gravity-orb group stacked at the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "spread",
+                "description": "Spread hits on the bottom-right-tether group."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "puddle",
+                "description": "Gravity orb lands south (blue circle between 4 and C and 3)."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spread-1-dps",
+          "label": "Tethers 1: spread / middle (DPS spread first)",
+          "branch": "dps-spread-first",
+          "trigger": {
+            "value": "DPS hold the spread tether in round 1.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          },
+          "positions": {
+            "D1": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "Spread between D and 4 (WSW) — MT's round-1 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                },
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "Spread between B and 3 (ESE) — OT's round-1 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                },
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:4",
+                "description": "Outer edge near 4 — H1's round-1 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                },
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:3",
+                "description": "Outer edge near 3 — H2's round-1 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-10"
+                },
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            }
+          },
+          "hazards": []
+        },
+        {
+          "id": "ruin-half-room",
+          "label": "Ruin III #2 + half-room AoE",
+          "images": [
+            "yan-p1-11"
+          ],
+          "trigger": {
+            "value": "Ruin III (tankbuster) cast; half-room AoE comes during it.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "With the party, just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                },
+                {
+                  "ref": "ikuya-omnitank-p1"
+                },
+                {
+                  "ref": "ikuya-omnitank-p1-notes"
+                }
+              ],
+              "note": "Position from yan-p1-11 (non-cone tank spot); tank swapped per D-P1-01."
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "North of the boss, in the cone (takes both hits).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                },
+                {
+                  "ref": "ikuya-omnitank-p1"
+                },
+                {
+                  "ref": "ikuya-omnitank-p1-notes"
+                }
+              ],
+              "note": "Position from yan-p1-11 (tank-in-cone spot); tank swapped per D-P1-01. Yan-only reading: yan-p1-11 shows MT in the cone."
+            },
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss, in the safe half.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Party stack just SW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "cone",
+                "description": "Ruin III cone, north in the example.",
+                "geometry": {
+                  "angleDeg": 90,
+                  "hits": 2
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-ruin"
+                },
+                {
+                  "ref": "yan-p1-11"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room AoE; east half in the example. Side is read from the statue effect."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-11"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stack-north-2",
+          "label": "Tethers 2: stack north",
+          "images": [
+            "yan-p1-12"
+          ],
+          "trigger": {
+            "value": "Tethers again; same procedure as round 1, but on the north side.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "再び全員に線がつきますので先ほどと同様に処理します。"
+              },
+              {
+                "ref": "yan-p1-12"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ],
+            "note": "\"Same as before\" = same procedure; the side flips to north (owner reading, matches yan-p1-12)."
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Whole-party stack north of centre, below A.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "puddle",
+                "description": "Blue circles north (near A) and south (near C)."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spread-2",
+          "label": "Tethers 2: spread (flipped)",
+          "branch": "th-spread-first",
+          "images": [
+            "yan-p1-13"
+          ],
+          "trigger": {
+            "value": "Spread is the first round flipped north/south. Half-room AoE follows.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "散開は1回目の上下反転 その後半面AoEが来ます。"
+              }
+            ]
+          },
+          "positions": {
+            "D1": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:1",
+                "description": "West of the north puddle, near 1.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:2",
+                "description": "East of the north puddle, near 2.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "NW outer edge, above 1.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "NE outer edge, above 2.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "spread",
+                "description": "Spread hits on the bottom-right-tether group."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room AoE after the spread."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "spread-2-th",
+          "label": "Tethers 2: spread (tanks+healers, flipped)",
+          "branch": "dps-spread-first",
+          "trigger": {
+            "value": "Round 2: tanks+healers spread on the north side.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2"
+              },
+              {
+                "ref": "owner-p1-review"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:1",
+                "description": "West of the north puddle, near 1 — D1's round-2 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "OT": {
+              "value": {
+                "kind": "example",
+                "anchor": "waymark:2",
+                "description": "East of the north puddle, near 2 — D2's round-2 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "NW outer edge — D3's round-2 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "H2": {
+              "value": {
+                "kind": "example",
+                "anchor": "other",
+                "description": "NE outer edge — D4's round-2 slot.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-13"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Slot pairs implied by Yan's \"round 2 = round 1 flipped N/S\" plus both example images: MT↔D1, OT↔D2, H1↔D3, H2↔D4. Owner confirmed (review item 17)."
+            },
+            "D1": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "example",
+                "anchor": "arena-center",
+                "description": "Middle (gravity-orb group).",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            }
+          },
+          "hazards": []
+        },
+        {
+          "id": "trap-pass",
+          "label": "Double-Trouble Trap pass",
+          "images": [
+            "yan-p1-14"
+          ],
+          "trigger": {
+            "value": "Pass the debuff: tanks+healers west, DPS east, take stack + knockback.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "つぎつぎトラップのデバフを受け渡すために西タンヒラ、東DPSで分かれて頭割り+ノックバックを受けます。"
+              }
+            ]
+          },
+          "positions": {
+            "H1": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder: just west of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder: just east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            },
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group, NW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group, NW of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group, SE of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group, SE of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-14"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "knockback",
+                "description": "Stack + knockback centred on each holder."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "into-puddles",
+          "label": "Knocked into Graviga; holder follows",
+          "images": [
+            "yan-p1-15"
+          ],
+          "trigger": {
+            "value": "Use the knockback to land in Graviga; the debuff holder walks into the puddle after. 2-minute burst here.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "ノックバックでグラビガを踏みにいき、デバフ持ちは追って沼に入ります。ここで2分バースト"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "Tank/healer group inside the north puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "North puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "North puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:A",
+                "description": "North puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:C",
+                "description": "DPS group inside the south puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:C",
+                "description": "South puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:C",
+                "description": "South puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:C",
+                "description": "South puddle.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "puddle",
+                "description": "Graviga puddles (沼) north and south."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-15"
+                },
+                {
+                  "ref": "yan-p1-gi2"
+                }
+              ],
+              "note": "Equating the blue circles with グラビガ/沼 is an inference from text + image."
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Tethers 1 → stack south → spread / middle.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2"
+            }
+          ]
+        },
+        {
+          "value": "Ruin III + half-room AoE.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2"
+            }
+          ]
+        },
+        {
+          "value": "Tethers 2 → resolve as before; spread flipped N/S → half-room AoE.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2"
+            }
+          ]
+        },
+        {
+          "value": "Double-Trouble Trap pass west/east → knockback into Graviga → holder follows. 2-minute burst.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-gi2"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "Tethers split by group, so in each round one group spreads while the other takes the gravity orb to the middle, and the groups swap for round 2. Round 1 resolves south and round 2 north, so the two Graviga puddles end up at opposite ends. Because round 2 is round 1 flipped, everyone has a mirrored pair of spread slots (MT↔D1, OT↔D2, H1↔D3, H2↔D4). The west/east trap pass reuses the group split, and the knockback carries each group into its own puddle: tanks+healers north, DPS south. The puddles are soaked as a light party. Like keeping the trap debuff alive and taking all the Tele-trouncing arrows, this is required to see P3. Missing it doesn't stop P1 or P2.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-gi2"
+          },
+          {
+            "ref": "yan-p1-10"
+          },
+          {
+            "ref": "yan-p1-13"
+          },
+          {
+            "ref": "yan-p1-15"
+          },
+          {
+            "ref": "owner-p1-review"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "7:09"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings. Soak reasoning from owner; the P3-prerequisite detail is from the video (corrects the earlier \"fake ending\" wording)."
+      },
+      "commonMistakes": [
+        {
+          "mistake": "Spreading with your hit overlapping the gravity orb.",
+          "consequence": "Wipe.",
+          "claim": {
+            "value": "Keep clear distance between your spread hit and the gravity orb.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-gi2",
+                "quoteJa": "散開したとき、自分にくる攻撃判定に重力弾が重なるとワイプになるので、重力弾に重ならないようにしっかり距離を取る"
+              },
+              {
+                "ref": "azurite-p1",
+                "at": "5:09"
+              }
+            ],
+            "note": "Video: the spread AoE also knocks back nearby players, and clipping a lingering puddle explodes it and wipes."
+          }
+        }
+      ],
+      "disagreements": [
+        "D-P1-01"
+      ],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review round 4 (items 26-28)."
+      }
+    },
+    {
+      "id": "p1-revolting-ruin-iii-2",
+      "phase": 1,
+      "order": 6,
+      "instance": 2,
+      "occursWithin": "p1-graven-image-2",
+      "names": {
+        "ja": "ばりばりルインガ",
+        "en": {
+          "value": "Revolting Ruin III",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Second Ruin III: same 2-hit 90° cone, during Graven Image II with a half-room AoE.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-ruin"
+          },
+          {
+            "ref": "yan-p1-gi2"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Ruin III has a castbar; MT Provokes during it.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1",
+              "quoteJa": "Provoke During Castbar"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Implied by Ikuya's \"Provoke During Castbar\"; owner agreed. Exact cast VFX not documented."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Provoke during the castbar. Takes neither hit; ends the mechanic holding aggro.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "yan-p1-11"
+            }
+          ],
+          "note": "Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies. Yan-only reading: yan-p1-11 shows MT in the cone."
+        },
+        "OT": {
+          "value": "Takes both hits under invulnerability. The 1st hit lands on OT as top enmity; MT's mid-cast Provoke drops OT to 2nd, so the 2nd hit lands on OT too.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies."
+        },
+        "H1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "H2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D3": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        },
+        "D4": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-ruin",
+              "quoteJa": "タンク強攻撃（90度扇範囲）"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+        }
+      },
+      "states": [],
+      "resolutionOrder": [
+        {
+          "value": "Cast starts: OT holds top enmity (from Ruin III #1).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ]
+        },
+        {
+          "value": "MT Provokes during the castbar: MT top, OT 2nd.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ]
+        },
+        {
+          "value": "Hit 1 on OT; at castbar end the 2nd hit retargets to 2nd enmity = OT.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "This mirrors Ruin III #1 with the tanks reversed. MT's mid-cast Provoke makes the retargeted 2nd hit land on OT again, so one OT invulnerability covers both hits.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "ikuya-omnitank-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings."
+      },
+      "commonMistakes": [],
+      "disagreements": [
+        "D-P1-01"
+      ],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-light-of-judgment-2",
+      "phase": 1,
+      "order": 7,
+      "instance": 2,
+      "names": {
+        "ja": "裁きの光",
+        "en": {
+          "value": "Light of Judgment",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-p1"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Raidwide.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-loj2",
+            "quoteJa": "全体攻撃"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "4:09"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Light of Judgment castbar; Hyperdrive follows immediately.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "ikuya-p1",
+              "quoteJa": "Use mitigation for Light of Judgement late into the castbar so it will cover Hyperdrive."
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Ikuya refers to a castbar. Owner: exact cue not important."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Take the raidwide. No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-loj2",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "raidwide",
+          "label": "Raidwide",
+          "trigger": {
+            "value": "Castbar ends; raidwide hits.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "ikuya-p1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Raidwide."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-loj2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [],
+      "whyItWorks": {
+        "value": "Same as Light of Judgment #1: no positioning, and late mitigation also covers the Hyperdrive right after.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-loj2"
+          },
+          {
+            "ref": "ikuya-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings. Ikuya's \"late into the castbar\" note is written for P1 in general; applying it to the 2nd cast is an inference."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-hyperdrive-2",
+      "phase": 1,
+      "order": 8,
+      "instance": 2,
+      "names": {
+        "ja": "ハイパードライブ（無詠唱）",
+        "en": {
+          "value": "Hyperdrive (no cast)",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "yan-p1-hd2"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Tankbuster, 3 hits, no castbar.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-hd2",
+            "quoteJa": "タンク強攻撃3回"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "4:15"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "No castbar; follows Light of Judgment.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "4:15"
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Takes all 3 hits under invulnerability (holds aggro after provoking Ruin III #2).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Yan does not say who takes Hyperdrive. Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies."
+        },
+        "OT": {
+          "value": "Not the target.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "ikuya-omnitank-p1"
+            },
+            {
+              "ref": "ikuya-omnitank-p1-notes"
+            }
+          ],
+          "note": "Owner decision D-P1-01 (2026-11-06): Ikuya tank plan applies."
+        },
+        "H1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "H2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D1": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D2": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D3": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        },
+        "D4": {
+          "value": null,
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-hd2",
+              "quoteJa": "タンク強攻撃3回"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm."
+        }
+      },
+      "states": [
+        {
+          "id": "hits",
+          "label": "3 tankbuster hits",
+          "trigger": {
+            "value": "Right after Light of Judgment; no castbar.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-hd2"
+              },
+              {
+                "ref": "ikuya-omnitank-p1-notes"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tankbuster",
+                "description": "3 hits on the tank.",
+                "geometry": {
+                  "hits": 3
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-hd2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [],
+      "whyItWorks": {
+        "value": "MT holds aggro after provoking Ruin III #2, so MT takes Hyperdrive under their own invulnerability. Over Ruin III #2 and Hyperdrive #2, each tank uses exactly one invulnerability.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "ikuya-omnitank-p1"
+          },
+          {
+            "ref": "ikuya-omnitank-p1-notes"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings."
+      },
+      "commonMistakes": [],
+      "disagreements": [
+        "D-P1-01"
+      ],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    },
+    {
+      "id": "p1-tele-trouncing",
+      "phase": 1,
+      "order": 9,
+      "names": {
+        "ja": "ずびずばテレポ",
+        "en": {
+          "value": "Tele-trouncing",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "owner-p1-mistakes"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": " Owner: likely correct (review item 3)."
+        }
+      },
+      "whatHappens": {
+        "value": "Each player gets a pair of arrow debuffs and goes to the matching tile pair. Double-Trouble Trap pass (tanks+healers west, DPS east). Fixed spread: melee inside, ranged outside. Then statue gaze + true/lie Thunder + true/lie Fire, resolved as a fixed spread or a group stack.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p1-tele"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "8:10"
+          }
+        ],
+        "note": "Video: the arrows place teleporters; one role gets two different arrows, the other two of the same. Taking all arrows is a P3 prerequisite."
+      },
+      "recognition": [
+        {
+          "value": "Check your debuffs. Same arrow twice → red-framed position. Two different arrows → blue-framed position. Tip: follow your own arrows to find the spot.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "同じ矢印のデバフの場合→赤枠のポジションに 違う矢印のデバフの場合→青枠のポジションに（自分についてる矢印を辿るとポジションがわかりやすいかも）"
+            },
+            {
+              "ref": "yan-p1-16"
+            },
+            {
+              "ref": "yan-p1-17"
+            }
+          ]
+        },
+        {
+          "value": "Teleport spread is fixed; no need to look at tethers.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "テレポ散開は近接内、外遠隔で固定（線を見なくてOK）。"
+            }
+          ]
+        },
+        {
+          "value": "Tethers by role: left side (facing the statue) = Confusion (chases and KOs the nearest player); right side = Sleep with a small AoE.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-history"
+            },
+            {
+              "ref": "azurite-p1",
+              "at": "8:35"
+            }
+          ],
+          "note": "Yan's changelog mentions the sleep/confusion variant; details from the video. Yan's current fixed spread means you needn't read the tethers."
+        },
+        {
+          "value": "Statue eye: yellow eye with question marks = look at the statue; purple eye = look away from the statue (not Kefka).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "azurite-p1",
+              "at": "11:15"
+            }
+          ],
+          "note": "Secondary source only; Yan does not describe the gaze."
+        }
+      ],
+      "branches": [
+        {
+          "id": "spread",
+          "label": "Post-teleport: spread",
+          "condition": {
+            "value": "Thunder/Fire resolve as spread.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-tele"
+              }
+            ],
+            "note": "Yan gives a 散開/頭割り table; the true/lie decision follows the Graven Image I rule."
+          }
+        },
+        {
+          "id": "stack",
+          "label": "Post-teleport: stack",
+          "condition": {
+            "value": "Thunder/Fire resolve as stack.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p1-tele"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Melee. Teleport spread: inner corner of NW blue frame. Later spread: at 4. Stack: tanks+healers at 3.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "近接組：MTは4"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "OT": {
+          "value": "Melee. Teleport spread: inner corner of NE blue frame. Later spread: at 3. Stack: tanks+healers at 3.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "STは3"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "H1": {
+          "value": "Ranged. Teleport spread: SW, between frames near 4. Later spread: south. Stack: tanks+healers at 3.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "H1は南"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "H2": {
+          "value": "Ranged. Teleport spread: SE, between frames near 3. Later spread: east. Stack: tanks+healers at 3.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "H2は東"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "D1": {
+          "value": "Melee. Teleport spread: inner corner of SW blue frame. Later spread: at 1. Stack: DPS at 1.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "D1は1"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "D2": {
+          "value": "Melee. Teleport spread: inner corner of SE blue frame. Later spread: at 2. Stack: DPS at 1.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "D2は2"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "D3": {
+          "value": "Ranged. Teleport spread: NW, between frames near 1. Later spread: west. Stack: DPS at 1.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "D3は西"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        },
+        "D4": {
+          "value": "Ranged. Teleport spread: NE, between frames near 2. Later spread: north. Stack: DPS at 1.",
+          "status": "derived-from-image",
+          "sources": [
+            {
+              "ref": "yan-p1-tele",
+              "quoteJa": "D4は北"
+            },
+            {
+              "ref": "yan-p1-19"
+            }
+          ],
+          "note": "Mixed claim: the later spread/stack spot is stated in Yan text; the teleport-spread spot is read from yan-p1-19."
+        }
+      },
+      "states": [
+        {
+          "id": "arrows",
+          "label": "Arrow debuffs → tile pair",
+          "images": [
+            "yan-p1-16",
+            "yan-p1-17"
+          ],
+          "trigger": {
+            "value": "Arrow debuffs applied.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele"
+              }
+            ]
+          },
+          "positions": {},
+          "objects": [
+            {
+              "value": {
+                "type": "object",
+                "description": "Red frames (same arrows): NW outer ↓↓, NE outer ←←, SE outer ↑↑, SW outer →→."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-17"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "object",
+                "description": "Blue frames (different arrows): NW inner ←/↑, NE inner →/↑, SE inner ↓/→, SW inner ↓/←."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-17"
+                }
+              ],
+              "note": "Which frame a given debuff pair maps to, and whether arrow order matters, is only implied by the picture ('follow your arrows'). Exact standing spot inside a frame not stated."
+            }
+          ],
+          "hazards": []
+        },
+        {
+          "id": "trap-pass",
+          "label": "Double-Trouble Trap pass",
+          "images": [
+            "yan-p1-18"
+          ],
+          "trigger": {
+            "value": "Pass the debuff: tanks+healers west, DPS east, take stack + knockback.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele",
+                "quoteJa": "つぎつぎトラップのデバフを受け渡すために西タンヒラ、東DPSで分かれて頭割り+ノックバックを受けます。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder (tank/healer side), west of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-18"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "example",
+                "anchor": "boss",
+                "description": "Example holder (DPS side), east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-18"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "Tank/healer group just west of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-18"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "DPS group just east of the boss.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-18"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "knockback",
+                "description": "Stack + knockback centred on each holder."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tele-spread",
+          "label": "Teleport spread (fixed)",
+          "images": [
+            "yan-p1-19"
+          ],
+          "trigger": {
+            "value": "Fixed spread: melee inside, ranged outside.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "other",
+                "description": "Inner corner of the NW blue frame.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "other",
+                "description": "Inner corner of the NE blue frame.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "other",
+                "description": "Inner corner of the SW blue frame.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "other",
+                "description": "Inner corner of the SE blue frame.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "NW, between the red and blue frames, by 1.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:2",
+                "description": "NE, between the red and blue frames, by 2.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:4",
+                "description": "SW, between the red and blue frames, by 4.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "SE, between the red and blue frames, by 3.",
+                "orientation": "true-north"
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-19"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "spread",
+                "description": "Spread."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                }
+              ]
+            }
+          ],
+          "objects": [
+            {
+              "value": {
+                "type": "object",
+                "description": "Place waymarks with the corners of the floor squares in mind."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele",
+                  "quoteJa": "フィールドマーカーの四角の角っちょを意識して置く。"
+                },
+                {
+                  "ref": "yan-p1-20"
+                }
+              ],
+              "note": "Exact waymark coordinates are not given."
+            }
+          ]
+        },
+        {
+          "id": "final-spread",
+          "label": "Gaze + Thunder/Fire: spread",
+          "branch": "spread",
+          "images": [
+            "yan-p1-21"
+          ],
+          "trigger": {
+            "value": "Statue gaze + true/lie Thunder + true/lie Fire.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele",
+                "quoteJa": "その後像から視線ギミック+真偽サンダガ+真偽ファイガが来ます。"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:4",
+                "description": "At 4.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                }
+              ],
+              "note": "Image shows the spot just inside the waymark, toward the boss."
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "At 3.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                }
+              ],
+              "note": "Image shows the spot just inside the waymark, toward the boss."
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "At 1.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                }
+              ],
+              "note": "Image shows the spot just inside the waymark, toward the boss."
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:2",
+                "description": "At 2.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                }
+              ],
+              "note": "Image shows the spot just inside the waymark, toward the boss."
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:C",
+                "description": "South outer edge.",
+                "candidates": [
+                  "SW of C",
+                  "SE of C"
+                ],
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Two candidate spots; take the one in the safe area given the Thunder true/lie tell (owner, review item 25). Which candidate matches which band direction is not drawn explicitly."
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:B",
+                "description": "East outer edge.",
+                "candidates": [
+                  "N of B",
+                  "S of B"
+                ],
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Two candidate spots; take the one in the safe area given the Thunder true/lie tell (owner, review item 25). Which candidate matches which band direction is not drawn explicitly."
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:D",
+                "description": "West outer edge.",
+                "candidates": [
+                  "N of D",
+                  "S of D"
+                ],
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Two candidate spots; take the one in the safe area given the Thunder true/lie tell (owner, review item 25). Which candidate matches which band direction is not drawn explicitly."
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "waymark:A",
+                "description": "North outer edge.",
+                "candidates": [
+                  "W of the statue",
+                  "E of the statue"
+                ],
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-21"
+                },
+                {
+                  "ref": "owner-p1-review"
+                }
+              ],
+              "note": "Two candidate spots; take the one in the safe area given the Thunder true/lie tell (owner, review item 25). Which candidate matches which band direction is not drawn explicitly."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "line",
+                "description": "Diagonal Thunder bands (NW-SE in the example)."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-21"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "gaze",
+                "description": "Statue gaze."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "azurite-p1",
+                  "at": "11:15"
+                }
+              ],
+              "note": "Yellow eye with \"?\" = look at it; purple eye = look away (video 11:15). Yan does not describe it."
+            }
+          ]
+        },
+        {
+          "id": "final-stack",
+          "label": "Gaze + Thunder/Fire: stack",
+          "branch": "stack",
+          "images": [
+            "yan-p1-22"
+          ],
+          "trigger": {
+            "value": "Statue gaze + true/lie Thunder + true/lie Fire.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "Tanks+healers stack at 3 (between 3 and the boss).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele",
+                  "quoteJa": "タンヒラは3で、DPSは1で頭割りをする"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "OT": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "Tanks+healers stack at 3.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "H1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "Tanks+healers stack at 3.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "H2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:3",
+                "description": "Tanks+healers stack at 3.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "D1": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "DPS stack at 1.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "D2": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "DPS stack at 1.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "D3": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "DPS stack at 1.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            "D4": {
+              "value": {
+                "kind": "fixed",
+                "anchor": "waymark:1",
+                "description": "DPS stack at 1.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                },
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "line",
+                "description": "Diagonal Thunder bands (NE-SW in the example)."
+              },
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "yan-p1-22"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Two group stacks."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p1-tele"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Read arrow debuffs → go to your frame.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele"
+            }
+          ]
+        },
+        {
+          "value": "Double-Trouble Trap pass, west/east.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele"
+            }
+          ]
+        },
+        {
+          "value": "Fixed teleport spread.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele"
+            }
+          ]
+        },
+        {
+          "value": "Gaze + true/lie Thunder + true/lie Fire → spread or stack.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p1-tele"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": "Each arrow pair maps to one framed tile pair, so you find your spot by following your own arrows instead of waiting for callouts. The post-teleport spread is fixed by role: melee inside so everyone can keep hitting the boss, ranged outside, and no tethers need checking. The final spread and stack use fixed waymark spots (melee at 1–4, ranged on the cardinal edges; tanks+healers stack at 3, DPS at 1).",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-tele"
+          },
+          {
+            "ref": "yan-history"
+          },
+          {
+            "ref": "yan-p1-17"
+          },
+          {
+            "ref": "yan-p1-19"
+          },
+          {
+            "ref": "yan-p1-21"
+          },
+          {
+            "ref": "yan-p1-22"
+          },
+          {
+            "ref": "owner-p1-review"
+          }
+        ],
+        "note": "Drafted by Claude 2026-11-06; Owner confirmed 2026-11-07 (review items 18-25). Reasoning only; adds no positions or timings. The \"everyone can hit\" reason comes from Yan's 2026-06-24 changelog entry (近接内固定（みんな殴れるほう）)."
+      },
+      "commonMistakes": [
+        {
+          "mistake": "Expecting to hit the boss from every stack spot.",
+          "consequence": "Lost uptime.",
+          "claim": {
+            "value": "Some patterns leave you unable to hit the boss.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p1-tele",
+                "quoteJa": "※殴れないパターンがあるので注意"
+              }
+            ]
+          }
+        }
+      ],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review round 4 (items 26-28)."
+      }
+    },
+    {
+      "id": "p1-phase-transition",
+      "phase": 1,
+      "order": 10,
+      "names": {
+        "ja": "時間切れ",
+        "en": {
+          "value": "Time's Up (phase transition)",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ],
+          "note": "Translation of 時間切れ; not an official cast name."
+        }
+      },
+      "whatHappens": {
+        "value": "At the end of P1's scripted mechanics, if the boss is at 14.9% HP or below the fight moves to P2; otherwise the party wipes.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-timeout",
+            "quoteJa": "14.9％以下でフェーズ移行"
+          },
+          {
+            "ref": "owner-p1-review"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "11:55"
+          }
+        ],
+        "note": "Yan gives only the 14.9% threshold under a \"time out\" heading; the wipe outcome and the likely final (enrage) cast are from the owner. Video: after the final Mystery Magic, Kefka does three auto-attacks, then enrages unless pushed past 15%."
+      },
+      "recognition": [
+        {
+          "value": "P1 runs out of scripted mechanics after Tele-trouncing; likely a final enrage cast. Exact cue not documented.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Get the boss to 14.9% HP or below before P1's scripted mechanics end.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p1-timeout"
+            },
+            {
+              "ref": "owner-p1-review"
+            }
+          ]
+        }
+      },
+      "states": [],
+      "resolutionOrder": [],
+      "whyItWorks": {
+        "value": "This is a DPS check: P2 only starts if the boss is at or below 14.9% when P1 times out.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p1-timeout"
+          },
+          {
+            "ref": "owner-p1-review"
+          },
+          {
+            "ref": "azurite-p1",
+            "at": "11:55"
+          }
+        ]
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "approved",
+        "date": "2026-11-07",
+        "note": "Approved in chat after review rounds 1-3 (docs/review/stage1-p1.md)."
+      }
+    }
+  ]
+}

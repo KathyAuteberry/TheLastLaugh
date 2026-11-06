@@ -1,0 +1,604 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-last-laugh.local/schema/phase.schema.json",
+  "title": "Phase mechanics (execution data, Yan Flash)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "phase",
+    "names",
+    "extractedAt",
+    "sources",
+    "notes",
+    "mechanics"
+  ],
+  "properties": {
+    "phase": {
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "names": {
+      "$ref": "#/$defs/Names"
+    },
+    "extractedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SourceRef"
+      },
+      "minItems": 1
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ClaimString"
+      }
+    },
+    "mechanics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Mechanic"
+      },
+      "minItems": 1
+    }
+  },
+  "$defs": {
+    "Status": {
+      "enum": [
+        "verified",
+        "source-stated",
+        "derived",
+        "derived-from-image",
+        "unverified"
+      ]
+    },
+    "Role": {
+      "enum": [
+        "MT",
+        "OT",
+        "H1",
+        "H2",
+        "D1",
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    "SourceRef": {
+      "description": "Points into data/sources.json. `ref` is a source id or an image id.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ref"
+      ],
+      "properties": {
+        "ref": {
+          "type": "string"
+        },
+        "quoteJa": {
+          "type": "string"
+        },
+        "imageRegion": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "at": {
+          "type": "string",
+          "pattern": "^\\d{1,2}:\\d{2}$",
+          "description": "Timestamp (m:ss) in a video source."
+        }
+      }
+    },
+    "ClaimBase": {
+      "type": "object",
+      "required": [
+        "value",
+        "status",
+        "sources"
+      ],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/Status"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SourceRef"
+          }
+        },
+        "note": {
+          "type": "string"
+        },
+        "value": true
+      }
+    },
+    "ClaimString": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/ClaimBase"
+        }
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": true,
+        "sources": true,
+        "note": true
+      },
+      "unevaluatedProperties": false
+    },
+    "ClaimPosition": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/ClaimBase"
+        }
+      ],
+      "properties": {
+        "value": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Position"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": true,
+        "sources": true,
+        "note": true
+      },
+      "unevaluatedProperties": false
+    },
+    "ClaimHazard": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/$defs/ClaimBase"
+        }
+      ],
+      "properties": {
+        "value": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/Hazard"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": true,
+        "sources": true,
+        "note": true
+      },
+      "unevaluatedProperties": false
+    },
+    "Names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ja",
+        "en"
+      ],
+      "properties": {
+        "ja": {
+          "type": "string"
+        },
+        "en": {
+          "$ref": "#/$defs/ClaimString"
+        },
+        "community": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Position": {
+      "description": "Never carries coordinates that no source supports. `polar` stays absent until measured from a source image.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "anchor",
+        "description",
+        "orientation"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "fixed",
+            "relative",
+            "example",
+            "randomized",
+            "orientation-dependent",
+            "player-adjusted"
+          ]
+        },
+        "anchor": {
+          "type": "string",
+          "pattern": "^(arena-center|boss|statue|waymark:[A-D1-4]|other)$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "polar": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "angleDeg",
+            "radius"
+          ],
+          "properties": {
+            "angleDeg": {
+              "type": "number"
+            },
+            "radius": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Alternative spots the source shows; selection rule lives in the claim note."
+        },
+        "orientation": {
+          "oneOf": [
+            {
+              "const": "true-north"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "relativeTo"
+              ],
+              "properties": {
+                "relativeTo": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Hazard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "description"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "cone",
+            "circle",
+            "half-room",
+            "quadrants",
+            "line",
+            "stack",
+            "spread",
+            "tower",
+            "knockback",
+            "beam",
+            "puddle",
+            "gaze",
+            "raidwide",
+            "tankbuster",
+            "object",
+            "other"
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "geometry": {
+          "description": "Only numbers a source states. Absent = not known.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "angleDeg": {
+              "type": "number"
+            },
+            "hits": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    },
+    "State": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "label",
+        "trigger",
+        "positions",
+        "hazards"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "label": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "trigger": {
+          "$ref": "#/$defs/ClaimString"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "positions": {
+          "type": "object",
+          "propertyNames": {
+            "$ref": "#/$defs/Role"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/ClaimPosition"
+          }
+        },
+        "hazards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ClaimHazard"
+          }
+        },
+        "objects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ClaimHazard"
+          }
+        }
+      }
+    },
+    "Mechanic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "phase",
+        "order",
+        "names",
+        "whatHappens",
+        "recognition",
+        "roles",
+        "states",
+        "resolutionOrder",
+        "whyItWorks",
+        "commonMistakes",
+        "ownerVerification"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^p[1-5]-[a-z0-9-]+$"
+        },
+        "phase": {
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "instance": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "occursWithin": {
+          "type": "string",
+          "description": "Id of the mechanic this one happens inside (e.g. Ruin III #2 inside Graven Image II)."
+        },
+        "names": {
+          "$ref": "#/$defs/Names"
+        },
+        "whatHappens": {
+          "$ref": "#/$defs/ClaimString"
+        },
+        "recognition": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ClaimString"
+          }
+        },
+        "branches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "label",
+              "condition"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "condition": {
+                "$ref": "#/$defs/ClaimString"
+              }
+            }
+          }
+        },
+        "roles": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "MT",
+            "OT",
+            "H1",
+            "H2",
+            "D1",
+            "D2",
+            "D3",
+            "D4"
+          ],
+          "properties": {
+            "MT": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "OT": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "H1": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "H2": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "D1": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "D2": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "D3": {
+              "$ref": "#/$defs/RoleClaim"
+            },
+            "D4": {
+              "$ref": "#/$defs/RoleClaim"
+            }
+          }
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/State"
+          }
+        },
+        "resolutionOrder": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ClaimString"
+          }
+        },
+        "whyItWorks": {
+          "$ref": "#/$defs/ClaimString"
+        },
+        "commonMistakes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "mistake",
+              "consequence",
+              "claim"
+            ],
+            "properties": {
+              "mistake": {
+                "type": "string"
+              },
+              "consequence": {
+                "type": "string"
+              },
+              "claim": {
+                "$ref": "#/$defs/ClaimString"
+              }
+            }
+          }
+        },
+        "disagreements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Ids in docs/STRATEGY_DECISIONS.md"
+        },
+        "ownerVerification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "unreviewed",
+                "approved",
+                "rejected",
+                "unsure"
+              ]
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "note": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "RoleClaim": {
+      "type": "object",
+      "description": "A role instruction. `notInvolved: true` means the role has no part in this mechanic; value must then be null and the claim still needs evidence (status + sources). Use `note` for incidental advice such as 'stay out of the cone'.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/ClaimBase"
+        }
+      ],
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": true,
+        "sources": true,
+        "note": true,
+        "notInvolved": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  }
+}

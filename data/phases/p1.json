@@ -5488,58 +5488,86 @@
             "D3": {
               "value": {
                 "kind": "fixed",
-                "anchor": "waymark:1",
-                "description": "NW, between the red and blue frames, by 1.",
+                "anchor": "other",
+                "description": "NW, just outside the first arrow (↑ of the blue frame), diagonally across it from MT.",
                 "orientation": "true-north"
               },
-              "status": "derived-from-image",
+              "status": "derived",
               "sources": [
                 {
                   "ref": "yan-p1-19"
+                },
+                {
+                  "ref": "kitten-dmu-gi3"
+                },
+                {
+                  "ref": "owner-kitten-review"
                 }
-              ]
+              ],
+              "note": "Moved 2026-11-09 (D-P1-07): hug the arrow so the quadrant's pair are nearest to each other; Yan's picture shows the gap between the frames."
             },
             "D4": {
               "value": {
                 "kind": "fixed",
-                "anchor": "waymark:2",
-                "description": "NE, between the red and blue frames, by 2.",
+                "anchor": "other",
+                "description": "NE, just outside the first arrow (→ of the blue frame), diagonally across it from OT.",
                 "orientation": "true-north"
               },
-              "status": "derived-from-image",
+              "status": "derived",
               "sources": [
                 {
                   "ref": "yan-p1-19"
+                },
+                {
+                  "ref": "kitten-dmu-gi3"
+                },
+                {
+                  "ref": "owner-kitten-review"
                 }
-              ]
+              ],
+              "note": "Moved 2026-11-09 (D-P1-07): hug the arrow so the quadrant's pair are nearest to each other; Yan's picture shows the gap between the frames."
             },
             "H1": {
               "value": {
                 "kind": "fixed",
-                "anchor": "waymark:4",
-                "description": "SW, between the red and blue frames, by 4.",
+                "anchor": "other",
+                "description": "SW, just outside the first arrow (← of the blue frame), diagonally across it from D1.",
                 "orientation": "true-north"
               },
-              "status": "derived-from-image",
+              "status": "derived",
               "sources": [
                 {
                   "ref": "yan-p1-19"
+                },
+                {
+                  "ref": "kitten-dmu-gi3"
+                },
+                {
+                  "ref": "owner-kitten-review"
                 }
-              ]
+              ],
+              "note": "Moved 2026-11-09 (D-P1-07): hug the arrow so the quadrant's pair are nearest to each other; Yan's picture shows the gap between the frames."
             },
             "H2": {
               "value": {
                 "kind": "fixed",
-                "anchor": "waymark:3",
-                "description": "SE, between the red and blue frames, by 3.",
+                "anchor": "other",
+                "description": "SE, just outside the first arrow (↓ of the blue frame), diagonally across it from D2.",
                 "orientation": "true-north"
               },
-              "status": "derived-from-image",
+              "status": "derived",
               "sources": [
                 {
                   "ref": "yan-p1-19"
+                },
+                {
+                  "ref": "kitten-dmu-gi3"
+                },
+                {
+                  "ref": "owner-kitten-review"
                 }
-              ]
+              ],
+              "note": "Moved 2026-11-09 (D-P1-07): hug the arrow so the quadrant's pair are nearest to each other; Yan's picture shows the gap between the frames."
             }
           },
           "hazards": [

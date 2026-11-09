@@ -226,3 +226,7 @@ Your feedback: start south, MT runs in just before the pull, groups head to thei
 ## Owner verdicts on round 16 (2026-11-09)
 
 - **Approved:** 64, 65, 66. R4 is done; the replay plan (R1–R4) is complete. Open: item 43 (Pulse Wave push direction).
+
+## Round 17: Kitten ERP comparison (2026-11-09)
+
+67. **Tele-trouncing teleport spread** (owner's reading, backed by Kitten ERP's Mana diagram; D-P1-07): D3, D4, H1 and H2 now hug their quadrant's first arrow, diagonally across it from their partner (MT, OT, D1, D2), instead of standing on the intercardinal waymarks. Each quadrant's pair are now each other's nearest player. D4 was also 0.13 too far north before. Shows in the guide (Tele-trouncing → teleport spread, confusion) and in the replay around 2:50–3:00. Approved in principle by the owner; please give the drawn result a look.

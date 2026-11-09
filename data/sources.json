@@ -153,6 +153,29 @@
       "title": "Owner feedback on the replay (R2)",
       "date": "2026-11-07",
       "note": "Given in chat: start the fight with neutral positions (main tank north, party loosely spread in the southern half), show the Ruin III cone only from its castbar, and fill the text-only steps with inferred diagrams."
+    },
+    "kitten-dmu": {
+      "source": "secondary",
+      "title": "DMU guide (Kitten ERP Guides)",
+      "author": "Kitten ERP Guides",
+      "url": "https://kitten-erp-guides.moe/ultimates/dmu",
+      "retrieved": "2026-11-09",
+      "method": "Read in the browser (text and diagrams; not stored in repo).",
+      "note": "English guide that documents Mana PF (which follows Yan) and Elemental (Lisbin/Megabin, Kroxy-Rinon) side by side. Yan still wins; used to clarify mechanics and to read details Yan's pictures leave open, only with owner approval."
+    },
+    "kitten-dmu-gi3": {
+      "source": "secondary",
+      "parent": "kitten-dmu",
+      "title": "Graven Image 3",
+      "url": "https://kitten-erp-guides.moe/ultimates/dmu/p1/graven_image_3",
+      "retrieved": "2026-11-09",
+      "note": "Teleport spread: \"edge close to the teleporter circle without touching it\"; the two players of a quadrant stand directly across that teleporter from each other (diagram graven3_teleportent_spread.png)."
+    },
+    "owner-kitten-review": {
+      "source": "owner",
+      "title": "Owner answers after the Kitten ERP comparison",
+      "date": "2026-11-09",
+      "note": "Given in chat: the four outer Tele-trouncing spread players hug their quadrant's first arrow diagonally, so each quadrant's pair are nearest to each other."
     }
   },
   "images": {

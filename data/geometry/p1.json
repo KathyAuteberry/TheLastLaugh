@@ -2706,9 +2706,15 @@
       "sources": [
         {
           "ref": "yan-p1-19"
+        },
+        {
+          "ref": "kitten-dmu-gi3"
+        },
+        {
+          "ref": "owner-kitten-review"
         }
       ],
-      "note": "yan-p1-19 is 1200 px; measured after scaling to 2000 px.",
+      "note": "yan-p1-19 is 1200 px; measured after scaling to 2000 px. Outer four (D3, D4, H1, H2) moved in 2026-11-09 (D-P1-07).",
       "positions": {
         "D1": {
           "at": [
@@ -2726,31 +2732,35 @@
         },
         "H1": {
           "at": [
-            -0.474,
-            -0.474
+            -0.382,
+            -0.429
           ],
-          "method": "auto"
+          "method": "eye",
+          "note": "Mirror of D1 across the quadrant's first arrow (SW ←), so the pair are each other's nearest player (owner + Kitten ERP, D-P1-07). Yan's picture shows this player in the gap between the frames."
         },
         "H2": {
           "at": [
-            0.463,
-            -0.467
+            0.42,
+            -0.391
           ],
-          "method": "auto"
+          "method": "eye",
+          "note": "Mirror of D2 across the quadrant's first arrow (SE ↓), so the pair are each other's nearest player (owner + Kitten ERP, D-P1-07). Yan's picture shows this player in the gap between the frames."
         },
         "D3": {
           "at": [
-            -0.503,
-            0.482
+            -0.398,
+            0.395
           ],
-          "method": "eye"
+          "method": "eye",
+          "note": "Mirror of MT across the quadrant's first arrow (NW ↑), so the pair are each other's nearest player (owner + Kitten ERP, D-P1-07). Yan's picture shows this player in the gap between the frames."
         },
         "D4": {
           "at": [
-            0.462,
-            0.646
+            0.391,
+            0.43
           ],
-          "method": "eye"
+          "method": "eye",
+          "note": "Mirror of OT across the quadrant's first arrow (NE →), so the pair are each other's nearest player (owner + Kitten ERP, D-P1-07). Yan's picture shows this player in the gap between the frames."
         },
         "MT": {
           "at": [
@@ -2881,7 +2891,7 @@
         }
       ],
       "owner": "approved",
-      "ownerDate": "2026-11-07"
+      "ownerDate": "2026-11-09"
     },
     "p1-tele-trouncing/confusion": {
       "image": "yan-p1-19",

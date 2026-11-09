@@ -14,7 +14,7 @@ A mechanic is complete only when it has no unverified claims **and** the owner a
 | P1 | 6 | Revolting Ruin III / ばりばりルインガ | 1 | 14 | 0 | 0 | 6 | approved | ✅ |
 | P1 | 7 | Light of Judgment / 裁きの光 | 4 | 10 | 0 | 0 | 0 | approved | ✅ |
 | P1 | 8 | Hyperdrive (no cast) / ハイパードライブ（無詠唱） | 4 | 10 | 0 | 0 | 6 | approved | ✅ |
-| P1 | 9 | Tele-trouncing / ずびずばテレポ | 34 | 7 | 24 | 0 | 0 | approved | ✅ |
+| P1 | 9 | Tele-trouncing / ずびずばテレポ | 34 | 11 | 20 | 0 | 0 | approved | ✅ |
 | P1 | 10 | Time's Up (phase transition) / 時間切れ | 2 | 12 | 0 | 0 | 0 | approved | ✅ |
 
 ## Mitigation events (Ikuya)
@@ -67,7 +67,7 @@ Each drawn scene and how its positions were measured. A diagram counts only when
 | p1-graven-image-2/into-puddles | yan-p1-15 | 1 auto / 7 eye-or-copy | approved |
 | p1-tele-trouncing/arrows | yan-p1-17 | 0 auto / 0 eye-or-copy | approved |
 | p1-tele-trouncing/trap-pass | yan-p1-18 | 3 auto / 5 eye-or-copy | approved |
-| p1-tele-trouncing/tele-spread | yan-p1-19 | 4 auto / 4 eye-or-copy | approved |
+| p1-tele-trouncing/tele-spread | yan-p1-19 | 2 auto / 6 eye-or-copy | approved |
 | p1-tele-trouncing/confusion | yan-p1-19 | 0 auto / 0 eye-or-copy | approved |
 | p1-tele-trouncing/final-spread | yan-p1-21 | 7 auto / 1 eye-or-copy | approved |
 | p1-tele-trouncing/final-stack | yan-p1-22 | 1 auto / 7 eye-or-copy | approved |

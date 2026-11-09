@@ -171,11 +171,118 @@
       "retrieved": "2026-11-09",
       "note": "Teleport spread: \"edge close to the teleporter circle without touching it\"; the two players of a quadrant stand directly across that teleporter from each other (diagram graven3_teleportent_spread.png)."
     },
+    "kitten-dmu-forsaken": {
+      "source": "secondary",
+      "parent": "kitten-dmu",
+      "title": "Forsaken",
+      "url": "https://kitten-erp-guides.moe/ultimates/dmu/p2/forsaken",
+      "retrieved": "2026-11-09",
+      "note": "Mana (Yan) tab: support left / DPS right, the melee of a pair moves when both have the same marker; Past/Future End baited by the two cone holders and the two melee helpers (tank NW, melee DPS NE); the initial tower group marks itself (bind = cone, ignore/stop = circle) for the final set, and in Mana the marks override the priority; All Things Ending on sets 3, 5, 7 and after 8; final bait always at true north."
+    },
+    "kitten-dmu-trine": {
+      "source": "secondary",
+      "parent": "kitten-dmu",
+      "title": "Trine",
+      "url": "https://kitten-erp-guides.moe/ultimates/dmu/p2/trine",
+      "retrieved": "2026-11-09",
+      "note": "Mana: tanks as far north as possible, non-tanks as far south; MT close, ST far. On Kefka's defeat, Aero III Assault knocks everyone back from the centre."
+    },
     "owner-kitten-review": {
       "source": "owner",
       "title": "Owner answers after the Kitten ERP comparison",
       "date": "2026-11-09",
-      "note": "Given in chat: the four outer Tele-trouncing spread players hug their quadrant's first arrow diagonally, so each quadrant's pair are nearest to each other."
+      "note": "Given in chat: the four outer Tele-trouncing spread players hug their quadrant's first arrow diagonally (so each quadrant's pair are nearest to each other), and the P2 answers read from Kitten's Mana tab are applied (\"Both\")."
+    },
+    "yan-p2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "フェーズ2"
+    },
+    "yan-p2-ue1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "終末の双腕 (1st, phase 2 opener)"
+    },
+    "yan-p2-forsaken-1": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "①ミッシング 優先順+立ち位置ぴれん",
+      "note": "Method 1 (priority). Sub-sections: ルール, 過去の終焉or未来の終焉, 詳細な立ち位置."
+    },
+    "yan-p2-forsaken-2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "②ミッシング 南調整+立ち位置ぴれん",
+      "note": "Method 2 (south adjusts). Rule list only; the Past/Future End and detailed-position sub-sections appear only under method 1."
+    },
+    "yan-p2-loj": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "裁きの光 (phase 2)"
+    },
+    "yan-p2-trine": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "トライン"
+    },
+    "yan-p2-ue2": {
+      "source": "yan",
+      "parent": "yan",
+      "section": "終末の双腕 (2nd) / 時間切れ"
+    },
+    "pylene-tweet-legs": {
+      "source": "secondary",
+      "parent": "yan",
+      "title": "ぴれん@FF14 (@ff14_pylene99) on X: odd towers, right-tower stack hit by All Things Ending",
+      "url": "https://x.com/ff14_pylene99/status/2065007208870592937",
+      "note": "Embedded on Yan's P2 page under 詳細な立ち位置 (Yan's strategy is credited to ぴれん). 4 images: odd-tower tips, even-tower position detail. Images not stored."
+    },
+    "pylene-tweet-cone": {
+      "source": "secondary",
+      "parent": "yan",
+      "title": "ぴれん@FF14 (@ff14_pylene99) on X: why the positions work (90° cone geometry)",
+      "url": "https://x.com/ff14_pylene99/status/2064553429968806148",
+      "note": "Embedded on Yan's P2 page. 1 image: circle-and-cone geometry sketch (borrowed by ぴれん). Image not stored."
+    },
+    "azurite-p2": {
+      "source": "secondary",
+      "title": "UMAD Phase 2 Guide - Dancing Mad (Ultimate)",
+      "author": "AzuriteTV",
+      "url": "https://www.youtube.com/watch?v=eS0DK49QAD0",
+      "published": "2026-06-16",
+      "retrieved": "2026-11-09",
+      "method": "yt-dlp auto-generated English subtitles (not stored in repo)",
+      "note": "NA/EU strategy. Used ONLY for how mechanics work (targets, tells, consequences), never for positions or assignments. Chapters: 0:06 Forsaken breakdown, 3:51 Forsaken strategy, 10:06 examples, 13:40 Trines."
+    },
+    "marii-naur": {
+      "source": "secondary",
+      "title": "Dancing Mad (Ultimate) - NAUR Visual Guide",
+      "author": "marii_yaa",
+      "url": "https://www.youtube.com/watch?v=qTYJKduOrbM",
+      "published": "2026-08-08",
+      "retrieved": "2026-11-09",
+      "method": "yt-dlp auto-generated English subtitles (not stored in repo)",
+      "note": "NA/EU (NAUR) strategy. Used ONLY for how mechanics work, never for positions or assignments. P2 chapters: 15:20 intro, 15:48 Forsaken towers 1-3, 22:53 towers 4-8, 28:32 Trines, 30:42 puzzle and enrage."
+    },
+    "owner-p2-review": {
+      "source": "owner",
+      "title": "Owner answers on P2 (Stage 1)",
+      "date": "2026-11-09",
+      "note": "Given in chat: Yan's two Forsaken (Missing) methods are extracted as a reader-selectable variant."
+    },
+    "ikuya-p2": {
+      "source": "ikuya",
+      "parent": "ikuya",
+      "sheet": "P2 | Forsaken Kefka",
+      "range": "B6:Z34",
+      "note": "Events: Ultimate Embrace (typo 'Embrance'), Forsaken, Towers I-VIII (II/IV/VI/VIII with Past/Future's End, III/V/VII with All Things Ending), Light of Judgement, Wings of Destruction, Ultimate Embrace."
+    },
+    "ikuya-omnitank-p2": {
+      "source": "ikuya",
+      "parent": "ikuya",
+      "sheet": "Omnitank",
+      "range": "B25:I33",
+      "note": "Rows: Ultimate Embrace (B27, 3:40), Wings of Destruction ¹ ³ (B29, 6:11), Ultimate Embrace ² (B31, 6:18). Notes D33."
     }
   },
   "images": {
@@ -338,6 +445,78 @@
       "caption": "頭割り",
       "uploadedAt": "2026-06-15T22:57+09:00",
       "shows": "NE-SW orange bands. DPS stacked at waymark 1; tanks+healers stacked just inside 3 (between 3 and boss). Contrast boost reveals a faint second band set at the other diagonal (NW-SE)."
+    },
+    "yan-p2-01": {
+      "parent": "yan-p2-forsaken-1",
+      "file": "1781204620867-9e6114dd.webp",
+      "size": "3000x1500",
+      "uploadedAt": "2026-06-12T04:03+09:00",
+      "caption": "8 panels 1回目–8回目 (method 1)",
+      "shows": "Method 1, all 8 tower sets as one example run, towers drawn as relative south (boss at top centre, two blue tower circles below it, left and right). Each panel labels the four tower-soak spots (top-left, bottom-left, top-right, bottom-right) with 'debuff → debuff' text (頭 stack, 扇 cone, 円 circle), red labels on panels 1-3 and 8, blue on 4-7. Panels 1, 3, 5, 7 (odd): yellow circles = stacks at the top spots, orange = circle AoE bottom-right, a cone wedge bottom-left. Panels 2, 4, 6, 8 (even): red circles around the boss = Past/Future End baits. Side tags between panels: 未来過去誘導 (bait Future/Past End) between 1-2, 3-4, 5-6, 7-8; 消滅の脚誘導 (bait All Things Ending) between 2-3, 4-5, 6-7. Panel 7 shows only 頭/扇/円 (last debuffs), panel 8 only 扇/円."
+    },
+    "yan-p2-02": {
+      "parent": "yan-p2-forsaken-1",
+      "file": "1781542082976-33a2f6b1.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-16T01:48+09:00",
+      "caption": "奇数回 (odd towers, detailed positions)",
+      "shows": "Odd tower set, relative south (towers below the boss, which is at the arena centre). 8 player dots (no role labels): left tower has dots at its top edge (near the boss hitbox), centre-top, bottom edge and one just outside below it (cone wedge pointing south from there); right tower has dots at its top-left edge, top edge and bottom edge. Yellow stack circles on the two top spots, orange circle AoE on the right tower's bottom spot, blue = towers."
+    },
+    "yan-p2-03": {
+      "parent": "yan-p2-forsaken-1",
+      "file": "1781542096313-40131390.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-16T01:48+09:00",
+      "caption": "偶数回 (even towers, detailed positions)",
+      "shows": "Even tower set, relative south. 8 player dots: two on the boss's target ring at its upper left and upper right (NW/NE of the boss), two where each tower's north edge meets the boss ring, two at each tower's south edge, and two far outside each tower on the east-west line through the tower centres. Red circles = Past/Future End baits on the four players nearest the boss; orange circles and wedges = circle AoEs and cones."
+    },
+    "yan-p2-04": {
+      "parent": "yan-p2-forsaken-1",
+      "file": "1781428336200-ca6e6c17.webp",
+      "size": "2045x1057",
+      "uploadedAt": "2026-06-14T18:12+09:00",
+      "caption": "in-game screenshot, odd towers",
+      "shows": "In-game screenshot of an odd tower set with red dots marking 8 player spots and purple dashed guide lines; chat log shows Missing (ミッシング) cast, Spell Hazard (スペルハザード) and magic vulnerability debuffs, then Past's End (過去の終焉)."
+    },
+    "yan-p2-05": {
+      "parent": "yan-p2-forsaken-1",
+      "file": "1781428465052-9c749887.webp",
+      "size": "1796x1440",
+      "uploadedAt": "2026-06-14T18:14+09:00",
+      "caption": "in-game screenshot, even towers",
+      "shows": "In-game screenshot of an even tower set with red dots marking player spots and yellow dashed guide lines; chat log shows Past's End, All Things Ending (消滅の脚) and Future's End (未来の終焉)."
+    },
+    "yan-p2-06": {
+      "parent": "yan-p2-forsaken-2",
+      "file": "1781204684419-10dc2396.webp",
+      "size": "3000x1500",
+      "uploadedAt": "2026-06-12T04:04+09:00",
+      "caption": "8 panels 1回目–8回目 (method 2)",
+      "shows": "Method 2, same layout as yan-p2-01 (one example run, 8 tower sets, relative south). Spot labels differ from method 1 from panel 1 on (e.g. panel 1 top-left 頭→円, top-right 頭→扇, bottom-left 扇→円, bottom-right 円→扇). Same 未来過去誘導 / 消滅の脚誘導 side tags."
+    },
+    "yan-p2-07": {
+      "parent": "yan-p2-trine",
+      "file": "1781542891101-8019d5f1.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-16T02:01+09:00",
+      "caption": "Trine example 1",
+      "shows": "Arena with waymarks; yellow triangles numbered 1-3 by drop order (three 1s, one 2, three 3s incl. one at the centre). Tank shield icons 1 and 2 with purple circles (near and far Wings of Destruction hits) in the NW; party icons stacked on the SE '1' triangle."
+    },
+    "yan-p2-08": {
+      "parent": "yan-p2-trine",
+      "file": "1781542901659-53a5ba69.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-16T02:01+09:00",
+      "caption": "Trine example 2",
+      "shows": "Second example layout: tanks NW (shield 2 at the far edge, shield 1 near the middle), party on the NE '1' triangle near waymark 2; centre triangle numbered 3."
+    },
+    "yan-p2-09": {
+      "parent": "yan-p2-trine",
+      "file": "1781542920226-9de80f24.webp",
+      "size": "2000x2000",
+      "uploadedAt": "2026-06-16T02:01+09:00",
+      "caption": "Trine example 3",
+      "shows": "Third example layout: tanks east (shield 1 near the middle, shield 2 at the east edge), party on the south '1' triangle at C; centre triangle numbered 3."
     }
   },
   "contrastCheck": {

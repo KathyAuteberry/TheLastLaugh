@@ -9,9 +9,9 @@ describe("mitigation lanes", () => {
   });
   it("draws one bar per press and attaches every carry-over to its press", () => {
     const lanes = buildLanes({});
-    const presses = allEntries().filter((x) => x.action === "press").length;
+    const presses = allEntries(1).filter((x) => x.action === "press").length;
     expect(lanes.flatMap((l) => l.bars).length).toBe(presses);
-    const carries = allEntries().filter((x) => x.action === "carry-over").length;
+    const carries = allEntries(1).filter((x) => x.action === "carry-over").length;
     expect(lanes.flatMap((l) => l.bars.flatMap((b) => b.carries)).length).toBe(carries);
   });
   it("narrows a tank's party mit to the chosen job", () => {

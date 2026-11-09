@@ -72,3 +72,24 @@ The replay's clock comes from **cactbot** (`cactbot-dmu`) and **BossMod Reborn**
 - **Kitten ERP** (Mana tab, which follows Yan): "edge close to the teleporter circle without touching it", with the quadrant's two players directly across the teleporter from each other; the diagram pulls the outer player in diagonally toward the first arrow.
 - **Owner:** the outer players hug the arrow diagonally, so each quadrant's pair are each other's nearest player.
 - **Decision (owner, 2026-11-09):** each outer player is the mirror of their inner partner across the quadrant's first arrow (NW ↑, NE →, SE ↓, SW ←): D3 (−0.398, 0.395), D4 (0.391, 0.430), H1 (−0.382, −0.429), H2 (0.420, −0.391). The partner is now nearest in every quadrant (0.24–0.31, against 0.39–0.40 to anyone else). The inner four are unchanged. This closes the disagreement noted in D-P1-05.
+
+## D-P2-01: Two Forsaken methods (2026-11-09)
+
+- **Yan:** two sections for Forsaken (ミッシング), both credited to ぴれん: ① priority (優先順) and ② south adjusts (南調整). They share the pairs, the tower turns (stack pairs 1-2-3-8, others 4-7), the odd-tower layout and the macros. They differ in how stack spots (odd towers) and even towers are chosen. The Past/Future End and detailed-position paragraphs appear only under ①.
+- **Decision (owner, 2026-11-09):** offer both as a reader-selectable variant (`method-1` / `method-2` branches in data/phases/p2.json).
+- **Kitten ERP (Mana tab, read 2026-11-09):** describes only one method: support left, DPS right, the melee of a pair moves when both have the same marker. That always gives the same spots as Yan's ① read left to right, so ① is the default variant and "by priority" on odd towers means higher priority on the left. Kitten also names the clone baiters: the two cone holders plus the melee of each outside pair (tank NW, melee DPS NE of the boss), and says the post-tower-3 marks are for the players who sit out until tower 8 (owner applied, 2026-11-09).
+
+## D-P2-02: How many clones in All Things Ending (2026-11-09)
+
+- **AzuriteTV (2:45):** "Kefka and his clones will face five random players".
+- **marii_yaa (20:32):** Past's/Future's End "will spawn three clones of Kefka".
+- **Kitten ERP:** Past's/Future's End targets "the four closest players" and "spawns a clone"; no clone count stated.
+- **Yan:** does not say. The diagrams show four red bait circles on even sets (the Past/Future End baits), which fits four bait targets.
+- **Decision:** not settled; the text says "Kefka and his clones" without a number. Matters only for drawing the cleaves later.
+
+## D-P2-03: Ultimate Embrace, how the tanks take it (2026-11-09)
+
+- **Yan:** "heavy tank attack" only.
+- **Videos:** either one tank's invulnerability or both tanks stacked with all defensives; AzuriteTV prefers the shared option and saving invulnerabilities for P3.
+- **Ikuya (Omnitank, P2):** both tanks Kitchen Sink on the first Ultimate Embrace; Rampart + 40% + 90s on Wings of Destruction carried into the second, plus short mitigation. P1 Omnitank note ³ adds a WAR alternative (kitchen sink Hyperdrive #2, Holmgang the first Ultimate Embrace).
+- **Decision:** mitigation is Ikuya's call (source hierarchy): shared, both tanks kitchen sink. The videos are only background.

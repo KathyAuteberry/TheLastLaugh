@@ -1,0 +1,3657 @@
+{
+  "phase": 2,
+  "names": {
+    "ja": "フェーズ2",
+    "en": {
+      "value": "Phase 2: God Kefka",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "cactbot-dmu"
+        },
+        {
+          "ref": "marii-naur",
+          "at": "15:20"
+        }
+      ]
+    }
+  },
+  "extractedAt": "2026-11-09",
+  "sources": [
+    {
+      "ref": "yan-p2"
+    },
+    {
+      "ref": "yan-history"
+    }
+  ],
+  "notes": [
+    {
+      "value": "Yan gives two methods for Forsaken (both credited to ぴれん). The guide offers both as a variant: Method ① priority, Method ② south adjusts.",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "yan-p2-forsaken-2"
+        },
+        {
+          "ref": "owner-p2-review"
+        }
+      ]
+    },
+    {
+      "value": "Tower positions in Forsaken are described relative to the current tower pair (towers = relative south, left/right as seen facing the boss from the towers), because the pair spawns at a random direction and turns 45° each set.",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "yan-p2-02"
+        },
+        {
+          "ref": "marii-naur",
+          "at": "16:50"
+        }
+      ]
+    },
+    {
+      "value": "If the P1 puzzles (trap debuff, puddles, arrows) were not completed, the fight ends after P2 instead of continuing to P3.",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "marii-naur",
+          "at": "31:02"
+        }
+      ],
+      "note": "Secondary source (video). Matches P1's 'P3 prerequisites' note."
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "p2-ultimate-embrace-1",
+      "phase": 2,
+      "order": 1,
+      "instance": 1,
+      "names": {
+        "ja": "終末の双腕",
+        "en": {
+          "value": "Ultimate Embrace",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:00"
+            }
+          ],
+          "note": "English name from cactbot and both videos; Yan gives only the Japanese name."
+        }
+      },
+      "whatHappens": {
+        "value": "Very heavy tankbuster that opens P2.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-ue1",
+            "quoteJa": "タンク強攻撃"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "0:00"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "15:26"
+          }
+        ],
+        "note": "Videos: a shared buster on the two tanks, taken either with one tank's invulnerability or both tanks stacked with all defensives; healers help. Yan says only 'heavy tank attack'."
+      },
+      "recognition": [
+        {
+          "value": "Ultimate Embrace castbar right after Kefka becomes targetable; head marker on the tanks.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "bmr-dmu"
+            }
+          ],
+          "note": "cactbot: head marker 0103 about 5 s before the hit; BossMod Reborn: 5 s cast. How the tanks split it comes from Ikuya (Stage 2)."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Take Ultimate Embrace with OT. Invulnerability or shared defensives: per Ikuya's plan (Stage 2).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1",
+              "quoteJa": "タンク強攻撃"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:00"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Take Ultimate Embrace with MT. Invulnerability or shared defensives: per Ikuya's plan (Stage 2).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1",
+              "quoteJa": "タンク強攻撃"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:00"
+            }
+          ]
+        },
+        "H1": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "H2": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D1": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D2": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D3": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D4": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue1"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        }
+      },
+      "states": [
+        {
+          "id": "buster",
+          "label": "Ultimate Embrace",
+          "trigger": {
+            "value": "Castbar ends.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tankbuster",
+                "description": "Shared heavy tankbuster on the tanks."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-ue1"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:00"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "15:26"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Forsaken (raidwide) follows.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:21"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": [],
+        "note": "To draft once Ikuya's tank plan is linked (Stage 2)."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    },
+    {
+      "id": "p2-forsaken",
+      "phase": 2,
+      "order": 2,
+      "names": {
+        "ja": "ミッシング",
+        "en": {
+          "value": "Forsaken",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "bmr-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:21"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "15:46"
+            }
+          ],
+          "note": "English name from cactbot, BossMod Reborn and both videos."
+        }
+      },
+      "whatHappens": {
+        "value": "Heavy raidwide (Forsaken), then 8 sets of 2 towers. After the cast, 2 players get a stack marker (always 1 tank/healer and 1 DPS), 3 get circle AoEs and 3 get cones; the circles all go to one group (tanks+healers or DPS) and the cones to the other. Each set's tower soakers trigger their markers and get new ones. Every second set comes with Past's/Future's End (baits on the 4 players nearest Kefka) and then All Things Ending (half-room cleaves from Kefka and his clones).",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-forsaken-1",
+            "quoteJa": "ミッシングの詠唱完了後、頭割り2人・円AoE3人・扇AoE3人にデバフが付与されます。頭割りは必ずタンヒラから1名、DPSから1名につきます。円AoEはタンヒラかDPSのどちらかにまとまってつき、扇も同様です。"
+          },
+          {
+            "ref": "yan-p2-forsaken-1",
+            "quoteJa": "8回出現する塔"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "0:42"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "2:25"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "16:07"
+          },
+          {
+            "ref": "cactbot-dmu"
+          }
+        ],
+        "note": "Debuff and bait mechanics (debuff stacks cleansed by towers, Past/Future End, All Things Ending) are explained in the videos; Yan names them but does not explain them."
+      },
+      "recognition": [
+        {
+          "value": "Markers after Forsaken: stack, circle or cone above each player; towers appear as a pair 90° apart and each new pair turns 45° clockwise or counterclockwise (same way all mechanic).",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "塔は毎回、時計or反時計に45度ずれる"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "2:05"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "16:50"
+            }
+          ]
+        },
+        {
+          "value": "Every player has 4 stacks of a debuff (videos: 'Spells' Trouble'); each tower soak removes one. Anyone still holding a stack when Light of Judgment hits dies.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "ここでデバフを持っている人は即死"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "1:43"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "16:30"
+            }
+          ],
+          "note": "English name as spoken in both videos (spelling unconfirmed). yan-p2-04's chat log shows スペルハザード applied right after Missing; it may be this debuff or the marker itself, so it is not used as the name."
+        },
+        {
+          "value": "Past's End vs Future's End: Past's End → the following All Things Ending cleaves behind Kefka and his clones; Future's End → in front of them.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "azurite-p2",
+              "at": "2:45"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "20:32"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+            }
+          ],
+          "note": "Secondary sources (videos) for the cleave direction; Yan gives only where to stand for each."
+        }
+      ],
+      "branches": [
+        {
+          "id": "method-1",
+          "label": "Method ①: priority (優先順)",
+          "condition": {
+            "value": "Your group uses Yan's first Forsaken method: stack spots and even towers by role priority healer > tank > melee > ranged, higher priority on the left. This is the rule Mana PF uses (Kitten ERP), so it is the default.",
+            "status": "derived",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1",
+                "quoteJa": "奇数回の左下は扇、右下は円。頭割りは優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+              },
+              {
+                "ref": "owner-p2-review"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "owner-kitten-review"
+              }
+            ],
+            "note": "Kitten ERP's Mana tab states it as \"support left, DPS right; the melee of the pair moves if both have the same marker\", which always gives the same spots as Yan's priority read left to right."
+          }
+        },
+        {
+          "id": "method-2",
+          "label": "Method ②: south adjusts (南調整)",
+          "condition": {
+            "value": "Your group uses Yan's second Forsaken method: keep your spot; when markers clash on the previous tower, the south player moves.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-2",
+                "quoteJa": "頭割りは、直前の塔でマーカーが被ったら南の人が場所移動する（1回目は左タンヒラ、右DPS）"
+              },
+              {
+                "ref": "owner-p2-review"
+              }
+            ]
+          }
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Pair with H1. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the left (tanks+healers) side. Method ① priority for stack spots and even towers: 2nd (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT."
+        },
+        "OT": {
+          "value": "Pair with H2. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the left (tanks+healers) side. Method ① priority for stack spots and even towers: 2nd (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT."
+        },
+        "H1": {
+          "value": "Pair with MT. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the left (tanks+healers) side. Method ① priority for stack spots and even towers: 1st (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT."
+        },
+        "H2": {
+          "value": "Pair with OT. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the left (tanks+healers) side. Method ① priority for stack spots and even towers: 1st (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT."
+        },
+        "D1": {
+          "value": "Pair with D3. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the right (DPS) side. Method ① priority for stack spots and even towers: 3rd (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT. 'Melee' for the priority list reads as melee DPS (D1/D2) and 'ranged' as D3/D4 (Yan's role order); not stated explicitly."
+        },
+        "D2": {
+          "value": "Pair with D4. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the right (DPS) side. Method ① priority for stack spots and even towers: 3rd (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT. 'Melee' for the priority list reads as melee DPS (D1/D2) and 'ranged' as D3/D4 (Yan's role order); not stated explicitly."
+        },
+        "D3": {
+          "value": "Pair with D1. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the right (DPS) side. Method ① priority for stack spots and even towers: 4th (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT. 'Melee' for the priority list reads as melee DPS (D1/D2) and 'ranged' as D3/D4 (Yan's role order); not stated explicitly."
+        },
+        "D4": {
+          "value": "Pair with D2. If your pair has a stack after Forsaken, soak towers 1, 2, 3 and 8; otherwise towers 4, 5, 6 and 7. When your pair is not in the towers, stand on the right (DPS) side. Method ① priority for stack spots and even towers: 4th (healer > tank > melee > ranged). Method ② keeps spots and only the south player moves when markers clash. After tower 3, mark yourself: circle → stop1, cone → bind1.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-2",
+              "quoteJa": "ペアを固定（MT&H1／ST&H2／D1&D3／D2&D4）"
+            },
+            {
+              "ref": "yan-p2-forsaken-1",
+              "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+            }
+          ],
+          "note": "ST in Yan = OT. 'Melee' for the priority list reads as melee DPS (D1/D2) and 'ranged' as D3/D4 (Yan's role order); not stated explicitly."
+        }
+      },
+      "states": [
+        {
+          "id": "raidwide",
+          "label": "Forsaken raidwide; groups split",
+          "trigger": {
+            "value": "Forsaken castbar.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "bmr-dmu"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "West of the boss (tanks+healers side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "OT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "West of the boss (tanks+healers side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "H1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "West of the boss (tanks+healers side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "H2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "West of the boss (tanks+healers side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "D1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "East of the boss (DPS side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "D2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "East of the boss (DPS side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "D3": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "East of the boss (DPS side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            },
+            "D4": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "East of the boss (DPS side).",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ],
+              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Very heavy raidwide."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:21"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "15:46"
+                },
+                {
+                  "ref": "cactbot-dmu"
+                }
+              ],
+              "note": "Videos: needs heavy mitigation and shields. Yan does not describe the cast."
+            }
+          ]
+        },
+        {
+          "id": "odd-towers-1",
+          "label": "Odd towers (1, 3, 5, 7): stacks top, cone bottom-left, circle bottom-right",
+          "branch": "method-1",
+          "images": [
+            "yan-p2-02",
+            "yan-p2-04",
+            "yan-p2-01"
+          ],
+          "trigger": {
+            "value": "A new tower pair appears (sets 1, 3, 5, 7).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1"
+              },
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players. A missed tower explodes and gives the party a damage down."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:23"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Explosion consequence: videos."
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Stack on each stack holder (needs 3 players)."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Circle AoE on each circle holder; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:42"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from each cone holder at the nearest player (not at the holder).",
+                "geometry": {
+                  "angleDeg": 90
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ],
+              "note": "Cone angle 90° per ぴれん's tweet."
+            }
+          ]
+        },
+        {
+          "id": "odd-towers-2",
+          "label": "Odd towers (1, 3, 5, 7): stacks top, cone bottom-left, circle bottom-right",
+          "branch": "method-2",
+          "images": [
+            "yan-p2-02",
+            "yan-p2-04",
+            "yan-p2-06"
+          ],
+          "trigger": {
+            "value": "A new tower pair appears (sets 1, 3, 5, 7).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-2"
+              },
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, left (tanks+healers).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stacks go left = tanks+healers, right = DPS on tower 1; later, if markers clashed on the previous tower, the south player moves. Out of the towers: your side, right (DPS).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "奇数回の左下は扇、右下は円。"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                }
+              ],
+              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers)."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players. A missed tower explodes and gives the party a damage down."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:23"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Explosion consequence: videos."
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Stack on each stack holder (needs 3 players)."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Circle AoE on each circle holder; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:42"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from each cone holder at the nearest player (not at the holder).",
+                "geometry": {
+                  "angleDeg": 90
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ],
+              "note": "Cone angle 90° per ぴれん's tweet."
+            }
+          ]
+        },
+        {
+          "id": "even-towers-1",
+          "label": "Even towers (2, 4, 6, 8) with Past's/Future's End baits",
+          "branch": "method-1",
+          "images": [
+            "yan-p2-03",
+            "yan-p2-05",
+            "yan-p2-01"
+          ],
+          "trigger": {
+            "value": "Next tower pair (sets 2, 4, 6, 8); Kefka casts Past's End or Future's End.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1"
+              },
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "19:12"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ]
+        },
+        {
+          "id": "even-towers-2",
+          "label": "Even towers (2, 4, 6, 8) with Past's/Future's End baits",
+          "branch": "method-2",
+          "images": [
+            "yan-p2-03",
+            "yan-p2-05",
+            "yan-p2-06"
+          ],
+          "trigger": {
+            "value": "Next tower pair (sets 2, 4, 6, 8); Kefka casts Past's End or Future's End.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-2"
+              },
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "19:12"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "OT": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "H1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "H2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D1": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D2": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D3": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            },
+            "D4": {
+              "value": {
+                "kind": "player-adjusted",
+                "anchor": "other",
+                "description": "In the towers (if it's your pair's turn): if markers clashed on the previous tower, the south player moves; otherwise take your marker in the same tower (tower 4: left = healer + melee, right = tank + ranged). Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-2"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ]
+        },
+        {
+          "id": "all-things-ending",
+          "label": "All Things Ending: dodge the clone cleaves",
+          "images": [
+            "yan-p2-01"
+          ],
+          "trigger": {
+            "value": "After each even tower set: Kefka and his clones face players and cast All Things Ending.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "azurite-p2",
+                "at": "2:45"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "20:32"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "Past's End: after it lands, wait between the (next) towers until All Things Ending starts casting. Future's End: wait on the opposite side of the towers, and run to the tower side once the cast appears. The 4th time (after tower 8): gather at A and dodge by the cast.",
+                "orientation": {
+                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                }
+              ],
+              "note": "Stated under method ① only; method ② has no separate Past/Future paragraph (it shares the same tags in yan-p2-06)."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each clone: behind them after Past's End, in front after Future's End."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                }
+              ],
+              "note": "Videos. Number of clones: Azurite says Kefka and his clones face 5 random players; marii says 3 clones. Not settled."
+            }
+          ]
+        },
+        {
+          "id": "mark-after-3",
+          "label": "After tower 3: mark yourself",
+          "trigger": {
+            "value": "After the 3rd tower set resolves.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1",
+                "quoteJa": "3回目の塔処理後の自分のデバフで分岐"
+              },
+              {
+                "ref": "yan-p2-forsaken-2",
+                "quoteJa": "3回目の塔処理後の自分のデバフで分岐"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [],
+          "objects": [
+            {
+              "value": {
+                "type": "other",
+                "description": "Macro: circle → /mk stop <me> (stop1/stop2); cone → /mk bind <me> (bind1/bind2). The players who just soaked tower 3 don't soak again until tower 8; the mark keeps their marker in view, and its number places them there (left 1, right 2)."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "・円がついた場合 /mk stop <me> /micon \"stop1\" marking ・扇がついた場合 /mk bind <me> /micon \"bind1\" marking"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "・円がついた場合 /mk stop <me> /micon \"stop1\" marking ・扇がついた場合 /mk bind <me> /micon \"bind1\" marking"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Purpose from Kitten ERP (Mana): the initial tower group marks itself for the final set, and in Mana the marks override the priority. Yan gives the macros and the tower-8 rule."
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Forsaken raidwide → towers 1 → (Past/Future End) towers 2 → All Things Ending → towers 3 → … → towers 8 → All Things Ending (4th, gather at A) → Light of Judgment.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "bmr-dmu"
+            },
+            {
+              "ref": "yan-p2-forsaken-1"
+            }
+          ],
+          "note": "Order from cactbot: Path of Light (tower) sets 1-8, Future's/Past's End after sets 1, 3, 5, 7 casts (landing with sets 2, 4, 6, 8), All Things Ending after sets 2, 4, 6, 8."
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": [],
+        "note": "To draft after the method questions are answered."
+      },
+      "commonMistakes": [
+        {
+          "mistake": "Right-tower stack on odd sets stands too far out",
+          "consequence": "gets clipped by All Things Ending",
+          "claim": {
+            "value": "Right-tower stack on odd sets clipped by All Things Ending.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1",
+                "quoteJa": "奇数回のみ右塔頭割りが滅亡の脚に轢かれるとの報告あり ラグビーボールの右側に立てば安定するとのこと"
+              },
+              {
+                "ref": "pylene-tweet-legs"
+              }
+            ],
+            "note": "Fixes from Yan/ぴれん: stand on the right side of the 'rugby ball' (tower overlap); when baiting the legs, shift slightly counterclockwise (to the boss's right) or have the stack step a little inward, but not so far that the left outside tank gets caught in the right stack; bait the legs from max melee, not hugging the target circle (too close makes the angle steep)."
+          }
+        }
+      ],
+      "disagreements": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    },
+    {
+      "id": "p2-light-of-judgment",
+      "phase": 2,
+      "order": 3,
+      "names": {
+        "ja": "裁きの光",
+        "en": {
+          "value": "Light of Judgment",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "13:28"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Raidwide. Anyone still holding a stack of the Forsaken debuff (videos: Spells' Trouble) dies.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-loj",
+            "quoteJa": "全体攻撃 ここでデバフを持っている人は即死"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "1:43"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "24:57"
+          }
+        ]
+      },
+      "recognition": [
+        {
+          "value": "Light of Judgment castbar after the last All Things Ending.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "13:28"
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Take the raidwide with no Forsaken debuff left (all 4 of your towers soaked). No positioning stated by Yan; mitigation per Ikuya.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-loj",
+              "quoteJa": "全体攻撃"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "raidwide",
+          "label": "Raidwide",
+          "trigger": {
+            "value": "Castbar ends.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Heavy raidwide; lethal with a Forsaken debuff stack left."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-loj"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "24:57"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Trine follows.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": []
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    },
+    {
+      "id": "p2-trine",
+      "phase": 2,
+      "order": 4,
+      "names": {
+        "ja": "トライン",
+        "en": {
+          "value": "Trine",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "13:50"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "28:34"
+            }
+          ]
+        }
+      },
+      "whatHappens": {
+        "value": "Triangles drop in three sets; each explodes on its corners in drop order. Everyone hides in a first-set triangle after it goes off. Meanwhile Wings of Destruction #1 (one wing glows: half-room on that side) and #2 (both wings glow: heavy hits on the nearest and farthest player), then Ultimate Embrace.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-trine",
+            "quoteJa": "1回目に降ってきた三角に入るので確認。その途中に破壊の翼（半面AoE）が来るので避ける。3回目は真ん中に確定で降ってくる。"
+          },
+          {
+            "ref": "yan-p2-trine",
+            "quoteJa": "破壊の翼（近い人と遠い人に強攻撃）"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "13:50"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "28:34"
+          }
+        ],
+        "note": "Corner explosions and wing glow tells: videos. Set sizes (3, 1, 3 triangles) per marii; Yan's images show the same counts."
+      },
+      "recognition": [
+        {
+          "value": "Note which triangles land first; the 3rd set always lands in the middle.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "3回目は真ん中に確定で降ってくる"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "28:34"
+            }
+          ]
+        },
+        {
+          "value": "Wings of Destruction: one glowing wing = half-room on that side (dodge to the other side); both wings = near + far heavy hits.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "azurite-p2",
+              "at": "13:50"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "28:55"
+            }
+          ],
+          "note": "Videos."
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Find a safe first-set triangle north, then west (tanks' order). Get close to the boss for the near Wings of Destruction hit, minding the middle triangle. Then Ultimate Embrace.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "タンクは北 > 西で安地を探す"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "MTはトラインの範囲に注意しつつボスに近づき"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Find a safe first-set triangle north, then west (tanks' order). Stand at the very outer edge for the far Wings of Destruction hit. Then Ultimate Embrace.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "タンクは北 > 西で安地を探す"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "STは絶対最外周"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Find a safe first-set triangle south, then east (healers+DPS order). Stand toward the outside but not on the very edge, so the far hit goes to OT.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒーラーDPS組は南 > 東で安地を探し"
+            },
+            {
+              "ref": "yan-p2-trine",
+              "quoteJa": "ヒラDPSは最外周を踏まないくらいの外周くらいが丁度いい"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "wings-1",
+          "label": "Triangles drop; Wings of Destruction (half-room)",
+          "images": [
+            "yan-p2-07",
+            "yan-p2-08",
+            "yan-p2-09"
+          ],
+          "trigger": {
+            "value": "Trine cast, then Wings of Destruction with one glowing wing.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-trine"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "Dodge the half-room to the side whose wing is not glowing, near the middle.",
+                "orientation": "true-north"
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "その途中に破壊の翼（半面AoE）が来るので避ける"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:55"
+                }
+              ],
+              "note": "Yan says only to dodge it; 'stay near the middle while triangles spawn' is from marii."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Wings of Destruction: half-room on the glowing wing's side."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "object",
+                "description": "Triangles in 3 sets (3, 1, 3); the 3rd set includes the middle one."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:34"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "wings-2",
+          "label": "Hide in first-set triangles; Wings of Destruction (near + far)",
+          "images": [
+            "yan-p2-07",
+            "yan-p2-08",
+            "yan-p2-09"
+          ],
+          "trigger": {
+            "value": "First-set triangles go off; Wings of Destruction with both wings glowing.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-trine"
+              },
+              {
+                "ref": "azurite-p2",
+                "at": "14:10"
+              }
+            ]
+          },
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "boss",
+                "description": "In the tanks' first-set triangle (search north, then west), as close to the boss as the triangles allow.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07/08/09 (shield 1)."
+            },
+            "OT": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the tanks' first-set triangle (search north, then west), at the very outer edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07/08/09 (shield 2)."
+            },
+            "H1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            },
+            "H2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            },
+            "D1": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            },
+            "D2": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            },
+            "D3": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            },
+            "D4": {
+              "value": {
+                "kind": "orientation-dependent",
+                "anchor": "other",
+                "description": "In the party's first-set triangle (search south, then east), out from the middle but not on the very edge.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine"
+                }
+              ],
+              "note": "Examples: yan-p2-07 (SE), yan-p2-08 (NE near 2), yan-p2-09 (south at C)."
+            }
+          },
+          "hazards": [
+            {
+              "value": {
+                "type": "tankbuster",
+                "description": "Wings of Destruction: heavy hits on the nearest and farthest player."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-trine",
+                  "quoteJa": "破壊の翼（近い人と遠い人に強攻撃）"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "14:10"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Triangle corners explode in drop order."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "13:50"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "28:34"
+                }
+              ],
+              "note": "Videos."
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Trine → Wings of Destruction (half-room) → first triangles go off → Wings of Destruction (near/far) → Ultimate Embrace.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "yan-p2-trine"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": []
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    },
+    {
+      "id": "p2-ultimate-embrace-2",
+      "phase": 2,
+      "order": 5,
+      "instance": 2,
+      "names": {
+        "ja": "終末の双腕",
+        "en": {
+          "value": "Ultimate Embrace",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "0:00"
+            }
+          ],
+          "note": "English name from cactbot and both videos; Yan gives only the Japanese name."
+        }
+      },
+      "whatHappens": {
+        "value": "Second heavy tankbuster, right after Wings of Destruction #2.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-ue2",
+            "quoteJa": "タンク強攻撃"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "14:10"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "30:16"
+          }
+        ],
+        "note": "Videos: close enough to the wing buster that most defensives carry over."
+      },
+      "recognition": [
+        {
+          "value": "Castbar right after the near/far Wings of Destruction; head marker on the tanks.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "14:10"
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Take Ultimate Embrace with OT. Invulnerability or shared defensives: per Ikuya's plan (Stage 2).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "タンク強攻撃"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "14:30"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Take Ultimate Embrace with MT. Invulnerability or shared defensives: per Ikuya's plan (Stage 2).",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "タンク強攻撃"
+            },
+            {
+              "ref": "azurite-p2",
+              "at": "14:30"
+            }
+          ]
+        },
+        "H1": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "H2": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D1": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D2": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D3": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        },
+        "D4": {
+          "value": null,
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            }
+          ],
+          "notInvolved": true,
+          "note": "Tankbuster; stay away from the tanks."
+        }
+      },
+      "states": [
+        {
+          "id": "buster",
+          "label": "Ultimate Embrace",
+          "trigger": {
+            "value": "Castbar ends.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tankbuster",
+                "description": "Shared heavy tankbuster on the tanks."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-ue2"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "14:30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "Time's up: the enrage starts right after.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "後時間切れ"
+            },
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "30:42"
+            }
+          ]
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": [],
+        "note": "To draft once Ikuya's tank plan is linked (Stage 2)."
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    },
+    {
+      "id": "p2-time-up",
+      "phase": 2,
+      "order": 6,
+      "names": {
+        "ja": "時間切れ",
+        "en": {
+          "value": "Time's Up (enrage)",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2"
+            },
+            {
+              "ref": "cactbot-dmu"
+            }
+          ],
+          "note": "Enrage cast in cactbot: Light of Judgment (Enrage), only if Kefka is above 0%."
+        }
+      },
+      "whatHappens": {
+        "value": "P2 has a 6:20 time limit. If Kefka is not at 0% after the second Ultimate Embrace, he enrages and wipes the party; otherwise P3 starts.",
+        "status": "source-stated",
+        "sources": [
+          {
+            "ref": "yan-p2-ue2",
+            "quoteJa": "このフェーズ2の時間切れは6分20秒です。"
+          },
+          {
+            "ref": "cactbot-dmu"
+          },
+          {
+            "ref": "azurite-p2",
+            "at": "15:31"
+          },
+          {
+            "ref": "marii-naur",
+            "at": "30:42"
+          }
+        ],
+        "note": "6:20 is from the pull. cactbot's P2 runs about 172 s from targetable to the enrage cast, which fits a 6:20 end after a ~3:28 P1 transition (timeline labels are offsets, not real time)."
+      },
+      "recognition": [
+        {
+          "value": "Kefka goes untargetable after Ultimate Embrace.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "cactbot-dmu"
+            },
+            {
+              "ref": "marii-naur",
+              "at": "30:42"
+            }
+          ]
+        }
+      ],
+      "roles": {
+        "MT": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "OT": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "H1": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "H2": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "D1": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "D2": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "D3": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        },
+        "D4": {
+          "value": "Burst from 0:00 in P1 (Yan): it buys about 5-6 s of extra burst by the end of P2.",
+          "status": "source-stated",
+          "sources": [
+            {
+              "ref": "yan-p2-ue2",
+              "quoteJa": "フェーズ1から0秒バーストをしていればバースト約5〜6秒分のバースト火力を得ることができます"
+            }
+          ]
+        }
+      },
+      "states": [
+        {
+          "id": "enrage",
+          "label": "Enrage or P3",
+          "trigger": {
+            "value": "After Ultimate Embrace #2.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "raidwide",
+                "description": "Enrage (wipe) if Kefka is above 0%."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "cactbot-dmu"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "30:42"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "knockback",
+                "description": "If Kefka reaches 0%: Aero III Assault knocks everyone back from the centre, unavoidably. Stay near the middle so it doesn't push you off the arena."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-trine"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "15:31"
+                },
+                {
+                  "ref": "owner-kitten-review"
+                }
+              ],
+              "note": "Kitten ERP names the cast and gives the advice; AzuriteTV mentions the knockback from the middle. Owner approved (review item 25, 2026-11-09)."
+            }
+          ]
+        }
+      ],
+      "resolutionOrder": [
+        {
+          "value": "If Kefka reaches 0%, Aero III Assault knocks everyone back from the middle, then P3 starts.",
+          "status": "derived",
+          "sources": [
+            {
+              "ref": "azurite-p2",
+              "at": "15:31"
+            },
+            {
+              "ref": "kitten-dmu-trine"
+            }
+          ],
+          "note": "Secondary sources (Kitten ERP, AzuriteTV)."
+        }
+      ],
+      "whyItWorks": {
+        "value": null,
+        "status": "unverified",
+        "sources": []
+      },
+      "commonMistakes": [],
+      "ownerVerification": {
+        "state": "unreviewed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "phase": 2,
+  "about": "Hand-authored layer on top of the generated Ikuya data (p2.ikuya.json). Holds what the sheet cannot say: which mechanic each damage event belongs to, typo aliases, and owner-facing notes. Re-running scripts/extract_ikuya.py never touches this file.",
+  "sheets": {
+    "phase": {
+      "name": "P2 | Forsaken Kefka",
+      "file": "sheet7",
+      "firstRow": 8,
+      "lastRow": 32,
+      "notesCell": "D34",
+      "timeColumns": {
+        "absolute": "D",
+        "phaseRelative": "E"
+      }
+    },
+    "omnitank": {
+      "name": "Omnitank",
+      "file": "sheet15",
+      "firstRow": 27,
+      "lastRow": 31,
+      "notesCell": "D33",
+      "timeColumns": {
+        "absolute": "D"
+      }
+    }
+  },
+  "columns": {
+    "phase": {
+      "F": "MT",
+      "H": "OT",
+      "J": "WHM",
+      "L": "AST",
+      "N": "SCH",
+      "P": "SGE",
+      "R": "D1",
+      "T": "D2",
+      "V": "D3",
+      "X": "D4",
+      "Z": "Extras"
+    },
+    "omnitank": {
+      "E": "MT",
+      "I": "OT"
+    }
+  },
+  "aliases": {
+    "Ultimate Embrance": "Ultimate Embrace",
+    "Fey Illumuniation": "Fey Illumination",
+    "Serpah": "Seraph"
+  },
+  "links": {
+    "ik-p2-0341": {
+      "mechanic": "p2-ultimate-embrace-1",
+      "state": "buster",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "yan-p2-ue1"
+        }
+      ],
+      "note": "Same name ('Ultimate Embrance' in the sheet, a typo).",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-ot-p2-0340": {
+      "mechanic": "p2-ultimate-embrace-1",
+      "state": "buster",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p2"
+        },
+        {
+          "ref": "yan-p2-ue1"
+        }
+      ],
+      "note": "Omnitank lists it at 3:40, the phase tab at 3:41.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0357": {
+      "mechanic": "p2-forsaken",
+      "state": "raidwide",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "yan-p2-forsaken-1"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0410": {
+      "mechanic": "p2-forsaken",
+      "state": "odd-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers I. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0420": {
+      "mechanic": "p2-forsaken",
+      "state": "even-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers II (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0431": {
+      "mechanic": "p2-forsaken",
+      "state": "odd-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers III; Ikuya pairs it with All Things Ending, which lands just before this set. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0441": {
+      "mechanic": "p2-forsaken",
+      "state": "even-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers IV (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0452": {
+      "mechanic": "p2-forsaken",
+      "state": "odd-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers V (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0502": {
+      "mechanic": "p2-forsaken",
+      "state": "even-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers VI (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0512": {
+      "mechanic": "p2-forsaken",
+      "state": "odd-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers VII (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0523": {
+      "mechanic": "p2-forsaken",
+      "state": "even-towers-1",
+      "status": "derived",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "cactbot-dmu"
+        }
+      ],
+      "note": "Towers VIII (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0543": {
+      "mechanic": "p2-light-of-judgment",
+      "state": "raidwide",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "yan-p2-loj"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0611": {
+      "mechanic": "p2-trine",
+      "state": "wings-2",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "yan-p2-trine"
+        }
+      ],
+      "note": "The near/far Wings of Destruction (second cast); Omnitank footnote ¹ also times Rampart at the end of the first (half-room) cast.",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-ot-p2-0611": {
+      "mechanic": "p2-trine",
+      "state": "wings-2",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p2"
+        },
+        {
+          "ref": "yan-p2-trine"
+        }
+      ],
+      "note": "Omnitank: MT takes the close hit, OT the far one, which matches Yan (MT near the boss, OT at the outer edge).",
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-p2-0618": {
+      "mechanic": "p2-ultimate-embrace-2",
+      "state": "buster",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-p2"
+        },
+        {
+          "ref": "yan-p2-ue2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    },
+    "ik-ot-p2-0618": {
+      "mechanic": "p2-ultimate-embrace-2",
+      "state": "buster",
+      "status": "source-stated",
+      "sources": [
+        {
+          "ref": "ikuya-omnitank-p2"
+        },
+        {
+          "ref": "yan-p2-ue2"
+        }
+      ],
+      "owner": "approved",
+      "ownerDate": "2026-11-09"
+    }
+  },
+  "decisions": {
+    "extras-check": {
+      "cell": "P2 | Forsaken Kefka!Z10",
+      "decision": "ignore",
+      "note": "Lone ✔ in the Extras column on Forsaken, as in P1 (owner chose to ignore it there, 2026-11-07). Owner confirmed for P2 on 2026-11-09."
+    }
+  },
+  "ownerReview": {
+    "state": "approved",
+    "date": "2026-11-09",
+    "scope": "All 16 links, sheet-detail items 18-22 in docs/review/stage1-p2.md (Ikuya v6.3)."
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Arena } from "../arena/Arena";
-import { describeSource, geometry, p1 } from "../data";
+import { allMechanics, describeSource, geometry, phaseMechanics } from "../data";
 import { stepsInPull } from "../model/sequence";
 import { defaultSelection, variationsFor } from "../model/variants";
 import type { Claim, Mechanic, Role, Scene, Selection, SourceRef, Status, VariationSpec } from "../model/types";
@@ -60,10 +60,11 @@ export function MechanicView({ m, who }: { m: Mechanic; who: Who }) {
   const spec = useMemo(() => variationsFor(m, geometry), [m]);
   const [sel, setSel] = useState<Selection>(() => defaultSelection(spec));
   // A mechanic that happens inside another one (no steps of its own) shows the parent's scenes for it.
-  const parent = m.states.length === 0 && geometry.seeAlso?.[m.id] ? p1.mechanics.find((x) => x.id === m.occursWithin) : undefined;
+  const parent = m.states.length === 0 && geometry.seeAlso?.[m.id] ? allMechanics.find((x) => x.id === m.occursWithin) : undefined;
+  const pull = phaseMechanics(m.phase);
   const steps = useMemo(() => parent
-    ? stepsInPull(parent, p1.mechanics, geometry, defaultSelection(variationsFor(parent, geometry))).filter((s) => geometry.seeAlso![m.id]!.includes(s.key))
-    : stepsInPull(m, p1.mechanics, geometry, sel), [m, sel, parent]);
+    ? stepsInPull(parent, pull, geometry, defaultSelection(variationsFor(parent, geometry))).filter((s) => geometry.seeAlso![m.id]!.includes(s.key))
+    : stepsInPull(m, pull, geometry, sel), [m, sel, parent, pull]);
   const [i, setI] = useState(0);
   const [playing, setPlaying] = useState(false);
   useEffect(() => { setI(0); setPlaying(false); setSel(defaultSelection(spec)); }, [m, spec]);
@@ -135,7 +136,7 @@ export function MechanicView({ m, who }: { m: Mechanic; who: Who }) {
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <section aria-label="Diagram" className="space-y-3 xl:sticky xl:top-[4.75rem] xl:self-start">
           <div className="panel relative mx-auto max-w-[34rem] p-2 xl:max-w-none">
-            <Arena scene={scene} focus={focus} title={`${m.names.en.value ?? m.names.ja}: ${step?.state.label ?? ""}`} />
+            <Arena scene={scene} focus={focus} phase={m.phase} title={`${m.names.en.value ?? m.names.ja}: ${step?.state.label ?? ""}`} />
             {!scene && <p className="absolute inset-x-6 bottom-6 rounded-lg bg-ink-950/90 p-2 text-center text-xs text-zinc-400 ring-1 ring-white/10">No measured diagram for this step: positions are only described in text.</p>}
             {scene && scene.owner !== "approved" && <span className="badge absolute left-3 top-3 bg-amber-400/15 text-amber-200 ring-amber-400/40">Diagram awaiting owner check</span>}
           </div>
@@ -206,6 +207,7 @@ function Legend({ scene }: { scene: Scene }) {
       {scene.dodge && <p className="text-zinc-500">{scene.dodge.note}{scene.dodge.melee && ` ${scene.dodge.melee.note}`}</p>}
       {scene.debuff?.length ? <p>• <span className="rounded-full bg-jester-violet px-1 text-[10px] font-bold text-white">T</span> = holds the Double-Trouble Trap debuff ({scene.debuff.join(" + ")}; example assignment, random in the fight).</p> : null}
       {Object.values(scene.positions ?? {}).some((p) => p?.alt) && <p>• A role shown twice = two candidate spots; take the one that is safe.</p>}
+      {scene.relative && <p>• Drawn with the towers as south: turn the picture to wherever the towers spawn. Waymarks are hidden because they do not line up.</p>}
       {scene.note && <p className="text-zinc-500">{scene.note}</p>}
       <p className="text-zinc-500">Measured from: <Sources refs={scene.sources} /></p>
     </div>

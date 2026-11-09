@@ -1,0 +1,1369 @@
+{
+  "generatedBy": "scripts/extract_ikuya.py",
+  "source": "ikuya-mitty-v6.3.xlsx",
+  "sheetVersion": "6.3",
+  "phase": 2,
+  "sheets": {
+    "phase": {
+      "name": "P2 | Forsaken Kefka",
+      "footnotes": {
+        "¹": "Provide single target mitigation and GCD shield both tanks in the phase transition for Ultimate Embrace. Also assist tanks with the last Ultimate Embrace.",
+        "²": "Prepare Spreadlo either on the OT shortly beforehand or the MT during Ultimate Embrace to assist the tanks.",
+        "³": "Use Holos during the first Ultimate Embrace so it is back for Light of Judgement and provides mitigation to the tanks. Alternatively, you can use Holos for the Wings of Destruction + Ultimate Embrace.",
+        "⁴": "Use early to avoid shaking off mitigation if playing WAR."
+      },
+      "notes": [
+        "All mechanics requires shields! | ➔ Indicates Carry Over"
+      ]
+    },
+    "omnitank": {
+      "name": "Omnitank",
+      "footnotes": {
+        "¹": "Rampart end of first Wings of Destruction (halfroom) cast, 40% two GCDs later and 10s mitigation at the end of second Wings of Destruction cast.",
+        "²": "Short mitigation before Ultimate Embrace finishes casting.",
+        "³": "PLD can take the Wings of Destruction at the wall to assist their co-tank with no downtime (discuss beforehand if MT)."
+      },
+      "notes": []
+    }
+  },
+  "events": [
+    {
+      "id": "ik-p2-0341",
+      "sheet": "phase",
+      "row": 8,
+      "name": "Ultimate Embrance",
+      "footnotes": [],
+      "time": {
+        "absolute": "3:41",
+        "phaseRelative": "0:24",
+        "cells": [
+          "D8",
+          "E8"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0357",
+      "sheet": "phase",
+      "row": 10,
+      "name": "Forsaken",
+      "footnotes": [],
+      "time": {
+        "absolute": "3:57",
+        "phaseRelative": "0:39",
+        "cells": [
+          "D10",
+          "E10"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0410",
+      "sheet": "phase",
+      "row": 12,
+      "name": "Towers I",
+      "footnotes": [],
+      "time": {
+        "absolute": "4:10",
+        "phaseRelative": "0:53",
+        "cells": [
+          "D12",
+          "E12"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0420",
+      "sheet": "phase",
+      "row": 14,
+      "name": "Towers II (Past/Future's End)",
+      "footnotes": [],
+      "time": {
+        "absolute": "4:20",
+        "phaseRelative": "1:03",
+        "cells": [
+          "D14",
+          "E14"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0431",
+      "sheet": "phase",
+      "row": 16,
+      "name": "Towers III \n(All Things Ending)",
+      "footnotes": [],
+      "time": {
+        "absolute": "4:31",
+        "phaseRelative": "1:14",
+        "cells": [
+          "D16",
+          "E16"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0441",
+      "sheet": "phase",
+      "row": 18,
+      "name": "Towers IV (Past/Future's End)",
+      "footnotes": [],
+      "time": {
+        "absolute": "4:41",
+        "phaseRelative": "1:24",
+        "cells": [
+          "D18",
+          "E18"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0452",
+      "sheet": "phase",
+      "row": 20,
+      "name": "Towers V \n(All Things Ending)",
+      "footnotes": [],
+      "time": {
+        "absolute": "4:52",
+        "phaseRelative": "1:35",
+        "cells": [
+          "D20",
+          "E20"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0502",
+      "sheet": "phase",
+      "row": 22,
+      "name": "Towers VI (Past/Future's End)",
+      "footnotes": [],
+      "time": {
+        "absolute": "5:02",
+        "phaseRelative": "1:45",
+        "cells": [
+          "D22",
+          "E22"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0512",
+      "sheet": "phase",
+      "row": 24,
+      "name": "Towers VII \n(All Things Ending)",
+      "footnotes": [],
+      "time": {
+        "absolute": "5:12",
+        "phaseRelative": "1:55",
+        "cells": [
+          "D24",
+          "E24"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0523",
+      "sheet": "phase",
+      "row": 26,
+      "name": "Towers VIII (Past/Future's End)",
+      "footnotes": [],
+      "time": {
+        "absolute": "5:23",
+        "phaseRelative": "2:06",
+        "cells": [
+          "D26",
+          "E26"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0543",
+      "sheet": "phase",
+      "row": 28,
+      "name": "Light of Judgement",
+      "footnotes": [],
+      "time": {
+        "absolute": "5:43",
+        "phaseRelative": "2:26",
+        "cells": [
+          "D28",
+          "E28"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0611",
+      "sheet": "phase",
+      "row": 30,
+      "name": "Wings of Destruction",
+      "footnotes": [],
+      "time": {
+        "absolute": "6:11",
+        "phaseRelative": "2:54",
+        "cells": [
+          "D30",
+          "E30"
+        ]
+      }
+    },
+    {
+      "id": "ik-p2-0618",
+      "sheet": "phase",
+      "row": 32,
+      "name": "Ultimate Embrace",
+      "footnotes": [],
+      "time": {
+        "absolute": "6:18",
+        "phaseRelative": "3:01",
+        "cells": [
+          "D32",
+          "E32"
+        ]
+      }
+    },
+    {
+      "id": "ik-ot-p2-0340",
+      "sheet": "omnitank",
+      "row": 27,
+      "name": "Ultimate Embrace",
+      "footnotes": [],
+      "time": {
+        "absolute": "3:40",
+        "phaseRelative": null,
+        "cells": [
+          "D27"
+        ]
+      }
+    },
+    {
+      "id": "ik-ot-p2-0611",
+      "sheet": "omnitank",
+      "row": 29,
+      "name": "Wings of Destruction",
+      "footnotes": [
+        "¹",
+        "³"
+      ],
+      "time": {
+        "absolute": "6:11",
+        "phaseRelative": null,
+        "cells": [
+          "D29"
+        ]
+      }
+    },
+    {
+      "id": "ik-ot-p2-0618",
+      "sheet": "omnitank",
+      "row": 31,
+      "name": "Ultimate Embrace",
+      "footnotes": [
+        "²"
+      ],
+      "time": {
+        "absolute": "6:18",
+        "phaseRelative": null,
+        "cells": [
+          "D31"
+        ]
+      }
+    }
+  ],
+  "entries": [
+    {
+      "eventId": "ik-p2-0341",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Assist Tanks",
+      "jobVariant": null,
+      "footnotes": [
+        "¹"
+      ],
+      "cell": "P2 | Forsaken Kefka!J8",
+      "raw": "Assist Tanks ¹"
+    },
+    {
+      "eventId": "ik-p2-0341",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Spreadlo",
+      "jobVariant": null,
+      "footnotes": [
+        "²"
+      ],
+      "cell": "P2 | Forsaken Kefka!N8",
+      "raw": "Spreadlo ²"
+    },
+    {
+      "eventId": "ik-p2-0341",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Holos",
+      "jobVariant": null,
+      "footnotes": [
+        "³"
+      ],
+      "cell": "P2 | Forsaken Kefka!P8",
+      "raw": "Holos ³"
+    },
+    {
+      "eventId": "ik-p2-0341",
+      "slot": "D2",
+      "action": "press",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!T8",
+      "raw": "Feint"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F10",
+      "raw": "Reprisal"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!H10",
+      "raw": "Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Plenary Indulgence",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J10",
+      "raw": "Plenary Indulgence"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Collective Unconscious",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L10",
+      "raw": "Collective Unconscious"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N10",
+      "raw": "Sacred Soil\n➔ Spreadlo"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Spreadlo",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N10",
+      "raw": "Sacred Soil\n➔ Spreadlo",
+      "carriedFromEventId": "ik-p2-0341"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P10",
+      "raw": "Kerachole + Zoe Shields\n➔ Holos"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Zoe Shields",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P10",
+      "raw": "Kerachole + Zoe Shields\n➔ Holos"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Holos",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P10",
+      "raw": "Kerachole + Zoe Shields\n➔ Holos",
+      "carriedFromEventId": "ik-p2-0341"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "D1",
+      "action": "press",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!R10",
+      "raw": "Feint"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "D3",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!V10",
+      "raw": "Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "D4",
+      "action": "press",
+      "ability": "Addle",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!X10",
+      "raw": "Addle"
+    },
+    {
+      "eventId": "ik-p2-0357",
+      "slot": "Extras",
+      "action": "flag",
+      "ability": "✔",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!Z10",
+      "raw": "✔"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F12",
+      "raw": "➔ Reprisal",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": [
+        "GNB",
+        "DRK"
+      ],
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!H12",
+      "raw": "Party Mit (GNB/DRK)"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Seraph",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N12",
+      "raw": "Seraph + Fey Illumination\n➔ Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Fey Illumination",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N12",
+      "raw": "Seraph + Fey Illumination\n➔ Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N12",
+      "raw": "Seraph + Fey Illumination\n➔ Sacred Soil",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Panhaima",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P12",
+      "raw": "Panhaima\n➔ Kerachole"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P12",
+      "raw": "Panhaima\n➔ Kerachole",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "D1",
+      "action": "carry-over",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!R12",
+      "raw": "➔ Feint",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "D3",
+      "action": "carry-over",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!V12",
+      "raw": "➔ Party Mit",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0410",
+      "slot": "D4",
+      "action": "carry-over",
+      "ability": "Addle",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!X12",
+      "raw": "➔ Addle",
+      "carriedFromEventId": "ik-p2-0357"
+    },
+    {
+      "eventId": "ik-p2-0420",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Seraph",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N14",
+      "raw": "Seraph\n➔ Fey Illumuniation"
+    },
+    {
+      "eventId": "ik-p2-0420",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Fey Illumination",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N14",
+      "raw": "Seraph\n➔ Fey Illumuniation",
+      "carriedFromEventId": "ik-p2-0410"
+    },
+    {
+      "eventId": "ik-p2-0420",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Panhaima",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P14",
+      "raw": "➔ Panhaima",
+      "carriedFromEventId": "ik-p2-0410"
+    },
+    {
+      "eventId": "ik-p2-0431",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F16",
+      "raw": "Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0431",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!H16",
+      "raw": "Reprisal"
+    },
+    {
+      "eventId": "ik-p2-0431",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Macrocosmos",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L16",
+      "raw": "Macrocosmos"
+    },
+    {
+      "eventId": "ik-p2-0431",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N16",
+      "raw": "Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0431",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P16",
+      "raw": "Kerachole"
+    },
+    {
+      "eventId": "ik-p2-0441",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "Party Mit",
+      "jobVariant": [
+        "GNB",
+        "DRK"
+      ],
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F18",
+      "raw": "➔ Party Mit (GNB/DRK)",
+      "carriedFromEventId": "ik-p2-0431"
+    },
+    {
+      "eventId": "ik-p2-0441",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N18",
+      "raw": "➔ Sacred Soil",
+      "carriedFromEventId": "ik-p2-0431"
+    },
+    {
+      "eventId": "ik-p2-0441",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P18",
+      "raw": "➔ Kerachole",
+      "carriedFromEventId": "ik-p2-0431"
+    },
+    {
+      "eventId": "ik-p2-0452",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Temperance",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J20",
+      "raw": " Temperance + Divine Caress"
+    },
+    {
+      "eventId": "ik-p2-0452",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Divine Caress",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J20",
+      "raw": " Temperance + Divine Caress"
+    },
+    {
+      "eventId": "ik-p2-0452",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Neutral Sect",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L20",
+      "raw": "Neutral Sect"
+    },
+    {
+      "eventId": "ik-p2-0452",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Expedient",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N20",
+      "raw": "Expedient"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F22",
+      "raw": "Reprisal"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Plenary Indulgence",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J22",
+      "raw": "Plenary Indulgence\n➔ Temperance"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "WHM",
+      "action": "carry-over",
+      "ability": "Temperance",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J22",
+      "raw": "Plenary Indulgence\n➔ Temperance",
+      "carriedFromEventId": "ik-p2-0452"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Collective Unconscious",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L22",
+      "raw": "Collective Unconscious"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Seraphism",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N22",
+      "raw": "Seraphism\n➔ Expedient"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Expedient",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N22",
+      "raw": "Seraphism\n➔ Expedient",
+      "carriedFromEventId": "ik-p2-0452"
+    },
+    {
+      "eventId": "ik-p2-0502",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Philosophia",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P22",
+      "raw": "Philosophia"
+    },
+    {
+      "eventId": "ik-p2-0512",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Liturgy of the Bell",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J24",
+      "raw": "Liturgy of the Bell\n➔ Temperance"
+    },
+    {
+      "eventId": "ik-p2-0512",
+      "slot": "WHM",
+      "action": "carry-over",
+      "ability": "Temperance",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J24",
+      "raw": "Liturgy of the Bell\n➔ Temperance",
+      "carriedFromEventId": "ik-p2-0452"
+    },
+    {
+      "eventId": "ik-p2-0512",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Sun Sign",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L24",
+      "raw": "Sun Sign"
+    },
+    {
+      "eventId": "ik-p2-0512",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N24",
+      "raw": "Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0512",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P24",
+      "raw": "Kerachole"
+    },
+    {
+      "eventId": "ik-p2-0523",
+      "slot": "WHM",
+      "action": "carry-over",
+      "ability": "Liturgy of the Bell",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J26",
+      "raw": "➔ Liturgy of the Bell",
+      "carriedFromEventId": "ik-p2-0512"
+    },
+    {
+      "eventId": "ik-p2-0523",
+      "slot": "AST",
+      "action": "carry-over",
+      "ability": "Sun Sign",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L26",
+      "raw": "➔ Sun Sign",
+      "carriedFromEventId": "ik-p2-0512"
+    },
+    {
+      "eventId": "ik-p2-0523",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N26",
+      "raw": "➔ Sacred Soil",
+      "carriedFromEventId": "ik-p2-0512"
+    },
+    {
+      "eventId": "ik-p2-0523",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P26",
+      "raw": "➔ Kerachole",
+      "carriedFromEventId": "ik-p2-0512"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!H28",
+      "raw": "Reprisal + Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!H28",
+      "raw": "Reprisal + Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Spreadlo",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N28",
+      "raw": "Spreadlo + Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N28",
+      "raw": "Spreadlo + Sacred Soil"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P28",
+      "raw": "Kerachole + Holos ³ + Zoe Shields"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Holos",
+      "jobVariant": null,
+      "footnotes": [
+        "³"
+      ],
+      "cell": "P2 | Forsaken Kefka!P28",
+      "raw": "Kerachole + Holos ³ + Zoe Shields"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Zoe Shields",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P28",
+      "raw": "Kerachole + Holos ³ + Zoe Shields"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "D1",
+      "action": "press",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!R28",
+      "raw": "Feint"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "D3",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!V28",
+      "raw": "Party Mit"
+    },
+    {
+      "eventId": "ik-p2-0543",
+      "slot": "D4",
+      "action": "press",
+      "ability": "Addle",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!X28",
+      "raw": "Addle"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F30",
+      "raw": "Reprisal + Party Mit ⁴"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [
+        "⁴"
+      ],
+      "cell": "P2 | Forsaken Kefka!F30",
+      "raw": "Reprisal + Party Mit ⁴"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "WHM",
+      "action": "press",
+      "ability": "Plenary Indulgence",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J30",
+      "raw": "Plenary Indulgence"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "AST",
+      "action": "press",
+      "ability": "Collective Unconscious",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L30",
+      "raw": "Collective Unconscious"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N30",
+      "raw": "Sacred Soil + Fey Illumination + Seraph"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Fey Illumination",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N30",
+      "raw": "Sacred Soil + Fey Illumination + Seraph"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "SCH",
+      "action": "press",
+      "ability": "Seraph",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N30",
+      "raw": "Sacred Soil + Fey Illumination + Seraph"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P30",
+      "raw": "Kerachole + Panhaima"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "SGE",
+      "action": "press",
+      "ability": "Panhaima",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P30",
+      "raw": "Kerachole + Panhaima"
+    },
+    {
+      "eventId": "ik-p2-0611",
+      "slot": "D2",
+      "action": "press",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!T30",
+      "raw": "Feint"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "Reprisal",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F32",
+      "raw": "➔ Reprisal + Party Mit",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "Party Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!F32",
+      "raw": "➔ Reprisal + Party Mit",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "WHM",
+      "action": "carry-over",
+      "ability": "Plenary Indulgence",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!J32",
+      "raw": "➔ Plenary Indulgence",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "AST",
+      "action": "carry-over",
+      "ability": "Collective Unconscious",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!L32",
+      "raw": "➔ Collective Unconscious",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Sacred Soil",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N32",
+      "raw": "➔ Sacred Soil + Fey Illumination + Seraph",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Fey Illumination",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N32",
+      "raw": "➔ Sacred Soil + Fey Illumination + Seraph",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "SCH",
+      "action": "carry-over",
+      "ability": "Seraph",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!N32",
+      "raw": "➔ Sacred Soil + Fey Illumination + Seraph",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Kerachole",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P32",
+      "raw": "➔ Kerachole + Panhaima",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "SGE",
+      "action": "carry-over",
+      "ability": "Panhaima",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!P32",
+      "raw": "➔ Kerachole + Panhaima",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-p2-0618",
+      "slot": "D2",
+      "action": "carry-over",
+      "ability": "Feint",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "P2 | Forsaken Kefka!T32",
+      "raw": "➔ Feint",
+      "carriedFromEventId": "ik-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0340",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Kitchen Sink",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E27",
+      "raw": "Kitchen Sink"
+    },
+    {
+      "eventId": "ik-ot-p2-0340",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Kitchen Sink",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I27",
+      "raw": "Kitchen Sink"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Rampart",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E29",
+      "raw": "Rampart + 40% + 90s (Close)"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "MT",
+      "action": "press",
+      "ability": "40%",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E29",
+      "raw": "Rampart + 40% + 90s (Close)"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "MT",
+      "action": "press",
+      "ability": "90s",
+      "jobVariant": null,
+      "footnotes": [],
+      "qualifier": "Close",
+      "cell": "Omnitank!E29",
+      "raw": "Rampart + 40% + 90s (Close)"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Rampart",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I29",
+      "raw": "Rampart + 40% + 90s (Far)"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "OT",
+      "action": "press",
+      "ability": "40%",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I29",
+      "raw": "Rampart + 40% + 90s (Far)"
+    },
+    {
+      "eventId": "ik-ot-p2-0611",
+      "slot": "OT",
+      "action": "press",
+      "ability": "90s",
+      "jobVariant": null,
+      "footnotes": [],
+      "qualifier": "Far",
+      "cell": "Omnitank!I29",
+      "raw": "Rampart + 40% + 90s (Far)"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "MT",
+      "action": "press",
+      "ability": "Short Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "Rampart",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "40%",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "MT",
+      "action": "carry-over",
+      "ability": "90s",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!E31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "OT",
+      "action": "press",
+      "ability": "Short Mit",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "OT",
+      "action": "carry-over",
+      "ability": "Rampart",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "OT",
+      "action": "carry-over",
+      "ability": "40%",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    },
+    {
+      "eventId": "ik-ot-p2-0618",
+      "slot": "OT",
+      "action": "carry-over",
+      "ability": "90s",
+      "jobVariant": null,
+      "footnotes": [],
+      "cell": "Omnitank!I31",
+      "raw": "Short Mit\n➔ Rampart + 40% + 90s",
+      "carriedFromEventId": "ik-ot-p2-0611"
+    }
+  ]
+}

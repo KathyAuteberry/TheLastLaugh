@@ -86,6 +86,8 @@ export interface Scene {
   shapes?: Shape[];
   unmeasured?: string[];
   owner?: "approved" | "rejected" | "unsure";
+  /** Drawn relative to the mechanic (e.g. towers as south), not to the arena: waymarks are hidden. */
+  relative?: boolean;
   /** Roles holding the Double-Trouble Trap debuff in this scene. */
   debuff?: Role[];
   /** Intermediate moments shown before the scene's final layout (position overrides). */

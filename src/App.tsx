@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { describeSource, p1, geometry } from "./data";
+import { allMechanics, describeSource, geometry, phases } from "./data";
 import { MechanicView } from "./guide/MechanicView";
 import { ReplayView } from "./replay/ReplayView";
 import type { Role } from "./model/types";
@@ -9,7 +9,7 @@ import { jobsForRole, loadSettings, myJob, partySummary, saveSettings, setMyJob,
 import { PartySettings } from "./settings/PartySettings";
 
 export function App() {
-  const mechanics = [...p1.mechanics].sort((a, b) => a.order - b.order);
+  const mechanics = [...allMechanics].sort((a, b) => a.phase - b.phase || a.order - b.order);
   const fromHash = () => mechanics.find((m) => `#${m.id}` === window.location.hash)?.id;
   const [selected, setSelected] = useState<string>(fromHash() ?? mechanics[0]!.id);
   const [view, setView] = useState<"guide" | "replay">(window.location.hash.startsWith("#replay") ? "replay" : "guide");
@@ -26,7 +26,7 @@ export function App() {
   const m = mechanics.find((x) => x.id === selected)!;
   const hasDiagram = (id: string) => !!geometry.seeAlso?.[id] || Object.keys(geometry.scenes).some((k) => k.startsWith(id + "/"));
 
-  const mechName = (x: typeof m) => `${x.names.en.value ?? x.names.ja}${x.instance && x.names.en.value?.match(/Ruin|Light|Hyperdrive/) ? ` #${x.instance}` : ""}`;
+  const mechName = (x: typeof m) => `${x.names.en.value ?? x.names.ja}${x.instance && x.names.en.value?.match(/Ruin|Light|Hyperdrive|Embrace/) ? ` #${x.instance}` : ""}`;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -34,7 +34,7 @@ export function App() {
         <div className="mx-auto flex max-w-[88rem] flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-2.5 sm:px-8">
           <a href={`#${selected}`} onClick={() => setView("guide")} className="group flex items-baseline gap-3">
             <span className="font-display text-xl font-bold tracking-wide text-white">The Last Laugh</span>
-            <span className="hidden text-xs text-zinc-500 md:inline">Dancing Mad (Ultimate) · Phase 1</span>
+            <span className="hidden text-xs text-zinc-500 md:inline">Dancing Mad (Ultimate) · Phases 1–2</span>
           </a>
           <div className="flex items-center gap-1.5 sm:gap-2">
             <nav aria-label="View" className="seg">
@@ -69,24 +69,30 @@ export function App() {
         <main className="mx-auto w-full max-w-[88rem] flex-1 px-4 py-6 sm:px-8"><ReplayView who={who} /></main>
       ) : (
       <div className="mx-auto grid w-full max-w-[88rem] flex-1 grid-cols-[minmax(0,1fr)] gap-x-8 gap-y-5 px-4 py-6 sm:px-8 lg:grid-cols-[13.5rem_minmax(0,1fr)]">
-        <nav aria-label="Phase 1 mechanics" className="min-w-0 lg:sticky lg:top-[4.75rem] lg:self-start">
-          <p className="eyebrow-gold mb-2 lg:px-3">Phase 1 · Kefka</p>
-          <ol className="no-scrollbar fade-x -mx-4 flex snap-x gap-1.5 overflow-x-auto px-4 pb-1 lg:mx-0 lg:block lg:space-y-0.5 lg:overflow-visible lg:px-0 lg:pb-0 lg:[mask-image:none]">
-            {mechanics.map((x, k) => {
-              const on = x.id === selected;
-              return (
-                <li key={x.id} className="snap-start">
-                  <a href={`#${x.id}`} onClick={() => setSelected(x.id)} aria-current={on ? "page" : undefined}
-                    className={`relative flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-sm transition-colors ${on ? "bg-white/[0.06] text-white ring-1 ring-white/10 lg:ring-0" : "text-zinc-400 ring-1 ring-white/[0.06] hover:bg-white/[0.03] hover:text-zinc-100 lg:ring-0"}`}>
-                    {on && <span className="absolute inset-y-1.5 left-0 hidden w-0.5 rounded-full bg-jester-gold lg:block" aria-hidden />}
-                    <span className={`font-mono text-[10px] ${on ? "text-jester-gold" : "text-zinc-600"}`}>{String(k + 1).padStart(2, "0")}</span>
-                    <span className="flex-1">{mechName(x)}</span>
-                    {!hasDiagram(x.id) && <span className="text-[10px] text-zinc-600" title="No diagram: described in text only">text</span>}
-                  </a>
-                </li>
-              );
-            })}
-          </ol>
+        <nav aria-label="Mechanics" className="min-w-0 lg:sticky lg:top-[4.75rem] lg:max-h-[calc(100vh-5.5rem)] lg:self-start lg:overflow-y-auto">
+          <div className="no-scrollbar fade-x -mx-4 flex snap-x gap-1.5 overflow-x-auto px-4 pb-1 lg:mx-0 lg:block lg:space-y-4 lg:overflow-visible lg:px-0 lg:pb-0 lg:[mask-image:none]">
+          {phases.map((ph) => (
+            <div key={ph.phase} className="contents lg:block">
+              <p className="eyebrow-gold mb-2 hidden lg:block lg:px-3">Phase {ph.phase}{ph.phase === 2 && <span className="ml-1.5 font-normal normal-case text-amber-300/80">first draft</span>}</p>
+              <ol className="contents lg:block lg:space-y-0.5" aria-label={`Phase ${ph.phase}`}>
+                {mechanics.filter((x) => x.phase === ph.phase).map((x, k) => {
+                  const on = x.id === selected;
+                  return (
+                    <li key={x.id} className="snap-start">
+                      <a href={`#${x.id}`} onClick={() => setSelected(x.id)} aria-current={on ? "page" : undefined}
+                        className={`relative flex items-center gap-2.5 whitespace-nowrap rounded-lg px-3 py-1.5 text-sm transition-colors ${on ? "bg-white/[0.06] text-white ring-1 ring-white/10 lg:ring-0" : "text-zinc-400 ring-1 ring-white/[0.06] hover:bg-white/[0.03] hover:text-zinc-100 lg:ring-0"}`}>
+                        {on && <span className="absolute inset-y-1.5 left-0 hidden w-0.5 rounded-full bg-jester-gold lg:block" aria-hidden />}
+                        <span className={`font-mono text-[10px] ${on ? "text-jester-gold" : "text-zinc-600"}`}><span className="lg:hidden">P{ph.phase}·</span>{String(k + 1).padStart(2, "0")}</span>
+                        <span className="flex-1">{mechName(x)}</span>
+                        {!hasDiagram(x.id) && <span className="text-[10px] text-zinc-600" title="No diagram: described in text only">text</span>}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          ))}
+          </div>
         </nav>
         <main className="min-w-0"><MechanicView m={m} who={who} /></main>
       </div>

@@ -158,7 +158,7 @@ for (const f of mitFiles) {
         if (from.sheet !== ev.sheet) err(f, x.cell, "carry-over origin on another sheet");
         if (sec(from.time.absolute) >= sec(ev.time.absolute)) err(f, x.cell, "carry-over origin is not earlier");
         const pressed = gen.entries.some((y) => y.eventId === from.id && y.slot === x.slot && y.ability === x.ability && y.action === "press"
-          && JSON.stringify(y.jobVariant) === JSON.stringify(x.jobVariant));
+          && (JSON.stringify(y.jobVariant) === JSON.stringify(x.jobVariant) || y.jobVariant === null)); // a job-limited carry-over may follow a press for all jobs
         if (!pressed) err(f, x.cell, `origin ${from.id} has no press of ${x.ability} in ${x.slot}`);
       }
     } else if ("carriedFromEventId" in x) err(f, x.cell, `${x.action} must not have carriedFromEventId`);
@@ -402,7 +402,7 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
 // Completion matrix
 const mitTable = mitRows
   .sort((a, b) => sec(a.event.time.absolute) - sec(b.event.time.absolute))
-  .map(({ event: e, link: l }) => `| ${e.time.absolute} | ${e.name} | ${e.sheet} | ${l.mechanic}${l.state ? " / " + l.state : ""} | ${l.status} | ${l.owner ?? "unreviewed"} |`);
+  .map(({ event: e, link: l }) => `| ${e.time.absolute} | ${e.name.replace(/\s*\n\s*/g, " ")} | ${e.sheet} | ${l.mechanic}${l.state ? " / " + l.state : ""} | ${l.status} | ${l.owner ?? "unreviewed"} |`);
 const rows = matrix.map((r) => {
   const complete = r.open === 0 && r.owner === "approved";
   return `| P${r.phase} | ${r.order} | ${r.en} / ${r.ja} | ${r.tally["source-stated"]} | ${r.tally["derived"]} | ${r.tally["derived-from-image"]} | ${r.tally["unverified"]} | ${r.notInvolved} | ${r.owner} | ${complete ? "✅" : "❌"} |`;

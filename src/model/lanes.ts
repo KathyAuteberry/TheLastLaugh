@@ -44,7 +44,8 @@ export function laneSlots(who: Who): Slot[] {
 /** All lanes for this viewer, in sheet order; the viewer's own lane(s) marked. */
 export function buildLanes(who: Who): Lane[] {
   const mine = new Set(slotsFor(who) ?? []);
-  const entries = allEntries().filter((x) => x.action !== "flag");
+  // The replay covers P1 only so far.
+  const entries = allEntries(1).filter((x) => x.action !== "flag");
   return laneSlots(who).map((slot) => {
     const own = entries.filter((x) => x.slot === slot);
     const bars: LaneBar[] = own.filter((x) => x.action === "press").flatMap((entry) => {

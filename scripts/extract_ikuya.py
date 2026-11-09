@@ -10,7 +10,9 @@ do not edit it by hand. Rules:
   - A line starting with ➔ is a carry-over, never a press. Its origin is the earlier event in
     the same sheet and slot where that ability was pressed (chains are followed to the origin).
   - Superscript footnote markers stay attached to the ability (or event name) they follow.
-  - "(GNB/DRK)"-style suffixes become a job variant on that ability.
+  - "(GNB/DRK)"-style suffixes become a job variant on that ability; any other trailing "(…)" note
+    (e.g. "(Close)") becomes a qualifier, so "90s (Close)" is the ability "90s" with qualifier "Close".
+  - A job-limited carry-over may trace back to a press made for all jobs.
 Exits non-zero if any carry-over has no origin or any footnote marker has no definition.
 """
 import glob, json, re, sys, zipfile
@@ -62,7 +64,12 @@ def parse_ability(token):
     if m:
         variant = m.group(1).split("/"); name = name[: m.start()].strip()
     name, more = split_markers(name)
-    return {"ability": name, "jobVariant": variant, "footnotes": more + markers}
+    out = {"ability": name, "jobVariant": variant, "footnotes": more + markers}
+    # A trailing note that is not a job list, e.g. "90s (Close)": who/where, kept apart from the ability name.
+    q = re.search(r"\s*\(([^()]+)\)$", name)
+    if q and not variant:
+        out["ability"] = name[: q.start()].strip(); out["qualifier"] = q.group(1)
+    return out
 
 def footnote_table(text):
     table, general = {}, []
@@ -120,7 +127,8 @@ for key, sh in overlay["sheets"].items():
                              "cell": f"{sh['name']}!{col}{row}", "raw": raw}
                     k = (slot, a["ability"], tuple(a["jobVariant"] or ()))
                     if carry:
-                        origin = pressed.get(k)
+                        # A job-limited carry-over (e.g. "➔ Party Mit (GNB/DRK)") may follow a press for all jobs.
+                        origin = pressed.get(k) or pressed.get((slot, a["ability"], ()))
                         if origin is None:
                             errors.append(f"{entry['cell']}: carry-over of '{a['ability']}' has no earlier press in slot {slot}")
                         entry["carriedFromEventId"] = origin

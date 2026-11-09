@@ -1,5 +1,7 @@
-import ikuyaRaw from "../../data/mitigation/p1.ikuya.json";
-import overlayRaw from "../../data/mitigation/p1.overlay.json";
+import ikuyaP1 from "../../data/mitigation/p1.ikuya.json";
+import overlayP1 from "../../data/mitigation/p1.overlay.json";
+import ikuyaP2 from "../../data/mitigation/p2.ikuya.json";
+import overlayP2 from "../../data/mitigation/p2.overlay.json";
 import abilitiesRaw from "../../data/mitigation/abilities.json";
 import type { Role } from "./types";
 
@@ -13,25 +15,43 @@ export type DpsJob = "BRD" | "MCH" | "DNC";
 export const D3_JOBS: DpsJob[] = ["BRD", "MCH", "DNC"];
 
 export interface MitEvent {
+  /** Phase of the sheet tab the event comes from (added when the phase files are merged). */
+  phase: number;
   id: string; sheet: "phase" | "omnitank"; row: number; name: string; footnotes: string[];
   time: { absolute: string; phaseRelative: string | null };
 }
 export interface MitEntry {
   eventId: string; slot: Slot; action: "press" | "carry-over" | "flag"; ability: string;
   jobVariant: string[] | null; footnotes: string[]; cell: string; carriedFromEventId?: string;
+  /** A trailing note on the cell that is not a job list, e.g. "Close" / "Far" (Omnitank P2). */
+  qualifier?: string;
 }
 interface Link { mechanic: string; state?: string; status: string; owner?: string; note?: string }
 
-const ikuya = ikuyaRaw as unknown as {
-  sheetVersion: string; sheets: Record<string, { name: string; footnotes: Record<string, string>; notes: string[] }>;
-  events: MitEvent[]; entries: MitEntry[];
+interface Book {
+  sheetVersion: string; phase: number; sheets: Record<string, { name: string; footnotes: Record<string, string>; notes: string[] }>;
+  events: Omit<MitEvent, "phase">[]; entries: MitEntry[];
+}
+type Overlay = { links: Record<string, Link>; decisions?: Record<string, { cell: string; decision: string }> };
+// One sheet file and one overlay per phase; event ids are unique across phases (ik-p1-…, ik-p2-…).
+const books = [ikuyaP1, ikuyaP2] as unknown as Book[];
+const overlays = [overlayP1, overlayP2] as unknown as Overlay[];
+const ikuya = {
+  sheetVersion: books[0]!.sheetVersion,
+  events: books.flatMap((b) => b.events.map((e) => ({ ...e, phase: b.phase }) as MitEvent)),
+  entries: books.flatMap((b) => b.entries),
 };
-const overlay = overlayRaw as unknown as { links: Record<string, Link>; decisions?: Record<string, { cell: string; decision: string }> };
+const overlay = {
+  links: Object.assign({}, ...overlays.map((o) => o.links)) as Record<string, Link>,
+  // Decision keys repeat across phases (e.g. "extras-check" in both), so keep them as a list.
+  decisions: overlays.flatMap((o) => Object.values(o.decisions ?? {})),
+};
+const bookFor = (phase: number) => books.find((b) => b.phase === phase);
 
 export const sheetVersion = ikuya.sheetVersion;
-export const sheetNotes = (sheet: string) => ikuya.sheets[sheet]?.notes ?? [];
-export const footnoteText = (sheet: string, marker: string) => ikuya.sheets[sheet]?.footnotes[marker];
-const ignoredCells = new Set(Object.values(overlay.decisions ?? {}).filter((d) => d.decision === "ignore").map((d) => d.cell));
+export const sheetNotes = (phase: number, sheet: string) => bookFor(phase)?.sheets[sheet]?.notes ?? [];
+export const footnoteText = (phase: number, sheet: string, marker: string) => bookFor(phase)?.sheets[sheet]?.footnotes[marker];
+const ignoredCells = new Set(overlay.decisions.filter((d) => d.decision === "ignore").map((d) => d.cell));
 const byId = new Map(ikuya.events.map((e) => [e.id, e]));
 export const eventById = (id: string) => byId.get(id);
 
@@ -106,7 +126,8 @@ export function entriesFor(eventId: string, who: Who): MitEntry[] {
 }
 
 /** Every Ikuya entry except cells the owner chose to ignore (overlay decisions). */
-export const allEntries = (): MitEntry[] => ikuya.entries.filter((x) => !ignoredCells.has(x.cell));
+export const allEntries = (phase?: number): MitEntry[] =>
+  ikuya.entries.filter((x) => !ignoredCells.has(x.cell) && (phase === undefined || byId.get(x.eventId)?.phase === phase));
 
 // ---------- durations (official Job Guide) ----------
 export interface Duration { sec: number | null; effect: string; status: "source-stated" | "derived"; note?: string }

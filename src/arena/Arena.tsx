@@ -215,7 +215,8 @@ function RoleMarker({ role, at, approx, derived, carried, highlighted, dimmed, s
 /** A castbar to draw under the boss (replay): ability name, fill 0–1, seconds left. */
 export interface CastBar { ability: string; progress: number; left: number }
 
-export function Arena({ scene, focus, title, still, cast }: { scene: Scene | undefined; focus?: Role; title: string; still?: boolean; cast?: CastBar }) {
+/** `phase` decides the props on the floor: the statue is only there in P1. */
+export function Arena({ scene, focus, title, still, cast, phase = 1 }: { scene: Scene | undefined; focus?: Role; title: string; still?: boolean; cast?: CastBar; phase?: number }) {
   const pts = displayPoints(scene);
   const wm = geometry.waymarks.points;
   const [stx, sty] = sv(geometry.statue.point);
@@ -249,7 +250,7 @@ export function Arena({ scene, focus, title, still, cast }: { scene: Scene | und
         })}
         {scene?.shapes?.map((s, i) => s.type === "knockback" ? null : <ShapeView key={i} s={s} scene={scene} />)}
       </g>
-      {Object.entries(wm).map(([k, p]) => {
+      {!scene?.relative && Object.entries(wm).map(([k, p]) => {
         const [x, y] = sv(p);
         const col = WAYMARK_COLOUR[k];
         return (
@@ -259,10 +260,13 @@ export function Arena({ scene, focus, title, still, cast }: { scene: Scene | und
           </g>
         );
       })}
-      <g transform={`translate(${stx} ${sty})`}>
-        <polygon points="0,-0.06 0.018,-0.018 0.06,0 0.018,0.018 0,0.06 -0.018,0.018 -0.06,0 -0.018,-0.018" fill="#e8b84a" stroke="#8b5cf6" strokeWidth={0.008} />
-        <title>Statue</title>
-      </g>
+      {phase === 1 && (
+        <g transform={`translate(${stx} ${sty})`}>
+          <polygon points="0,-0.06 0.018,-0.018 0.06,0 0.018,0.018 0,0.06 -0.018,0.018 -0.06,0 -0.018,-0.018" fill="#e8b84a" stroke="#8b5cf6" strokeWidth={0.008} />
+          <title>Statue</title>
+        </g>
+      )}
+      {scene?.relative && <text x={0} y={1.1} textAnchor="middle" fontSize={0.05} fill="#a1a1aa">towers = relative south</text>}
       <BossToken />
       {ROLES.map((r) => {
         const alt = scene?.positions?.[r]?.alt;

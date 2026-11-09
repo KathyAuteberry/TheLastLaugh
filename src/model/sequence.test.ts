@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { geometry, p1 } from "../data";
+import { allMechanics, geometry, p1 } from "../data";
 import type { Role } from "./types";
 import { ROLES } from "./types";
 import { buildPull, buildSteps, stepsInPull } from "./sequence";
@@ -29,7 +29,7 @@ describe("buildSteps", () => {
   it("every measured scene places only roles, never unverified text positions as exact", () => {
     for (const [key, scene] of Object.entries(geometry.scenes)) {
       const [mid, sid] = key.split("/");
-      const state = p1.mechanics.find((m) => m.id === mid)!.states.find((s) => s.id === sid)!;
+      const state = allMechanics.find((m) => m.id === mid)!.states.find((s) => s.id === sid)!;
       for (const role of Object.keys(scene.positions ?? {})) {
         const claim = state.positions[role as keyof typeof state.positions];
         if (claim) expect(claim.status, `${key} ${role}`).not.toBe("unverified");

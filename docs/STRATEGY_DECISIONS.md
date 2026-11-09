@@ -58,3 +58,10 @@ The replay's clock comes from **cactbot** (`cactbot-dmu`) and **BossMod Reborn**
 - **Disagreement in the measurements:** by raw distance in Yan's picture, OT is closer to MT and D2 than to D4, and D1 is about as close to D2 as to H1. "Nearest player" would send OT, D1 and D2 at the wrong person. The guide pairs by quadrant, as the owner describes.
 - **Not from a source:** the jump length (the next cell, about 7 y; off the tiles on the fourth jump, by the average jump) and the teleport times (spread evenly over the confusion, labelled as estimates).
 - **Decision:** new "Confused" variation (tanks + healers or DPS). The confused players walk into their quadrant's first arrow and take all four arrows; the sleepers stay put.
+
+## D-P1-06: Mitigation durations and one carry-over that runs out (2026-11-09)
+
+- **Ikuya:** shows who presses what and when (the sheet's time = press time, owner decision), and marks with ➔ when an earlier press is meant to still cover a later hit.
+- **Job Guide (official, checked 2026-11-09):** how long each effect lasts. The replay's lane bars use these (`durations` in data/mitigation/abilities.json). Where the page lists several durations (e.g. Holos: 30 s barrier, 20 s damage reduction), the bar uses the mitigating effect and the choice is written next to the number.
+- **Disagreement:** WHM Temperance pressed at 2:45 (Double-Trouble Trap) is carried to the 3:07 Mystery Magic hit (3:07.1). Temperance lasts 20 s, so it ends at 3:05.0, 2.1 s before that hit. Every other carry-over in P1 fits within its duration.
+- **Decision (owner-approved 2026-11-09):** keep Ikuya's plan as written and show the gap: the bar ends before the ➔ marker, which is drawn in red. A later press (2:47.1 or after) would cover both hits; that is not stated by any source, so the guide does not suggest it.

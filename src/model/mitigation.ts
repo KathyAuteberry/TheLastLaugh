@@ -44,7 +44,19 @@ export function eventsFor(mechanicId: string, stateId?: string): MitEvent[] {
     .sort((a, b) => sec(a.time.absolute) - sec(b.time.absolute));
 }
 
-export interface Who { role?: Role; tankJob?: TankJob; healerJob?: HealerJob; dpsJob?: DpsJob }
+/**
+ * The viewer's party, as far as the plan cares: the two tanks' jobs, which two healer jobs are in the party, and D3's
+ * job (the only DPS with a job-specific action in P1). Anything unset means "not chosen".
+ */
+export interface Party { MT?: TankJob; OT?: TankJob; D3?: DpsJob; healers?: HealerJob[] }
+export interface Who { role?: Role; tankJob?: TankJob; healerJob?: HealerJob; dpsJob?: DpsJob; party?: Party }
+
+/** The job playing a sheet column, if known: the party setting, else the viewer's own job for their own column. */
+export function jobForSlot(slot: Slot, who: Who): string | undefined {
+  if (slot === "MT" || slot === "OT") return who.party?.[slot] ?? (slot === who.role ? who.tankJob : undefined);
+  if (slot === "D3") return who.party?.D3 ?? (who.role === "D3" ? who.dpsJob : undefined);
+  return undefined;
+}
 
 // ---------- real ability names (official Job Guide), resolved per job ----------
 export interface RealAbility { ability: string; level: number; optional?: boolean }
@@ -61,7 +73,7 @@ export function realAbilities(x: Pick<MitEntry, "slot" | "ability">, who: Who): 
   if (!term) return undefined;
   const confirmed = term.confirmed !== false;
   if (term.allJobs) return { list: term.allJobs, confirmed };
-  const job = x.slot === "MT" || x.slot === "OT" ? who.tankJob : x.slot === "D3" ? who.dpsJob : undefined;
+  const job = jobForSlot(x.slot, who);
   const list = job ? term.byJob?.[job] : undefined;
   return list ? { list, confirmed } : undefined;
 }
@@ -89,6 +101,28 @@ export function entriesFor(eventId: string, who: Who): MitEntry[] {
     x.eventId === eventId &&
     !ignoredCells.has(x.cell) &&
     (!slots || slots.includes(x.slot)) &&
-    (!x.jobVariant || !who.tankJob || x.jobVariant.includes(who.tankJob)),
+    (!x.jobVariant || !jobForSlot(x.slot, who) || x.jobVariant.includes(jobForSlot(x.slot, who)!)),
   );
+}
+
+/** Every Ikuya entry except cells the owner chose to ignore (overlay decisions). */
+export const allEntries = (): MitEntry[] => ikuya.entries.filter((x) => !ignoredCells.has(x.cell));
+
+// ---------- durations (official Job Guide) ----------
+export interface Duration { sec: number | null; effect: string; status: "source-stated" | "derived"; note?: string }
+const durations = (abilitiesRaw as unknown as { durations: { owner: string; byAbility: Record<string, Duration> } }).durations;
+export const durationOf = (ability: string): Duration | undefined => durations.byAbility[ability];
+export const durationsOwner = durations.owner;
+
+/**
+ * The abilities an entry can stand for, one list per possible job: a job the viewer chose for their own lane,
+ * else every job the term covers (narrowed by Ikuya's job note, e.g. "GNB/DRK"). A real ability name is its own list.
+ */
+export function candidateAbilities(x: Pick<MitEntry, "slot" | "ability" | "jobVariant">, who: Who): { job?: string; abilities: RealAbility[] }[] {
+  const term = Object.entries(abilities.terms).find(([k, t]) => (t.ikuyaTerm ?? k) === x.ability && t.slots.includes(x.slot))?.[1];
+  if (!term) return [{ abilities: [{ ability: x.ability, level: 0 }] }];
+  if (term.allJobs) return [{ abilities: term.allJobs }];
+  const own = jobForSlot(x.slot, who);
+  const jobs = Object.keys(term.byJob ?? {}).filter((j) => (own ? j === own : !x.jobVariant || x.jobVariant.includes(j)));
+  return jobs.map((job) => ({ job, abilities: term.byJob![job]! }));
 }

@@ -171,3 +171,39 @@ Your feedback: start south, MT runs in just before the pull, groups head to thei
 ## Owner verdict on item 51 (2026-11-08)
 
 - **Approved:** 51 (Hyperdrive #2: MT alone, others loose south). The `p1-hyperdrive-2/hits` scene now carries `owner: approved`; every P1 scene is owner-approved again. The timeline file as a whole is still unreviewed.
+
+## Owner verdicts on round 13 (2026-11-09)
+
+- **Approved:** 58. **59 approved for now**; the owner wants to revisit the design later.
+- **Replay timing approved as a whole** (`data/timeline/p1.json` now `owner: approved`).
+- **43** (Pulse Wave push direction) still waits.
+- **Next:** R3, mitigation lanes.
+
+## Round 14: mitigation lanes, R3 (built 2026-11-09)
+
+60. **Durations** (`durations` in data/mitigation/abilities.json, `owner: unreviewed`): all 55 real abilities behind Ikuya's P1 plan, from the official Job Guide pages (checked 2026-11-09). 42 list a single duration. For 13 the page lists several and the bar uses the effect that mitigates, with the choice written next to it:
+    - Shake It Off 30 s (barrier; regen 15 s), Nascent Flash / Bloodwhetting / Heart of Corundum / Intervention / Holy Sheltron 8 s (the 4 s follow-up reduction and later barriers/heals are not drawn), Shadowed Vigil 15 s, Divine Caress 10 s, Temperance 20 s, Expedient 20 s (speed-up 10 s), Holos 20 s (barrier 30 s).
+    - **Collective Unconscious 10 s** (the ring lasts 18 s, the damage reduction 10 s).
+    - **Neutral Sect 30 s**: its healing buff is 20 s, but Ikuya uses it for the Aspected Benefic / Helios Conjunction barriers, which last 30 s.
+    - Provoke and Deployment Tactics have no own duration: drawn as a press only (Deployment lasts as long as the barrier it spreads).
+    - Terms that stand for several abilities (Kitchen Sink, Spreadlo, Seraph, Zoe Shields) last as long as their longest non-optional ability.
+61. **Lanes** under the replay: one row per column of Ikuya's sheet (MT, OT, WHM, AST, SCH, SGE, D1–D4), your own highlighted and the rest dimmed.
+    - **Healers by job, not H1/H2:** the sheet plans healers per job, and which job is H1 or H2 isn't stated by any source, so the lanes follow the sheet. That makes 10 rows instead of the 8 agreed; say if you'd rather fold them into H1/H2.
+    - White dot = press (Ikuya time); bar = how long it lasts. For a tank lane without a chosen job the bar is solid to the shortest job's duration and faded to the longest (e.g. Party Mit: 15 s DRK/GNB, 30 s WAR/PLD).
+    - ➔ = Ikuya's carry-over, at the hit it is meant to cover. Hover a bar for every job's abilities, durations and notes, and the sheet cell. Click a lane to seek. Presses that overlap get their own track.
+    - **"Your mitigation"** box in the step column: what of yours is active and how long is left, and your next press.
+62. **Finding (D-P1-06):** WHM Temperance pressed at 2:45 and carried to the 3:07 Mystery Magic runs out 2.1 s before that hit (20 s duration). Drawn with a red ➔. Every other carry-over fits. The guide keeps Ikuya's plan as written; it does not suggest a later press, since no source says so.
+- **Owner on 61 (2026-11-09):** keep the healer lanes per job; add party settings so only the party's healers show (item 63).
+
+## Round 15 (built 2026-11-09)
+
+63. **Party settings** (people icon at the top right, opens a pop-up; shows the party in short, e.g. "DRK · WAR · AST SCH · BRD"):
+    - **You:** role and job (the header's Role/Job selects edit the same setting).
+    - **Party:** MT job, OT job, the two healer jobs, D3 job. Picking your own job fills your slot; a healer's job joins the healer pair (a third healer drops the earliest).
+    - **Effect:** lanes show only the chosen healers; each tank lane uses its tank's job (exact bar lengths, real ability names, and Ikuya's job-only rows such as "Party Mit (GNB/DRK)" hidden for other jobs); D3's lane uses D3's job. The guide's mitigation panel uses the same jobs.
+    - Saved in the browser only; display only, never changes the plan. Escape or a click outside closes it.
+
+## Owner verdicts on rounds 14–15 (2026-11-09)
+
+- **Approved:** 60 (durations; `durations.owner` now approved), 61, 62 (D-P1-06: Ikuya's plan kept, gap shown), 63.
+- R3 (mitigation lanes) is done. Next in the replay plan: R4 (deep links, phone pass, browser test).

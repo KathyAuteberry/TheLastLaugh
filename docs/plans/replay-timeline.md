@@ -72,11 +72,11 @@ The exception is the Tele-trouncing trap: Ikuya says 2:45, while cactbot puts th
 ## Milestones (owner review after each)
 - **R1 ✅ (built 2026-11-07, awaiting review):** `data/timeline/p1.json`, sources `cactbot-dmu` / `bmr-dmu`, `src/model/timeline.ts` (`buildTimeline`, `stepAt`, `ikuyaTiming`, clock helpers) + 7 tests, validator rules, a timing table in COMPLETION.md, and D-P1-03.
 - **R2 ✅ (built 2026-11-07, awaiting review):** `src/replay/ReplayView.tsx` with the clock, play/pause, 0.5–2× speed, a seek bar (mechanic segments, step ticks, Ikuya ◆), the arena, per-mechanic variation choices, "up next", and a Guide/Replay switch (`#replay`).
-- **R3:** mitigation lanes with durations.
+- **R3 ✅ (built and approved 2026-11-09):** Job Guide durations in `abilities.json`, `src/model/lanes.ts` + 5 tests, `src/replay/MitigationLanes.tsx`, D-P1-06.
 - **R4:** deep links, mobile layout, Playwright.
 
 ## Decisions needed
 1. ~~Timing~~: decided, cactbot + BossMod Reborn.
 2. ~~Lanes~~: decided (owner, 2026-11-07): all 8 roles, yours highlighted.
-3. Durations from the Job Guide for the active bars: OK?
+3. ~~Durations~~: Job Guide (owner said go ahead with lanes, 2026-11-09).
 4. Replay ends at the P1 transition (or the >15% enrage branch, shown as a note)?

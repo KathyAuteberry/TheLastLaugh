@@ -104,6 +104,16 @@ for (const [k, t] of Object.entries(abil.terms)) {
   for (const list of [t.allJobs ?? [], ...Object.values(t.byJob ?? {})]) for (const a of list) if (!a.ability || !(a.level > 0)) err("abilities.json", k, "ability needs name and level");
 }
 const realNames = new Set(abil.alreadyRealNames.verified);
+// Durations (Job Guide) for the replay's mitigation lanes: every real ability needs one, chosen from what the page lists.
+const durs = abil.durations?.byAbility ?? {};
+const realAbilityNames = new Set([...abil.alreadyRealNames.verified, ...Object.values(abil.terms).flatMap((t) => [t.allJobs ?? [], ...Object.values(t.byJob ?? {})].flat().map((a) => a.ability))]);
+for (const n of realAbilityNames) if (!durs[n]) err("abilities.json", n, "no Job Guide duration");
+for (const [n, d] of Object.entries(durs)) {
+  if (!["source-stated", "derived"].includes(d.status)) err("abilities.json", n, "duration status must be source-stated or derived");
+  if (d.sec !== null && !d.jobGuideDurations?.includes(d.sec)) err("abilities.json", n, `duration ${d.sec}s is not one the Job Guide lists`);
+  if (d.status === "derived" && !d.note) err("abilities.json", n, "a chosen duration (several listed) needs a note");
+  if (d.sec === null && !d.note) err("abilities.json", n, "no duration needs a note");
+}
 for (const f of mitFiles) for (const e of read("data/mitigation/" + f).entries) {
   if (e.action === "flag") continue;
   const mapped = Object.entries(abil.terms).some(([k, t]) => (t.ikuyaTerm ?? k) === e.ability && t.slots.includes(e.slot));

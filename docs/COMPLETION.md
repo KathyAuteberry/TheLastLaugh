@@ -81,7 +81,7 @@ Each drawn scene and how its positions were measured. A diagram counts only when
 
 When each step resolves, in seconds from combat start. ≈ = neither source times it.
 
-Owner review: **unreviewed**
+Owner review: **approved**
 
 | Step | t (s) | source | cactbot | BossMod Reborn |
 |---|---|---|---|---|

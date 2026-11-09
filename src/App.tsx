@@ -1,36 +1,27 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { describeSource, p1, geometry } from "./data";
 import { MechanicView } from "./guide/MechanicView";
 import { ReplayView } from "./replay/ReplayView";
 import type { Role } from "./model/types";
 import { ROLES } from "./model/types";
-import { D3_JOBS, HEALER_JOBS, TANK_JOBS, sheetVersion, type DpsJob, type HealerJob, type TankJob } from "./model/mitigation";
-
-const FOCUS_KEY = "tll.focusRole";
-const JOB_KEY = "tll.job";
-const readJob = (): string => { try { return localStorage.getItem(JOB_KEY) ?? ""; } catch { return ""; } };
-const readFocus = (): Role | undefined => {
-  try { const v = localStorage.getItem(FOCUS_KEY); return ROLES.includes(v as Role) ? (v as Role) : undefined; } catch { return undefined; }
-};
+import { sheetVersion } from "./model/mitigation";
+import { jobsForRole, loadSettings, myJob, partySummary, saveSettings, setMyJob, whoFrom, type Settings } from "./settings/party";
+import { PartySettings } from "./settings/PartySettings";
 
 export function App() {
   const mechanics = [...p1.mechanics].sort((a, b) => a.order - b.order);
   const fromHash = () => mechanics.find((m) => `#${m.id}` === window.location.hash)?.id;
   const [selected, setSelected] = useState<string>(fromHash() ?? mechanics[0]!.id);
   const [view, setView] = useState<"guide" | "replay">(window.location.hash.startsWith("#replay") ? "replay" : "guide");
-  const [focus, setFocus] = useState<Role | undefined>(readFocus);
-  const [job, setJob] = useState<string>(readJob);
-  useEffect(() => { try { focus ? localStorage.setItem(FOCUS_KEY, focus) : localStorage.removeItem(FOCUS_KEY); localStorage.setItem(JOB_KEY, job); } catch { /* storage unavailable */ } }, [focus, job]);
-  const isTank = focus === "MT" || focus === "OT";
-  const isHealer = focus === "H1" || focus === "H2";
-  const isD3 = focus === "D3";
-  const jobs: string[] = isTank ? TANK_JOBS : isHealer ? HEALER_JOBS : isD3 ? D3_JOBS : [];
-  const who = {
-    role: focus,
-    tankJob: isTank && TANK_JOBS.includes(job as TankJob) ? (job as TankJob) : undefined,
-    healerJob: isHealer && HEALER_JOBS.includes(job as HealerJob) ? (job as HealerJob) : undefined,
-    dpsJob: isD3 && D3_JOBS.includes(job as DpsJob) ? (job as DpsJob) : undefined,
-  };
+  const [settings, setSettings] = useState<Settings>(loadSettings);
+  const [partyOpen, setPartyOpen] = useState(false);
+  const closeParty = useCallback(() => setPartyOpen(false), []);
+  useEffect(() => saveSettings(settings), [settings]);
+  const focus = settings.role;
+  const jobs = jobsForRole(focus);
+  const job = myJob(settings) ?? "";
+  const who = useMemo(() => whoFrom(settings), [settings]);
+  const summary = partySummary(settings.party);
   useEffect(() => { const h = () => { const id = fromHash(); if (id) { setSelected(id); setView("guide"); } else if (window.location.hash.startsWith("#replay")) setView("replay"); }; window.addEventListener("hashchange", h); return () => window.removeEventListener("hashchange", h); });
   const m = mechanics.find((x) => x.id === selected)!;
   const hasDiagram = (id: string) => !!geometry.seeAlso?.[id] || Object.keys(geometry.scenes).some((k) => k.startsWith(id + "/"));
@@ -52,22 +43,27 @@ export function App() {
               ))}
             </nav>
             <label className="flex items-center gap-1.5 text-xs text-zinc-500"><span className="hidden sm:inline">Role</span>
-              <select aria-label="My role" className="select" value={focus ?? ""} onChange={(e) => setFocus((e.target.value || undefined) as Role | undefined)}>
+              <select aria-label="My role" className="select" value={focus ?? ""} onChange={(e) => setSettings((x) => ({ ...x, role: (e.target.value || undefined) as Role | undefined }))}>
                 <option value="">Everyone</option>
                 {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
               </select>
             </label>
             {jobs.length > 0 && (
               <label className="flex items-center gap-1.5 text-xs text-zinc-500"><span className="hidden sm:inline">Job</span>
-                <select aria-label="Job" className="select" value={jobs.includes(job) ? job : ""} onChange={(e) => setJob(e.target.value)}>
+                <select aria-label="Job" className="select" value={jobs.includes(job) ? job : ""} onChange={(e) => setSettings((x) => setMyJob(x, e.target.value))}>
                   <option value="">Any</option>
                   {jobs.map((j) => <option key={j} value={j}>{j}</option>)}
                 </select>
               </label>
             )}
+            <button type="button" className="btn gap-2" onClick={() => setPartyOpen(true)} aria-haspopup="dialog" title="You and your party">
+              <svg viewBox="0 0 16 16" className="h-4 w-4 text-zinc-400" fill="none" stroke="currentColor" strokeWidth={1.5} aria-hidden><circle cx="6" cy="5.5" r="2.3" /><path d="M1.8 13.5c.4-2.4 2.1-3.8 4.2-3.8s3.8 1.4 4.2 3.8" /><circle cx="11.3" cy="6.3" r="1.8" /><path d="M11 9.8c1.7 0 3 1.1 3.3 3" /></svg>
+              <span className="hidden lg:inline">{summary ? <span className="font-mono text-xs text-zinc-300">{summary}</span> : "Party"}</span>
+            </button>
           </div>
         </div>
       </header>
+      {partyOpen && <PartySettings s={settings} onChange={setSettings} onClose={closeParty} />}
 
       {view === "replay" ? (
         <main className="mx-auto w-full max-w-[88rem] flex-1 px-4 py-6 sm:px-8"><ReplayView who={who} /></main>

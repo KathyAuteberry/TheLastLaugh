@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { geometry, p1 } from "../data";
 import { Arena } from "../arena/Arena";
 import { Chevron, VariationPicker } from "../guide/MechanicView";
+import { ActiveMits, MitigationLanes } from "./MitigationLanes";
 import type { Mechanic, PlacedRole, Pt, Role, Scene, Selection, Shape } from "../model/types";
 import { ROLES } from "../model/types";
 import { arrowsAt } from "../model/arrows";
@@ -160,13 +161,14 @@ export function ReplayView({ who }: { who: Who }) {
             )}
           </div>
 
+          <ActiveMits who={who} now={now} />
+
           {hitsHere.length > 0 && (
             <div className="panel-quiet p-4 text-xs text-zinc-400">
               <h3 className="eyebrow mb-1.5">Ikuya damage events</h3>
               {hitsHere.map((x) => (
                 <p key={x.id}>◆ Press at <span className="font-mono text-jester-gold">{formatClock(x.press)}</span> (Ikuya) · hits at <span className="font-mono text-zinc-200">{formatClock(x.hit)}</span>{x.gap && <span className="block text-zinc-500">{x.gap}</span>}</p>
               ))}
-              <p className="mt-1.5 text-zinc-500">Who presses what comes in the mitigation lanes (next milestone); the guide view already lists it.</p>
             </div>
           )}
 
@@ -188,6 +190,8 @@ export function ReplayView({ who }: { who: Who }) {
           {now >= END - 0.05 && <p className="panel p-4 text-zinc-300">{timeline.end.label}. <span className="text-zinc-500">{timeline.end.note}</span></p>}
         </section>
       </div>
+
+      <MitigationLanes who={who} now={now} start={START} end={END} hits={IKUYA} onSeek={(t) => setNow(t)} />
 
       <p className="note border-t border-white/[0.06] pt-4 text-zinc-500">
         Timing from <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/OverlayPlugin/cactbot">cactbot</a> (Apache-2.0) and <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/FFXIV-CombatReborn/BossmodReborn">BossMod Reborn</a> (BSD-3-Clause), seconds from the pull. They only set the clock: positions are Yan Flash's, mitigation is Ikuya Mitty's. Ikuya's times are when to press, which can be a little before the hit.

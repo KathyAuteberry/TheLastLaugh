@@ -319,5 +319,549 @@
       "Panhaima"
     ]
   },
-  "ownerDate": "2026-11-07"
+  "ownerDate": "2026-11-07",
+  "durations": {
+    "_about": "How long each ability's effect lasts, for the replay's mitigation lanes. Seconds from the official Job Guide (level-100 descriptions), checked 2026-11-09. 'sec' is the duration of the effect the bar shows ('effect'). status 'source-stated' = the page lists one duration; 'derived' = the page lists several and the choice is explained in 'note' or 'effect'. sec null = no lasting effect (drawn as a press only).",
+    "checked": "2026-11-09",
+    "owner": "approved",
+    "byAbility": {
+      "Shake It Off": {
+        "sec": 30,
+        "effect": "barrier",
+        "status": "derived",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          30,
+          15
+        ],
+        "note": "Its regen lasts 15 s; not drawn."
+      },
+      "Divine Veil": {
+        "sec": 30,
+        "effect": "barrier",
+        "status": "source-stated",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          30
+        ]
+      },
+      "Passage of Arms": {
+        "sec": 18,
+        "effect": "damage reduction behind the paladin",
+        "status": "source-stated",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          18
+        ],
+        "note": "Ends early if the paladin acts or moves."
+      },
+      "Dark Missionary": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Heart of Light": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "gunbreaker",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Nascent Flash": {
+        "sec": 8,
+        "effect": "damage reduction (Nascent Glint)",
+        "status": "derived",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          8,
+          4,
+          20
+        ],
+        "note": "Follow-ups not drawn: 4 s more reduction (Stem the Flow), 20 s barrier (Stem the Tide)."
+      },
+      "Intervention": {
+        "sec": 8,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          8,
+          4,
+          12
+        ],
+        "note": "Follow-ups not drawn: 4 s more reduction (Knight's Resolve), 12 s regen."
+      },
+      "The Blackest Night": {
+        "sec": 7,
+        "effect": "barrier",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          7
+        ]
+      },
+      "Oblation": {
+        "sec": 10,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Heart of Corundum": {
+        "sec": 8,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "gunbreaker",
+        "jobGuideDurations": [
+          8,
+          30,
+          4,
+          20
+        ],
+        "note": "Follow-ups not drawn: 4 s more reduction (Clarity of Corundum), 20 s heal trigger."
+      },
+      "Rampart": {
+        "sec": 20,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          20
+        ]
+      },
+      "Damnation": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          15,
+          15
+        ]
+      },
+      "Bloodwhetting": {
+        "sec": 8,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          8,
+          4,
+          20
+        ],
+        "note": "Follow-ups not drawn: 4 s more reduction (Stem the Flow), 20 s barrier (Stem the Tide)."
+      },
+      "Thrill of Battle": {
+        "sec": 10,
+        "effect": "max HP increase",
+        "status": "source-stated",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Guardian": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          15,
+          15
+        ],
+        "note": "Its barrier also lasts 15 s."
+      },
+      "Holy Sheltron": {
+        "sec": 8,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          8,
+          4,
+          12
+        ],
+        "note": "Follow-ups not drawn: 4 s more reduction (Knight's Resolve), 12 s regen."
+      },
+      "Bulwark": {
+        "sec": 10,
+        "effect": "block",
+        "status": "source-stated",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Shadowed Vigil": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          15,
+          20
+        ],
+        "note": "Follow-up not drawn: 20 s heal trigger (Vigilant)."
+      },
+      "Dark Mind": {
+        "sec": 10,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Great Nebula": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "gunbreaker",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Camouflage": {
+        "sec": 20,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "gunbreaker",
+        "jobGuideDurations": [
+          20
+        ]
+      },
+      "Holmgang": {
+        "sec": 10,
+        "effect": "invulnerability",
+        "status": "source-stated",
+        "jobGuidePage": "warrior",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Hallowed Ground": {
+        "sec": 10,
+        "effect": "invulnerability",
+        "status": "source-stated",
+        "jobGuidePage": "paladin",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Living Dead": {
+        "sec": 10,
+        "effect": "Living Dead",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          10,
+          10
+        ],
+        "note": "If HP hits 0, Walking Dead follows for another 10 s; not drawn."
+      },
+      "Superbolide": {
+        "sec": 10,
+        "effect": "invulnerability",
+        "status": "source-stated",
+        "jobGuidePage": "gunbreaker",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Provoke": {
+        "sec": null,
+        "effect": "enmity",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [],
+        "note": "No lasting effect: drawn as a press only."
+      },
+      "Reprisal": {
+        "sec": 15,
+        "effect": "damage-down on enemies",
+        "status": "source-stated",
+        "jobGuidePage": "darkknight",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Feint": {
+        "sec": 15,
+        "effect": "damage-down on the boss",
+        "status": "source-stated",
+        "jobGuidePage": "monk",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Addle": {
+        "sec": 15,
+        "effect": "damage-down on the boss",
+        "status": "source-stated",
+        "jobGuidePage": "blackmage",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Troubadour": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "bard",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Tactician": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "machinist",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Shield Samba": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "dancer",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Divine Caress": {
+        "sec": 10,
+        "effect": "barrier",
+        "status": "derived",
+        "jobGuidePage": "whitemage",
+        "jobGuideDurations": [
+          10,
+          15
+        ],
+        "note": "Follow-up not drawn: 15 s regen (Divine Aura)."
+      },
+      "Liturgy of the Bell": {
+        "sec": 20,
+        "effect": "heal on damage",
+        "status": "source-stated",
+        "jobGuidePage": "whitemage",
+        "jobGuideDurations": [
+          20
+        ]
+      },
+      "Plenary Indulgence": {
+        "sec": 10,
+        "effect": "damage reduction (Confession)",
+        "status": "source-stated",
+        "jobGuidePage": "whitemage",
+        "jobGuideDurations": [
+          10
+        ]
+      },
+      "Temperance": {
+        "sec": 20,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "whitemage",
+        "jobGuideDurations": [
+          20,
+          30
+        ],
+        "note": "Divine Grace (which unlocks Divine Caress) lasts 30 s; not drawn."
+      },
+      "Collective Unconscious": {
+        "sec": 10,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "astrologian",
+        "jobGuideDurations": [
+          18,
+          10,
+          15
+        ],
+        "note": "The Job Guide lists 18 s for the ring and 10 s for the damage reduction; the bar uses 10 s. The effect ends if the astrologian acts or moves."
+      },
+      "Macrocosmos": {
+        "sec": 15,
+        "effect": "damage compiled for the heal",
+        "status": "source-stated",
+        "jobGuidePage": "astrologian",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Neutral Sect": {
+        "sec": 30,
+        "effect": "barrier from Aspected Benefic / Helios Conjunction",
+        "status": "derived",
+        "jobGuidePage": "astrologian",
+        "jobGuideDurations": [
+          20,
+          30,
+          30
+        ],
+        "note": "The healing buff lasts 20 s; the barriers it adds last 30 s. The bar uses 30 s because Ikuya uses it for the barriers."
+      },
+      "Sun Sign": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "astrologian",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Expedient": {
+        "sec": 20,
+        "effect": "damage reduction (Desperate Measures)",
+        "status": "derived",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          10,
+          20
+        ],
+        "note": "The speed-up lasts 10 s."
+      },
+      "Fey Illumination": {
+        "sec": 20,
+        "effect": "magic damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          20
+        ]
+      },
+      "Sacred Soil": {
+        "sec": 15,
+        "effect": "damage reduction zone",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Summon Seraph": {
+        "sec": 22,
+        "effect": "Seraph present",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          22
+        ]
+      },
+      "Consolation": {
+        "sec": 30,
+        "effect": "barrier",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          30
+        ]
+      },
+      "Seraphism": {
+        "sec": 20,
+        "effect": "regen and changed actions",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          20
+        ]
+      },
+      "Recitation": {
+        "sec": 15,
+        "effect": "free critical heal",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Adloquium": {
+        "sec": 30,
+        "effect": "barrier (Galvanize)",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [
+          30
+        ]
+      },
+      "Deployment Tactics": {
+        "sec": null,
+        "effect": "spreads Galvanize",
+        "status": "source-stated",
+        "jobGuidePage": "scholar",
+        "jobGuideDurations": [],
+        "note": "Lasts for the time left on the original barrier; no own duration."
+      },
+      "Holos": {
+        "sec": 20,
+        "effect": "damage reduction",
+        "status": "derived",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          30,
+          20
+        ],
+        "note": "Its barrier lasts 30 s."
+      },
+      "Kerachole": {
+        "sec": 15,
+        "effect": "damage reduction",
+        "status": "source-stated",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          15,
+          15
+        ]
+      },
+      "Panhaima": {
+        "sec": 15,
+        "effect": "barrier (re-applies up to 5 times)",
+        "status": "source-stated",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          15
+        ]
+      },
+      "Philosophia": {
+        "sec": 20,
+        "effect": "healing buff and Eudaimonia",
+        "status": "source-stated",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          20,
+          20
+        ]
+      },
+      "Zoe": {
+        "sec": 30,
+        "effect": "next heal boosted",
+        "status": "source-stated",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          30
+        ]
+      },
+      "Eukrasian Prognosis II": {
+        "sec": 30,
+        "effect": "barrier",
+        "status": "source-stated",
+        "jobGuidePage": "sage",
+        "jobGuideDurations": [
+          30
+        ]
+      }
+    },
+    "ownerDate": "2026-11-09",
+    "ownerNote": "Approved 2026-11-09 (stage 5 review items 60-63)."
+  }
 }

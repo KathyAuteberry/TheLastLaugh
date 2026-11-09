@@ -6,7 +6,7 @@
     "cactbot-dmu",
     "bmr-dmu"
   ],
-  "owner": "unreviewed",
+  "owner": "approved",
   "steps": {
     "p1-revolting-ruin-iii-1/pull#0": {
       "t": 0,
@@ -1194,5 +1194,7 @@
     "runSpeed": 0.3,
     "knockbackSeconds": 0.3,
     "note": "Replay movement (derived, not from a source): each role starts moving 0.5 s (owner: reaction time) after the moment that tells them where to go — by default when the previous step resolves — and runs at 6 y/s (base run speed; 0.3 of the 20 y arena radius per second, radius from BossMod Reborn). Until the answer is known, a role can head halfway between its possible spots (hedges). A knockback moves a role in 0.3 s."
-  }
+  },
+  "ownerDate": "2026-11-09",
+  "ownerNote": "Replay timing approved as a whole 2026-11-09 (after review rounds 7-13)."
 }

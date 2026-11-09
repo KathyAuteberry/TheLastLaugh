@@ -8,9 +8,13 @@
     "preview": "vite preview",
     "test": "vitest run",
     "validate": "node scripts/validate.mjs",
-    "extract:ikuya": "python3 -I scripts/extract_ikuya.py"
+    "extract:ikuya": "python3 -I scripts/extract_ikuya.py",
+    "e2e": "playwright test",
+    "deploy": "npm run build && npm test && wrangler pages deploy dist --project-name the-last-laugh --branch master",
+    "deploy:preview": "npm run build && wrangler pages deploy dist --project-name the-last-laugh --branch preview"
   },
   "devDependencies": {
+    "@playwright/test": "1.48.2",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react": "4.7.0",
@@ -20,7 +24,8 @@
     "tailwindcss": "3.4.19",
     "typescript": "5.6.3",
     "vite": "5.4.21",
-    "vitest": "2.1.9"
+    "vitest": "2.1.9",
+    "wrangler": "4.151.2"
   },
   "dependencies": {
     "react": "18.3.1",

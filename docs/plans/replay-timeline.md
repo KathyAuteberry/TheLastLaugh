@@ -73,7 +73,7 @@ The exception is the Tele-trouncing trap: Ikuya says 2:45, while cactbot puts th
 - **R1 ✅ (built 2026-11-07, awaiting review):** `data/timeline/p1.json`, sources `cactbot-dmu` / `bmr-dmu`, `src/model/timeline.ts` (`buildTimeline`, `stepAt`, `ikuyaTiming`, clock helpers) + 7 tests, validator rules, a timing table in COMPLETION.md, and D-P1-03.
 - **R2 ✅ (built 2026-11-07, awaiting review):** `src/replay/ReplayView.tsx` with the clock, play/pause, 0.5–2× speed, a seek bar (mechanic segments, step ticks, Ikuya ◆), the arena, per-mechanic variation choices, "up next", and a Guide/Replay switch (`#replay`).
 - **R3 ✅ (built and approved 2026-11-09):** Job Guide durations in `abilities.json`, `src/model/lanes.ts` + 5 tests, `src/replay/MitigationLanes.tsx`, D-P1-06.
-- **R4:** deep links, mobile layout, Playwright.
+- **R4 ✅ (built and approved 2026-11-09):** deep links + Copy link (`src/replay/link.ts` + 3 tests), phone pass. Playwright smoke test (`npm run e2e`, e2e/smoke.spec.ts, desktop + phone).
 
 ## Decisions needed
 1. ~~Timing~~: decided, cactbot + BossMod Reborn.

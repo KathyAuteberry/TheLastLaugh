@@ -30,13 +30,13 @@ export function App() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 border-b border-white/[0.06] bg-ink-950/85 backdrop-blur-md">
+      <header className="z-30 border-b md:sticky md:top-0 border-white/[0.06] bg-ink-950/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-[88rem] flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-2.5 sm:px-8">
           <a href={`#${selected}`} onClick={() => setView("guide")} className="group flex items-baseline gap-3">
             <span className="font-display text-xl font-bold tracking-wide text-white">The Last Laugh</span>
             <span className="hidden text-xs text-zinc-500 md:inline">Dancing Mad (Ultimate) · Phase 1</span>
           </a>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <nav aria-label="View" className="seg">
               {(["guide", "replay"] as const).map((v) => (
                 <a key={v} href={v === "replay" ? "#replay" : `#${selected}`} onClick={() => setView(v)} aria-current={view === v ? "page" : undefined} className="seg-item capitalize">{v}</a>
@@ -56,7 +56,7 @@ export function App() {
                 </select>
               </label>
             )}
-            <button type="button" className="btn gap-2" onClick={() => setPartyOpen(true)} aria-haspopup="dialog" title="You and your party">
+            <button type="button" className="btn w-9 shrink-0 gap-2 px-0 lg:w-auto lg:px-3" onClick={() => setPartyOpen(true)} aria-haspopup="dialog" aria-label="You and your party" title="You and your party">
               <svg viewBox="0 0 16 16" className="h-4 w-4 text-zinc-400" fill="none" stroke="currentColor" strokeWidth={1.5} aria-hidden><circle cx="6" cy="5.5" r="2.3" /><path d="M1.8 13.5c.4-2.4 2.1-3.8 4.2-3.8s3.8 1.4 4.2 3.8" /><circle cx="11.3" cy="6.3" r="1.8" /><path d="M11 9.8c1.7 0 3 1.1 3.3 3" /></svg>
               <span className="hidden lg:inline">{summary ? <span className="font-mono text-xs text-zinc-300">{summary}</span> : "Party"}</span>
             </button>

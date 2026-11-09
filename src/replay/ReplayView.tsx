@@ -3,6 +3,7 @@ import { geometry, p1 } from "../data";
 import { Arena } from "../arena/Arena";
 import { Chevron, VariationPicker } from "../guide/MechanicView";
 import { ActiveMits, MitigationLanes } from "./MitigationLanes";
+import { buildReplayLink, parseReplayLink } from "./link";
 import type { Mechanic, PlacedRole, Pt, Role, Scene, Selection, Shape } from "../model/types";
 import { ROLES } from "../model/types";
 import { arrowsAt } from "../model/arrows";
@@ -19,15 +20,38 @@ const mechName = (m: Mechanic) => `${m.names.en.value ?? m.names.ja}${m.instance
 const SOURCE_LABEL = { cactbot: "cactbot", bmr: "BossMod Reborn" } as const;
 
 /** Ikuya damage events with their press (sheet) and hit (timeline) times. */
+const SPECS = Object.fromEntries(p1.mechanics.map((m) => [m.id, variationsFor(m, geometry)] as const).filter(([, sp]) => sp.groups.length));
+const DEFAULTS = Object.fromEntries(Object.entries(SPECS).map(([id, sp]) => [id, defaultSelection(sp)]));
+/** Time and choices from a #replay?… link, with each linked mechanic's other choices at their defaults. */
+function fromLink(hash: string) {
+  const l = parseReplayLink(hash, SPECS);
+  return { t: l.t === undefined ? undefined : Math.min(END, Math.max(START, l.t)), selections: Object.fromEntries(Object.entries(l.selections).map(([id, sel]) => [id, { ...DEFAULTS[id], ...sel }])) };
+}
+
 const IKUYA = Object.keys(timeline.ikuya)
   .flatMap((id) => { const t = ikuyaTiming(id); return t ? [{ id, ...t }] : []; })
   .sort((a, b) => a.hit - b.hit);
 
 export function ReplayView({ who }: { who: Who }) {
-  const [now, setNow] = useState(START);
+  const initial = useMemo(() => fromLink(window.location.hash), []);
+  const [now, setNow] = useState(initial.t ?? START);
   const [playing, setPlaying] = useState(false);
   const [speed, setSpeed] = useState<(typeof SPEEDS)[number]>(1);
-  const [selections, setSelections] = useState<Record<string, Selection>>({});
+  const [selections, setSelections] = useState<Record<string, Selection>>(initial.selections);
+  const [copied, setCopied] = useState<"" | "copied" | "address">("");
+  // A pasted link while the replay is open re-applies its time and choices.
+  useEffect(() => {
+    const onHash = () => { if (!window.location.hash.startsWith("#replay?")) return; const l = fromLink(window.location.hash); setPlaying(false); setSelections(l.selections); if (l.t !== undefined) setNow(l.t); };
+    window.addEventListener("hashchange", onHash);
+    return () => window.removeEventListener("hashchange", onHash);
+  }, []);
+  const copyLink = async () => {
+    const hash = buildReplayLink(now, selections, SPECS, DEFAULTS);
+    history.replaceState(null, "", hash);
+    let how: "copied" | "address" = "copied";
+    try { await navigator.clipboard.writeText(window.location.href); } catch { how = "address"; /* clipboard blocked: the address bar has the link */ }
+    setCopied(how); setTimeout(() => setCopied(""), 2000);
+  };
   const tl = useMemo(() => buildTimeline(p1.mechanics, geometry, selections), [selections]);
   const cur = stepAt(tl, now);
   const segments = useMemo(() => mechanicSegments(tl), [tl]);
@@ -86,7 +110,7 @@ export function ReplayView({ who }: { who: Who }) {
   const hitsHere = IKUYA.filter((x) => x.hit > cur.from && x.hit <= cur.at);
 
   return (
-    <article className="space-y-5">
+    <article className="space-y-5 pb-16 lg:pb-0">
       <header className="flex flex-wrap items-end justify-between gap-3">
         <div className="min-w-0">
           <p className="eyebrow-gold">Replay · Phase 1</p>
@@ -109,6 +133,10 @@ export function ReplayView({ who }: { who: Who }) {
               <button key={sp} role="radio" aria-checked={speed === sp} onClick={() => setSpeed(sp)} className="seg-item px-2.5 text-xs tabular-nums">{sp}×</button>
             ))}
           </div>
+          <button className="btn ml-auto gap-1.5 md:ml-2" onClick={copyLink} title="Copy a link to this moment and your variation choices">
+            <svg viewBox="0 0 16 16" className="h-4 w-4 text-zinc-400" fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" aria-hidden><path d="M6.5 9.5l3-3M7 4.5l1-1a2.8 2.8 0 014 4l-1 1M9 11.5l-1 1a2.8 2.8 0 01-4-4l1-1" /></svg>
+            <span className="text-xs">{copied === "copied" ? "Copied" : copied === "address" ? "Link in address bar" : "Copy link"}</span>
+          </button>
           <span className="ml-auto hidden items-center gap-1 text-xs text-zinc-500 md:flex"><span className="kbd">Space</span> play/pause <span className="kbd ml-2">←</span><span className="kbd">→</span> step</span>
         </div>
       </div>
@@ -122,9 +150,9 @@ export function ReplayView({ who }: { who: Who }) {
           {scene && <MarkerKey scene={scene} />}
         </section>
 
-        <section aria-label="Current step" className="space-y-4 text-sm">
+        <section aria-label="Current step" className="flex flex-col gap-4 text-sm">
           {/* Fixed height (fits the largest set, six groups) so the boxes below stay put as mechanics change. */}
-          <div className="panel flex flex-col p-4 lg:h-[19rem] xl:h-[16.5rem]">
+          <div className="panel order-last flex flex-col p-4 lg:order-none lg:h-[19rem] xl:h-[16.5rem]">
             {spec.groups.length > 0
               ? <>
                   <div className="min-h-0 flex-1 overflow-y-auto"><VariationPicker compact spec={spec} sel={sel} onChange={(s) => setSelections((x) => ({ ...x, [m.id]: s }))} /></div>
@@ -191,6 +219,18 @@ export function ReplayView({ who }: { who: Who }) {
         </section>
       </div>
 
+      {/* Phone: the controls stay at hand while you scroll to the step text and lanes. */}
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-white/[0.08] bg-ink-950/90 px-4 py-2 backdrop-blur-md lg:hidden">
+        <div className="mx-auto flex max-w-xl items-center gap-2">
+          <button className="btn btn-icon" onClick={() => jump(-1)} aria-label="Previous step"><Chevron left /></button>
+          <button className="btn btn-primary w-20" onClick={() => { if (now >= END) setNow(START); setPlaying(!playing); }}>{playing ? "Pause" : now >= END ? "Replay" : "Play"}</button>
+          <button className="btn btn-icon" onClick={() => jump(1)} aria-label="Next step"><Chevron /></button>
+          <div className="ml-auto min-w-0 text-right">
+            <p className="font-mono text-base tabular-nums leading-tight text-white">{formatClock(now)}</p>
+            <p className="truncate text-[11px] leading-tight text-zinc-500">{mechName(m)} · {label}</p>
+          </div>
+        </div>
+      </div>
       <MitigationLanes who={who} now={now} start={START} end={END} hits={IKUYA} onSeek={(t) => setNow(t)} />
 
       <p className="note border-t border-white/[0.06] pt-4 text-zinc-500">

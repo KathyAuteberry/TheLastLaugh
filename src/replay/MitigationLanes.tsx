@@ -96,10 +96,10 @@ function LaneRow({ lane, who, dim, pct, w, late, onSeek, start, span }: {
             </div>
           );
         })}
-        {lane.bars.flatMap((b) => b.carries.map((c) => {
+        {lane.bars.flatMap((b, bi) => b.carries.map((c, ci) => {
           const bad = late.has(c.eventId + b.slot);
           const t = track[lane.bars.indexOf(b)]!;
-          return <span key={c.eventId + b.entry.cell} className={`pointer-events-none absolute -translate-x-1/2 text-xs font-bold leading-[15px] ${bad ? "text-red-400" : "text-jester-gold"}`} style={{ left: pct(c.at), top: 5 + t * ROW + 1 }}>➔</span>;
+          return <span key={`${bi}-${ci}`} className={`pointer-events-none absolute -translate-x-1/2 text-xs font-bold leading-[15px] ${bad ? "text-red-400" : "text-jester-gold"}`} style={{ left: pct(c.at), top: 5 + t * ROW + 1 }}>➔</span>;
         }))}
       </div>
     </div>

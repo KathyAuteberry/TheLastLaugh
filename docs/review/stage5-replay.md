@@ -207,3 +207,22 @@ Your feedback: start south, MT runs in just before the pull, groups head to thei
 
 - **Approved:** 60 (durations; `durations.owner` now approved), 61, 62 (D-P1-06: Ikuya's plan kept, gap shown), 63.
 - R3 (mitigation lanes) is done. Next in the replay plan: R4 (deep links, phone pass, browser test).
+
+## Round 16: R4 (built 2026-11-09)
+
+64. **Replay links:** `#replay?t=2:53.4&p1-tele-trouncing=confused:dps,fire:stack` opens the replay at that time with those choices (other choices stay at their defaults; anything unknown in a link is ignored). **Copy link** next to the speed buttons writes the current moment and your non-default choices to the address bar and the clipboard ("Link in address bar" when the browser blocks the clipboard). Pasting a new link while the replay is open applies it. Role and party are not in the link: they stay each viewer's own.
+65. **Phone pass (replay):**
+    - The header is no longer pinned below tablet width and fits on one row of controls (Party becomes an icon).
+    - On phones the step box, your mitigation and "up next" come straight after the arena; the variations panel moves below them (on wide screens it stays on top at its fixed height).
+    - A bar pinned to the bottom of the screen keeps ◀ Play ▶, the clock and the current step at hand while scrolling. Lanes scroll sideways inside their panel.
+    - Checked at 375 px: no sideways page scroll.
+66. **Browser smoke test** (owner OK'd the install 2026-11-09): `npm run e2e` runs Playwright 1.48.2 with its own Chromium against a dev server on port 5179, as desktop (1440×900) and phone (Pixel 7). 4 checks × 2 sizes, all passing:
+    - a replay link at 1:29 as a SCH in an AST + SCH party: clock, step heading (Graven Image II), only the AST and SCH healer lanes, Sacred Soil under "Your mitigation", no console errors;
+    - a link with variation choices selects them, and Copy link writes the same link back;
+    - the guide steps forward, and the Party pop-up opens and closes with Escape;
+    - no sideways page scroll on a guide page and the replay.
+    - **Two bugs it caught, fixed (pre-confirmed):** duplicate React keys on carry-over arrows when one Ikuya cell holds two abilities (console warning, no visible effect), and the Party button's accessible name was "Party" instead of "You and your party" on wide screens.
+
+## Owner verdicts on round 16 (2026-11-09)
+
+- **Approved:** 64, 65, 66. R4 is done; the replay plan (R1–R4) is complete. Open: item 43 (Pulse Wave push direction).

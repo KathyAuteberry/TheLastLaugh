@@ -384,6 +384,12 @@
           "items": {
             "$ref": "#/$defs/ClaimHazard"
           }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ClaimString"
+          }
         }
       }
     },

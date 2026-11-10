@@ -15,9 +15,9 @@ A mechanic is complete only when it has no unverified claims **and** the owner a
 | P1 | 7 | Light of Judgment / 裁きの光 | 4 | 10 | 0 | 0 | 0 | approved | ✅ |
 | P1 | 8 | Hyperdrive (no cast) / ハイパードライブ（無詠唱） | 4 | 10 | 0 | 0 | 6 | approved | ✅ |
 | P1 | 9 | Tele-trouncing / ずびずばテレポ | 34 | 11 | 20 | 0 | 0 | approved | ✅ |
-| P1 | 10 | Time's Up (phase transition) / 時間切れ | 2 | 12 | 0 | 0 | 0 | approved | ✅ |
-| P2 | 1 | Ultimate Embrace / 終末の双腕 | 10 | 4 | 0 | 1 | 6 | unreviewed | ❌ |
-| P2 | 2 | Forsaken / ミッシング | 58 | 31 | 0 | 1 | 0 | unreviewed | ❌ |
+| P1 | 10 | Time's Up (enrage) / 時間切れ | 2 | 12 | 0 | 0 | 0 | approved | ✅ |
+| P2 | 1 | Ultimate Embrace / 終末の双腕 | 20 | 4 | 0 | 1 | 6 | unreviewed | ❌ |
+| P2 | 2 | Forsaken / ミッシング | 136 | 28 | 9 | 0 | 0 | unreviewed | ❌ |
 | P2 | 3 | Light of Judgment / 裁きの光 | 5 | 9 | 0 | 1 | 0 | unreviewed | ❌ |
 | P2 | 4 | Trine / トライン | 26 | 9 | 0 | 1 | 0 | unreviewed | ❌ |
 | P2 | 5 | Ultimate Embrace / 終末の双腕 | 10 | 4 | 0 | 1 | 6 | unreviewed | ❌ |
@@ -47,14 +47,14 @@ Each damage event from the sheet and the mechanic it is linked to. A link counts
 | 3:40 | Ultimate Embrace | omnitank | p2-ultimate-embrace-1 / buster | source-stated | approved |
 | 3:41 | Ultimate Embrance | phase | p2-ultimate-embrace-1 / buster | source-stated | approved |
 | 3:57 | Forsaken | phase | p2-forsaken / raidwide | source-stated | approved |
-| 4:10 | Towers I | phase | p2-forsaken / odd-towers-1 | derived | approved |
-| 4:20 | Towers II (Past/Future's End) | phase | p2-forsaken / even-towers-1 | derived | approved |
-| 4:31 | Towers III (All Things Ending) | phase | p2-forsaken / odd-towers-1 | derived | approved |
-| 4:41 | Towers IV (Past/Future's End) | phase | p2-forsaken / even-towers-1 | derived | approved |
-| 4:52 | Towers V (All Things Ending) | phase | p2-forsaken / odd-towers-1 | derived | approved |
-| 5:02 | Towers VI (Past/Future's End) | phase | p2-forsaken / even-towers-1 | derived | approved |
-| 5:12 | Towers VII (All Things Ending) | phase | p2-forsaken / odd-towers-1 | derived | approved |
-| 5:23 | Towers VIII (Past/Future's End) | phase | p2-forsaken / even-towers-1 | derived | approved |
+| 4:10 | Towers I | phase | p2-forsaken / set-1 | derived | approved |
+| 4:20 | Towers II (Past/Future's End) | phase | p2-forsaken / set-2 | derived | approved |
+| 4:31 | Towers III (All Things Ending) | phase | p2-forsaken / set-3 | derived | approved |
+| 4:41 | Towers IV (Past/Future's End) | phase | p2-forsaken / set-4 | derived | approved |
+| 4:52 | Towers V (All Things Ending) | phase | p2-forsaken / set-5 | derived | approved |
+| 5:02 | Towers VI (Past/Future's End) | phase | p2-forsaken / set-6 | derived | approved |
+| 5:12 | Towers VII (All Things Ending) | phase | p2-forsaken / set-7 | derived | approved |
+| 5:23 | Towers VIII (Past/Future's End) | phase | p2-forsaken / set-8 | derived | approved |
 | 5:43 | Light of Judgement | phase | p2-light-of-judgment / raidwide | source-stated | approved |
 | 6:11 | Wings of Destruction | phase | p2-trine / wings-2 | source-stated | approved |
 | 6:11 | Wings of Destruction | omnitank | p2-trine / wings-2 | source-stated | approved |
@@ -98,10 +98,25 @@ Each drawn scene and how its positions were measured. A diagram counts only when
 | p1-hyperdrive-1/hits | — | 0 auto / 1 eye-or-copy | approved |
 | p1-hyperdrive-2/hits | — | 0 auto / 8 eye-or-copy | approved |
 | p1-phase-transition/time-up | — | 0 auto / 0 eye-or-copy | approved |
-| p2-forsaken/raidwide | — | 0 auto / 0 eye-or-copy | unreviewed |
-| p2-forsaken/odd-towers-1 | yan-p2-02 | 8 auto / 0 eye-or-copy | unreviewed |
+| p2-ultimate-embrace-1/buster | — | 0 auto / 8 eye-or-copy | unreviewed |
+| p2-forsaken/raidwide | kitten-p2-lineup | 8 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/spells | kitten-p2-lineup | 8 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-1 | yan-p2-02 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-2 | yan-p2-03 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/bait-2 | — | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-3 | yan-p2-02 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/swap-1 | — | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-4 | yan-p2-03 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/bait-4 | — | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-5 | yan-p2-02 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-6 | yan-p2-03 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/bait-6 | — | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-7 | yan-p2-02 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/swap-2 | — | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/set-8 | yan-p2-03 | 0 auto / 0 eye-or-copy | unreviewed |
+| p2-forsaken/final-bait | — | 0 auto / 8 eye-or-copy | unreviewed |
+| p2-forsaken/final-dodge | — | 0 auto / 0 eye-or-copy | unreviewed |
 | p2-forsaken/odd-towers-2 | yan-p2-02 | 8 auto / 0 eye-or-copy | unreviewed |
-| p2-forsaken/even-towers-1 | yan-p2-03 | 8 auto / 0 eye-or-copy | unreviewed |
 | p2-forsaken/even-towers-2 | yan-p2-03 | 8 auto / 0 eye-or-copy | unreviewed |
 | p2-trine/wings-2 | yan-p2-07 | 2 auto / 6 eye-or-copy | unreviewed |
 

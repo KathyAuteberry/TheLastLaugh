@@ -6138,7 +6138,7 @@
       "names": {
         "ja": "時間切れ",
         "en": {
-          "value": "Time's Up (phase transition)",
+          "value": "Time's Up (enrage)",
           "status": "derived",
           "sources": [
             {

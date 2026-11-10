@@ -58,13 +58,171 @@
     }
   },
   "scenes": {
-    "p2-forsaken/raidwide": {
+    "p2-ultimate-embrace-1/buster": {
       "sources": [
+        {
+          "ref": "owner-p2-draft-review"
+        },
+        {
+          "ref": "kitten-dmu-forsaken",
+          "at": "0:12"
+        },
+        {
+          "ref": "azurite-p2",
+          "at": "0:00"
+        }
+      ],
+      "note": "Loose spots from the owner: both tanks north, the party south, no set spots. The clip shows a red ring centred on the main tank (a splash shared by both tanks, as the videos say).",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.035,
+            0.3
+          ],
+          "method": "loose",
+          "note": "North, main threat."
+        },
+        "OT": {
+          "at": [
+            0.035,
+            0.3
+          ],
+          "method": "loose",
+          "note": "North, stacked with MT."
+        },
+        "H1": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        },
+        "H2": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        },
+        "D1": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        },
+        "D2": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        },
+        "D3": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        },
+        "D4": {
+          "at": [
+            0,
+            -0.45
+          ],
+          "method": "loose",
+          "note": "South, away from the tanks."
+        }
+      },
+      "shapes": [
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.035,
+              0.3
+            ]
+          ],
+          "radius": 0.17,
+          "kind": "tankbuster",
+          "label": "Ultimate Embrace: circle on the main-threat tank, shared by both tanks (size not measured)"
+        }
+      ]
+    },
+    "p2-forsaken/raidwide": {
+      "image": "kitten-p2-lineup",
+      "sources": [
+        {
+          "ref": "kitten-p2-lineup"
+        },
         {
           "ref": "yan-p2-forsaken-1"
         }
       ],
-      "note": "Yan only says west/east of the boss; no spots are drawn.",
+      "note": "Line-up from Kitten ERP's picture (role boxes measured by colour; centre and scale from its waymarks). Yan only says tanks+healers west, DPS east (shaded halves), which this line-up keeps.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.409,
+            -0.217
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.168,
+            -0.342
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.457,
+            -0.46
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.194,
+            -0.576
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.121,
+            -0.35
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.383,
+            -0.237
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.139,
+            -0.579
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.399,
+            -0.481
+          ],
+          "method": "auto"
+        }
+      },
       "zones": [
         {
           "label": "Tanks + healers",
@@ -85,84 +243,101 @@
         }
       ]
     },
-    "p2-forsaken/odd-towers-1": {
+    "p2-forsaken/spells": {
+      "image": "kitten-p2-lineup",
+      "sources": [
+        {
+          "ref": "kitten-p2-lineup"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Same line-up. The spells over each head come from the chosen example deal; pairs holding a stack are the tower group.",
+      "positions": {
+        "MT": {
+          "at": [
+            -0.409,
+            -0.217
+          ],
+          "method": "auto"
+        },
+        "OT": {
+          "at": [
+            -0.168,
+            -0.342
+          ],
+          "method": "auto"
+        },
+        "H1": {
+          "at": [
+            -0.457,
+            -0.46
+          ],
+          "method": "auto"
+        },
+        "H2": {
+          "at": [
+            -0.194,
+            -0.576
+          ],
+          "method": "auto"
+        },
+        "D1": {
+          "at": [
+            0.121,
+            -0.35
+          ],
+          "method": "auto"
+        },
+        "D2": {
+          "at": [
+            0.383,
+            -0.237
+          ],
+          "method": "auto"
+        },
+        "D3": {
+          "at": [
+            0.139,
+            -0.579
+          ],
+          "method": "auto"
+        },
+        "D4": {
+          "at": [
+            0.399,
+            -0.481
+          ],
+          "method": "auto"
+        }
+      },
+      "forsaken": {
+        "at": "held",
+        "after": 0
+      }
+    },
+    "p2-forsaken/set-1": {
       "image": "yan-p2-02",
       "sources": [
         {
           "ref": "yan-p2-02"
         },
         {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-1"
+        },
+        {
           "ref": "kitten-dmu-forsaken"
         }
       ],
-      "note": "Example deal for tower 1: MT+H1 and D1+D3 got the stacks (H1, D3), the supports got cones and the DPS circles; who gets what is random. Drawn relative to the towers: the towers count as south wherever they spawn (they move 45° each set), so no waymarks are shown.",
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
       "relative": true,
-      "positions": {
-        "H1": {
-          "at": [
-            -0.297,
-            -0.243
-          ],
-          "method": "auto",
-          "note": "Left stack (support stack holder, top spot)."
-        },
-        "MT": {
-          "at": [
-            -0.298,
-            -0.455
-          ],
-          "method": "auto",
-          "note": "Cone holder, bottom of the left tower."
-        },
-        "H2": {
-          "at": [
-            -0.297,
-            -0.566
-          ],
-          "method": "auto",
-          "note": "Outside pair: baits the cone just below the left tower."
-        },
-        "OT": {
-          "at": [
-            -0.127,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Outside pair: left tower's north-east edge on the boss ring; shares the left stack."
-        },
-        "D3": {
-          "at": [
-            0.22,
-            -0.14
-          ],
-          "method": "auto",
-          "note": "Right stack (DPS stack holder, top spot)."
-        },
-        "D1": {
-          "at": [
-            0.296,
-            -0.493
-          ],
-          "method": "auto",
-          "note": "Circle holder, bottom of the right tower."
-        },
-        "D2": {
-          "at": [
-            0.126,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Outside pair: right tower's north-west edge; shares the right stack. Yan draws one dot for both outside DPS (marii and Kitten put both here)."
-        },
-        "D4": {
-          "at": [
-            0.126,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Same spot as D2 (one dot in Yan's picture)."
-        }
-      },
       "shapes": [
         {
           "type": "towers",
@@ -220,6 +395,1564 @@
           "kind": "danger",
           "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
         }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 1
+      }
+    },
+    "p2-forsaken/set-2": {
+      "image": "yan-p2-03",
+      "sources": [
+        {
+          "ref": "yan-p2-03"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-2"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.224,
+              0.224
+            ],
+            [
+              0.223,
+              0.224
+            ],
+            [
+              -0.297,
+              -0.099
+            ],
+            [
+              0.297,
+              -0.099
+            ]
+          ],
+          "radius": 0.244,
+          "kind": "danger",
+          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka (one cast by Kefka, three by his clones)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.298,
+              -0.497
+            ],
+            [
+              0.296,
+              -0.497
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoEs on the circle holders"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.297,
+            -0.099
+          ],
+          "directionDeg": 231,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            0.297,
+            -0.099
+          ],
+          "directionDeg": 129,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 2
+      }
+    },
+    "p2-forsaken/bait-2": {
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        },
+        {
+          "ref": "bmr-dmu-forsaken"
+        }
+      ],
+      "relative": true,
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        }
+      ],
+      "forsaken": {
+        "at": "held",
+        "after": 2
+      },
+      "variantPositions": [
+        {
+          "when": {
+            "end": "past"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            }
+          }
+        },
+        {
+          "when": {
+            "end": "future"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            }
+          }
+        }
+      ],
+      "unmeasured": [
+        "Kefka's three clones: where they stand is not in our sources, so they are not drawn",
+        "All Things Ending cleaves"
+      ]
+    },
+    "p2-forsaken/set-3": {
+      "image": "yan-p2-02",
+      "sources": [
+        {
+          "ref": "yan-p2-02"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-3"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.297,
+              -0.243
+            ],
+            [
+              0.22,
+              -0.14
+            ]
+          ],
+          "radius": 0.287,
+          "kind": "stack",
+          "label": "Stacks (3 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              0.296,
+              -0.493
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoE on the circle holder"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.298,
+            -0.455
+          ],
+          "directionDeg": 180,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
+        },
+        {
+          "type": "halfroom",
+          "fromDeg": -90,
+          "toDeg": 90,
+          "kind": "danger",
+          "label": "All Things Ending from Kefka: the half away from the towers. He faces the bait stack, so Past's End (cleaves behind him) and Future's End (cleaves in front) both hit this half if the bait was right. His three clones' cleaves are not drawn."
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 3
+      },
+      "unmeasured": [
+        "Cleaves from Kefka's three clones (where the clones stand is not in our sources)"
+      ]
+    },
+    "p2-forsaken/swap-1": {
+      "sources": [
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "relative": true,
+      "carry": {
+        "note": "Nobody moves for the swap itself; it is about who soaks next."
+      },
+      "forsaken": {
+        "at": "held",
+        "after": 3
+      },
+      "note": "Signs: the tower group marks itself with its spell for set 8 (bind = cone, ignore = circle; 1 or 2 in the order you mark)."
+    },
+    "p2-forsaken/set-4": {
+      "image": "yan-p2-03",
+      "sources": [
+        {
+          "ref": "yan-p2-03"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-4"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.224,
+              0.224
+            ],
+            [
+              0.223,
+              0.224
+            ],
+            [
+              -0.297,
+              -0.099
+            ],
+            [
+              0.297,
+              -0.099
+            ]
+          ],
+          "radius": 0.244,
+          "kind": "danger",
+          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka (one cast by Kefka, three by his clones)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.298,
+              -0.497
+            ],
+            [
+              0.296,
+              -0.497
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoEs on the circle holders"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.297,
+            -0.099
+          ],
+          "directionDeg": 231,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            0.297,
+            -0.099
+          ],
+          "directionDeg": 129,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 4
+      }
+    },
+    "p2-forsaken/bait-4": {
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        },
+        {
+          "ref": "bmr-dmu-forsaken"
+        }
+      ],
+      "relative": true,
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        }
+      ],
+      "forsaken": {
+        "at": "held",
+        "after": 4
+      },
+      "variantPositions": [
+        {
+          "when": {
+            "end": "past"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            }
+          }
+        },
+        {
+          "when": {
+            "end": "future"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            }
+          }
+        }
+      ],
+      "unmeasured": [
+        "Kefka's three clones: where they stand is not in our sources, so they are not drawn",
+        "All Things Ending cleaves"
+      ]
+    },
+    "p2-forsaken/set-5": {
+      "image": "yan-p2-02",
+      "sources": [
+        {
+          "ref": "yan-p2-02"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-5"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.297,
+              -0.243
+            ],
+            [
+              0.22,
+              -0.14
+            ]
+          ],
+          "radius": 0.287,
+          "kind": "stack",
+          "label": "Stacks (3 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              0.296,
+              -0.493
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoE on the circle holder"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.298,
+            -0.455
+          ],
+          "directionDeg": 180,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
+        },
+        {
+          "type": "halfroom",
+          "fromDeg": -90,
+          "toDeg": 90,
+          "kind": "danger",
+          "label": "All Things Ending from Kefka: the half away from the towers. He faces the bait stack, so Past's End (cleaves behind him) and Future's End (cleaves in front) both hit this half if the bait was right. His three clones' cleaves are not drawn."
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 5
+      },
+      "unmeasured": [
+        "Cleaves from Kefka's three clones (where the clones stand is not in our sources)"
+      ]
+    },
+    "p2-forsaken/set-6": {
+      "image": "yan-p2-03",
+      "sources": [
+        {
+          "ref": "yan-p2-03"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-6"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.224,
+              0.224
+            ],
+            [
+              0.223,
+              0.224
+            ],
+            [
+              -0.297,
+              -0.099
+            ],
+            [
+              0.297,
+              -0.099
+            ]
+          ],
+          "radius": 0.244,
+          "kind": "danger",
+          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka (one cast by Kefka, three by his clones)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.298,
+              -0.497
+            ],
+            [
+              0.296,
+              -0.497
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoEs on the circle holders"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.297,
+            -0.099
+          ],
+          "directionDeg": 231,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            0.297,
+            -0.099
+          ],
+          "directionDeg": 129,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 6
+      }
+    },
+    "p2-forsaken/bait-6": {
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        },
+        {
+          "ref": "bmr-dmu-forsaken"
+        }
+      ],
+      "relative": true,
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        }
+      ],
+      "forsaken": {
+        "at": "held",
+        "after": 6
+      },
+      "variantPositions": [
+        {
+          "when": {
+            "end": "past"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                -0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+            }
+          }
+        },
+        {
+          "when": {
+            "end": "future"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "OT": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "H2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D1": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D2": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D3": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            },
+            "D4": {
+              "at": [
+                0,
+                0.33
+              ],
+              "method": "loose",
+              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+            }
+          }
+        }
+      ],
+      "unmeasured": [
+        "Kefka's three clones: where they stand is not in our sources, so they are not drawn",
+        "All Things Ending cleaves"
+      ]
+    },
+    "p2-forsaken/set-7": {
+      "image": "yan-p2-02",
+      "sources": [
+        {
+          "ref": "yan-p2-02"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-7"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.297,
+              -0.243
+            ],
+            [
+              0.22,
+              -0.14
+            ]
+          ],
+          "radius": 0.287,
+          "kind": "stack",
+          "label": "Stacks (3 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              0.296,
+              -0.493
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoE on the circle holder"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.298,
+            -0.455
+          ],
+          "directionDeg": 180,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
+        },
+        {
+          "type": "halfroom",
+          "fromDeg": -90,
+          "toDeg": 90,
+          "kind": "danger",
+          "label": "All Things Ending from Kefka: the half away from the towers. He faces the bait stack, so Past's End (cleaves behind him) and Future's End (cleaves in front) both hit this half if the bait was right. His three clones' cleaves are not drawn."
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 7
+      },
+      "unmeasured": [
+        "Cleaves from Kefka's three clones (where the clones stand is not in our sources)"
+      ]
+    },
+    "p2-forsaken/swap-2": {
+      "sources": [
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "relative": true,
+      "carry": {
+        "note": "Nobody moves for the swap itself; it is about who soaks next."
+      },
+      "forsaken": {
+        "at": "held",
+        "after": 7
+      },
+      "note": "The helpers are out of spells; only the tower group (with its signs) still holds one."
+    },
+    "p2-forsaken/set-8": {
+      "image": "yan-p2-03",
+      "sources": [
+        {
+          "ref": "yan-p2-03"
+        },
+        {
+          "ref": "yan-p2-01"
+        },
+        {
+          "ref": "kitten-p2-mana-8"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "note": "Set 1's towers are drawn at south and each later set is turned 45° from the last (the direction is a variation); where set 1 really spawns is not in our sources, so no waymarks are shown. Spots: Yan's detailed picture; who stands where: the chosen deal and the method ① rules.",
+      "relative": true,
+      "shapes": [
+        {
+          "type": "towers",
+          "centres": [
+            [
+              -0.297,
+              -0.296
+            ],
+            [
+              0.297,
+              -0.296
+            ]
+          ],
+          "radius": 0.211,
+          "kind": "tower",
+          "label": "Towers (2 players each)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.224,
+              0.224
+            ],
+            [
+              0.223,
+              0.224
+            ],
+            [
+              -0.297,
+              -0.099
+            ],
+            [
+              0.297,
+              -0.099
+            ]
+          ],
+          "radius": 0.244,
+          "kind": "danger",
+          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka (one cast by Kefka, three by his clones)"
+        },
+        {
+          "type": "circles",
+          "centres": [
+            [
+              -0.298,
+              -0.497
+            ],
+            [
+              0.296,
+              -0.497
+            ]
+          ],
+          "radius": 0.289,
+          "kind": "spread",
+          "label": "Circle AoEs on the circle holders"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            -0.297,
+            -0.099
+          ],
+          "directionDeg": 231,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        },
+        {
+          "type": "cone",
+          "origin": [
+            0.297,
+            -0.099
+          ],
+          "directionDeg": 129,
+          "angleDeg": 70,
+          "radius": 1.2,
+          "kind": "danger",
+          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
+        }
+      ],
+      "forsaken": {
+        "at": "set",
+        "set": 8
+      }
+    },
+    "p2-forsaken/final-bait": {
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "forsaken": {
+        "at": "held",
+        "after": 8
+      },
+      "note": "Loose spot: Yan says gather at A; Kitten (Mana) always baits at true north.",
+      "positions": {
+        "MT": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "OT": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "H1": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "H2": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "D1": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "D2": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "D3": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        },
+        "D4": {
+          "at": [
+            0,
+            0.66
+          ],
+          "method": "loose",
+          "note": "Gathered at A."
+        }
+      },
+      "unmeasured": [
+        "Kefka's three clones from the 4th Past's/Future's End (where they stand is not in our sources)"
+      ]
+    },
+    "p2-forsaken/final-dodge": {
+      "sources": [
+        {
+          "ref": "yan-p2-forsaken-1"
+        },
+        {
+          "ref": "kitten-dmu-forsaken"
+        }
+      ],
+      "forsaken": {
+        "at": "held",
+        "after": 8
+      },
+      "note": "Loose spots. Kefka faces A after the bait: Past's End cleaves behind him (stay at A), Future's End in front (walk through him to the south). Kitten: 'walking through Kefka to the opposite or standing still'.",
+      "variantPositions": [
+        {
+          "when": {
+            "end": "past"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "OT": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "H1": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "H2": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "D1": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "D2": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "D3": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            },
+            "D4": {
+              "at": [
+                0,
+                0.66
+              ],
+              "method": "loose",
+              "note": "Stay at A."
+            }
+          }
+        },
+        {
+          "when": {
+            "end": "future"
+          },
+          "positions": {
+            "MT": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "OT": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "H1": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "H2": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "D1": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "D2": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "D3": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            },
+            "D4": {
+              "at": [
+                0,
+                -0.6
+              ],
+              "method": "loose",
+              "note": "Walked through Kefka to the south."
+            }
+          }
+        }
+      ],
+      "shapes": [
+        {
+          "type": "halfroom",
+          "fromDeg": 90,
+          "toDeg": 270,
+          "kind": "danger",
+          "label": "All Things Ending after Past's End: behind Kefka",
+          "when": {
+            "end": "past"
+          }
+        },
+        {
+          "type": "halfroom",
+          "fromDeg": -90,
+          "toDeg": 90,
+          "kind": "danger",
+          "label": "All Things Ending after Future's End: in front of Kefka",
+          "when": {
+            "end": "future"
+          }
+        }
+      ],
+      "unmeasured": [
+        "the clones' cleaves"
       ]
     },
     "p2-forsaken/odd-towers-2": {
@@ -356,167 +2089,6 @@
           "radius": 1.2,
           "kind": "danger",
           "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
-        }
-      ]
-    },
-    "p2-forsaken/even-towers-1": {
-      "image": "yan-p2-03",
-      "sources": [
-        {
-          "ref": "yan-p2-03"
-        },
-        {
-          "ref": "kitten-dmu-forsaken"
-        }
-      ],
-      "note": "Example deal for tower 2: the tower-1 soakers again, now H1+D1 with cones and MT+D3 with circles; OT, H2, D2, D4 outside. Who gets what is random. Drawn relative to the towers: the towers count as south wherever they spawn (they move 45° each set), so no waymarks are shown.",
-      "relative": true,
-      "positions": {
-        "OT": {
-          "at": [
-            -0.224,
-            0.224
-          ],
-          "method": "auto",
-          "note": "Outside pair's tank: boss's north-west edge, baits Past's/Future's End."
-        },
-        "D2": {
-          "at": [
-            0.223,
-            0.224
-          ],
-          "method": "auto",
-          "note": "Outside pair's melee DPS: boss's north-east edge, baits Past's/Future's End."
-        },
-        "H1": {
-          "at": [
-            -0.297,
-            -0.099
-          ],
-          "method": "auto",
-          "note": "Cone holder: left tower's north edge on the boss ring; also baits Past's/Future's End."
-        },
-        "D1": {
-          "at": [
-            0.297,
-            -0.099
-          ],
-          "method": "auto",
-          "note": "Cone holder: right tower's north edge on the boss ring; also baits Past's/Future's End."
-        },
-        "MT": {
-          "at": [
-            -0.298,
-            -0.497
-          ],
-          "method": "auto",
-          "note": "Circle holder: left tower's south edge, as far back as possible."
-        },
-        "D3": {
-          "at": [
-            0.296,
-            -0.497
-          ],
-          "method": "auto",
-          "note": "Circle holder: right tower's south edge, as far back as possible."
-        },
-        "H2": {
-          "at": [
-            -0.54,
-            -0.296
-          ],
-          "method": "auto",
-          "note": "Outside healer: far west, level with the tower centres, baits the left cone."
-        },
-        "D4": {
-          "at": [
-            0.539,
-            -0.296
-          ],
-          "method": "auto",
-          "note": "Outside ranged: far east, level with the tower centres, baits the right cone."
-        }
-      },
-      "shapes": [
-        {
-          "type": "towers",
-          "centres": [
-            [
-              -0.297,
-              -0.296
-            ],
-            [
-              0.297,
-              -0.296
-            ]
-          ],
-          "radius": 0.211,
-          "kind": "tower",
-          "label": "Towers (2 players each)"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              -0.224,
-              0.224
-            ],
-            [
-              0.223,
-              0.224
-            ],
-            [
-              -0.297,
-              -0.099
-            ],
-            [
-              0.297,
-              -0.099
-            ]
-          ],
-          "radius": 0.244,
-          "kind": "danger",
-          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              -0.298,
-              -0.497
-            ],
-            [
-              0.296,
-              -0.497
-            ]
-          ],
-          "radius": 0.289,
-          "kind": "spread",
-          "label": "Circle AoEs on the circle holders"
-        },
-        {
-          "type": "cone",
-          "origin": [
-            -0.297,
-            -0.099
-          ],
-          "directionDeg": 231,
-          "angleDeg": 70,
-          "radius": 1.2,
-          "kind": "danger",
-          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
-        },
-        {
-          "type": "cone",
-          "origin": [
-            0.297,
-            -0.099
-          ],
-          "directionDeg": 129,
-          "angleDeg": 70,
-          "radius": 1.2,
-          "kind": "danger",
-          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
         }
       ]
     },
@@ -776,6 +2348,507 @@
       "unmeasured": [
         "Trine triangles"
       ]
+    }
+  },
+  "forsaken": {
+    "note": "Slots measured from Yan's detailed odd/even pictures (yan-p2-02, yan-p2-03; the cyan dots, scripts/measure_dots.py). Who stands where comes from the chosen deal and the rules in src/model/forsaken.ts (Yan's method ①, worded as in Kitten ERP's Mana tab).",
+    "slots": {
+      "odd": {
+        "left-top": {
+          "at": [
+            -0.297,
+            -0.243
+          ],
+          "method": "auto",
+          "note": "Left stack spot."
+        },
+        "left-bottom": {
+          "at": [
+            -0.298,
+            -0.455
+          ],
+          "method": "auto",
+          "note": "Cone spot, bottom of the left tower."
+        },
+        "right-top": {
+          "at": [
+            0.22,
+            -0.14
+          ],
+          "method": "auto",
+          "note": "Right stack spot."
+        },
+        "right-bottom": {
+          "at": [
+            0.296,
+            -0.493
+          ],
+          "method": "auto",
+          "note": "Circle spot, bottom of the right tower."
+        },
+        "helper-tank": {
+          "at": [
+            -0.127,
+            -0.146
+          ],
+          "method": "auto",
+          "note": "Left tower's north-east edge on the boss ring."
+        },
+        "helper-healer": {
+          "at": [
+            -0.297,
+            -0.566
+          ],
+          "method": "auto",
+          "note": "Just below the left tower (cone bait)."
+        },
+        "helper-dps": {
+          "at": [
+            0.126,
+            -0.146
+          ],
+          "method": "auto",
+          "note": "Right tower's north-west edge; Yan draws one dot for both outside DPS."
+        }
+      },
+      "even": {
+        "left-top": {
+          "at": [
+            -0.297,
+            -0.099
+          ],
+          "method": "auto",
+          "note": "Left tower's north edge on the boss ring."
+        },
+        "left-bottom": {
+          "at": [
+            -0.298,
+            -0.497
+          ],
+          "method": "auto",
+          "note": "Bottom of the left tower."
+        },
+        "right-top": {
+          "at": [
+            0.297,
+            -0.099
+          ],
+          "method": "auto",
+          "note": "Right tower's north edge on the boss ring."
+        },
+        "right-bottom": {
+          "at": [
+            0.296,
+            -0.497
+          ],
+          "method": "auto",
+          "note": "Bottom of the right tower."
+        },
+        "helper-tank": {
+          "at": [
+            -0.224,
+            0.224
+          ],
+          "method": "auto",
+          "note": "Boss ring, north-west."
+        },
+        "helper-melee": {
+          "at": [
+            0.223,
+            0.224
+          ],
+          "method": "auto",
+          "note": "Boss ring, north-east."
+        },
+        "helper-healer": {
+          "at": [
+            -0.54,
+            -0.296
+          ],
+          "method": "auto",
+          "note": "West of the left tower."
+        },
+        "helper-ranged": {
+          "at": [
+            0.539,
+            -0.296
+          ],
+          "method": "auto",
+          "note": "East of the right tower."
+        }
+      }
+    },
+    "deals": {
+      "yan": {
+        "label": "Yan's run",
+        "note": "Yan's own example run (method ①, 8 panels), roles read from the icons in each panel.",
+        "sources": [
+          {
+            "ref": "yan-p2-01"
+          }
+        ],
+        "sets": [
+          {
+            "MT": "stack",
+            "D2": "stack",
+            "D4": "cone",
+            "H1": "circle"
+          },
+          {
+            "MT": "cone",
+            "H1": "circle",
+            "D2": "cone",
+            "D4": "circle"
+          },
+          {
+            "MT": "stack",
+            "H1": "stack",
+            "D2": "cone",
+            "D4": "circle"
+          },
+          {
+            "D1": "cone",
+            "H2": "circle",
+            "D3": "cone",
+            "OT": "circle"
+          },
+          {
+            "H2": "stack",
+            "D1": "stack",
+            "D3": "cone",
+            "OT": "circle"
+          },
+          {
+            "H2": "cone",
+            "OT": "cone",
+            "D1": "circle",
+            "D3": "circle"
+          },
+          {
+            "H2": "stack",
+            "D3": "stack",
+            "OT": "cone",
+            "D1": "circle"
+          },
+          {
+            "MT": "cone",
+            "D4": "cone",
+            "D2": "circle",
+            "H1": "circle"
+          }
+        ],
+        "signs": {
+          "MT": "bind1",
+          "D4": "bind2",
+          "D2": "ignore1",
+          "H1": "ignore2"
+        }
+      },
+      "kitten": {
+        "label": "Kitten's run",
+        "note": "Kitten ERP's Mana example run (8 pictures). Its sets 6 and 7 reuse the pictures of sets 4 and 5.",
+        "sources": [
+          {
+            "ref": "kitten-p2-mana-1"
+          },
+          {
+            "ref": "kitten-p2-mana-2"
+          },
+          {
+            "ref": "kitten-p2-mana-3"
+          },
+          {
+            "ref": "kitten-p2-mana-4"
+          },
+          {
+            "ref": "kitten-p2-mana-5"
+          },
+          {
+            "ref": "kitten-p2-mana-6"
+          },
+          {
+            "ref": "kitten-p2-mana-7"
+          },
+          {
+            "ref": "kitten-p2-mana-8"
+          }
+        ],
+        "sets": [
+          {
+            "H1": "stack",
+            "D2": "stack",
+            "D4": "cone",
+            "MT": "circle"
+          },
+          {
+            "H1": "cone",
+            "MT": "circle",
+            "D2": "cone",
+            "D4": "circle"
+          },
+          {
+            "D2": "stack",
+            "D4": "stack",
+            "MT": "cone",
+            "H1": "circle"
+          },
+          {
+            "D1": "cone",
+            "D3": "cone",
+            "H2": "circle",
+            "OT": "circle"
+          },
+          {
+            "OT": "stack",
+            "D3": "stack",
+            "D1": "cone",
+            "H2": "circle"
+          },
+          {
+            "D1": "cone",
+            "D3": "cone",
+            "H2": "circle",
+            "OT": "circle"
+          },
+          {
+            "OT": "stack",
+            "D3": "stack",
+            "D1": "cone",
+            "H2": "circle"
+          },
+          {
+            "D2": "cone",
+            "D4": "cone",
+            "MT": "circle",
+            "H1": "circle"
+          }
+        ],
+        "signs": {
+          "MT": "ignore1",
+          "H1": "ignore2",
+          "D2": "bind1",
+          "D4": "bind2"
+        }
+      },
+      "c": {
+        "label": "Example C",
+        "constructed": true,
+        "note": "Built by us from the rules (not from a source): OT+H2 and D1+D3 start with the stacks, supports get cones; both stacks land on supports in set 5 and on DPS in set 7.",
+        "sources": [
+          {
+            "ref": "kitten-dmu-forsaken"
+          },
+          {
+            "ref": "yan-p2-forsaken-1"
+          }
+        ],
+        "sets": [
+          {
+            "H2": "stack",
+            "D3": "stack",
+            "OT": "cone",
+            "D1": "circle"
+          },
+          {
+            "H2": "cone",
+            "OT": "circle",
+            "D1": "cone",
+            "D3": "circle"
+          },
+          {
+            "OT": "stack",
+            "D1": "stack",
+            "H2": "cone",
+            "D3": "circle"
+          },
+          {
+            "MT": "cone",
+            "H1": "cone",
+            "D2": "circle",
+            "D4": "circle"
+          },
+          {
+            "MT": "stack",
+            "H1": "stack",
+            "D2": "cone",
+            "D4": "circle"
+          },
+          {
+            "H1": "cone",
+            "MT": "circle",
+            "D2": "cone",
+            "D4": "circle"
+          },
+          {
+            "D2": "stack",
+            "D4": "stack",
+            "MT": "cone",
+            "H1": "circle"
+          },
+          {
+            "D1": "cone",
+            "D3": "cone",
+            "OT": "circle",
+            "H2": "circle"
+          }
+        ],
+        "signs": {
+          "D1": "bind1",
+          "D3": "bind2",
+          "OT": "ignore1",
+          "H2": "ignore2"
+        }
+      },
+      "d": {
+        "label": "Example D",
+        "constructed": true,
+        "note": "Built by us from the rules (not from a source): OT+H2 and D2+D4 start with the stacks, DPS get cones; both supports hold cones in set 2, so the melee swap happens there too.",
+        "sources": [
+          {
+            "ref": "kitten-dmu-forsaken"
+          },
+          {
+            "ref": "yan-p2-forsaken-1"
+          }
+        ],
+        "sets": [
+          {
+            "OT": "stack",
+            "D4": "stack",
+            "D2": "cone",
+            "H2": "circle"
+          },
+          {
+            "OT": "cone",
+            "H2": "cone",
+            "D2": "circle",
+            "D4": "circle"
+          },
+          {
+            "H2": "stack",
+            "D2": "stack",
+            "D4": "cone",
+            "OT": "circle"
+          },
+          {
+            "MT": "circle",
+            "H1": "circle",
+            "D1": "cone",
+            "D3": "cone"
+          },
+          {
+            "MT": "stack",
+            "D3": "stack",
+            "H1": "cone",
+            "D1": "circle"
+          },
+          {
+            "MT": "cone",
+            "H1": "circle",
+            "D3": "cone",
+            "D1": "circle"
+          },
+          {
+            "H1": "stack",
+            "D1": "stack",
+            "D3": "cone",
+            "MT": "circle"
+          },
+          {
+            "OT": "cone",
+            "D2": "cone",
+            "H2": "circle",
+            "D4": "circle"
+          }
+        ],
+        "signs": {
+          "OT": "bind1",
+          "D2": "bind2",
+          "H2": "ignore1",
+          "D4": "ignore2"
+        }
+      }
+    }
+  },
+  "variations": {
+    "p2-forsaken": {
+      "groups": [
+        {
+          "id": "variant",
+          "label": "Method",
+          "options": [
+            {
+              "id": "method-1",
+              "label": "① priority"
+            },
+            {
+              "id": "method-2",
+              "label": "② south adjusts"
+            }
+          ]
+        },
+        {
+          "id": "turn",
+          "label": "Tower turn",
+          "note": "Each soak turns the towers 45°, clockwise or anticlockwise at random; once the first set turns, every later set turns the same way (Yan; Kitten). Set 1 is drawn at south: our sources do not show where it really spawns.",
+          "options": [
+            {
+              "id": "cw",
+              "label": "Clockwise"
+            },
+            {
+              "id": "ccw",
+              "label": "Anticlockwise"
+            }
+          ]
+        },
+        {
+          "id": "deal",
+          "label": "Example markers",
+          "note": "Who gets which spell is random. Yan's and Kitten's runs are copied from their pictures; C and D are built by us from the same rules. Method ② diagrams do not use this.",
+          "options": [
+            {
+              "id": "yan",
+              "label": "Yan's run"
+            },
+            {
+              "id": "kitten",
+              "label": "Kitten's run"
+            },
+            {
+              "id": "c",
+              "label": "Example C"
+            },
+            {
+              "id": "d",
+              "label": "Example D"
+            }
+          ]
+        },
+        {
+          "id": "end",
+          "label": "Kefka's cast",
+          "note": "Past's End or Future's End: random each time, it decides where you bait All Things Ending. Shown the same for every bait here.",
+          "options": [
+            {
+              "id": "past",
+              "label": "Past's End"
+            },
+            {
+              "id": "future",
+              "label": "Future's End"
+            }
+          ]
+        }
+      ],
+      "branches": {
+        "method-1": {
+          "variant": "method-1"
+        },
+        "method-2": {
+          "variant": "method-2"
+        }
+      }
     }
   }
 }

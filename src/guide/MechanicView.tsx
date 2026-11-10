@@ -108,6 +108,13 @@ export function MechanicView({ m, who }: { m: Mechanic; who: Who }) {
         <div className="p-4 pt-3">
           <h3 className="text-base font-semibold text-white">{step.frame ?? step.state.label}</h3>
           <p className="mt-1 text-zinc-300"><ClaimText c={step.state.trigger} /></p>
+          {step.state.actions?.length ? (
+            <ol className="mt-2 list-decimal space-y-1 pl-5 text-zinc-300 marker:text-zinc-600">{step.state.actions.map((c, k) => <li key={k}><ClaimText c={c} /></li>)}</ol>
+          ) : null}
+          {focus && scene?.roleText?.[focus] && (
+            <p className="mt-3 rounded-lg bg-jester-gold/[0.07] px-3 py-2 text-zinc-200 ring-1 ring-jester-gold/20"><strong className="text-jester-gold">{focus}</strong>{" "}
+              {scene.roleText[focus]} <span className="text-xs text-zinc-500">({step.sel.deal ? "this example deal" : "example"})</span></p>
+          )}
           {focus && step.state.positions[focus] && (
             <p className="mt-3 rounded-lg bg-jester-gold/[0.07] px-3 py-2 text-zinc-200 ring-1 ring-jester-gold/20"><strong className="text-jester-gold">{focus}</strong>{" "}
               {step.state.positions[focus]!.value?.description ?? <em className="text-red-300">no position given</em>}
@@ -205,9 +212,13 @@ function Legend({ scene }: { scene: Scene }) {
         ? <p className="text-violet-200">• Moved to the nearest safe spot for this variation: {derived.join(", ")} (dashed; derived from the drawn AoEs, not drawn by Yan).</p>
         : <p className="text-violet-200">• Derived spot: {derived.join(", ")} (dashed; computed, not drawn by Yan). {[...new Set(derived.map((r) => scene.positions?.[r as Role]?.note).filter(Boolean))].join(" ")}</p>)}
       {scene.dodge && <p className="text-zinc-500">{scene.dodge.note}{scene.dodge.melee && ` ${scene.dodge.melee.note}`}</p>}
+      {scene.spells && <p>• Icon over a head = that player's spell: <span className="text-amber-300">four arrows</span> stack, <span className="text-orange-300">ring</span> circle AoE, <span className="text-rose-300">wedge</span> cone. Solid ring = resolves in this step; dashed ring = held for a later set. Who gets what is random: pick an example under Variations.</p>}
+      {scene.signs && <p>• Badge = sign the player put on themselves after set 3: chain = Bind (holds a cone), crossed circle = Ignore (holds a circle); the number is the order of marking.</p>}
       {scene.debuff?.length ? <p>• <span className="rounded-full bg-jester-violet px-1 text-[10px] font-bold text-white">T</span> = holds the Double-Trouble Trap debuff ({scene.debuff.join(" + ")}; example assignment, random in the fight).</p> : null}
       {Object.values(scene.positions ?? {}).some((p) => p?.alt) && <p>• A role shown twice = two candidate spots; take the one that is safe.</p>}
-      {scene.relative && <p>• Drawn with the towers as south: turn the picture to wherever the towers spawn. Waymarks are hidden because they do not line up.</p>}
+      {scene.relative && (scene.frameLabel
+        ? <p>• Set 1's towers are drawn at south; each later set is turned 45° from the last, the way chosen under Variations (random, but the same every set). Where set 1 really spawns is not in our sources, so waymarks are hidden. Left/right = as seen from the towers facing Kefka.</p>
+        : <p>• Drawn with the towers as south: turn the picture to wherever the towers spawn. Waymarks are hidden because they do not line up.</p>)}
       {scene.note && <p className="text-zinc-500">{scene.note}</p>}
       <p className="text-zinc-500">Measured from: <Sources refs={scene.sources} /></p>
     </div>

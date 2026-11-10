@@ -85,7 +85,10 @@ The replay's clock comes from **cactbot** (`cactbot-dmu`) and **BossMod Reborn**
 - **marii_yaa (20:32):** Past's/Future's End "will spawn three clones of Kefka".
 - **Kitten ERP:** Past's/Future's End targets "the four closest players" and "spawns a clone"; no clone count stated.
 - **Yan:** does not say. The diagrams show four red bait circles on even sets (the Past/Future End baits), which fits four bait targets.
-- **Decision:** not settled; the text says "Kefka and his clones" without a number. Matters only for drawing the cleaves later.
+- **cactbot (ability list, timing source):** Past's End / Future's End damage "(On 1 player)" and "(On 3 players)".
+- **BossMod Reborn (P2Forsaken.cs, read 2026-11-11):** one Past's/Future's End AoE is cast by Kefka, the others by helper actors (the clones); it tracks Kefka plus the clones (4 in all) and waits for 4 All Things Ending casts. Each turns to its own nearest player.
+- **Owner (2026-11-11):** thought there were two clones; no source says two.
+- **Decision (updated 2026-11-11):** Kefka plus three clones (BossMod, cactbot's 1 + 3 split, marii). AzuriteTV's "five" is the odd one out. Where the clones stand is in no source, so they are not drawn; only Kefka's own cleave is.
 
 ## D-P2-03: Ultimate Embrace, how the tanks take it (2026-11-09)
 
@@ -93,3 +96,25 @@ The replay's clock comes from **cactbot** (`cactbot-dmu`) and **BossMod Reborn**
 - **Videos:** either one tank's invulnerability or both tanks stacked with all defensives; AzuriteTV prefers the shared option and saving invulnerabilities for P3.
 - **Ikuya (Omnitank, P2):** both tanks Kitchen Sink on the first Ultimate Embrace; Rampart + 40% + 90s on Wings of Destruction carried into the second, plus short mitigation. P1 Omnitank note ³ adds a WAR alternative (kitchen sink Hyperdrive #2, Holmgang the first Ultimate Embrace).
 - **Decision:** mitigation is Ikuya's call (source hierarchy): shared, both tanks kitchen sink. The videos are only background.
+
+## D-P2-04: Forsaken step by step: example deals and the line-up (2026-11-10)
+
+- **Owner (2026-11-10):** Forsaken needs the line-up, the spells over each head with a few viable example deals, one step per tower set, the clone baits and both group swaps.
+- **Yan:** one full example run of method ① (yan-p2-01, 8 panels, roles readable from the icons) and the detailed odd/even spot pictures (yan-p2-02/03). No line-up spots: only "tanks+healers west, DPS east before Forsaken".
+- **Kitten ERP (Mana):** a second full run (8 pictures; its sets 6 and 7 reuse the pictures of 4 and 5) and a line-up picture south of the boss (pairs in two columns per side), which keeps Yan's west/east split.
+- **Decision:** spots stay Yan's (measured slots); who stands where is computed per deal from the method ① rules (src/model/forsaken.ts). Deals: Yan's run, Kitten's run (both copied from the pictures; unit tests check the rules reproduce every tower spot in both), and two deals we built from the same rules (C, D; labelled as ours) to cover the cases the source runs miss. The validator checks every deal against the rules. The line-up spots come from Kitten's picture (Yan has none). Method ② keeps its two generic steps: Yan's ② text is too short to place players set by set.
+- **Not drawn:** the clones' cleaves (D-P2-02; clones and Kefka's own cleave are drawn since D-P2-05); bait spots are loose (Yan gives only "between / opposite the towers", "gather at A").
+
+## D-P2-05: Forsaken tower turn, clones and Kefka's cleave (2026-11-11)
+
+- **Owner's friend (2026-11-11):** the towers do not turn on our site; they turn 45°, clockwise or anticlockwise, and once picked the direction stays for the whole mechanic.
+- **Yan:** 塔は毎回、時計or反時計に45度ずれる (the towers shift 45° clockwise or anticlockwise each time). Past's End: wait between the towers until All Things Ending is cast; Future's End: wait opposite the towers and run to the tower side once it is cast.
+- **Kitten ERP:** two towers 90° apart; soaking turns them 45°, same direction throughout. Past's/Future's End hits the four players nearest Kefka with an AoE that "spawns a clone"; All Things Ending is a halfroom cleave in front of (Future's End) or behind (Past's End) Kefka, who faces the bait group.
+- **Decision:**
+  - "Tower turn" is a variation (cw / ccw).
+  - Towers-as-south pictures are turned (set n − 1) × 45° from set 1 when drawn, never stored. Set 1 stays at south, as no source fixes its true spot, so waymarks stay hidden.
+  - Bait steps are drawn against the next (already turned) towers. Swap steps stay on the set just soaked.
+  - Kefka's own All Things Ending is drawn on the half away from the towers: both rules give that half once the bait is right.
+  - The clones are not drawn: three of them (D-P2-02), but no source says where they stand. (A first try drew them where the AoEs landed; removed the same day as a guess.)
+  - Bait steps: everyone stacks on one spot at max melee or a bit further, so Kefka and all three clones turn to the same point (owner's friend; Kitten, marii, AzuriteTV; BossMod's nearest-player rule).
+

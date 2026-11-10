@@ -108,3 +108,70 @@ P2 now shows in the guide (nav "Phase 2 · first draft"), with Ikuya's P2 mitiga
 - **Cone width:** drawn at about 70° (Kitten's text); Yan's odd-tower picture draws it wider (about 100°). Which is right?
 - **Trine near/far hits** (yan-p2-07, example 1 of 3): tanks auto-measured; the six party icons are stacked in Yan's picture, so they share one spot (read by eye). The triangles are not drawn yet.
 - Not drawn: Ultimate Embrace, Light of Judgment, All Things Ending, the first Wings of Destruction, Time's up (text only).
+
+## Owner feedback, round 2 (2026-11-10) and what changed
+
+Feedback (partial review of the draft): Ultimate Embrace #1 likely has both tanks north and the party south, with a circle on the main tank if it is a splash; Forsaken needs many more steps (line-up, spells over each head with a few viable deals, one step per set, clone baits, the swaps).
+
+Now on the site (method ①; method ② keeps its generic steps, see D-P2-04):
+
+- **Ultimate Embrace #1:** tanks stacked north, party south (loose spots). Kitten's clip shows a red ring centred on the main tank, so it is drawn as a circle on MT, shared by both tanks. Its size is not measured.
+- **Forsaken, 17 steps:** raidwide with Kitten's south line-up (measured from its picture) → spells appear (icon over each head) → sets 1, 2 → bait → set 3 → swap 1 (signs appear) → set 4 → bait → sets 5, 6 → bait → set 7 → swap 2 → set 8 → final bait at A → final dodge.
+- **Four example deals** (Variations → "Example markers"): Yan's run and Kitten's run, copied from their pictures (the rules reproduce every tower spot in both; unit-tested), plus C and D, which we built from the same rules. Between them they cover: both stacks on supports, both on DPS, and the melee swap on a tower-group even set. Set 4 always has the melee swap (the helpers' spells are dealt at the cast), which Yan's method ② text confirms ("tower 4: left healer + melee, right tank + ranged").
+- **Kefka's cast** (Past's / Future's End) switches all bait steps: party between the next towers, or opposite them; final dodge stays at A or walks through Kefka to the south.
+- Ikuya's Towers I–VIII rows now point at their own set (same approval).
+
+Questions (yes / no / edit):
+
+27. **Cone width:** about 70° (Kitten) or about 100° (Yan's drawing)? Still open from round 1.
+28. **Bait spot:** everyone in one group at max melee, between the next towers (Past's End) or opposite them (Future's End). Yan and Kitten give only the side; "one group" is our reading. OK?
+29. **Examples C and D** are ours, not from a source (labelled as such). OK to keep, or show only Yan's and Kitten's runs?
+30. **Ultimate Embrace #2:** same layout as #1 (tanks north, party south)?
+31. **Signs:** the number on Bind/Ignore goes by who marks first (Yan's macro is `/mk stop <me>`, no number), so Yan's and Kitten's runs differ there. OK as an example?
+
+### Owner verdicts on round 2 (2026-11-11)
+
+- **27 Cone width:** Kitten's 70° (Yan's drawing and Pylene's tweet say 90°; Kitten says "closer to around 70°"). Drawn at 70°.
+- **28 Bait spot:** open.
+- **29 Examples C and D:** keep.
+- **30 Ultimate Embrace #2:** not sure yet, open.
+- **31 Signs:** whoever marks first gets the lower number (normal for Mana). Kept.
+
+## Friend's look at the preview, round 3 (2026-11-11)
+
+A friend of the owner looked at the preview site (it already had the round-2 steps). Three points, no details:
+
+1. **Towers do not turn on our site.** True: every set was drawn with the towers at south. Yan (塔は毎回、時計or反時計に45度ずれる) and Kitten both say each soak turns them 45°, the same way for the whole mechanic. **Fixed:** new variation "Tower turn" (clockwise / anticlockwise). Set 1 is still drawn at south, because no source shows where it really spawns. Each later set is turned 45° further, with the previous set's towers dashed. Bait steps are drawn against the next towers, so the bait spot now visibly moves with the turn (see D-P2-05).
+2. **"The add baiting is wrong."** No details. What changed: the clones are now drawn (K marks) where the four Past's/Future's End AoEs landed, from the even set until the next All Things Ending; Kefka's own All Things Ending is drawn on the half away from the towers. The bait spot itself is unchanged and still our reading (question 28).
+3. **"The stack between towers is very wrong."** I re-measured: our odd-set spots match Yan's detailed picture (yan-p2-02) dot for dot. The left stack is just above the left tower's centre, the right stack on the right tower's top-left edge, and the tank helper and the two DPS helpers stand between the towers by the boss ring. Kitten's Mana picture has the same layout. Kitten's text puts the left stack "in between the dot of the tower and Kefka's boss circle" (on the line from the boss to the tower centre); Yan's dot is about 0.05 arena radius off that line. Nothing changed: I need the friend's details first.
+
+Questions (yes / no / edit):
+
+32. **Stack between towers:** what exactly looks wrong (which set, which player, which picture)? If your friend plays Elemental (Kroxy-Rinon raidplan), the odd-set spots differ there, and our site follows Mana / Yan.
+33. **Clones:** draw them one per Past's/Future's End AoE (four, where the AoEs landed), marked unverified, or hide them until the count is settled (D-P2-02)?
+34. **Set 1 at south:** OK to draw set 1 at south with no waymarks? Kitten's line-up is south of the boss, but neither source says where the first towers appear.
+
+### Owner verdicts on round 3 (2026-11-11)
+
+- **32 Stack:** the friend meant the bait stack: everyone on one spot at max melee, far enough from all the clones that their cleaves line up. The sources agree:
+  - Kitten: at least max melee, or a clone can curve into a tower.
+  - marii: "the farther you are from them, the shallower of an angle".
+  - AzuriteTV: stack between (or opposite) the new towers at max melee.
+  - BossMod: Kefka and each clone turn to their own nearest player.
+
+  Bait steps now say this, with sources. This also settles question 28.
+- **33 Clones:** the owner thought two. The sources:
+
+  | Source | What it says |
+  |---|---|
+  | BossMod's Forsaken code | Kefka casts one Past's/Future's End AoE and three clone actors cast the rest, then 4 All Things Ending casts |
+  | cactbot | Damage "(On 1 player)" plus "(On 3 players)" |
+  | marii | "three clones" |
+  | AzuriteTV | "five random players" (doesn't fit) |
+  | Kitten, Yan | No count |
+
+  Text now says Kefka plus three clones (D-P2-02). No source says where the clones stand, and Kitten's clips are too busy to read, so **the K marks are removed**. Only Kefka's own cleave is drawn.
+- **34 Set 1 at south:** OK.
+
+35. **BossMod for mechanic behaviour:** the clone count and the "turns to its nearest player" rule come from BossMod's code. Until now BossMod and cactbot were used for replay timing only. OK to use BossMod for how a mechanic behaves (never for positions), like the YouTube subtitles?
+   - **Owner (2026-11-11):** yes. BossMod may be used for how a mechanic behaves, never for positions.

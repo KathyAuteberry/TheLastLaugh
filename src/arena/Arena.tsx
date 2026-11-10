@@ -1,4 +1,4 @@
-import type { ArrowDir, Pt, Role, Scene, Shape } from "../model/types";
+import type { ArrowDir, Pt, Role, Scene, Shape, Sign, Spell } from "../model/types";
 import { tileCells } from "../model/arrows";
 import { ROLES, roleKind } from "../model/types";
 import { geometry } from "../data";
@@ -12,10 +12,10 @@ const WAYMARK_COLOUR: Record<string, string> = { A: "#ef4461", "1": "#ef4461", B
 const ROLE_COLOUR = { tank: "#4f7fe0", healer: "#3fae5f", dps: "#d9534f" } as const;
 const KIND_FILL: Record<string, string> = {
   danger: "rgba(224,49,79,0.32)", tankbuster: "rgba(224,49,79,0.38)", telegraph: "none",
-  tower: "rgba(139,92,246,0.35)", puddle: "rgba(56,104,230,0.45)", stack: "rgba(232,184,74,0.22)", spread: "rgba(240,120,60,0.18)",
+  tower: "rgba(139,92,246,0.35)", ghost: "none", puddle: "rgba(56,104,230,0.45)", stack: "rgba(232,184,74,0.22)", spread: "rgba(240,120,60,0.18)",
 };
 const KIND_STROKE: Record<string, string> = {
-  danger: "#e0314f", tankbuster: "#e0314f", telegraph: "#ffd1d9", tower: "#a78bfa", puddle: "#6d8ff5", knockback: "#f4e6dc", stack: "#e8b84a", spread: "#f0783c",
+  danger: "#e0314f", tankbuster: "#e0314f", telegraph: "#ffd1d9", tower: "#a78bfa", ghost: "rgba(167,139,250,0.6)", puddle: "#6d8ff5", knockback: "#f4e6dc", stack: "#e8b84a", spread: "#f0783c",
 };
 
 function wedge(fromDeg: number, toDeg: number, r: number): string {
@@ -40,8 +40,10 @@ function displayPoints(scene: Scene | undefined): Partial<Record<Role, Pt>> {
     roles.forEach((r, i) => {
       const base = pos[r]!.at;
       if (roles.length === 1) { out[r] = base; return; }
+      // Ring wide enough that the markers (about 0.11 across) do not cover each other.
       const a = (2 * Math.PI * i) / roles.length;
-      out[r] = [base[0] + 0.055 * Math.cos(a), base[1] + 0.055 * Math.sin(a)];
+      const rad = Math.max(0.055, 0.021 * roles.length);
+      out[r] = [base[0] + rad * Math.cos(a), base[1] + rad * Math.sin(a)];
     });
   }
   return out;
@@ -169,7 +171,7 @@ function ShapeView({ s, scene }: { s: Shape; scene: Scene }) {
     }
     case "towers":
     case "circles":
-      return <g>{s.centres.map((c, i) => { const [x, y] = sv(c); return <circle key={i} cx={x} cy={y} r={s.radius} fill={fill} stroke={stroke} strokeWidth={0.008} />; })}</g>;
+      return <g>{s.centres.map((c, i) => { const [x, y] = sv(c); return <circle key={i} cx={x} cy={y} r={s.radius} fill={fill} stroke={stroke} strokeWidth={0.008} strokeDasharray={s.kind === "ghost" ? "0.03 0.02" : undefined} />; })}</g>;
   }
 }
 
@@ -178,7 +180,7 @@ function ArrowGlyph({ dir, scale = 1 }: { dir: ArrowDir; scale?: number }) {
   return <path transform={`rotate(${ARROW_ROT[dir]}) scale(${scale})`} d="M0 -0.06 L0.05 0 L0.022 0 L0.022 0.055 L-0.022 0.055 L-0.022 0 L-0.05 0 Z" fill="#f4e6dc" />;
 }
 
-function RoleMarker({ role, at, approx, derived, carried, highlighted, dimmed, still, debuff, arrows }: { role: Role; at: Pt; approx: boolean; derived?: boolean; carried?: boolean; highlighted: boolean; dimmed: boolean; still?: boolean; debuff?: boolean; arrows?: ArrowDir[] }) {
+function RoleMarker({ role, at, approx, derived, carried, highlighted, dimmed, still, debuff, arrows, spell, sign }: { role: Role; at: Pt; approx: boolean; derived?: boolean; carried?: boolean; highlighted: boolean; dimmed: boolean; still?: boolean; debuff?: boolean; arrows?: ArrowDir[]; spell?: { spell: Spell; resolving: boolean }; sign?: Sign }) {
   const kind = roleKind(role);
   const [x, y] = sv(at);
   const c = ROLE_COLOUR[kind];
@@ -200,6 +202,8 @@ function RoleMarker({ role, at, approx, derived, carried, highlighted, dimmed, s
         </g>
       ))}
       {arrows?.length ? <title>{`${role}: arrow debuffs still to drop (${arrows.join(", ")}; short timer first)`}</title> : null}
+      {spell && <SpellIcon role={role} spell={spell.spell} resolving={spell.resolving} />}
+      {sign && <SignBadge role={role} sign={sign} />}
       {debuff && (
         <g transform="translate(0.05 -0.05)">
           <circle r={0.03} fill="#8b5cf6" stroke="#f4e6ff" strokeWidth={0.006} />
@@ -207,6 +211,40 @@ function RoleMarker({ role, at, approx, derived, carried, highlighted, dimmed, s
           <title>{`${role} holds the Double-Trouble Trap debuff`}</title>
         </g>
       )}
+    </g>
+  );
+}
+
+const SPELL_COLOUR: Record<Spell, string> = { stack: "#e8b84a", circle: "#f0783c", cone: "#ef4461" };
+const SPELL_NAME: Record<Spell, string> = { stack: "stack", circle: "circle AoE", cone: "cone" };
+
+/** The spell over a player's head (Forsaken). Bright = resolves in this step; faded and dashed = only held. */
+function SpellIcon({ role, spell, resolving }: { role: Role; spell: Spell; resolving: boolean }) {
+  const c = SPELL_COLOUR[spell];
+  return (
+    <g transform="translate(0 -0.092)" opacity={resolving ? 1 : 0.8}>
+      <circle r={0.036} fill="#17141f" stroke={c} strokeWidth={0.007} strokeDasharray={resolving ? undefined : "0.012 0.008"} />
+      {spell === "stack" && <g stroke={c} strokeWidth={0.007} fill="none" strokeLinecap="round">
+        {[0, 90, 180, 270].map((d) => <path key={d} transform={`rotate(${d})`} d="M0 -0.026 L0 -0.01 M-0.008 -0.018 L0 -0.01 L0.008 -0.018" />)}
+      </g>}
+      {spell === "circle" && <><circle r={0.019} fill="none" stroke={c} strokeWidth={0.007} /><circle r={0.006} fill={c} /></>}
+      {spell === "cone" && <path d="M0 0.02 L-0.02 -0.016 A0.04 0.04 0 0 1 0.02 -0.016 Z" fill={c} />}
+      <title>{`${role}: ${SPELL_NAME[spell]}${resolving ? " (resolves now)" : " (held for a later set)"}`}</title>
+    </g>
+  );
+}
+
+/** A sign the player put on themselves: Bind (chain) or Ignore (crossed circle) with its number. */
+function SignBadge({ role, sign }: { role: Role; sign: Sign }) {
+  const bind = sign.startsWith("bind");
+  return (
+    <g transform="translate(0.062 -0.06)">
+      <circle r={0.026} fill="#f4f1fa" stroke="#3b2a6b" strokeWidth={0.005} />
+      {bind
+        ? <g fill="none" stroke="#3b2a6b" strokeWidth={0.006}><ellipse cx={-0.008} cy={0.004} rx={0.009} ry={0.006} transform="rotate(-35 -0.008 0.004)" /><ellipse cx={0.006} cy={-0.006} rx={0.009} ry={0.006} transform="rotate(-35 0.006 -0.006)" /></g>
+        : <g fill="none" stroke="#c0263f" strokeWidth={0.006}><circle r={0.013} /><path d="M-0.009 0.009 L0.009 -0.009" /></g>}
+      <text x={0.03} y={-0.012} fontSize={0.03} fontWeight={800} fill="#f4f1fa" stroke="#17141f" strokeWidth={0.006} paintOrder="stroke">{sign.slice(-1)}</text>
+      <title>{`${role} wears ${bind ? "Bind" : "Ignore"} ${sign.slice(-1)}`}</title>
     </g>
   );
 }
@@ -266,7 +304,7 @@ export function Arena({ scene, focus, title, still, cast, phase = 1 }: { scene: 
           <title>Statue</title>
         </g>
       )}
-      {scene?.relative && <text x={0} y={1.1} textAnchor="middle" fontSize={0.05} fill="#a1a1aa">towers = relative south</text>}
+      {scene?.relative && <text x={0} y={1.1} textAnchor="middle" fontSize={0.05} fill="#a1a1aa">{scene.frameLabel ?? "towers = relative south"}</text>}
       <BossToken />
       {ROLES.map((r) => {
         const alt = scene?.positions?.[r]?.alt;
@@ -279,7 +317,7 @@ export function Arena({ scene, focus, title, still, cast, phase = 1 }: { scene: 
         const p = scene!.positions![r]!;
         const as = scene!.arrowState;
         const pending = as?.pairs[r]?.filter((_, i) => !as.drops.some((d) => d.role === r && d.index === i));
-        return <RoleMarker key={r} role={r} at={at} arrows={pending} debuff={scene!.debuff?.includes(r)} approx={p.method !== "auto" || !!p.alt} derived={p.method === "derived"} carried={p.method === "carried"} highlighted={focus === r} dimmed={!!focus && focus !== r} still={still} />;
+        return <RoleMarker key={r} role={r} at={at} arrows={pending} debuff={scene!.debuff?.includes(r)} spell={scene!.spells?.[r]} sign={scene!.signs?.[r]} approx={p.method !== "auto" || !!p.alt} derived={p.method === "derived"} carried={p.method === "carried"} highlighted={focus === r} dimmed={!!focus && focus !== r} still={still} />;
       })}
       {scene?.shapes?.map((s, i) => s.type === "knockback" ? <ShapeView key={`kb-${i}`} s={s} scene={scene} /> : null)}
       {cast && <BossCastBar cast={cast} />}

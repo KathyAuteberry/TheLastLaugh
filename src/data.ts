@@ -21,6 +21,7 @@ export const geometry: Geometry = {
   scenes: { ...g1.scenes, ...g2.scenes },
   variations: { ...g1.variations, ...g2.variations },
   seeAlso: { ...g1.seeAlso, ...g2.seeAlso },
+  forsaken: g2.forsaken,
 };
 
 interface SourceEntry { title?: string; url?: string; section?: string; parent?: string; sheet?: string; source?: string; at?: string }
@@ -31,6 +32,8 @@ const reg = sourcesRaw as unknown as { sources: Record<string, SourceEntry & { i
 export function describeSource(ref: string): { label: string; url?: string } {
   const img = reg.images[ref];
   if (img) {
+    // Kitten ERP pictures are stored with their full URL; Yan's are file names under Yan's image base.
+    if (/^https?:/.test(img.file)) return { label: `Kitten ERP picture (${reg.sources[img.parent]?.title ?? ""}: ${img.caption ?? ""})`, url: img.file };
     const base = reg.sources.yan?.imageUrlBase ?? "";
     return { label: `Yan Flash diagram (${reg.sources[img.parent]?.section ?? ""})`, url: base + img.file };
   }

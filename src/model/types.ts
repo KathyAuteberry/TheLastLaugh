@@ -23,6 +23,8 @@ export interface State {
   positions: Partial<Record<Role, Claim<Position>>>;
   hazards: Claim<Hazard>[];
   objects?: Claim<Hazard>[];
+  /** What to do in this step, in order (shown under the step title). */
+  actions?: Claim<string>[];
 }
 
 export interface Branch { id: string; label: string; condition: Claim<string> }
@@ -125,6 +127,43 @@ export interface Scene {
   /** Roles this scene does not place keep their spot from the previous step (drawn as "carried"). */
   carry?: { note: string };
   dodge?: { margin: number; maxShift: number; keepSide?: boolean; note: string; melee?: { roles: Role[]; maxRadius: number; note: string } };
+  /** Positions that depend on the variation (merged over `positions` when `when` matches). */
+  variantPositions?: { when: Selection; positions: Partial<Record<Role, PlacedRole>> }[];
+  /**
+   * Forsaken (P2): players and their spells come from the chosen example deal (`geometry.forsaken`).
+   * "set": tower set n is resolving (spots from the odd/even slot layout, placed by the rules in forsaken.ts).
+   * "held": no towers resolve; show the spells everyone holds after set `after` (0 = right after the cast).
+   */
+  forsaken?: { at: "set"; set: number } | { at: "held"; after: number };
+  /** Computed, never stored (forsaken.ts): the spell over each head, and whether it resolves in this step. */
+  spells?: Partial<Record<Role, { spell: Spell; resolving: boolean }>>;
+  /** Computed, never stored: signs players put on themselves (Forsaken, after set 3). */
+  signs?: Partial<Record<Role, Sign>>;
+  /** Computed, never stored: one line per role explaining its spot in this step. */
+  roleText?: Partial<Record<Role, string>>;
+  /** Computed (Forsaken): what the turned picture shows, printed under the arena instead of "towers = relative south". */
+  frameLabel?: string;
+}
+
+export type Spell = "stack" | "circle" | "cone";
+export type Sign = "bind1" | "bind2" | "ignore1" | "ignore2";
+/** One example run of Forsaken: who resolves which spell in each tower set (random in the fight). */
+export interface ForsakenDeal {
+  label: string;
+  note: string;
+  sources: SourceRef[];
+  /** Built by us from the rules, not copied from a source. */
+  constructed?: boolean;
+  /** Index 0 = set 1. Each entry: the four soakers and the spell they resolve. */
+  sets: Partial<Record<Role, Spell>>[];
+  /** Signs the first tower group puts on itself after set 3 (bind = cone, ignore = circle; the number = order of marking). */
+  signs: Partial<Record<Role, Sign>>;
+}
+export interface ForsakenSpec {
+  note: string;
+  /** Named spots, measured once per layout (odd sets, even sets). */
+  slots: { odd: Record<string, PlacedRole>; even: Record<string, PlacedRole> };
+  deals: Record<string, ForsakenDeal>;
 }
 
 /** A fixed set of roles, or one set per variation (e.g. whichever group the statue tethers). */
@@ -145,4 +184,5 @@ export interface Geometry {
   variations?: Record<string, VariationSpec>;
   /** Mechanics that happen inside another one and have no steps of their own: the parent's scenes that show them. */
   seeAlso?: Record<string, string[]>;
+  forsaken?: ForsakenSpec;
 }

@@ -98,7 +98,7 @@
     },
     "ik-p2-0410": {
       "mechanic": "p2-forsaken",
-      "state": "odd-towers-1",
+      "state": "set-1",
       "status": "derived",
       "sources": [
         {
@@ -108,13 +108,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers I. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers I. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-1 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0420": {
       "mechanic": "p2-forsaken",
-      "state": "even-towers-1",
+      "state": "set-2",
       "status": "derived",
       "sources": [
         {
@@ -124,13 +124,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers II (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers II (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-2 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0431": {
       "mechanic": "p2-forsaken",
-      "state": "odd-towers-1",
+      "state": "set-3",
       "status": "derived",
       "sources": [
         {
@@ -140,13 +140,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers III; Ikuya pairs it with All Things Ending, which lands just before this set. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers III; Ikuya pairs it with All Things Ending, which lands just before this set. Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-3 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0441": {
       "mechanic": "p2-forsaken",
-      "state": "even-towers-1",
+      "state": "set-4",
       "status": "derived",
       "sources": [
         {
@@ -156,13 +156,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers IV (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers IV (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-4 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0452": {
       "mechanic": "p2-forsaken",
-      "state": "odd-towers-1",
+      "state": "set-5",
       "status": "derived",
       "sources": [
         {
@@ -172,13 +172,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers V (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers V (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-5 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0502": {
       "mechanic": "p2-forsaken",
-      "state": "even-towers-1",
+      "state": "set-6",
       "status": "derived",
       "sources": [
         {
@@ -188,13 +188,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers VI (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers VI (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-6 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0512": {
       "mechanic": "p2-forsaken",
-      "state": "odd-towers-1",
+      "state": "set-7",
       "status": "derived",
       "sources": [
         {
@@ -204,13 +204,13 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers VII (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers VII (All Things Ending). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-7 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },
     "ik-p2-0523": {
       "mechanic": "p2-forsaken",
-      "state": "even-towers-1",
+      "state": "set-8",
       "status": "derived",
       "sources": [
         {
@@ -220,7 +220,7 @@
           "ref": "cactbot-dmu"
         }
       ],
-      "note": "Towers VIII (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Links point at the method ① state; the same towers apply to method ②.",
+      "note": "Towers VIII (Past/Future's End). Ikuya's tower rows are numbered I-VIII like cactbot's 8 Path of Light sets. Retargeted on 2026-11-10 from the generic odd/even step to set-8 once Forsaken got one step per set (same row, same approval).",
       "owner": "approved",
       "ownerDate": "2026-11-09"
     },

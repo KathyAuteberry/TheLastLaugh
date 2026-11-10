@@ -74,14 +74,15 @@ function nearestSafe(rs: ((p: Pt) => number)[], base: Pt, d: NonNullable<Scene["
 export function resolveScene(scene: Scene | undefined, sel: Selection): Scene | undefined {
   if (!scene) return scene;
   const shapes = scene.shapes?.filter((s) => matches(s.when, sel));
-  const out: Scene = { ...scene, shapes };
+  const vp = scene.variantPositions?.filter((v) => matches(v.when, sel)).reduce((acc, v) => ({ ...acc, ...v.positions }), {} as Scene["positions"]);
+  const out: Scene = { ...scene, shapes, ...(vp && Object.keys(vp).length ? { positions: { ...scene.positions, ...vp } } : {}) };
   const d = scene.dodge;
-  if (!d || !scene.positions) return out;
+  if (!d || !out.positions) return out;
   const rs = regions(shapes ?? []);
   if (!rs.length) return out;
   const positions: Partial<Record<Role, PlacedRole>> = {};
   const unplaced: Partial<Record<Role, string>> = { ...scene.unplaced };
-  for (const [r, p] of Object.entries(scene.positions) as [Role, PlacedRole][]) {
+  for (const [r, p] of Object.entries(out.positions) as [Role, PlacedRole][]) {
     // A role with two candidate spots takes whichever needs the smaller move; the other is not shown.
     // Melee roles (if the scene says so) stay within reach of the boss instead of keeping their side;
     // if that is impossible they fall back to the general rule.

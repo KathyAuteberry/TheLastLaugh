@@ -283,6 +283,25 @@
       "sheet": "Omnitank",
       "range": "B25:I33",
       "note": "Rows: Ultimate Embrace (B27, 3:40), Wings of Destruction ¹ ³ (B29, 6:11), Ultimate Embrace ² (B31, 6:18). Notes D33."
+    },
+    "owner-p2-draft-review": {
+      "source": "owner",
+      "title": "Owner feedback on the P2 first draft",
+      "date": "2026-11-10",
+      "note": "Given in chat: Ultimate Embrace #1 likely has both tanks north and the party south (no individual spots), drawn with a circle on the main-threat tank if it is a splash; Forsaken needs the party line-up, the spells over each head with a few viable example deals, one step per tower set, the Kefka clone baits and the two group swaps."
+    },
+    "bmr-dmu-forsaken": {
+      "source": "secondary",
+      "parent": "bmr-dmu",
+      "title": "BossMod Reborn module: Dancing Mad (Ultimate), P2Forsaken.cs and DMUEnums.cs",
+      "author": "FFXIV-CombatReborn/BossmodReborn contributors",
+      "url": "https://github.com/FFXIV-CombatReborn/BossmodReborn/blob/d30c5441fd845ee070d39eae0c534e17859abf98/BossMod/Modules/Dawntrail/Ultimate/DMU/P2Forsaken.cs",
+      "license": "BSD-3-Clause",
+      "commit": "d30c5441fd845ee070d39eae0c534e17859abf98",
+      "committed": "2026-10-14",
+      "retrieved": "2026-11-11",
+      "method": "Read the code at that commit (not stored in repo).",
+      "note": "Mechanic behaviour only, never positions (owner OK 2026-11-11, review question 35). Past's/Future's End: one AoE cast by Kefka and the others by helper actors 0x4C39 (Kefka's clones); the module tracks Kefka plus the clones (list sized 4) and waits for 4 All Things Ending casts, i.e. Kefka plus three clones. Each of them turns to its own nearest player (one player each); Past's End cleaves behind, Future's End in front; drawn as a 180° cone."
     }
   },
   "images": {
@@ -517,6 +536,69 @@
       "uploadedAt": "2026-06-16T02:01+09:00",
       "caption": "Trine example 3",
       "shows": "Third example layout: tanks east (shield 1 near the middle, shield 2 at the east edge), party on the south '1' triangle at C; centre triangle numbered 3."
+    },
+    "kitten-p2-lineup": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_lineup.png",
+      "size": "738x736",
+      "caption": "Line-up south of the boss before Forsaken resolves",
+      "shows": "True-north arena with waymarks. Pairs in a line south of the boss: MT and H1 outer-west, ST and H2 inner-west, D1 and D3 inner-east, D2 and D4 outer-east (role boxes, measured by colour)."
+    },
+    "kitten-p2-mana-1": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_1.png",
+      "size": "738x736",
+      "caption": "Mana run, set 1",
+      "shows": "Kitten's Mana example run, set 1, towers drawn at the arena's south-west and south-east (relative). Left tower: H1 stack (top), D4 cone (bottom), H2 below; right tower: D2 stack (top), MT circle (bottom); ST by the left tower, D1 and D3 by the right."
+    },
+    "kitten-p2-mana-2": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_2.png",
+      "size": "738x736",
+      "caption": "Mana run, set 2",
+      "shows": "Kitten's Mana example run, set 2, towers drawn at the arena's south-west and south-east (relative). Left tower: H1 cone (top), MT circle (bottom); right: D2 cone, D4 circle; ST at the boss's NW, D1 at its NE, H2 west of the left tower, D3 east of the right."
+    },
+    "kitten-p2-mana-3": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_3.png",
+      "size": "738x736",
+      "caption": "Mana run, set 3",
+      "shows": "Kitten's Mana example run, set 3, towers drawn at the arena's south-west and south-east (relative). Left tower: D2 stack (top), MT cone (bottom); right: D4 stack, H1 circle; ST by the left tower, D1 and D3 by the right, H2 below the left tower."
+    },
+    "kitten-p2-mana-4": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_4.png",
+      "size": "738x736",
+      "caption": "Mana run, set 4",
+      "shows": "Kitten's Mana example run, set 4, towers drawn at the arena's south-west and south-east (relative). Left tower: D1 cone, H2 circle; right: D3 cone, ST circle; MT NW (Ignore 1), D2 NE (Bind 1), H1 west (Ignore 2), D4 east (Bind 2)."
+    },
+    "kitten-p2-mana-5": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_5.png",
+      "size": "738x736",
+      "caption": "Mana run, set 5",
+      "shows": "Kitten's Mana example run, set 5, towers drawn at the arena's south-west and south-east (relative). Left tower: ST stack, D1 cone; right: D3 stack, H2 circle; MT by the left tower, D2 and D4 by the right, H1 below the left tower; signs as in set 4."
+    },
+    "kitten-p2-mana-6": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_6.png",
+      "size": "738x736",
+      "caption": "Mana run, set 6",
+      "shows": "Kitten's Mana example run, set 6, towers drawn at the arena's south-west and south-east (relative). Same picture as set 4."
+    },
+    "kitten-p2-mana-7": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_7.png",
+      "size": "738x736",
+      "caption": "Mana run, set 7",
+      "shows": "Kitten's Mana example run, set 7, towers drawn at the arena's south-west and south-east (relative). Same picture as set 5."
+    },
+    "kitten-p2-mana-8": {
+      "parent": "kitten-dmu-forsaken",
+      "file": "https://ffxivkittenassets.com/dmu/p2/forsaken_mana_8.png",
+      "size": "738x736",
+      "caption": "Mana run, set 8",
+      "shows": "Kitten's Mana example run, set 8, towers drawn at the arena's south-west and south-east (relative). Left tower: D2 cone (Bind 1), MT circle (Ignore 1); right: D4 cone (Bind 2), H1 circle (Ignore 2); ST NW, D1 NE, H2 west, D3 east."
     }
   },
   "contrastCheck": {

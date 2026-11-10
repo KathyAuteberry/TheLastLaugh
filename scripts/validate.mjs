@@ -189,6 +189,45 @@ for (const f of readdirSync(root + "data/geometry").filter((x) => x.endsWith(".j
       checkSel(`variations/${mid}/${b}`, mid, sel);
     }
   }
+  if (g.forsaken) {
+    // Forsaken deals must follow the rules the solver (src/model/forsaken.ts) assumes.
+    const fz = g.forsaken;
+    const PAIR = { MT: "H1", H1: "MT", OT: "H2", H2: "OT", D1: "D3", D3: "D1", D2: "D4", D4: "D2" };
+    const sup = (r) => r[0] !== "D";
+    for (const [lay, slots] of Object.entries(fz.slots ?? {}))
+      for (const [k, p] of Object.entries(slots)) {
+        if (!inRange(p.at)) err(f, `forsaken/slots/${lay}/${k}`, "out of range");
+        if (!["auto", "eye", "copy", "loose"].includes(p.method)) err(f, `forsaken/slots/${lay}/${k}`, "bad method");
+      }
+    const dealGroup = g.variations?.["p2-forsaken"]?.groups.find((x) => x.id === "deal");
+    for (const o of dealGroup?.options ?? []) if (!fz.deals?.[o.id]) err(f, "forsaken", `deal option ${o.id} has no deal`);
+    for (const [id, dl] of Object.entries(fz.deals ?? {})) {
+      const w = `forsaken/deals/${id}`;
+      if (!dealGroup?.options.some((o) => o.id === id)) err(f, w, "not offered in the deal variation group");
+      if (!dl.label || !dl.note || !dl.sources?.length) err(f, w, "needs label, note, sources");
+      for (const s of dl.sources ?? []) if (!knownRefs.has(s.ref)) err(f, w, `unknown source ${s.ref}`);
+      if (dl.sets?.length !== 8) { err(f, w, "needs 8 sets"); continue; }
+      const stacks0 = Object.keys(dl.sets[0]).filter((r) => dl.sets[0][r] === "stack");
+      if (stacks0.length !== 2 || sup(stacks0[0]) === sup(stacks0[1])) err(f, w, "set 1: one support and one DPS stack");
+      const tg = [...ROLESET].filter((r) => stacks0.includes(r) || stacks0.includes(PAIR[r]));
+      dl.sets.forEach((set, i) => {
+        const n = i + 1, who = Object.keys(set);
+        const want = [1, 2, 3, 8].includes(n) ? tg : [...ROLESET].filter((r) => !tg.includes(r));
+        if (who.length !== 4 || !want.every((r) => who.includes(r))) err(f, w, `set ${n}: soakers must be ${want.join(",")}`);
+        const count = (s) => who.filter((r) => set[r] === s).length;
+        if (n % 2 && !(count("stack") === 2 && count("cone") === 1 && count("circle") === 1)) err(f, w, `set ${n}: odd sets are 2 stacks, 1 cone, 1 circle`);
+        if (!(n % 2) && !(count("cone") === 2 && count("circle") === 2)) err(f, w, `set ${n}: even sets are 2 cones, 2 circles`);
+      });
+      // Right after the cast: per role group one stack and three of the same kind; the two groups get opposite kinds.
+      const initial = { ...dl.sets[3], ...dl.sets[0] };
+      const kinds = [true, false].map((s) => [...ROLESET].filter((r) => sup(r) === s).map((r) => initial[r]).filter((x) => x !== "stack"));
+      if (kinds.some((k) => k.length !== 3 || new Set(k).size !== 1) || kinds[0][0] === kinds[1][0]) err(f, w, "initial deal: each role group one stack + three of one kind, opposite kinds");
+      const signs = dl.signs ?? {};
+      if (Object.keys(signs).sort().join() !== [...tg].sort().join()) err(f, w, "signs: exactly the tower group");
+      if (Object.values(signs).sort().join() !== "bind1,bind2,ignore1,ignore2") err(f, w, "signs: bind1, bind2, ignore1, ignore2 once each");
+      for (const [r, s] of Object.entries(signs)) if ((s.startsWith("bind") ? "cone" : "circle") !== dl.sets[7][r]) err(f, w, `signs: ${r} ${s} does not match its set-8 spell`);
+    }
+  }
   for (const [mid, keys] of Object.entries(g.seeAlso ?? {})) {
     if (!mechStates.has(mid)) err(f, `seeAlso/${mid}`, "unknown mechanic");
     for (const k of keys) if (!g.scenes[k]) err(f, `seeAlso/${mid}`, `unknown scene ${k}`);
@@ -273,6 +312,23 @@ for (const f of readdirSync(root + "data/geometry").filter((x) => x.endsWith(".j
       for (const o of grp?.options ?? []) if (!tp.confused?.some((c) => c.when?.confused === o.id)) err(f, key, `teleports: no confused roles for confused=${o.id}`);
       for (const c of tp.confused ?? []) { checkSel(key, mid, c.when); for (const r of c.roles ?? []) if (!ROLESET.has(r)) err(f, key, `teleports: bad role ${r}`); }
     }
+    for (const vp of sc.variantPositions ?? []) {
+      checkSel(key, mid, vp.when);
+      for (const [r, p] of Object.entries(vp.positions ?? {})) {
+        if (!ROLESET.has(r)) err(f, key, `variantPositions: bad role ${r}`);
+        if (!inRange(p.at)) err(f, key, `variantPositions: ${r} out of range`);
+        if (!["auto", "eye", "copy", "loose"].includes(p.method)) err(f, key, `variantPositions: ${r} bad method`);
+      }
+    }
+    if (sc.forsaken) {
+      const fz = sc.forsaken;
+      if (!g.forsaken) err(f, key, "forsaken scene without a forsaken spec");
+      if (fz.at === "set") { if (!(fz.set >= 1 && fz.set <= 8)) err(f, key, "forsaken: set must be 1-8"); if (sc.positions) err(f, key, "forsaken set scenes are placed by the solver; store no positions"); }
+      else if (fz.at === "held") { if (!(fz.after >= 0 && fz.after <= 8)) err(f, key, "forsaken: after must be 0-8"); }
+      else err(f, key, "forsaken: at must be set or held");
+    }
+    for (const k of ["spells", "signs", "roleText", "frameLabel"]) if (sc[k]) err(f, key, `${k} is computed, never stored`);
+    for (const s of sc.shapes ?? []) if (s.kind === "ghost") err(f, key, "ghost towers are computed, never stored");
     if (sc.dodge && !(sc.dodge.margin > 0 && sc.dodge.maxShift > 0 && sc.dodge.note)) err(f, key, "dodge needs margin, maxShift and note");
     if (sc.dodge?.melee && !(sc.dodge.melee.roles?.every((r) => ROLESET.has(r)) && sc.dodge.melee.maxRadius > 0 && sc.dodge.melee.note)) err(f, key, "dodge.melee needs roles, maxRadius and note");
     for (const s of sc.shapes ?? []) {

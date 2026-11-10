@@ -2,6 +2,7 @@ import type { Geometry, Mechanic, PlacedRole, Pt, Role, RoleSel, Scene, Selectio
 import { ROLES } from "./types";
 import { allSelections, defaultSelection, matches, resolveScene, variationsFor } from "./variants";
 import { arrowPlan, teleportChain, tileCells, tilesOf, type ArrowState } from "./arrows";
+import { withForsaken } from "./forsaken";
 
 /** One step of a mechanic as the viewer sees it: the text state plus (if measured) its scene. */
 export interface Step {
@@ -27,7 +28,7 @@ export function buildSteps(m: Mechanic, geometry: Geometry, sel: Selection): Ste
     .flatMap((s) => {
       const key = `${m.id}/${s.id}`;
       const raw = geometry.scenes[key];
-      const scene = resolveScene(raw, sel);
+      const scene = withForsaken(resolveScene(raw, sel), sel, geometry.forsaken);
       const frames: Step[] = (raw?.frames ?? []).map((f, i) => ({
         mechanic: m, state: s, key: `${key}#${i}`, frame: f.label, sel,
         scene: withTeleports(withArrows(resolveScene({ ...raw!, frames: undefined, debuff: f.debuff ?? raw!.debuff, positions: { ...raw!.positions, ...f.positions } }, sel), sel, (i - 1) as -1 | 0, key), sel, i, key, geometry),

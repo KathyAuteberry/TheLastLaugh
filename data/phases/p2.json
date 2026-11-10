@@ -235,12 +235,133 @@
               }
             ]
           },
-          "positions": {},
+          "positions": {
+            "MT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "North of Kefka, stacked with the other tank.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "OT": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "North of Kefka, stacked with the other tank.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "H1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "H2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "D1": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "D2": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "D3": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            },
+            "D4": {
+              "value": {
+                "kind": "relative",
+                "anchor": "boss",
+                "description": "South of Kefka, away from the tanks.",
+                "orientation": "true-north"
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ],
+              "note": "Owner: 'likely' both tanks north, party south; no individual spots."
+            }
+          },
           "hazards": [
             {
               "value": {
                 "type": "tankbuster",
-                "description": "Shared heavy tankbuster on the tanks."
+                "description": "Heavy tankbuster: a circle centred on the main-threat tank, shared by both tanks."
               },
               "status": "source-stated",
               "sources": [
@@ -254,6 +375,37 @@
                 {
                   "ref": "marii-naur",
                   "at": "15:26"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken",
+                  "at": "0:12"
+                }
+              ],
+              "note": "Kitten's Ultimate Embrace clip (top of the Forsaken page, 0:12) shows a red ring centred on the main tank; the videos say both tanks share it. Physical: Feint helps (Kitten)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "MT takes aggro as soon as Kefka is targetable; both tanks stand together north of him, everyone else south.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "owner-p2-draft-review"
+                }
+              ]
+            },
+            {
+              "value": "Both tanks use their mitigation (Ikuya's plan below); it is physical, so melee Feint.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "ikuya-p2"
                 }
               ]
             }
@@ -602,9 +754,9 @@
       "states": [
         {
           "id": "raidwide",
-          "label": "Forsaken raidwide; groups split",
+          "label": "Forsaken raidwide; line up south",
           "trigger": {
-            "value": "Forsaken castbar.",
+            "value": "Forsaken castbar, a few auto-attacks after Ultimate Embrace.",
             "status": "source-stated",
             "sources": [
               {
@@ -612,6 +764,9 @@
               },
               {
                 "ref": "bmr-dmu"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
               }
             ]
           },
@@ -620,161 +775,145 @@
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "West of the boss (tanks+healers side).",
+                "description": "South-west of Kefka: outer support column, front (H1 behind you).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "OT": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "West of the boss (tanks+healers side).",
+                "description": "South-west of Kefka: inner support column, front (H2 behind you).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "H1": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "West of the boss (tanks+healers side).",
+                "description": "South-west of Kefka: outer support column, back (behind MT).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "H2": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "West of the boss (tanks+healers side).",
+                "description": "South-west of Kefka: inner support column, back (behind OT).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "D1": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "East of the boss (DPS side).",
+                "description": "South-east of Kefka: inner DPS column, front (D3 behind you).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "D2": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "East of the boss (DPS side).",
+                "description": "South-east of Kefka: outer DPS column, front (D4 behind you).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "D3": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "East of the boss (DPS side).",
+                "description": "South-east of Kefka: inner DPS column, back (behind D1).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             },
             "D4": {
               "value": {
                 "kind": "relative",
                 "anchor": "boss",
-                "description": "East of the boss (DPS side).",
+                "description": "South-east of Kefka: outer DPS column, back (behind D2).",
                 "orientation": "true-north"
               },
-              "status": "source-stated",
+              "status": "derived-from-image",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "kitten-p2-lineup"
                 },
                 {
-                  "ref": "yan-p2-forsaken-2",
-                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                  "ref": "yan-p2-forsaken-1"
                 }
               ],
-              "note": "Yan recommends this split before Forsaken so pairs can see each other's markers; not a required spot."
+              "note": "Kitten's line-up picture; Yan says only tanks+healers west, DPS east."
             }
           },
           "hazards": [
@@ -799,255 +938,116 @@
               ],
               "note": "Videos: needs heavy mitigation and shields. Yan does not describe the cast."
             }
+          ],
+          "actions": [
+            {
+              "value": "Mitigate: Forsaken is a very heavy raidwide (Kitten: up to about 560k).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "azurite-p2"
+                }
+              ]
+            },
+            {
+              "value": "Line up in your pair south of Kefka: supports on the west side (MT+H1 outside, OT+H2 inside), DPS on the east (D1+D3 inside, D2+D4 outside), front player nearer the boss.",
+              "status": "derived-from-image",
+              "sources": [
+                {
+                  "ref": "kitten-p2-lineup"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "※ミッシング前に西タンヒラ・東DPSで分かれておくと目視しやすい"
+                }
+              ]
+            },
+            {
+              "value": "The line-up lets each pair see at once whether it got a stack.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
           ]
         },
         {
-          "id": "odd-towers-1",
-          "label": "Odd towers (1, 3, 5, 7): stacks top, cone bottom-left, circle bottom-right",
-          "branch": "method-1",
-          "images": [
-            "yan-p2-02",
-            "yan-p2-04",
-            "yan-p2-01"
-          ],
+          "id": "spells",
+          "label": "Spells appear: find your group",
           "trigger": {
-            "value": "A new tower pair appears (sets 1, 3, 5, 7).",
+            "value": "Forsaken resolves: everyone gets 4 debuff stacks and a spell over their head.",
             "status": "source-stated",
             "sources": [
               {
-                "ref": "yan-p2-forsaken-1"
+                "ref": "kitten-dmu-forsaken"
               },
               {
-                "ref": "cactbot-dmu"
+                "ref": "azurite-p2"
               }
             ]
           },
-          "positions": {
-            "MT": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
+          "positions": {},
+          "hazards": [],
+          "actions": [
+            {
+              "value": "Each role group gets one stack; its other three get all cones or all circles, and the two role groups get opposite ones.",
+              "status": "source-stated",
               "sources": [
                 {
                   "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                  "quoteJa": "頭割りは必ずタンヒラから1名、DPSから1名につきます。"
                 },
                 {
                   "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
                 }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+              ]
             },
-            "OT": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
+            {
+              "value": "Your pair holds the stack: you are the tower group and soak sets 1, 2, 3 and 8. Otherwise you are a helper: sets 4, 5, 6 and 7.",
+              "status": "source-stated",
               "sources": [
                 {
                   "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
+                  "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
                 },
                 {
                   "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
                 }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+              ]
             },
-            "H1": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
+            {
+              "value": "Note your partner's spell too: on even sets it tells the melee whether to swap towers.",
+              "status": "source-stated",
               "sources": [
                 {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
                   "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
                 }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
-            },
-            "H2": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, left (tanks+healers).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
-            },
-            "D1": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
-            },
-            "D2": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
-            },
-            "D3": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
-            },
-            "D4": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): bottom-left with a cone, bottom-right with a circle, top spots with a stack; stack holders take the left/right top spot by priority healer > tank > melee > ranged (higher priority on the left). Out of the towers: your side, right (DPS).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "奇数回の左下は扇、右下は円。"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "Exact spots: yan-p2-02 (no role labels; each spot depends on the random markers). 'By priority' read as higher priority = left, as on Kitten ERP's Mana tab."
+              ]
             }
+          ]
+        },
+        {
+          "id": "set-1",
+          "label": "Set 1 (tower group): stacks, cone, circle",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 1 appears (tower group).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
           },
+          "positions": {},
           "hazards": [
             {
               "value": {
@@ -1111,7 +1111,7 @@
                 "type": "cone",
                 "description": "Cone from each cone holder at the nearest player (not at the holder).",
                 "geometry": {
-                  "angleDeg": 90
+                  "angleDeg": 70
                 }
               },
               "status": "source-stated",
@@ -1126,9 +1126,1605 @@
                 },
                 {
                   "ref": "pylene-tweet-cone"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
                 }
               ],
-              "note": "Cone angle 90° per ぴれん's tweet."
+              "note": "About 70° per Kitten ERP; ぴれん's tweet says 90°. Open question for the owner."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Tower group into the towers: cone bottom-left, circle bottom-right, stacks on the two top spots (support left, DPS right; if both stacks are in one role group, its melee takes the other side).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。頭割りは優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "Kitten's Mana wording; it gives the same spots as Yan's priority list."
+            },
+            {
+              "value": "Helpers outside the towers: tank by the left tower on the boss ring (shares the left stack), healer just below the left tower (takes the cone), both DPS by the right tower (share the right stack).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-02"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Each stack needs 3 players: left = its holder, the outside tank and the cone holder (a cone never hurts its own holder); right = its holder and the two outside DPS.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-02"
+                }
+              ]
+            },
+            {
+              "value": "No All Things Ending on set 1.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Kefka casts Past's End or Future's End during this set: remember which (it lands on the next set and decides the bait).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "cactbot-dmu"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-2",
+          "label": "Set 2 (tower group): cones, circles, Past's/Future's End",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 2 appears, turned 45° from the last (tower group); Past's/Future's End lands on the 4 players nearest Kefka.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Tower group: support pair to the left tower, DPS pair to the right; cone on the top spot where the tower meets the boss ring, circle at the bottom. If both supports hold the same spell, the tank and the melee DPS swap sides.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "偶数回は左から優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Helpers outside the towers: tank at the boss's north-west edge and melee DPS at its north-east edge (with the two cones they take Past's/Future's End); healer west of the left tower and ranged DPS east of the right tower, 90° round the tower from its cone, to bait it.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-03"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ]
+            },
+            {
+              "value": "Ranged helpers: stand out far enough that your melee partner can see whether you hold the stack.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bait-2",
+          "label": "Bait All Things Ending (after set 2)",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 2 resolved: Kefka and his three clones (the clones cast three of the four Past's/Future's End AoEs) are about to turn to the nearest players; the next towers are up.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "bmr-dmu-forsaken"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "20:32"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Past's End (he cleaves behind): wait between the next towers until All Things Ending starts casting.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Future's End (he cleaves in front): wait on the side opposite the towers, then run to the towers when the cast appears.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Everyone stacks on one spot at max melee or a bit further. Kefka and each clone turn to their own nearest player and lock in when All Things Ending starts casting, so one tight stack makes all four face the same way. The further out, the shallower the clones' angles; too close and a clone can curve its cleave into a tower.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:52"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "3:26"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-3",
+          "label": "Set 3 (tower group): stacks again; All Things Ending",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 3 appears (tower group).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players. A missed tower explodes and gives the party a damage down."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:23"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Explosion consequence: videos."
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Stack on each stack holder (needs 3 players)."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Circle AoE on each circle holder; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:42"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from each cone holder at the nearest player (not at the holder).",
+                "geometry": {
+                  "angleDeg": 70
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "About 70° per Kitten ERP; ぴれん's tweet says 90°. Open question for the owner."
+            },
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "All Things Ending resolves during this set: if the bait was right, Kefka and the clones cleave away from the towers. Don't drift up towards Kefka.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "azurite-p2"
+                }
+              ],
+              "note": "Kitten: stay below its 'red line' or get kicked (damage down)."
+            },
+            {
+              "value": "Tower group into the towers: cone bottom-left, circle bottom-right, stacks on the two top spots (support left, DPS right; if both stacks are in one role group, its melee takes the other side).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。頭割りは優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "Kitten's Mana wording; it gives the same spots as Yan's priority list."
+            },
+            {
+              "value": "Helpers outside the towers: tank by the left tower on the boss ring (shares the left stack), healer just below the left tower (takes the cone), both DPS by the right tower (share the right stack).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-02"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Each stack needs 3 players: left = its holder, the outside tank and the cone holder (a cone never hurts its own holder); right = its holder and the two outside DPS.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-02"
+                }
+              ]
+            },
+            {
+              "value": "Kefka casts Past's End or Future's End during this set: remember which (it lands on the next set and decides the bait).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "cactbot-dmu"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swap-1",
+          "label": "Swap 1: the helpers take sets 4 to 7",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 3 resolved: the tower group has 1 debuff stack left, the helpers still 4.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [],
+          "actions": [
+            {
+              "value": "Tower group: mark yourself with the spell you now hold (it waits until set 8): circle → /mk stop <me> (Ignore), cone → /mk bind <me> (Bind). The number, 1 or 2, goes by who marks first.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "・円がついた場合 /mk stop <me>"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Helpers: you soak sets 4, 5, 6 and 7. The tower group takes the outside spots by role.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "頭割りがついたペアは1・2・3・8回目、それ以外のペアは4・5・6・7回目で処理"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Why swap: once your debuff runs out you get no new spell; if the tower group kept going, the helpers would end up with stacks on set 6 and wipe the party.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Keep count on the party list (debuff stacks), or by the music.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-4",
+          "label": "Set 4 (helpers): always a melee swap",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 4 appears, turned 45° from the last (helpers); Past's/Future's End lands on the 4 players nearest Kefka.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Helpers into the towers, same rules as set 2. Your pair's spells were dealt at the cast, so both supports hold the same spell and so do both DPS: the tank and melee DPS always swap (left: healer + melee DPS; right: tank + ranged DPS).",
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-forsaken-2",
+                  "quoteJa": "4回目は左ヒーラー・近接／右タンク・遠隔"
+                },
+                {
+                  "ref": "yan-p2-01"
+                }
+              ],
+              "note": "Follows from the rules; Yan's method ② text states the same pairing for tower 4."
+            },
+            {
+              "value": "Tower group outside the towers: tank at the boss's north-west edge and melee DPS at its north-east edge (with the two cones they take Past's/Future's End); healer west of the left tower and ranged DPS east of the right tower, 90° round the tower from its cone, to bait it.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-03"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ]
+            },
+            {
+              "value": "Ranged helpers: stand out far enough that your melee partner can see whether you hold the stack.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bait-4",
+          "label": "Bait All Things Ending (after set 4)",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 4 resolved: Kefka and his three clones (the clones cast three of the four Past's/Future's End AoEs) are about to turn to the nearest players; the next towers are up.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "bmr-dmu-forsaken"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "20:32"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Past's End (he cleaves behind): wait between the next towers until All Things Ending starts casting.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Future's End (he cleaves in front): wait on the side opposite the towers, then run to the towers when the cast appears.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Everyone stacks on one spot at max melee or a bit further. Kefka and each clone turn to their own nearest player and lock in when All Things Ending starts casting, so one tight stack makes all four face the same way. The further out, the shallower the clones' angles; too close and a clone can curve its cleave into a tower.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:52"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "3:26"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-5",
+          "label": "Set 5 (helpers): stacks; All Things Ending",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 5 appears (helpers).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players. A missed tower explodes and gives the party a damage down."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:23"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Explosion consequence: videos."
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Stack on each stack holder (needs 3 players)."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Circle AoE on each circle holder; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:42"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from each cone holder at the nearest player (not at the holder).",
+                "geometry": {
+                  "angleDeg": 70
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "About 70° per Kitten ERP; ぴれん's tweet says 90°. Open question for the owner."
+            },
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "All Things Ending resolves during this set: if the bait was right, Kefka and the clones cleave away from the towers. Don't drift up towards Kefka.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "azurite-p2"
+                }
+              ],
+              "note": "Kitten: stay below its 'red line' or get kicked (damage down)."
+            },
+            {
+              "value": "Tower group into the towers: cone bottom-left, circle bottom-right, stacks on the two top spots (support left, DPS right; if both stacks are in one role group, its melee takes the other side).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。頭割りは優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "Kitten's Mana wording; it gives the same spots as Yan's priority list."
+            },
+            {
+              "value": "Tower group outside the towers: tank by the left tower on the boss ring (shares the left stack), healer just below the left tower (takes the cone), both DPS by the right tower (share the right stack).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-02"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Each stack needs 3 players: left = its holder, the outside tank and the cone holder (a cone never hurts its own holder); right = its holder and the two outside DPS.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-02"
+                }
+              ]
+            },
+            {
+              "value": "Kefka casts Past's End or Future's End during this set: remember which (it lands on the next set and decides the bait).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "cactbot-dmu"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-6",
+          "label": "Set 6 (helpers): cones and circles",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 6 appears, turned 45° from the last (helpers); Past's/Future's End lands on the 4 players nearest Kefka.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Tower group: support pair to the left tower, DPS pair to the right; cone on the top spot where the tower meets the boss ring, circle at the bottom. If both supports hold the same spell, the tank and the melee DPS swap sides.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "偶数回は左から優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Tower group outside the towers: tank at the boss's north-west edge and melee DPS at its north-east edge (with the two cones they take Past's/Future's End); healer west of the left tower and ranged DPS east of the right tower, 90° round the tower from its cone, to bait it.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-03"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ]
+            },
+            {
+              "value": "Ranged helpers: stand out far enough that your melee partner can see whether you hold the stack.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bait-6",
+          "label": "Bait All Things Ending (after set 6)",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 6 resolved: Kefka and his three clones (the clones cast three of the four Past's/Future's End AoEs) are about to turn to the nearest players; the next towers are up.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "bmr-dmu-forsaken"
+              },
+              {
+                "ref": "marii-naur",
+                "at": "20:32"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Past's End (he cleaves behind): wait between the next towers until All Things Ending starts casting.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去の終焉は着弾後、塔の間で消滅の脚詠唱開始まで待機する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Future's End (he cleaves in front): wait on the side opposite the towers, then run to the towers when the cast appears.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "未来の終焉は着弾後、塔の反対側で消滅の脚詠唱開始まで待機し詠唱が見えたら塔側に駆け込む"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Everyone stacks on one spot at max melee or a bit further. Kefka and each clone turn to their own nearest player and lock in when All Things Ending starts casting, so one tight stack makes all four face the same way. The further out, the shallower the clones' angles; too close and a clone can curve its cleave into a tower.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:52"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "3:26"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-7",
+          "label": "Set 7 (helpers): last stacks; All Things Ending",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 7 appears (helpers).",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players. A missed tower explodes and gives the party a damage down."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                },
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:23"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Explosion consequence: videos."
+            },
+            {
+              "value": {
+                "type": "stack",
+                "description": "Stack on each stack holder (needs 3 players)."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Circle AoE on each circle holder; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "0:42"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                }
+              ],
+              "note": "Videos."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cone from each cone holder at the nearest player (not at the holder).",
+                "geometry": {
+                  "angleDeg": 70
+                }
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "1:02"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "16:07"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "About 70° per Kitten ERP; ぴれん's tweet says 90°. Open question for the owner."
+            },
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "All Things Ending resolves during this set: if the bait was right, Kefka and the clones cleave away from the towers. Don't drift up towards Kefka.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "azurite-p2"
+                }
+              ],
+              "note": "Kitten: stay below its 'red line' or get kicked (damage down)."
+            },
+            {
+              "value": "Tower group into the towers: cone bottom-left, circle bottom-right, stacks on the two top spots (support left, DPS right; if both stacks are in one role group, its melee takes the other side).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "奇数回の左下は扇、右下は円。頭割りは優先順位で ヒラ > タンク > 近接DPS > 遠隔DPS"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "Kitten's Mana wording; it gives the same spots as Yan's priority list."
+            },
+            {
+              "value": "Tower group outside the towers: tank by the left tower on the boss ring (shares the left stack), healer just below the left tower (takes the cone), both DPS by the right tower (share the right stack).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-02"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Each stack needs 3 players: left = its holder, the outside tank and the cone holder (a cone never hurts its own holder); right = its holder and the two outside DPS.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-02"
+                }
+              ]
+            },
+            {
+              "value": "Kefka casts Past's End or Future's End during this set: remember which (it lands on the next set and decides the bait).",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "cactbot-dmu"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "swap-2",
+          "label": "Swap 2: the tower group returns for set 8",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 7 resolved: the helpers are out of debuff stacks.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "yan-p2-forsaken-1"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [],
+          "actions": [
+            {
+              "value": "Tower group: soak set 8 by your sign: Bind 1 top-left, Bind 2 top-right, Ignore 1 bottom-left, Ignore 2 bottom-right. In Mana the signs override the priority.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Helpers: you are done; take the outside spots by role.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "set-8",
+          "label": "Set 8 (tower group, by signs)",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Tower set 8 appears, turned 45° from the last (tower group); Past's/Future's End lands on the 4 players nearest Kefka.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "cactbot-dmu"
+              },
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "yan-p2-forsaken-1"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "tower",
+                "description": "Two towers; each needs 2 players."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": {
+                "type": "circle",
+                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
+              },
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:25"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "過去未来の分身誘導"
+                }
+              ],
+              "note": "Videos explain the targeting."
+            },
+            {
+              "value": {
+                "type": "cone",
+                "description": "Cones and circles from the soakers' markers, as on odd sets."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "5:11"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "19:12"
+                }
+              ],
+              "note": "Videos: even sets are 2 cones + 2 circles."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Tower group by sign: Bind (cone) on the top spots, Ignore (circle) at the bottom; 1 left, 2 right.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
+            },
+            {
+              "value": "Helpers outside the towers: tank at the boss's north-west edge and melee DPS at its north-east edge (with the two cones they take Past's/Future's End); healer west of the left tower and ranged DPS east of the right tower, 90° round the tower from its cone, to bait it.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-03"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "pylene-tweet-cone"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-bait",
+          "label": "Final bait at A",
+          "branch": "method-1",
+          "trigger": {
+            "value": "Set 8 resolved; the 4th Past's/Future's End clones are out.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Everyone gathers at A (true north) to bait Kefka and his clones.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-forsaken-1",
+                  "quoteJa": "4回目の過去未来はAに集合して消滅の脚をギミックに応じて避ける"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ],
+              "note": "Elemental baits between the last towers instead (Kitten)."
+            }
+          ]
+        },
+        {
+          "id": "final-dodge",
+          "label": "Dodge the last All Things Ending",
+          "branch": "method-1",
+          "trigger": {
+            "value": "All Things Ending starts casting.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              },
+              {
+                "ref": "cactbot-dmu"
+              }
+            ]
+          },
+          "positions": {},
+          "hazards": [
+            {
+              "value": {
+                "type": "half-room",
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
+              },
+              "status": "derived",
+              "sources": [
+                {
+                  "ref": "azurite-p2",
+                  "at": "2:45"
+                },
+                {
+                  "ref": "marii-naur",
+                  "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
+                }
+              ],
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
+            }
+          ],
+          "actions": [
+            {
+              "value": "Past's End: he cleaves behind him, so stay at A. Future's End: he cleaves in front, so walk through him to the south.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "kitten-dmu-forsaken"
+                },
+                {
+                  "ref": "yan-p2-forsaken-1"
+                }
+              ]
+            },
+            {
+              "value": "Light of Judgment follows: heal up; anyone with a debuff stack left dies.",
+              "status": "source-stated",
+              "sources": [
+                {
+                  "ref": "yan-p2-loj"
+                },
+                {
+                  "ref": "kitten-dmu-forsaken"
+                }
+              ]
             }
           ]
         },
@@ -1412,312 +3008,6 @@
                 }
               ],
               "note": "Cone angle 90° per ぴれん's tweet."
-            }
-          ]
-        },
-        {
-          "id": "even-towers-1",
-          "label": "Even towers (2, 4, 6, 8) with Past's/Future's End baits",
-          "branch": "method-1",
-          "images": [
-            "yan-p2-03",
-            "yan-p2-05",
-            "yan-p2-01"
-          ],
-          "trigger": {
-            "value": "Next tower pair (sets 2, 4, 6, 8); Kefka casts Past's End or Future's End.",
-            "status": "source-stated",
-            "sources": [
-              {
-                "ref": "yan-p2-forsaken-1"
-              },
-              {
-                "ref": "cactbot-dmu"
-              },
-              {
-                "ref": "marii-naur",
-                "at": "19:12"
-              }
-            ]
-          },
-          "positions": {
-            "MT": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "OT": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "H1": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "H2": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "D1": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "D2": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "D3": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            },
-            "D4": {
-              "value": {
-                "kind": "player-adjusted",
-                "anchor": "other",
-                "description": "In the towers (if it's your pair's turn): left to right by priority healer > tank > melee > ranged. Out of the towers: fixed spot on your side; the two cone holders (on the towers' north edges) and the melee of each outside pair (tank at the boss's NW, melee DPS at its NE) bait Past's/Future's End. Tower 8: by the head-marker number (left 1, right 2).",
-                "orientation": {
-                  "relativeTo": "the current tower pair (towers treated as relative south; 'left' = left when facing the boss from the towers)"
-                }
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "塔以外のペアは位置固定（左タンヒラ、右DPS）過去未来の分身誘導は扇担当2人と近接2人"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "8回目の塔処理は、マーカーの数字基準（左1／右2）で処理する"
-                },
-                {
-                  "ref": "kitten-dmu-forsaken"
-                },
-                {
-                  "ref": "owner-kitten-review"
-                }
-              ],
-              "note": "'近接2人' (the two melee) = the melee player of each pair outside the towers: the tank of the tanks+healers pair and the melee DPS of the DPS pair (Kitten ERP Mana diagram: tank NW, melee NE of the boss; marii's video agrees). Matches yan-p2-03's 4 baiters."
-            }
-          },
-          "hazards": [
-            {
-              "value": {
-                "type": "tower",
-                "description": "Two towers; each needs 2 players."
-              },
-              "status": "source-stated",
-              "sources": [
-                {
-                  "ref": "yan-p2-forsaken-1"
-                }
-              ]
-            },
-            {
-              "value": {
-                "type": "circle",
-                "description": "Past's/Future's End: one AoE bait on each of the 4 players nearest Kefka; magic vulnerability."
-              },
-              "status": "source-stated",
-              "sources": [
-                {
-                  "ref": "azurite-p2",
-                  "at": "2:25"
-                },
-                {
-                  "ref": "marii-naur",
-                  "at": "19:12"
-                },
-                {
-                  "ref": "yan-p2-forsaken-1",
-                  "quoteJa": "過去未来の分身誘導"
-                }
-              ],
-              "note": "Videos explain the targeting."
-            },
-            {
-              "value": {
-                "type": "cone",
-                "description": "Cones and circles from the soakers' markers, as on odd sets."
-              },
-              "status": "derived",
-              "sources": [
-                {
-                  "ref": "azurite-p2",
-                  "at": "5:11"
-                },
-                {
-                  "ref": "marii-naur",
-                  "at": "19:12"
-                }
-              ],
-              "note": "Videos: even sets are 2 cones + 2 circles."
             }
           ]
         },
@@ -2264,7 +3554,7 @@
             {
               "value": {
                 "type": "half-room",
-                "description": "Half-room cleaves from Kefka and each clone: behind them after Past's End, in front after Future's End."
+                "description": "Half-room cleaves from Kefka and each of his three clones: behind them after Past's End, in front after Future's End. Each turns to its own nearest player."
               },
               "status": "derived",
               "sources": [
@@ -2275,11 +3565,15 @@
                 {
                   "ref": "marii-naur",
                   "at": "20:32"
+                },
+                {
+                  "ref": "bmr-dmu-forsaken"
                 }
               ],
-              "note": "Videos. Number of clones: Azurite says Kefka and his clones face 5 random players; marii says 3 clones. Not settled."
+              "note": "Kefka plus three clones: BossMod's Forsaken code (one Past's/Future's End AoE from Kefka, the rest from three clone actors; then 4 All Things Ending casts) and marii ('three clones'). AzuriteTV's 'five random players' does not fit. Where the clones stand is not in our sources (D-P2-02)."
             }
-          ]
+          ],
+          "branch": "method-2"
         },
         {
           "id": "mark-after-3",
@@ -2325,12 +3619,13 @@
               ],
               "note": "Purpose from Kitten ERP (Mana): the initial tower group marks itself for the final set, and in Mana the marks override the priority. Yan gives the macros and the tower-8 rule."
             }
-          ]
+          ],
+          "branch": "method-2"
         }
       ],
       "resolutionOrder": [
         {
-          "value": "Forsaken raidwide → towers 1 → (Past/Future End) towers 2 → All Things Ending → towers 3 → … → towers 8 → All Things Ending (4th, gather at A) → Light of Judgment.",
+          "value": "Forsaken raidwide → line-up → sets 1-3 (tower group) → swap → sets 4-7 (helpers) → swap → set 8 (tower group) → final bait at A → Light of Judgment. Past's/Future's End lands with each even set; All Things Ending resolves with sets 3, 5, 7 and after set 8.",
           "status": "source-stated",
           "sources": [
             {
@@ -2341,16 +3636,28 @@
             },
             {
               "ref": "yan-p2-forsaken-1"
+            },
+            {
+              "ref": "kitten-dmu-forsaken"
             }
-          ],
-          "note": "Order from cactbot: Path of Light (tower) sets 1-8, Future's/Past's End after sets 1, 3, 5, 7 casts (landing with sets 2, 4, 6, 8), All Things Ending after sets 2, 4, 6, 8."
+          ]
         }
       ],
       "whyItWorks": {
-        "value": null,
-        "status": "unverified",
-        "sources": [],
-        "note": "To draft after the method questions are answered."
+        "value": "Pairs never change and each pair always works the same side (supports left, DPS right), so a glance at your partner's spell tells you your spot. The stack pairs and the others swap after set 3, giving everyone exactly 4 soaks before Light of Judgment. Fixed outside spots put the right players nearest Kefka for the Past's/Future's End baits, and waiting between or opposite the towers aims the clone cleaves away from the next towers.",
+        "status": "derived",
+        "sources": [
+          {
+            "ref": "yan-p2-forsaken-1"
+          },
+          {
+            "ref": "kitten-dmu-forsaken"
+          },
+          {
+            "ref": "owner-p2-review"
+          }
+        ],
+        "note": "Draft item 23 (owner: probably OK)."
       },
       "commonMistakes": [
         {
@@ -2369,6 +3676,19 @@
               }
             ],
             "note": "Fixes from Yan/ぴれん: stand on the right side of the 'rugby ball' (tower overlap); when baiting the legs, shift slightly counterclockwise (to the boss's right) or have the stack step a little inward, but not so far that the left outside tank gets caught in the right stack; bait the legs from max melee, not hugging the target circle (too close makes the angle steep)."
+          }
+        },
+        {
+          "mistake": "Ranged helper stands too close on an even set",
+          "consequence": "the melee partner cannot see your spell and misses a needed swap",
+          "claim": {
+            "value": "Kitten: ranged players walk to the back so the melee can tell whether they hold the stack.",
+            "status": "source-stated",
+            "sources": [
+              {
+                "ref": "kitten-dmu-forsaken"
+              }
+            ]
           }
         }
       ],

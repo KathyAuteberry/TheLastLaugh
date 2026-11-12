@@ -131,6 +131,12 @@
       "note": "The owner's static, 33 progression pulls (6 reach Tele-trouncing, 4 the end of P1). IINACT network log and a RaidTrace trace of the same session, cross-checked with the Duty Recorder replay. Only derived numbers are stored (medians, ranges, counts, positions relative to the arena centre); never player names, IDs or raw lines. Extracted with FluffySim's evidence tooling.",
       "method": "Times: per pull, seconds from the log's InCombat line; median over the pulls that reached the moment. Positions and warps: RaidTrace actor moves and ActorControl 241 position sets."
     },
+    "owner-trace-dmu-1113": {
+      "source": "ingame",
+      "title": "Owner's RaidTrace, Revolting Ruin III cone width (2026-11-13)",
+      "date": "2026-11-13",
+      "note": "Given in chat by the owner (2026-11-14). Players standing still: one 58° off the cone's centre line was hit; players 78–79° off were missed in three pulls. So the cone is roughly 116–146° wide (allowing for hitbox size). RaidTrace draws about 130°; FluffySim uses 120°. Yan's text says 90°. Only derived angles are stored."
+    },
     "cactbot-dmu": {
       "source": "secondary",
       "title": "cactbot raidboss timeline: Dancing Mad (Ultimate)",

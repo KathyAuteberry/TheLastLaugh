@@ -98,7 +98,7 @@
         }
       },
       "whatHappens": {
-        "value": "Tankbuster: 90° cone, two hits. The 1st hit targets the top-enmity player, the 2nd hit targets the 2nd-enmity player.",
+        "value": "Tankbuster: wide cone, about 130° (Yan says 90°; the owner's RaidTrace measures 116–146°), two hits. The 1st hit targets the top-enmity player, the 2nd hit targets the 2nd-enmity player.",
         "status": "source-stated",
         "sources": [
           {
@@ -111,6 +111,9 @@
           {
             "ref": "azurite-p1",
             "at": "0:05"
+          },
+          {
+            "ref": "owner-trace-dmu-1113"
           }
         ]
       },
@@ -181,10 +184,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "H2": {
           "value": null,
@@ -193,10 +199,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D1": {
           "value": null,
@@ -205,10 +214,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D2": {
           "value": null,
@@ -217,10 +229,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D3": {
           "value": null,
@@ -229,10 +244,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D4": {
           "value": null,
@@ -241,10 +259,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         }
       },
       "states": [
@@ -4425,7 +4446,7 @@
         }
       },
       "whatHappens": {
-        "value": "Second Ruin III: same 2-hit 90° cone, during Graven Image II with a half-room AoE.",
+        "value": "Second Ruin III: same 2-hit cone (about 130°), during Graven Image II with a half-room AoE.",
         "status": "source-stated",
         "sources": [
           {
@@ -4433,6 +4454,9 @@
           },
           {
             "ref": "yan-p1-gi2"
+          },
+          {
+            "ref": "owner-trace-dmu-1113"
           }
         ]
       },
@@ -4489,10 +4513,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "H2": {
           "value": null,
@@ -4501,10 +4528,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D1": {
           "value": null,
@@ -4513,10 +4543,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D2": {
           "value": null,
@@ -4525,10 +4558,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D3": {
           "value": null,
@@ -4537,10 +4573,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         },
         "D4": {
           "value": null,
@@ -4549,10 +4588,13 @@
             {
               "ref": "yan-p1-ruin",
               "quoteJa": "タンク強攻撃（90度扇範囲）"
+            },
+            {
+              "ref": "owner-trace-dmu-1113"
             }
           ],
           "notInvolved": true,
-          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the 90° cone."
+          "note": "Tankbuster: only tanks are targeted. Proposed \"not involved\"; owner to confirm. Stay out of the cone (about 130° wide)."
         }
       },
       "states": [],

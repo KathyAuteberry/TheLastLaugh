@@ -150,3 +150,8 @@ The replay's clock comes from **the owner's in-game recordings** (`owner-logs-dm
   - Bait steps: everyone stacks on one spot at max melee or a bit further, so Kefka and all three clones turn to the same point (owner's friend; Kitten, marii, AzuriteTV; BossMod's nearest-player rule).
 
 
+## D-P1-11: Revolting Ruin III cone width, measured (2026-11-14)
+
+- **Yan:** "タンク強攻撃（90度扇範囲）", a 90° cone. The guide drew and described it as 90°.
+- **Owner's RaidTrace (2026-11-13):** with players standing still, one 58° off the cone's centre line was hit, and players 78–79° off were missed in three pulls. So the cone is roughly **116–146°** wide. RaidTrace draws about 130°; FluffySim now uses 120°.
+- **Decision:** the measurement wins over Yan's text on how wide the cone is (game behaviour, not strategy). Both Ruin III diagrams draw **130°**, RaidTrace's own width and inside the measured window. The text says "about 130°" and keeps Yan's quote. Positions are unchanged: only tanks are in it either way.

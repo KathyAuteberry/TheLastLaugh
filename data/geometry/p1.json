@@ -187,6 +187,9 @@
         },
         {
           "ref": "owner-p1-review"
+        },
+        {
+          "ref": "owner-trace-dmu-1113"
         }
       ],
       "note": "Yan has no Ruin III #1 diagram. MT spot copied from the tank-in-cone spot in yan-p1-11 (Ruin III #2) under convention C-01 (boss faces north).",
@@ -216,11 +219,11 @@
             0
           ],
           "directionDeg": 0,
-          "angleDeg": 90,
+          "angleDeg": 130,
           "radius": 1.05,
           "kind": "tankbuster",
-          "label": "Ruin III ×2 (90°)",
-          "source": "text"
+          "label": "Ruin III ×2 (about 130°, measured)",
+          "source": "trace"
         }
       ],
       "carry": {
@@ -228,7 +231,7 @@
       },
       "owner": "approved",
       "ownerDate": "2026-11-07",
-      "ownerNote": "Approved 2026-11-07 (stage 5 review items 35, 42)."
+      "ownerNote": "Approved 2026-11-07 (stage 5 review items 35, 42). Cone widened from Yan's 90° to about 130° on the owner's RaidTrace measurement (2026-11-14, D-P1-11)."
     },
     "p1-graven-image-1/tether-knockback": {
       "sources": [
@@ -1522,6 +1525,9 @@
         },
         {
           "ref": "ikuya-omnitank-p1"
+        },
+        {
+          "ref": "owner-trace-dmu-1113"
         }
       ],
       "note": "Tanks swapped from Yan's drawing per D-P1-01: OT takes the cone (Yan draws MT there).",
@@ -1603,10 +1609,10 @@
             0
           ],
           "directionDeg": 0,
-          "angleDeg": 90,
+          "angleDeg": 130,
           "radius": 1.05,
           "kind": "tankbuster",
-          "label": "Ruin III ×2 on OT (90°)"
+          "label": "Ruin III ×2 on OT (about 130°, measured)"
         },
         {
           "type": "halfroom",
@@ -1622,7 +1628,8 @@
         "D3"
       ],
       "owner": "approved",
-      "ownerDate": "2026-11-07"
+      "ownerDate": "2026-11-07",
+      "ownerNote": "Cone widened from Yan's 90° to about 130° on the owner's RaidTrace measurement (2026-11-14, D-P1-11)."
     },
     "p1-graven-image-2/stack-north-2": {
       "image": "yan-p1-12",

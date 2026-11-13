@@ -131,6 +131,12 @@
       "note": "The owner's static, 33 progression pulls (6 reach Tele-trouncing, 4 the end of P1). IINACT network log and a RaidTrace trace of the same session, cross-checked with the Duty Recorder replay. Only derived numbers are stored (medians, ranges, counts, positions relative to the arena centre); never player names, IDs or raw lines. Extracted with FluffySim's evidence tooling.",
       "method": "Times: per pull, seconds from the log's InCombat line; median over the pulls that reached the moment. Positions and warps: RaidTrace actor moves and ActorControl 241 position sets."
     },
+    "owner-chat-forsaken-bait": {
+      "source": "owner",
+      "title": "Owner in chat: Forsaken bait spots (2026-11-14)",
+      "date": "2026-11-14",
+      "note": "Directions were right (Past's End between the next towers, Future's End opposite), distance wrong: everyone stacks about 10 y from the centre, typically touching the inner side of the waymark; ranged (H1, H2, D3, D4) are best a bit further out, so the yellow spell on them is easier to see."
+    },
     "owner-trace-dmu-1113": {
       "source": "ingame",
       "title": "Owner's RaidTrace, Revolting Ruin III cone width (2026-11-13)",
@@ -226,7 +232,7 @@
       "source": "yan",
       "parent": "yan",
       "section": "②ミッシング 南調整+立ち位置ぴれん",
-      "note": "Method 2 (south adjusts). Rule list only; the Past/Future End and detailed-position sub-sections appear only under method 1."
+      "note": "Method 2 (south adjusts). Rule list only; the Past/Future End and detailed-position sub-sections appear only under method 1. Not used in the guide since 2026-11-14 (owner dropped method 2); kept for the record."
     },
     "yan-p2-loj": {
       "source": "yan",

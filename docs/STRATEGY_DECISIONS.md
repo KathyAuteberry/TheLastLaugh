@@ -108,6 +108,7 @@ The replay's clock comes from **the owner's in-game recordings** (`owner-logs-dm
 
 - **Yan:** two sections for Forsaken (ミッシング), both credited to ぴれん: ① priority (優先順) and ② south adjusts (南調整). They share the pairs, the tower turns (stack pairs 1-2-3-8, others 4-7), the odd-tower layout and the macros. They differ in how stack spots (odd towers) and even towers are chosen. The Past/Future End and detailed-position paragraphs appear only under ①.
 - **Decision (owner, 2026-11-09):** offer both as a reader-selectable variant (`method-1` / `method-2` branches in data/phases/p2.json).
+- **Superseded (owner, 2026-11-14):** method ② dropped. Yan's Forsaken is priority by self-marking (method ①, also what Mana uses per Kitten), so the guide shows only that: the Method picker, the four method ② steps and their two diagrams are removed, and the steps no longer carry a branch.
 - **Kitten ERP (Mana tab, read 2026-11-09):** describes only one method: support left, DPS right, the melee of a pair moves when both have the same marker. That always gives the same spots as Yan's ① read left to right, so ① is the default variant and "by priority" on odd towers means higher priority on the left. Kitten also names the clone baiters: the two cone holders plus the melee of each outside pair (tank NW, melee DPS NE of the boss), and says the post-tower-3 marks are for the players who sit out until tower 8 (owner applied, 2026-11-09).
 
 ## D-P2-02: How many clones in All Things Ending (2026-11-09)
@@ -147,7 +148,7 @@ The replay's clock comes from **the owner's in-game recordings** (`owner-logs-dm
   - Bait steps are drawn against the next (already turned) towers. Swap steps stay on the set just soaked.
   - Kefka's own All Things Ending is drawn on the half away from the towers: both rules give that half once the bait is right.
   - The clones are not drawn: three of them (D-P2-02), but no source says where they stand. (A first try drew them where the AoEs landed; removed the same day as a guess.)
-  - Bait steps: everyone stacks on one spot at max melee or a bit further, so Kefka and all three clones turn to the same point (owner's friend; Kitten, marii, AzuriteTV; BossMod's nearest-player rule).
+  - Bait steps: everyone stacks on one line through Kefka, so Kefka and all three clones turn to the same point (owner's friend; Kitten, marii, AzuriteTV; BossMod's nearest-player rule). Distance (owner, 2026-11-14): tanks and melee about 10 y from the centre, touching the inner side of the waymark; ranged a little further out to show their yellow spell. Drawn at 10 y (0.5) and 12 y (0.6); the 12 y is our guess, pending the owner. Supersedes the earlier "max melee or a bit further" (drawn at 6.6 y).
 
 
 ## D-P1-11: Revolting Ruin III cone width, measured (2026-11-14)

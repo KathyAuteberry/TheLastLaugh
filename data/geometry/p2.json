@@ -516,10 +516,13 @@
         },
         {
           "ref": "bmr-dmu-forsaken"
+        },
+        {
+          "ref": "owner-chat-forsaken-bait"
         }
       ],
       "relative": true,
-      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one line through Kefka: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). Tanks and melee stand about 10 y from the centre, touching the inner side of the waymark (owner); ranged (H1, H2, D3, D4) stand a little further out on the same line, so the yellow spell on them is easier to see (owner; 12 y is our guess at the distance). One tight line makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod).",
       "shapes": [
         {
           "type": "towers",
@@ -551,66 +554,66 @@
             "MT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         },
@@ -622,66 +625,66 @@
             "MT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         }
@@ -916,10 +919,13 @@
         },
         {
           "ref": "bmr-dmu-forsaken"
+        },
+        {
+          "ref": "owner-chat-forsaken-bait"
         }
       ],
       "relative": true,
-      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one line through Kefka: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). Tanks and melee stand about 10 y from the centre, touching the inner side of the waymark (owner); ranged (H1, H2, D3, D4) stand a little further out on the same line, so the yellow spell on them is easier to see (owner; 12 y is our guess at the distance). One tight line makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod).",
       "shapes": [
         {
           "type": "towers",
@@ -951,66 +957,66 @@
             "MT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         },
@@ -1022,66 +1028,66 @@
             "MT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         }
@@ -1297,10 +1303,13 @@
         },
         {
           "ref": "bmr-dmu-forsaken"
+        },
+        {
+          "ref": "owner-chat-forsaken-bait"
         }
       ],
       "relative": true,
-      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one spot at max melee or a bit further: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). One tight stack makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod). The exact distance is loose.",
+      "note": "Drawn against the next towers, already up and turned 45° from the last set. Everyone stacks on one line through Kefka: between the towers (Past's End) or opposite them (Future's End; run to the tower side once All Things Ending is cast). Tanks and melee stand about 10 y from the centre, touching the inner side of the waymark (owner); ranged (H1, H2, D3, D4) stand a little further out on the same line, so the yellow spell on them is easier to see (owner; 12 y is our guess at the distance). One tight line makes Kefka and all three clones face the same way (Yan, Kitten, marii, AzuriteTV, BossMod).",
       "shapes": [
         {
           "type": "towers",
@@ -1332,66 +1341,66 @@
             "MT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                -0.33
+                -0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Stacked between the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                -0.33
+                -0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone between the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line between the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         },
@@ -1403,66 +1412,66 @@
             "MT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "OT": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "H1": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "H2": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D1": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D2": {
               "at": [
                 0,
-                0.33
+                0.5
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Stacked opposite the next towers, about 10 y from the centre, touching the inner side of the waymark."
             },
             "D3": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             },
             "D4": {
               "at": [
                 0,
-                0.33
+                0.6
               ],
               "method": "loose",
-              "note": "Stacked with everyone opposite the next towers, at max melee or a bit further."
+              "note": "Ranged: on the stack's line opposite the next towers, a little further out than the melee (about 12 y, our guess) so your yellow spell is easy to see."
             }
           }
         }
@@ -1953,304 +1962,6 @@
       ],
       "unmeasured": [
         "the clones' cleaves"
-      ]
-    },
-    "p2-forsaken/odd-towers-2": {
-      "image": "yan-p2-02",
-      "sources": [
-        {
-          "ref": "yan-p2-02"
-        },
-        {
-          "ref": "kitten-dmu-forsaken"
-        }
-      ],
-      "note": "Example deal for tower 1: MT+H1 and D1+D3 got the stacks (H1, D3), the supports got cones and the DPS circles; who gets what is random. Drawn relative to the towers: the towers count as south wherever they spawn (they move 45° each set), so no waymarks are shown.",
-      "relative": true,
-      "positions": {
-        "H1": {
-          "at": [
-            -0.297,
-            -0.243
-          ],
-          "method": "auto",
-          "note": "Left stack (support stack holder, top spot)."
-        },
-        "MT": {
-          "at": [
-            -0.298,
-            -0.455
-          ],
-          "method": "auto",
-          "note": "Cone holder, bottom of the left tower."
-        },
-        "H2": {
-          "at": [
-            -0.297,
-            -0.566
-          ],
-          "method": "auto",
-          "note": "Outside pair: baits the cone just below the left tower."
-        },
-        "OT": {
-          "at": [
-            -0.127,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Outside pair: left tower's north-east edge on the boss ring; shares the left stack."
-        },
-        "D3": {
-          "at": [
-            0.22,
-            -0.14
-          ],
-          "method": "auto",
-          "note": "Right stack (DPS stack holder, top spot)."
-        },
-        "D1": {
-          "at": [
-            0.296,
-            -0.493
-          ],
-          "method": "auto",
-          "note": "Circle holder, bottom of the right tower."
-        },
-        "D2": {
-          "at": [
-            0.126,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Outside pair: right tower's north-west edge; shares the right stack. Yan draws one dot for both outside DPS (marii and Kitten put both here)."
-        },
-        "D4": {
-          "at": [
-            0.126,
-            -0.146
-          ],
-          "method": "auto",
-          "note": "Same spot as D2 (one dot in Yan's picture)."
-        }
-      },
-      "shapes": [
-        {
-          "type": "towers",
-          "centres": [
-            [
-              -0.297,
-              -0.296
-            ],
-            [
-              0.297,
-              -0.296
-            ]
-          ],
-          "radius": 0.211,
-          "kind": "tower",
-          "label": "Towers (2 players each)"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              -0.297,
-              -0.243
-            ],
-            [
-              0.22,
-              -0.14
-            ]
-          ],
-          "radius": 0.287,
-          "kind": "stack",
-          "label": "Stacks (3 players each)"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              0.296,
-              -0.493
-            ]
-          ],
-          "radius": 0.289,
-          "kind": "spread",
-          "label": "Circle AoE on the circle holder"
-        },
-        {
-          "type": "cone",
-          "origin": [
-            -0.298,
-            -0.455
-          ],
-          "directionDeg": 180,
-          "angleDeg": 70,
-          "radius": 1.2,
-          "kind": "danger",
-          "label": "Cone at the nearest player (about 70°, Kitten ERP; Yan draws it wider)"
-        }
-      ]
-    },
-    "p2-forsaken/even-towers-2": {
-      "image": "yan-p2-03",
-      "sources": [
-        {
-          "ref": "yan-p2-03"
-        },
-        {
-          "ref": "kitten-dmu-forsaken"
-        }
-      ],
-      "note": "Example deal for tower 2: the tower-1 soakers again, now H1+D1 with cones and MT+D3 with circles; OT, H2, D2, D4 outside. Who gets what is random. Drawn relative to the towers: the towers count as south wherever they spawn (they move 45° each set), so no waymarks are shown.",
-      "relative": true,
-      "positions": {
-        "OT": {
-          "at": [
-            -0.224,
-            0.224
-          ],
-          "method": "auto",
-          "note": "Outside pair's tank: boss's north-west edge, baits Past's/Future's End."
-        },
-        "D2": {
-          "at": [
-            0.223,
-            0.224
-          ],
-          "method": "auto",
-          "note": "Outside pair's melee DPS: boss's north-east edge, baits Past's/Future's End."
-        },
-        "H1": {
-          "at": [
-            -0.297,
-            -0.099
-          ],
-          "method": "auto",
-          "note": "Cone holder: left tower's north edge on the boss ring; also baits Past's/Future's End."
-        },
-        "D1": {
-          "at": [
-            0.297,
-            -0.099
-          ],
-          "method": "auto",
-          "note": "Cone holder: right tower's north edge on the boss ring; also baits Past's/Future's End."
-        },
-        "MT": {
-          "at": [
-            -0.298,
-            -0.497
-          ],
-          "method": "auto",
-          "note": "Circle holder: left tower's south edge, as far back as possible."
-        },
-        "D3": {
-          "at": [
-            0.296,
-            -0.497
-          ],
-          "method": "auto",
-          "note": "Circle holder: right tower's south edge, as far back as possible."
-        },
-        "H2": {
-          "at": [
-            -0.54,
-            -0.296
-          ],
-          "method": "auto",
-          "note": "Outside healer: far west, level with the tower centres, baits the left cone."
-        },
-        "D4": {
-          "at": [
-            0.539,
-            -0.296
-          ],
-          "method": "auto",
-          "note": "Outside ranged: far east, level with the tower centres, baits the right cone."
-        }
-      },
-      "shapes": [
-        {
-          "type": "towers",
-          "centres": [
-            [
-              -0.297,
-              -0.296
-            ],
-            [
-              0.297,
-              -0.296
-            ]
-          ],
-          "radius": 0.211,
-          "kind": "tower",
-          "label": "Towers (2 players each)"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              -0.224,
-              0.224
-            ],
-            [
-              0.223,
-              0.224
-            ],
-            [
-              -0.297,
-              -0.099
-            ],
-            [
-              0.297,
-              -0.099
-            ]
-          ],
-          "radius": 0.244,
-          "kind": "danger",
-          "label": "Past's/Future's End: AoE on the 4 players nearest Kefka"
-        },
-        {
-          "type": "circles",
-          "centres": [
-            [
-              -0.298,
-              -0.497
-            ],
-            [
-              0.296,
-              -0.497
-            ]
-          ],
-          "radius": 0.289,
-          "kind": "spread",
-          "label": "Circle AoEs on the circle holders"
-        },
-        {
-          "type": "cone",
-          "origin": [
-            -0.297,
-            -0.099
-          ],
-          "directionDeg": 231,
-          "angleDeg": 70,
-          "radius": 1.2,
-          "kind": "danger",
-          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
-        },
-        {
-          "type": "cone",
-          "origin": [
-            0.297,
-            -0.099
-          ],
-          "directionDeg": 129,
-          "angleDeg": 70,
-          "radius": 1.2,
-          "kind": "danger",
-          "label": "Cones at the nearest player (about 70°, Kitten ERP)"
-        }
       ]
     },
     "p2-trine/wings-2": {
@@ -2774,20 +2485,6 @@
     "p2-forsaken": {
       "groups": [
         {
-          "id": "variant",
-          "label": "Method",
-          "options": [
-            {
-              "id": "method-1",
-              "label": "① priority"
-            },
-            {
-              "id": "method-2",
-              "label": "② south adjusts"
-            }
-          ]
-        },
-        {
           "id": "turn",
           "label": "Tower turn",
           "note": "Each soak turns the towers 45°, clockwise or anticlockwise at random; once the first set turns, every later set turns the same way (Yan; Kitten). Set 1 is drawn at south: our sources do not show where it really spawns.",
@@ -2805,7 +2502,7 @@
         {
           "id": "deal",
           "label": "Example markers",
-          "note": "Who gets which spell is random. Yan's and Kitten's runs are copied from their pictures; C and D are built by us from the same rules. Method ② diagrams do not use this.",
+          "note": "Who gets which spell is random. Yan's and Kitten's runs are copied from their pictures; C and D are built by us from the same rules.",
           "options": [
             {
               "id": "yan",
@@ -2841,14 +2538,7 @@
           ]
         }
       ],
-      "branches": {
-        "method-1": {
-          "variant": "method-1"
-        },
-        "method-2": {
-          "variant": "method-2"
-        }
-      }
+      "branches": {}
     }
   }
 }

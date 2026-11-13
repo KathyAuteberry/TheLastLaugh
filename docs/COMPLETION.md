@@ -17,7 +17,7 @@ A mechanic is complete only when it has no unverified claims **and** the owner a
 | P1 | 9 | Tele-trouncing / ずびずばテレポ | 34 | 11 | 20 | 0 | 0 | approved | ✅ |
 | P1 | 10 | Time's Up (enrage) / 時間切れ | 2 | 12 | 0 | 0 | 0 | approved | ✅ |
 | P2 | 1 | Ultimate Embrace / 終末の双腕 | 20 | 4 | 0 | 1 | 6 | unreviewed | ❌ |
-| P2 | 2 | Forsaken / ミッシング | 136 | 28 | 9 | 0 | 0 | unreviewed | ❌ |
+| P2 | 2 | Forsaken / ミッシング | 109 | 16 | 9 | 0 | 0 | unreviewed | ❌ |
 | P2 | 3 | Light of Judgment / 裁きの光 | 5 | 9 | 0 | 1 | 0 | unreviewed | ❌ |
 | P2 | 4 | Trine / トライン | 26 | 9 | 0 | 1 | 0 | unreviewed | ❌ |
 | P2 | 5 | Ultimate Embrace / 終末の双腕 | 10 | 4 | 0 | 1 | 6 | unreviewed | ❌ |
@@ -116,8 +116,6 @@ Each drawn scene and how its positions were measured. A diagram counts only when
 | p2-forsaken/set-8 | yan-p2-03 | 0 auto / 0 eye-or-copy | unreviewed |
 | p2-forsaken/final-bait | — | 0 auto / 8 eye-or-copy | unreviewed |
 | p2-forsaken/final-dodge | — | 0 auto / 0 eye-or-copy | unreviewed |
-| p2-forsaken/odd-towers-2 | yan-p2-02 | 8 auto / 0 eye-or-copy | unreviewed |
-| p2-forsaken/even-towers-2 | yan-p2-03 | 8 auto / 0 eye-or-copy | unreviewed |
 | p2-trine/wings-2 | yan-p2-07 | 2 auto / 6 eye-or-copy | unreviewed |
 
 ## Replay timing (owner logs, then cactbot + BossMod Reborn)

@@ -55,7 +55,7 @@ describe("Forsaken solver", () => {
 
   it("builds one step per set, bait and swap for method ①, and shows spells", () => {
     const m = p2.mechanics.find((x) => x.id === "p2-forsaken")!;
-    const steps = stepsInPull(m, p2.mechanics, geometry, { variant: "method-1", deal: "c", end: "future" });
+    const steps = stepsInPull(m, p2.mechanics, geometry, { deal: "c", end: "future" });
     expect(steps.map((s) => s.state.id)).toEqual(["raidwide", "spells", "set-1", "set-2", "bait-2", "set-3", "swap-1", "set-4", "bait-4", "set-5", "set-6", "bait-6", "set-7", "swap-2", "set-8", "final-bait", "final-dodge"]);
     const s1 = steps.find((s) => s.state.id === "set-1")!.scene!;
     expect(Object.keys(s1.positions!).length).toBe(8);
@@ -66,15 +66,14 @@ describe("Forsaken solver", () => {
     expect(swap.positions?.D1?.method).toBe("carried");
     const bait = steps.find((s) => s.state.id === "bait-2")!.scene!;
     // Future's End: opposite the next towers (set 3, turned 90° clockwise from set 1), so north turns to east.
-    expect(bait.positions?.MT?.at).toEqual(rotate([0, 0.33], 90));
+    expect(bait.positions?.MT?.at).toEqual(rotate([0, 0.5], 90));
+    expect(bait.positions?.H1?.at).toEqual(rotate([0, 0.6], 90)); // ranged a little further out
     expect(bait.positions?.MT?.at[0]).toBeGreaterThan(0.3);
-    const m2 = stepsInPull(m, p2.mechanics, geometry, { variant: "method-2", deal: "yan", end: "past" });
-    expect(m2.map((s) => s.state.id)).toEqual(["raidwide", "spells", "odd-towers-2", "even-towers-2", "all-things-ending", "mark-after-3"]);
   });
 
   it("turns each set 45° the chosen way and draws Kefka's cleave away from the towers", () => {
     const m = p2.mechanics.find((x) => x.id === "p2-forsaken")!;
-    const at = (turn: string, id: string) => stepsInPull(m, p2.mechanics, geometry, { variant: "method-1", deal: "yan", end: "past", turn }).find((s) => s.state.id === id)!.scene!;
+    const at = (turn: string, id: string) => stepsInPull(m, p2.mechanics, geometry, { deal: "yan", end: "past", turn }).find((s) => s.state.id === id)!.scene!;
     const slots = geometry.forsaken!.slots;
     const s1 = at("cw", "set-1");
     expect(s1.positions?.MT?.at).toEqual(slots.odd["left-top"]!.at); // set 1 drawn at south, unturned

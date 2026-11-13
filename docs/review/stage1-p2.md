@@ -175,3 +175,14 @@ Questions (yes / no / edit):
 
 35. **BossMod for mechanic behaviour:** the clone count and the "turns to its nearest player" rule come from BossMod's code. Until now BossMod and cactbot were used for replay timing only. OK to use BossMod for how a mechanic behaves (never for positions), like the YouTube subtitles?
    - **Owner (2026-11-11):** yes. BossMod may be used for how a mechanic behaves, never for positions.
+
+### Owner correction, bait spots (2026-11-14)
+
+- Directions were right; the distance was wrong (the stack was drawn at 6.6 y). Now tanks and melee stand about 10 y from the centre (0.5), touching the inner side of the waymark, and ranged (H1, H2, D3, D4) stand further out on the same line.
+
+36. **Ranged bait distance:** "a little further" is drawn at 12 y (0.6), which is our guess. What distance do your ranged use? Note: our waymarks come from Yan's picture at about 14.5 y, so the 10 y spot doesn't touch the drawn waymark.
+
+### Owner decision, method ② dropped (2026-11-14)
+
+- Yan's Forsaken is priority by self-marking, so method ② (south adjusts) is removed: the Method picker, its four steps (odd towers, even towers, All Things Ending, mark after tower 3) and their two diagrams. Question 11's method ② answer no longer applies.
+- Role text now says the mark number goes by who marks first, matching the swap step (it said "stop1 / bind1" before).

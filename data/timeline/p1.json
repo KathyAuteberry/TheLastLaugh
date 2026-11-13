@@ -1,16 +1,17 @@
 {
   "phase": 1,
-  "about": "When each P1 step resolves, for the replay. Clock = seconds from combat start (cactbot InCombat line; BossMod Reborn state sums start at the same point). Timing only: positions, assignments and mitigation never come from here.",
-  "rule": "t = cactbot when it has a line naming the ability (synced or not) and BossMod Reborn agrees within 1 s; otherwise BossMod Reborn; null when neither source times the moment (shown as approximate, between its neighbours). A step is shown from the previous step’s t until its own t.",
+  "about": "When each P1 step resolves, for the replay. Clock = seconds from combat start (the InCombat line of the owner's IINACT log; cactbot and BossMod Reborn count from the same point). Timing only: positions, assignments and mitigation never come from here.",
+  "rule": "t = the owner's in-game log/trace median when it times the moment (min, max and n kept in `log`); otherwise cactbot when it has a line naming the ability and BossMod Reborn agrees within 1 s; otherwise BossMod Reborn; otherwise an estimate with a note, or null (shown as approximate, between its neighbours). cactbot and BossMod Reborn values stay as cross-checks. A step is shown from the previous step’s t until its own t.",
   "sources": [
+    "owner-logs-dmu",
     "cactbot-dmu",
     "bmr-dmu"
   ],
-  "owner": "approved",
+  "owner": "pending",
   "steps": {
     "p1-revolting-ruin-iii-1/pull#0": {
       "t": 0,
-      "source": "cactbot",
+      "source": "log",
       "ability": "Combat starts",
       "ids": [],
       "cactbot": {
@@ -18,11 +19,18 @@
         "line": "sync"
       },
       "bmr": 0,
-      "note": "Pre-pull positions until combat starts."
+      "note": "Pre-pull positions until combat starts (the log's InCombat line).",
+      "log": {
+        "t": 0,
+        "min": 0,
+        "max": 0,
+        "n": 33,
+        "event": "InCombat (ACT 260): the clock starts here"
+      }
     },
     "p1-revolting-ruin-iii-1/pull": {
-      "t": 10.6,
-      "source": "cactbot",
+      "t": 10.14,
+      "source": "log",
       "ability": "Revolting Ruin III castbar starts",
       "ids": [
         "C403"
@@ -41,11 +49,18 @@
         ],
         "source": "owner",
         "what": "MT runs in to pull the boss about 0.5 s before combat starts"
+      },
+      "log": {
+        "t": 10.14,
+        "min": 10.09,
+        "max": 10.22,
+        "n": 33,
+        "event": "C403 cast starts"
       }
     },
     "p1-revolting-ruin-iii-1/cast": {
-      "t": 15.6,
-      "source": "cactbot",
+      "t": 15.21,
+      "source": "log",
       "ability": "Revolting Ruin III",
       "ids": [
         "C403",
@@ -56,12 +71,26 @@
         "line": "sync"
       },
       "bmr": 15.2,
-      "until": 18.7,
-      "note": "Two hits: 15.6 and 18.7 (BMR 15.2 / 18.4)."
+      "until": 18.34,
+      "note": "Two hits: 15.21 and 18.34 (log medians; cactbot 15.6 / 18.7, BMR 15.2 / 18.4).",
+      "log": {
+        "t": 15.21,
+        "min": 15.14,
+        "max": 15.27,
+        "n": 33,
+        "event": "C403 hit 1",
+        "until": {
+          "t": 18.34,
+          "min": 18.26,
+          "max": 18.49,
+          "n": 33,
+          "event": "C4E1 hit 2"
+        }
+      }
     },
     "p1-graven-image-1/tether-knockback": {
-      "t": 35.1,
-      "source": "cactbot",
+      "t": 34.91,
+      "source": "log",
       "ability": "Pulse Wave",
       "ids": [
         "BAA9"
@@ -73,8 +102,8 @@
       "bmr": 35,
       "hedges": [
         {
-          "t": 30,
-          "source": "bmr",
+          "t": 29.86,
+          "source": "log",
           "groups": [
             "fire",
             "ice"
@@ -103,18 +132,25 @@
               ]
             }
           ],
-          "what": "Statue tether appears (BossMod Reborn: 5.1 s before Pulse Wave). The tethered group moves north, halfway between its possible pre-knockback spots"
+          "what": "Statue tether appears (log: tethers at 29.86, 5.0 s before Pulse Wave). The tethered group moves north, halfway between its possible pre-knockback spots"
         }
       ],
       "cue": {
-        "t": 32.4,
-        "source": "bmr",
-        "what": "Mystery Magic cast starts: Kefka shows Fire and Ice (BossMod Reborn starts both on this cast)"
+        "t": 32.27,
+        "source": "log",
+        "what": "Mystery Magic cast starts: Kefka shows Fire and Ice (log: boss icons and cast at 32.2–32.3)"
+      },
+      "log": {
+        "t": 34.91,
+        "min": 34.67,
+        "max": 35.06,
+        "n": 31,
+        "event": "BAA9 Pulse Wave"
       }
     },
     "p1-graven-image-1/spread-ice-true": {
-      "t": 38.3,
-      "source": "cactbot",
+      "t": 38.05,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -129,7 +165,7 @@
       "knockback": {
         "from": [
           0,
-          0.995
+          2.2
         ],
         "distance": 0.65,
         "roles": [
@@ -156,13 +192,20 @@
             ]
           }
         ],
-        "source": "bmr",
-        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+        "source": "owner-logs-dmu",
+        "what": "Pulse Wave: tethered players knocked 13 y away from its caster, 44 y north of the centre (the statue is drawn on the rim)"
+      },
+      "log": {
+        "t": 38.05,
+        "min": 37.8,
+        "max": 38.19,
+        "n": 31,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-graven-image-1/spread-ice-lie": {
-      "t": 38.3,
-      "source": "cactbot",
+      "t": 38.05,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -177,7 +220,7 @@
       "knockback": {
         "from": [
           0,
-          0.995
+          2.2
         ],
         "distance": 0.65,
         "roles": [
@@ -204,13 +247,20 @@
             ]
           }
         ],
-        "source": "bmr",
-        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+        "source": "owner-logs-dmu",
+        "what": "Pulse Wave: tethered players knocked 13 y away from its caster, 44 y north of the centre (the statue is drawn on the rim)"
+      },
+      "log": {
+        "t": 38.05,
+        "min": 37.8,
+        "max": 38.19,
+        "n": 31,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-graven-image-1/stack-ice-true": {
-      "t": 38.3,
-      "source": "cactbot",
+      "t": 38.05,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -225,7 +275,7 @@
       "knockback": {
         "from": [
           0,
-          0.995
+          2.2
         ],
         "distance": 0.65,
         "roles": [
@@ -252,13 +302,20 @@
             ]
           }
         ],
-        "source": "bmr",
-        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+        "source": "owner-logs-dmu",
+        "what": "Pulse Wave: tethered players knocked 13 y away from its caster, 44 y north of the centre (the statue is drawn on the rim)"
+      },
+      "log": {
+        "t": 38.05,
+        "min": 37.8,
+        "max": 38.19,
+        "n": 31,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-graven-image-1/stack-ice-lie": {
-      "t": 38.3,
-      "source": "cactbot",
+      "t": 38.05,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -273,7 +330,7 @@
       "knockback": {
         "from": [
           0,
-          0.995
+          2.2
         ],
         "distance": 0.65,
         "roles": [
@@ -300,13 +357,20 @@
             ]
           }
         ],
-        "source": "bmr",
-        "what": "Pulse Wave: tethered players knocked 13 y from the statue"
+        "source": "owner-logs-dmu",
+        "what": "Pulse Wave: tethered players knocked 13 y away from its caster, 44 y north of the centre (the statue is drawn on the rim)"
+      },
+      "log": {
+        "t": 38.05,
+        "min": 37.8,
+        "max": 38.19,
+        "n": 31,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-graven-image-1/beam-line": {
-      "t": 42.5,
-      "source": "cactbot",
+      "t": 42.27,
+      "source": "log",
       "ability": "Wave Cannon",
       "ids": [
         "BAA8"
@@ -315,11 +379,18 @@
         "t": 42.5,
         "line": "sync"
       },
-      "bmr": 42.4
+      "bmr": 42.4,
+      "log": {
+        "t": 42.27,
+        "min": 42.05,
+        "max": 42.44,
+        "n": 30,
+        "event": "BAA8 Wave Cannon"
+      }
     },
     "p1-graven-image-1/towers": {
-      "t": 46,
-      "source": "cactbot",
+      "t": 45.89,
+      "source": "log",
       "ability": "Explosion",
       "ids": [
         "BAAA"
@@ -328,11 +399,18 @@
         "t": 46,
         "line": "sync"
       },
-      "bmr": 46
+      "bmr": 46,
+      "log": {
+        "t": 45.89,
+        "min": 45.68,
+        "max": 46.07,
+        "n": 30,
+        "event": "BAAA Explosion towers"
+      }
     },
     "p1-graven-image-1/trap-pass": {
-      "t": 49.7,
-      "source": "cactbot",
+      "t": 49.51,
+      "source": "log",
       "ability": "Double-trouble Trap",
       "ids": [
         "BAA7"
@@ -341,11 +419,18 @@
         "t": 49.7,
         "line": "sync"
       },
-      "bmr": 49.7
+      "bmr": 49.7,
+      "log": {
+        "t": 49.51,
+        "min": 49.26,
+        "max": 49.68,
+        "n": 29,
+        "event": "BAA7 trap expires"
+      }
     },
     "p1-graven-image-1/mystery-magic": {
-      "t": 53.7,
-      "source": "cactbot",
+      "t": 53.46,
+      "source": "log",
       "ability": "Mystery Magic (Blizzard III Blowout + Thrumming Thunder III)",
       "ids": [
         "BA94",
@@ -365,11 +450,18 @@
         "roles": "all-but-holders",
         "source": "bmr",
         "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      },
+      "log": {
+        "t": 53.46,
+        "min": 53.24,
+        "max": 53.63,
+        "n": 29,
+        "event": "BA94 Mystery Magic 2 resolves"
       }
     },
     "p1-light-of-judgment-1/raidwide": {
-      "t": 62.7,
-      "source": "cactbot",
+      "t": 62.54,
+      "source": "log",
       "ability": "Light of Judgment",
       "ids": [
         "C622"
@@ -378,11 +470,18 @@
         "t": 62.7,
         "line": "sync"
       },
-      "bmr": 62.8
+      "bmr": 62.8,
+      "log": {
+        "t": 62.54,
+        "min": 62.32,
+        "max": 62.72,
+        "n": 29,
+        "event": "C622 raidwide"
+      }
     },
     "p1-hyperdrive-1/hits": {
-      "t": 65.8,
-      "source": "cactbot",
+      "t": 65.74,
+      "source": "log",
       "ability": "Hyperdrive",
       "ids": [
         "C24B"
@@ -392,12 +491,26 @@
         "line": "no-sync"
       },
       "bmr": 66,
-      "until": 69.8,
-      "note": "Three hits: 65.8, 67.8, 69.8 (BMR 66.0 / 68.1 / 70.2)."
+      "until": 69.93,
+      "note": "Three hits: 65.74, 67.84, 69.93 (log medians; cactbot 65.8 / 67.9 / 69.8).",
+      "log": {
+        "t": 65.74,
+        "min": 65.52,
+        "max": 65.92,
+        "n": 29,
+        "event": "C24B hit 1",
+        "until": {
+          "t": 69.93,
+          "min": 69.73,
+          "max": 70.09,
+          "n": 25,
+          "event": "C24B hit 3"
+        }
+      }
     },
     "p1-graven-image-2/stack-south-1": {
-      "t": 87.2,
-      "source": "cactbot",
+      "t": 87.42,
+      "source": "log",
       "ability": "Gravitas",
       "ids": [
         "BAAC"
@@ -406,11 +519,18 @@
         "t": 87.2,
         "line": "sync"
       },
-      "bmr": 87.7
+      "bmr": 87.7,
+      "log": {
+        "t": 87.42,
+        "min": 87.18,
+        "max": 87.62,
+        "n": 25,
+        "event": "BAAC Gravitas set 1"
+      }
     },
     "p1-graven-image-2/spread-1": {
-      "t": 91.2,
-      "source": "cactbot",
+      "t": 91.42,
+      "source": "log",
       "ability": "Vitrophyre",
       "ids": [
         "BAB0"
@@ -419,11 +539,18 @@
         "t": 91.2,
         "line": "sync"
       },
-      "bmr": 91.8
+      "bmr": 91.8,
+      "log": {
+        "t": 91.42,
+        "min": 91.2,
+        "max": 91.61,
+        "n": 19,
+        "event": "BAB0 Vitrophyre set 1"
+      }
     },
     "p1-graven-image-2/spread-1-dps": {
-      "t": 91.2,
-      "source": "cactbot",
+      "t": 91.42,
+      "source": "log",
       "ability": "Vitrophyre",
       "ids": [
         "BAB0"
@@ -432,11 +559,18 @@
         "t": 91.2,
         "line": "sync"
       },
-      "bmr": 91.8
+      "bmr": 91.8,
+      "log": {
+        "t": 91.42,
+        "min": 91.2,
+        "max": 91.61,
+        "n": 19,
+        "event": "BAB0 Vitrophyre set 1"
+      }
     },
     "p1-graven-image-2/ruin-half-room": {
-      "t": 101.1,
-      "source": "cactbot",
+      "t": 101.23,
+      "source": "log",
       "ability": "Intemperate Will / Gravitational Wave",
       "ids": [
         "BAB1",
@@ -447,11 +581,18 @@
         "line": "sync"
       },
       "bmr": 101.6,
-      "note": "Ruin III hits at 97.1 and 100.2 during this step."
+      "note": "Ruin III hits at 97.25 and 100.38 during this step (log).",
+      "log": {
+        "t": 101.23,
+        "min": 100.92,
+        "max": 101.42,
+        "n": 16,
+        "event": "BAB1/BAB2 half-room cleave 1"
+      }
     },
     "p1-graven-image-2/stack-north-2": {
-      "t": 105.8,
-      "source": "cactbot",
+      "t": 105.86,
+      "source": "log",
       "ability": "Gravitas",
       "ids": [
         "BAAC"
@@ -460,11 +601,18 @@
         "t": 105.8,
         "line": "sync"
       },
-      "bmr": 106.2
+      "bmr": 106.2,
+      "log": {
+        "t": 105.86,
+        "min": 105.64,
+        "max": 106.03,
+        "n": 15,
+        "event": "BAAC Gravitas set 2"
+      }
     },
     "p1-graven-image-2/spread-2": {
-      "t": 109.8,
-      "source": "cactbot",
+      "t": 109.89,
+      "source": "log",
       "ability": "Vitrophyre",
       "ids": [
         "BAB0"
@@ -474,11 +622,18 @@
         "line": "sync"
       },
       "bmr": 110.2,
-      "note": "The second half-room AoE follows at 114.4."
+      "note": "The second half-room AoE follows at 114.4.",
+      "log": {
+        "t": 109.89,
+        "min": 109.68,
+        "max": 110.05,
+        "n": 11,
+        "event": "BAB0 Vitrophyre set 2"
+      }
     },
     "p1-graven-image-2/spread-2-th": {
-      "t": 109.8,
-      "source": "cactbot",
+      "t": 109.89,
+      "source": "log",
       "ability": "Vitrophyre",
       "ids": [
         "BAB0"
@@ -488,11 +643,18 @@
         "line": "sync"
       },
       "bmr": 110.2,
-      "note": "The second half-room AoE follows at 114.4."
+      "note": "The second half-room AoE follows at 114.4.",
+      "log": {
+        "t": 109.89,
+        "min": 109.68,
+        "max": 110.05,
+        "n": 11,
+        "event": "BAB0 Vitrophyre set 2"
+      }
     },
     "p1-graven-image-2/trap-pass": {
-      "t": 118.1,
-      "source": "cactbot",
+      "t": 118.18,
+      "source": "log",
       "ability": "Double-trouble Trap",
       "ids": [
         "BAA7"
@@ -501,39 +663,61 @@
         "t": 118.1,
         "line": "sync"
       },
-      "bmr": 118.5
+      "bmr": 118.5,
+      "log": {
+        "t": 118.18,
+        "min": 117.99,
+        "max": 118.24,
+        "n": 7,
+        "event": "BAA7 trap expires"
+      }
     },
     "p1-graven-image-2/into-puddles#0": {
-      "t": null,
-      "source": null,
+      "t": 119.7,
+      "source": "log",
       "ability": "Knockback lands",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Right after the knockback; neither source times it.",
+      "note": "RaidTrace: the knocked-back players are 14 y away about 1.5 s after the trap goes off (median per pull over the stacked players).",
       "knockback": {
         "from": "nearest-holder",
         "distance": 0.7,
         "roles": "all-but-holders",
         "source": "bmr",
         "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      },
+      "log": {
+        "t": 119.7,
+        "min": 119.65,
+        "max": 119.9,
+        "n": 6
       }
     },
     "p1-graven-image-2/into-puddles": {
-      "t": 121.5,
-      "source": "bmr",
-      "ability": "Graviga puddles go off",
-      "ids": [],
+      "t": 120.82,
+      "source": "log",
+      "ability": "Gravity III puddles go off",
+      "ids": [
+        "BAAF"
+      ],
       "cactbot": {
         "t": 117,
         "line": "annotation"
       },
       "bmr": 121.5,
-      "note": "cactbot only marks a 6 s Gravity III pop window from 117.0; BossMod Reborn has the puddles gone at 121.5."
+      "note": "Log: BAAF Gravity III hits at 120.82. cactbot only marks a 6 s pop window from 117.0; BossMod Reborn has the puddles gone at 121.5.",
+      "log": {
+        "t": 120.82,
+        "min": 120.64,
+        "max": 120.95,
+        "n": 7,
+        "event": "BAAF Gravity III puddles detonate"
+      }
     },
     "p1-light-of-judgment-2/raidwide": {
-      "t": 132.4,
-      "source": "cactbot",
+      "t": 132.33,
+      "source": "log",
       "ability": "Light of Judgment",
       "ids": [
         "C622"
@@ -542,11 +726,18 @@
         "t": 132.4,
         "line": "sync"
       },
-      "bmr": 132.7
+      "bmr": 132.7,
+      "log": {
+        "t": 132.33,
+        "min": 132.06,
+        "max": 132.39,
+        "n": 7,
+        "event": "C622 raidwide"
+      }
     },
     "p1-hyperdrive-2/hits": {
-      "t": 135.6,
-      "source": "cactbot",
+      "t": 135.49,
+      "source": "log",
       "ability": "Hyperdrive",
       "ids": [
         "C24B"
@@ -557,16 +748,30 @@
       },
       "bmr": 135.9,
       "until": 139.7,
-      "note": "Three hits: 135.6, 137.7, 139.7 (BMR 135.9 / 138.0 / 140.1).",
+      "note": "Three hits: 135.49, 137.60, 139.70 (log medians; cactbot 135.6 / 137.7 / 139.7, BMR 135.9 / 138.0 / 140.1).",
       "cue": {
-        "t": 121.5,
-        "source": "bmr",
+        "t": 120.82,
+        "source": "log",
         "what": "Puddles resolved and only a raidwide comes before Hyperdrive: MT goes to the tank spot, everyone else heads south"
+      },
+      "log": {
+        "t": 135.49,
+        "min": 135.23,
+        "max": 135.54,
+        "n": 7,
+        "event": "C24B hit 1",
+        "until": {
+          "t": 139.7,
+          "min": 139.44,
+          "max": 139.81,
+          "n": 7,
+          "event": "C24B hit 3"
+        }
       }
     },
     "p1-tele-trouncing/arrows#0": {
-      "t": 151.5,
-      "source": "cactbot",
+      "t": 151.58,
+      "source": "log",
       "ability": "Tele-trouncing (cast ends)",
       "ids": [
         "BAB9"
@@ -576,11 +781,18 @@
         "line": "sync"
       },
       "bmr": 152,
-      "note": "The arrow debuffs go out when the cast ends (derived: the two timers then run out at 159.4 and 162.4)."
+      "note": "The arrow debuffs go out when the cast ends (derived: the two timers then run out at 159.4 and 162.4).",
+      "log": {
+        "t": 151.58,
+        "min": 151.35,
+        "max": 151.75,
+        "n": 6,
+        "event": "BAB9 Tele-trouncing cast ends"
+      }
     },
     "p1-tele-trouncing/arrows#1": {
-      "t": 159.4,
-      "source": "cactbot",
+      "t": 159.41,
+      "source": "log",
       "ability": "Tele-trouncing 1",
       "ids": [
         "BABA"
@@ -590,11 +802,18 @@
         "line": "sync"
       },
       "bmr": 159.8,
-      "note": "Short-timer arrows drop."
+      "note": "Short-timer arrows drop.",
+      "log": {
+        "t": 159.41,
+        "min": 159.18,
+        "max": 159.56,
+        "n": 6,
+        "event": "BABA 7 s portents drop"
+      }
     },
     "p1-tele-trouncing/arrows": {
       "t": 162.4,
-      "source": "cactbot",
+      "source": "log",
       "ability": "Tele-trouncing 2",
       "ids": [
         "BABA"
@@ -604,11 +823,18 @@
         "line": "sync"
       },
       "bmr": 162.8,
-      "note": "Long-timer arrows drop (BossMod Reborn: 3.0 s after the first)."
+      "note": "Long-timer arrows drop (BossMod Reborn: 3.0 s after the first).",
+      "log": {
+        "t": 162.4,
+        "min": 162.18,
+        "max": 162.58,
+        "n": 6,
+        "event": "BABA 10 s portents drop"
+      }
     },
     "p1-tele-trouncing/trap-pass": {
-      "t": 168.2,
-      "source": "bmr",
+      "t": 167.81,
+      "source": "log",
       "ability": "Double-trouble Trap knockback",
       "ids": [
         "BAA7"
@@ -618,11 +844,18 @@
         "line": "annotation"
       },
       "bmr": 168.2,
-      "note": "cactbot only has an un-synced “--knockback--” note at 170.6; BossMod Reborn counts the two knockback casts done at 168.2."
+      "note": "cactbot only has an un-synced “--knockback--” note at 170.6; BossMod Reborn counts the two knockback casts done at 168.2.",
+      "log": {
+        "t": 167.81,
+        "min": 167.64,
+        "max": 167.91,
+        "n": 6,
+        "event": "BAA7 trap expires"
+      }
     },
     "p1-tele-trouncing/tele-spread": {
-      "t": 173.4,
-      "source": "cactbot",
+      "t": 173.45,
+      "source": "log",
       "ability": "Indulgent Will / Idyllic Will",
       "ids": [
         "BAB5",
@@ -639,18 +872,25 @@
         "roles": "all-but-holders",
         "source": "bmr",
         "what": "Trap explosion: everyone in the stack is knocked 14 y away from the debuff holder (BossMod Reborn)"
+      },
+      "log": {
+        "t": 173.45,
+        "min": 173.28,
+        "max": 173.6,
+        "n": 6,
+        "event": "BAB5/BAB6 Indulgent / Idyllic Will"
       }
     },
     "p1-tele-trouncing/confusion#0": {
-      "t": 174.7,
+      "t": 174.4,
       "source": "estimate",
       "ability": "Confused player steps into the first arrow",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "note": "Estimate: the trace shows the first warp 0.31–0.36 s after a confused player walks in (the warp fires at least 0.3 s after walking in), so walking in is placed 0.35 s before warp 1 (174.75). Confused is applied at 174.08 (log status line; Indulgent Will hits at 173.45) and lasts 6 s.",
       "cue": {
-        "t": 173.4,
+        "t": 174.08,
         "react": false,
         "roles": [
           {
@@ -676,65 +916,97 @@
             ]
           }
         ],
-        "source": "cactbot",
-        "what": "Confused at once: they walk at their partner, not by choice"
+        "source": "log",
+        "what": "Confused at once (log: status at 174.08): they walk at their partner, not by choice"
       }
     },
     "p1-tele-trouncing/confusion#1": {
-      "t": 176.2,
-      "source": "estimate",
+      "t": 174.75,
+      "source": "log",
       "ability": "Teleport 1",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "note": "Warp times are measured (owner's RaidTrace, ActorControl 241). Each warp binds the player for about 1 s; a landing within an arrow's 2 y chains to that arrow when the Bind ends, so chained warps come every 0.98–1.04 s. Medians over the confused players' warps; later warps have fewer samples because not every chain reached them.",
       "teleport": {
-        "source": "owner",
-        "what": "Teleported along the arrow: an instant jump, not a walk"
+        "source": "log",
+        "what": "Teleported 6 y from the arrow centre in its direction: an instant jump, then about 1 s of Bind"
+      },
+      "log": {
+        "t": 174.75,
+        "min": 174.4,
+        "max": 175.02,
+        "n": 9,
+        "event": "confused player warp 1",
+        "from": "trace"
       }
     },
     "p1-tele-trouncing/confusion#2": {
-      "t": 177.6,
-      "source": "estimate",
+      "t": 175.76,
+      "source": "log",
       "ability": "Teleport 2",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "note": "Warp times are measured (owner's RaidTrace, ActorControl 241). Each warp binds the player for about 1 s; a landing within an arrow's 2 y chains to that arrow when the Bind ends, so chained warps come every 0.98–1.04 s. Medians over the confused players' warps; later warps have fewer samples because not every chain reached them.",
       "teleport": {
-        "source": "owner",
-        "what": "Teleported along the arrow: an instant jump, not a walk"
+        "source": "log",
+        "what": "Teleported 6 y from the arrow centre in its direction: an instant jump, then about 1 s of Bind"
+      },
+      "log": {
+        "t": 175.76,
+        "min": 175.51,
+        "max": 175.99,
+        "n": 5,
+        "event": "confused player warp 2 (chained)",
+        "from": "trace"
       }
     },
     "p1-tele-trouncing/confusion#3": {
-      "t": 179.1,
-      "source": "estimate",
+      "t": 176.85,
+      "source": "log",
       "ability": "Teleport 3",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "note": "Warp times are measured (owner's RaidTrace, ActorControl 241). Each warp binds the player for about 1 s; a landing within an arrow's 2 y chains to that arrow when the Bind ends, so chained warps come every 0.98–1.04 s. Medians over the confused players' warps; later warps have fewer samples because not every chain reached them.",
       "teleport": {
-        "source": "owner",
-        "what": "Teleported along the arrow: an instant jump, not a walk"
+        "source": "log",
+        "what": "Teleported 6 y from the arrow centre in its direction: an instant jump, then about 1 s of Bind"
+      },
+      "log": {
+        "t": 176.85,
+        "min": 176.53,
+        "max": 177.01,
+        "n": 4,
+        "event": "confused player warp 3 (chained)",
+        "from": "trace"
       }
     },
     "p1-tele-trouncing/confusion": {
-      "t": 180.5,
-      "source": "estimate",
+      "t": 177.94,
+      "source": "log",
       "ability": "Teleport 4",
       "ids": [],
       "cactbot": null,
       "bmr": null,
-      "note": "Estimate: no source times the teleports. The longest walk into the first arrow (about 7 y) takes 1.2 s from when the confusion starts (173.4); the four teleports are then spread evenly until the confusion wears off at 180.5 (BossMod Reborn; owner: teleported four times while confused).",
+      "note": "Warp times are measured (owner's RaidTrace, ActorControl 241). Each warp binds the player for about 1 s; a landing within an arrow's 2 y chains to that arrow when the Bind ends, so chained warps come every 0.98–1.04 s. Medians over the confused players' warps; later warps have fewer samples because not every chain reached them.",
       "teleport": {
-        "source": "owner",
-        "what": "Teleported along the arrow: an instant jump, not a walk"
+        "source": "log",
+        "what": "Teleported 6 y from the arrow centre in its direction: an instant jump, then about 1 s of Bind"
+      },
+      "log": {
+        "t": 177.94,
+        "min": 177.81,
+        "max": 178.03,
+        "n": 3,
+        "event": "confused player warp 4 (chained)",
+        "from": "trace"
       }
     },
     "p1-tele-trouncing/final-spread": {
-      "t": 187.1,
-      "source": "cactbot",
+      "t": 187.2,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -745,11 +1017,11 @@
         "line": "sync"
       },
       "bmr": 187.5,
-      "note": "Mystery Magic (Thunder) and the gaze resolve at 186.3, Fire at 187.1.",
+      "note": "Mystery Magic (Thunder) resolves at 186.4, the gaze at 186.58, Fire at 187.2 (log).",
       "hedges": [
         {
-          "t": 180.5,
-          "source": "bmr",
+          "t": 180.04,
+          "source": "log",
           "groups": [
             "fire",
             "thunderDir",
@@ -760,18 +1032,25 @@
             "p1-tele-trouncing/final-spread",
             "p1-tele-trouncing/final-stack"
           ],
-          "what": "Sleep and confusion wear off (BossMod Reborn); everyone heads halfway between their possible final spots"
+          "what": "Sleep and confusion wear off (log: Confused lost at 179.90–180.21); everyone heads halfway between their possible final spots"
         }
       ],
       "cue": {
-        "t": 181.3,
-        "source": "cactbot",
+        "t": 181.41,
+        "source": "log",
         "what": "Mystery Magic cast starts: Thunder and Fire are shown"
+      },
+      "log": {
+        "t": 187.2,
+        "min": 186.88,
+        "max": 187.37,
+        "n": 6,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-tele-trouncing/final-stack": {
-      "t": 187.1,
-      "source": "cactbot",
+      "t": 187.2,
+      "source": "log",
       "ability": "Flagrant Fire III",
       "ids": [
         "BAA2",
@@ -782,11 +1061,11 @@
         "line": "sync"
       },
       "bmr": 187.5,
-      "note": "Mystery Magic (Thunder) and the gaze resolve at 186.3, Fire at 187.1.",
+      "note": "Mystery Magic (Thunder) resolves at 186.4, the gaze at 186.58, Fire at 187.2 (log).",
       "hedges": [
         {
-          "t": 180.5,
-          "source": "bmr",
+          "t": 180.04,
+          "source": "log",
           "groups": [
             "fire",
             "thunderDir",
@@ -797,18 +1076,25 @@
             "p1-tele-trouncing/final-spread",
             "p1-tele-trouncing/final-stack"
           ],
-          "what": "Sleep and confusion wear off (BossMod Reborn); everyone heads halfway between their possible final spots"
+          "what": "Sleep and confusion wear off (log: Confused lost at 179.90–180.21); everyone heads halfway between their possible final spots"
         }
       ],
       "cue": {
-        "t": 181.3,
-        "source": "cactbot",
+        "t": 181.41,
+        "source": "log",
         "what": "Mystery Magic cast starts: Thunder and Fire are shown"
+      },
+      "log": {
+        "t": 187.2,
+        "min": 186.88,
+        "max": 187.37,
+        "n": 6,
+        "event": "BAA2/BAA3 Flagrant Fire III"
       }
     },
     "p1-phase-transition/time-up": {
-      "t": 197.9,
-      "source": "bmr",
+      "t": 197.53,
+      "source": "log",
       "ability": "Kefka becomes untargetable",
       "ids": [],
       "cactbot": {
@@ -816,38 +1102,73 @@
         "line": "annotation"
       },
       "bmr": 197.9,
-      "note": "cactbot only marks “--untargetable--” at 197.3 (no ability); BossMod Reborn has the boss untargetable at 197.9. Above 14.9% HP, the enrage cast starts at 197.5 and lands at about 202.4 (cactbot, unconfirmed)."
+      "note": "Log: Kefka untargetable at 197.53 (197.29–197.71, 4 pulls). cactbot marks “--untargetable--” at 197.3, BossMod Reborn 197.9. Above 14.9% HP the enrage cast (BABB) starts at 197.67 and lands at 202.65 (log).",
+      "log": {
+        "t": 197.53,
+        "min": 197.29,
+        "max": 197.71,
+        "n": 4,
+        "event": "Kefka untargetable (ACT 34)"
+      }
     }
   },
-  "casts_about": "Kefka's castbars. end = the cactbot line for the cast's own ability; length = BossMod Reborn's cast time for that ability (DMUEnums); start = end − length, or cactbot's StartsUsing line where it has one. bmrStart = BossMod Reborn's cast start where its states give one directly (cross-check). Hyperdrive has no cast. Not shown: an unnamed 3 s Kefka cast ending at 168.7 (cactbot hides it as --sync--; BossMod Reborn: 'Unknown', id C554), because its name is not known.",
+  "casts_about": "Kefka's castbars. start = the log's cast line (ACT 20), end = the log's ability line (ACT 21/22), medians over the owner's pulls (min, max, n in `log`). length = the game's nominal cast time (ACT bars run about 0.3 s shorter). cactbot's line and BossMod Reborn's start stay as cross-checks. Hyperdrive has no cast. Not shown: an unnamed 3 s Kefka cast (C554, log 165.78 → 168.78) because its name is not known. The enrage Light of Judgment (BABB) is not listed: in the logs it starts 0.14 s after Kefka goes untargetable, after the replay ends (see end.note).",
   "casts": [
     {
       "ability": "Revolting Ruin III",
       "ids": [
         "C403"
       ],
-      "start": 10.6,
-      "end": 15.6,
+      "start": 10.14,
+      "end": 15.21,
       "length": 5.0,
-      "how": "starts-using",
+      "how": "log",
       "cactbot": {
         "t": 15.6,
         "line": "sync"
       },
-      "bmrStart": 10.1
+      "bmrStart": 10.1,
+      "log": {
+        "start": {
+          "t": 10.14,
+          "min": 10.09,
+          "max": 10.22,
+          "n": 33
+        },
+        "end": {
+          "t": 15.21,
+          "min": 15.14,
+          "max": 15.27,
+          "n": 33
+        }
+      }
     },
     {
       "ability": "Graven Image",
       "ids": [
         "BCF2"
       ],
-      "start": 26.2,
-      "end": 29.2,
+      "start": 26.12,
+      "end": 29.1,
       "length": 3.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 29.2,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 26.12,
+          "min": 25.86,
+          "max": 26.25,
+          "n": 33
+        },
+        "end": {
+          "t": 29.1,
+          "min": 28.85,
+          "max": 29.24,
+          "n": 33
+        }
       }
     },
     {
@@ -855,13 +1176,27 @@
       "ids": [
         "BA94"
       ],
-      "start": 32.4,
-      "end": 37.4,
+      "start": 32.27,
+      "end": 37.24,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 37.4,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 32.27,
+          "min": 32.03,
+          "max": 32.42,
+          "n": 32
+        },
+        "end": {
+          "t": 37.24,
+          "min": 36.99,
+          "max": 37.39,
+          "n": 32
+        }
       }
     },
     {
@@ -869,28 +1204,56 @@
       "ids": [
         "BAA6"
       ],
-      "start": 41.6,
-      "end": 44.6,
+      "start": 41.42,
+      "end": 44.41,
       "length": 3.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 44.6,
         "line": "sync"
       },
-      "note": "The only Double-trouble Trap cast in P1: later traps are the same debuff being passed on."
+      "note": "The only Double-trouble Trap cast in P1: later traps are the same debuff being passed on.",
+      "log": {
+        "start": {
+          "t": 41.42,
+          "min": 41.16,
+          "max": 41.58,
+          "n": 31
+        },
+        "end": {
+          "t": 44.41,
+          "min": 44.16,
+          "max": 44.58,
+          "n": 30
+        }
+      }
     },
     {
       "ability": "Mystery Magic",
       "ids": [
         "BA94"
       ],
-      "start": 48.7,
-      "end": 53.7,
+      "start": 48.49,
+      "end": 53.46,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 53.7,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 48.49,
+          "min": 48.27,
+          "max": 48.66,
+          "n": 30
+        },
+        "end": {
+          "t": 53.46,
+          "min": 53.24,
+          "max": 53.63,
+          "n": 29
+        }
       }
     },
     {
@@ -898,13 +1261,27 @@
       "ids": [
         "C622"
       ],
-      "start": 57.7,
-      "end": 62.7,
+      "start": 57.56,
+      "end": 62.54,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 62.7,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 57.56,
+          "min": 57.35,
+          "max": 57.75,
+          "n": 29
+        },
+        "end": {
+          "t": 62.54,
+          "min": 62.32,
+          "max": 62.72,
+          "n": 29
+        }
       }
     },
     {
@@ -912,13 +1289,27 @@
       "ids": [
         "BCF2"
       ],
-      "start": 77.0,
-      "end": 80.0,
+      "start": 77.18,
+      "end": 80.16,
       "length": 3.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 80.0,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 77.18,
+          "min": 76.94,
+          "max": 77.35,
+          "n": 25
+        },
+        "end": {
+          "t": 80.16,
+          "min": 79.89,
+          "max": 80.34,
+          "n": 25
+        }
       }
     },
     {
@@ -926,13 +1317,27 @@
       "ids": [
         "C403"
       ],
-      "start": 92.1,
-      "end": 97.1,
+      "start": 92.17,
+      "end": 97.25,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 97.1,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 92.17,
+          "min": 91.88,
+          "max": 92.38,
+          "n": 21
+        },
+        "end": {
+          "t": 97.25,
+          "min": 96.94,
+          "max": 97.44,
+          "n": 16
+        }
       }
     },
     {
@@ -940,13 +1345,27 @@
       "ids": [
         "C622"
       ],
-      "start": 127.4,
-      "end": 132.4,
+      "start": 127.35,
+      "end": 132.33,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 132.4,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 127.35,
+          "min": 127.09,
+          "max": 127.41,
+          "n": 7
+        },
+        "end": {
+          "t": 132.33,
+          "min": 132.06,
+          "max": 132.39,
+          "n": 7
+        }
       }
     },
     {
@@ -954,13 +1373,27 @@
       "ids": [
         "BAB9"
       ],
-      "start": 146.5,
-      "end": 151.5,
+      "start": 146.6,
+      "end": 151.58,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 151.5,
         "line": "sync"
+      },
+      "log": {
+        "start": {
+          "t": 146.6,
+          "min": 146.38,
+          "max": 146.77,
+          "n": 6
+        },
+        "end": {
+          "t": 151.58,
+          "min": 151.35,
+          "max": 151.75,
+          "n": 6
+        }
       }
     },
     {
@@ -968,52 +1401,65 @@
       "ids": [
         "BCF2"
       ],
-      "start": 160.6,
-      "end": 163.6,
+      "start": 160.66,
+      "end": 163.65,
       "length": 3.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 163.6,
         "line": "sync"
       },
-      "bmrStart": 161.1
+      "bmrStart": 161.1,
+      "log": {
+        "start": {
+          "t": 160.66,
+          "min": 160.43,
+          "max": 160.81,
+          "n": 6
+        },
+        "end": {
+          "t": 163.65,
+          "min": 163.43,
+          "max": 163.78,
+          "n": 6
+        }
+      }
     },
     {
       "ability": "Mystery Magic",
       "ids": [
         "BA94"
       ],
-      "start": 181.3,
-      "end": 186.3,
+      "start": 181.41,
+      "end": 186.4,
       "length": 5.0,
-      "how": "end-minus-length",
+      "how": "log",
       "cactbot": {
         "t": 186.3,
         "line": "sync"
       },
-      "bmrStart": 181.8
-    },
-    {
-      "ability": "Light of Judgment",
-      "ids": [
-        "BABB"
-      ],
-      "start": 197.5,
-      "end": 202.4,
-      "length": 5.0,
-      "how": "starts-using",
-      "cactbot": {
-        "t": 202.4,
-        "line": "sync"
-      },
-      "note": "Enrage: only if Kefka is above 14.9% HP at the end of P1. cactbot marks this cast unconfirmed; the replay ends at 3:17.9, while it is still casting."
+      "bmrStart": 181.8,
+      "log": {
+        "start": {
+          "t": 181.41,
+          "min": 181.1,
+          "max": 181.59,
+          "n": 6
+        },
+        "end": {
+          "t": 186.4,
+          "min": 186.07,
+          "max": 186.57,
+          "n": 6
+        }
+      }
     }
   ],
   "ticks": [
     {
       "id": "gi1-cast",
-      "t": 29.2,
-      "source": "cactbot",
+      "t": 29.1,
+      "source": "log",
       "ability": "Graven Image",
       "ids": [
         "BCF2"
@@ -1022,12 +1468,19 @@
         "t": 29.2,
         "line": "sync"
       },
-      "bmr": 29.2
+      "bmr": 29.2,
+      "log": {
+        "t": 29.1,
+        "min": 28.85,
+        "max": 29.24,
+        "n": 33,
+        "event": "BCF2 Graven Image resolves"
+      }
     },
     {
       "id": "gi1-ice",
-      "t": 37.4,
-      "source": "cactbot",
+      "t": 37.24,
+      "source": "log",
       "ability": "Blizzard III Blowout",
       "ids": [
         "BA98",
@@ -1037,12 +1490,19 @@
         "t": 37.4,
         "line": "no-sync"
       },
-      "bmr": 37.4
+      "bmr": 37.4,
+      "log": {
+        "t": 37.24,
+        "min": 36.99,
+        "max": 37.39,
+        "n": 32,
+        "event": "BA94 Mystery Magic 1 resolves"
+      }
     },
     {
       "id": "gi2-cast",
-      "t": 80,
-      "source": "cactbot",
+      "t": 80.16,
+      "source": "log",
       "ability": "Graven Image",
       "ids": [
         "BCF2"
@@ -1051,12 +1511,19 @@
         "t": 80,
         "line": "sync"
       },
-      "bmr": null
+      "bmr": null,
+      "log": {
+        "t": 80.16,
+        "min": 79.89,
+        "max": 80.34,
+        "n": 25,
+        "event": "BCF2 resolves"
+      }
     },
     {
       "id": "ruin2-hit1",
-      "t": 97.1,
-      "source": "cactbot",
+      "t": 97.25,
+      "source": "log",
       "ability": "Revolting Ruin III",
       "ids": [
         "C403"
@@ -1065,12 +1532,19 @@
         "t": 97.1,
         "line": "sync"
       },
-      "bmr": 97.6
+      "bmr": 97.6,
+      "log": {
+        "t": 97.25,
+        "min": 96.94,
+        "max": 97.44,
+        "n": 16,
+        "event": "C403 hit 1"
+      }
     },
     {
       "id": "ruin2-hit2",
-      "t": 100.2,
-      "source": "cactbot",
+      "t": 100.38,
+      "source": "log",
       "ability": "Revolting Ruin III",
       "ids": [
         "C4E1"
@@ -1079,12 +1553,19 @@
         "t": 100.2,
         "line": "sync"
       },
-      "bmr": 100.8
+      "bmr": 100.8,
+      "log": {
+        "t": 100.38,
+        "min": 100.07,
+        "max": 100.57,
+        "n": 16,
+        "event": "C4E1 hit 2"
+      }
     },
     {
       "id": "gi2-halfroom2",
-      "t": 114.4,
-      "source": "cactbot",
+      "t": 114.34,
+      "source": "log",
       "ability": "Intemperate Will / Gravitational Wave",
       "ids": [
         "BAB1",
@@ -1094,12 +1575,19 @@
         "t": 114.4,
         "line": "sync"
       },
-      "bmr": 114.7
+      "bmr": 114.7,
+      "log": {
+        "t": 114.34,
+        "min": 114.06,
+        "max": 114.49,
+        "n": 12,
+        "event": "BAB1/BAB2 half-room cleave 2"
+      }
     },
     {
       "id": "gi3-cast",
-      "t": 163.6,
-      "source": "cactbot",
+      "t": 163.65,
+      "source": "log",
       "ability": "Graven Image",
       "ids": [
         "BCF2"
@@ -1108,12 +1596,19 @@
         "t": 163.6,
         "line": "sync"
       },
-      "bmr": null
+      "bmr": null,
+      "log": {
+        "t": 163.65,
+        "min": 163.43,
+        "max": 163.78,
+        "n": 6,
+        "event": "BCF2 resolves"
+      }
     },
     {
       "id": "tele-mystery",
-      "t": 186.3,
-      "source": "cactbot",
+      "t": 186.4,
+      "source": "log",
       "ability": "Mystery Magic (Thunder) + gaze",
       "ids": [
         "BA94",
@@ -1126,19 +1621,33 @@
         "t": 186.3,
         "line": "sync"
       },
-      "bmr": 186.9
+      "bmr": 186.9,
+      "log": {
+        "t": 186.4,
+        "min": 186.07,
+        "max": 186.57,
+        "n": 6,
+        "event": "BA94 Mystery Magic 3 resolves"
+      }
     }
   ],
   "end": {
-    "t": 197.9,
-    "source": "bmr",
+    "t": 197.53,
+    "source": "log",
     "label": "Kefka becomes untargetable (end of P1)",
     "cactbot": {
       "t": 197.3,
       "line": "annotation"
     },
     "bmr": 197.9,
-    "note": "If Kefka is above 14.9% HP here, Light of Judgment (enrage) follows at about 202.4 (cactbot, unconfirmed)."
+    "note": "If Kefka is above 14.9% HP here, Light of Judgment (enrage) lands at 202.65 (log, 3 pulls).",
+    "log": {
+      "t": 197.53,
+      "min": 197.29,
+      "max": 197.71,
+      "n": 4,
+      "event": "Kefka untargetable (ACT 34)"
+    }
   },
   "ikuya": {
     "ik-ot-p1-0016": {
@@ -1192,9 +1701,10 @@
     "start": -3,
     "reaction": 0.5,
     "runSpeed": 0.3,
-    "knockbackSeconds": 0.3,
-    "note": "Replay movement (derived, not from a source): each role starts moving 0.5 s (owner: reaction time) after the moment that tells them where to go — by default when the previous step resolves — and runs at 6 y/s (base run speed; 0.3 of the 20 y arena radius per second, radius from BossMod Reborn). Until the answer is known, a role can head halfway between its possible spots (hedges). A knockback moves a role in 0.3 s."
+    "knockbackSeconds": 0.7,
+    "note": "Replay movement: each role starts moving 0.5 s (owner: reaction time) after the moment that tells them where to go — by default when the previous step resolves — and runs at 6 y/s (base run speed; 0.3 of the 20 y arena radius per second, radius from BossMod Reborn). Until the answer is known, a role can head halfway between its possible spots (hedges). A knockback starts 0.8 s after the hit and takes 0.7 s (owner's RaidTrace, D-P1-09). Reaction and run speed are derived, not measured.",
+    "knockbackDelay": 0.8
   },
   "ownerDate": "2026-11-09",
-  "ownerNote": "Replay timing approved as a whole 2026-11-09 (after review rounds 7-13)."
+  "ownerNote": "Retimed from the owner's logs 2026-11-12 (D-P1-08); needs a new owner look. Previous approval: replay timing approved as a whole 2026-11-09."
 }

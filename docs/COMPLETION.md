@@ -120,50 +120,50 @@ Each drawn scene and how its positions were measured. A diagram counts only when
 | p2-forsaken/even-towers-2 | yan-p2-03 | 8 auto / 0 eye-or-copy | unreviewed |
 | p2-trine/wings-2 | yan-p2-07 | 2 auto / 6 eye-or-copy | unreviewed |
 
-## Replay timing (cactbot + BossMod Reborn)
+## Replay timing (owner logs, then cactbot + BossMod Reborn)
 
-When each step resolves, in seconds from combat start. ≈ = neither source times it.
+When each step resolves, in seconds from combat start: the median over the owner's logged pulls, with their range and count. ≈ = no source times it.
 
-Owner review: **approved**
+Owner review: **pending**
 
-| Step | t (s) | source | cactbot | BossMod Reborn |
-|---|---|---|---|---|
-| p1-revolting-ruin-iii-1/pull#0 | 0 | cactbot | 0 (sync) | 0 |
-| p1-revolting-ruin-iii-1/pull | 10.6 | cactbot | 10.6 (sync) | 10.1 |
-| p1-revolting-ruin-iii-1/cast | 15.6 | cactbot | 15.6 (sync) | 15.2 |
-| p1-graven-image-1/tether-knockback | 35.1 | cactbot | 35.1 (sync) | 35 |
-| p1-graven-image-1/spread-ice-true | 38.3 | cactbot | 38.3 (sync) | 38.2 |
-| p1-graven-image-1/spread-ice-lie | 38.3 | cactbot | 38.3 (sync) | 38.2 |
-| p1-graven-image-1/stack-ice-true | 38.3 | cactbot | 38.3 (sync) | 38.2 |
-| p1-graven-image-1/stack-ice-lie | 38.3 | cactbot | 38.3 (sync) | 38.2 |
-| p1-graven-image-1/beam-line | 42.5 | cactbot | 42.5 (sync) | 42.4 |
-| p1-graven-image-1/towers | 46 | cactbot | 46 (sync) | 46 |
-| p1-graven-image-1/trap-pass | 49.7 | cactbot | 49.7 (sync) | 49.7 |
-| p1-graven-image-1/mystery-magic | 53.7 | cactbot | 53.7 (sync) | 53.7 |
-| p1-light-of-judgment-1/raidwide | 62.7 | cactbot | 62.7 (sync) | 62.8 |
-| p1-hyperdrive-1/hits | 65.8 | cactbot | 65.8 (no-sync) | 66 |
-| p1-graven-image-2/stack-south-1 | 87.2 | cactbot | 87.2 (sync) | 87.7 |
-| p1-graven-image-2/spread-1 | 91.2 | cactbot | 91.2 (sync) | 91.8 |
-| p1-graven-image-2/spread-1-dps | 91.2 | cactbot | 91.2 (sync) | 91.8 |
-| p1-graven-image-2/ruin-half-room | 101.1 | cactbot | 101.1 (sync) | 101.6 |
-| p1-graven-image-2/stack-north-2 | 105.8 | cactbot | 105.8 (sync) | 106.2 |
-| p1-graven-image-2/spread-2 | 109.8 | cactbot | 109.8 (sync) | 110.2 |
-| p1-graven-image-2/spread-2-th | 109.8 | cactbot | 109.8 (sync) | 110.2 |
-| p1-graven-image-2/trap-pass | 118.1 | cactbot | 118.1 (sync) | 118.5 |
-| p1-graven-image-2/into-puddles#0 | ≈ | — | — | — |
-| p1-graven-image-2/into-puddles | 121.5 | bmr | 117 (annotation) | 121.5 |
-| p1-light-of-judgment-2/raidwide | 132.4 | cactbot | 132.4 (sync) | 132.7 |
-| p1-hyperdrive-2/hits | 135.6 | cactbot | 135.6 (no-sync) | 135.9 |
-| p1-tele-trouncing/arrows#0 | 151.5 | cactbot | 151.5 (sync) | 152 |
-| p1-tele-trouncing/arrows#1 | 159.4 | cactbot | 159.4 (sync) | 159.8 |
-| p1-tele-trouncing/arrows | 162.4 | cactbot | 162.4 (sync) | 162.8 |
-| p1-tele-trouncing/trap-pass | 168.2 | bmr | 170.6 (annotation) | 168.2 |
-| p1-tele-trouncing/tele-spread | 173.4 | cactbot | 173.4 (sync) | 173.9 |
-| p1-tele-trouncing/confusion#0 | 174.7 | estimate | — | — |
-| p1-tele-trouncing/confusion#1 | 176.2 | estimate | — | — |
-| p1-tele-trouncing/confusion#2 | 177.6 | estimate | — | — |
-| p1-tele-trouncing/confusion#3 | 179.1 | estimate | — | — |
-| p1-tele-trouncing/confusion | 180.5 | estimate | — | — |
-| p1-tele-trouncing/final-spread | 187.1 | cactbot | 187.1 (sync) | 187.5 |
-| p1-tele-trouncing/final-stack | 187.1 | cactbot | 187.1 (sync) | 187.5 |
-| p1-phase-transition/time-up | 197.9 | bmr | 197.3 (annotation) | 197.9 |
+| Step | t (s) | source | logs: range (pulls) | cactbot | BossMod Reborn |
+|---|---|---|---|---|---|
+| p1-revolting-ruin-iii-1/pull#0 | 0 | log | 0–0 (33) | 0 (sync) | 0 |
+| p1-revolting-ruin-iii-1/pull | 10.14 | log | 10.09–10.22 (33) | 10.6 (sync) | 10.1 |
+| p1-revolting-ruin-iii-1/cast | 15.21 | log | 15.14–15.27 (33) | 15.6 (sync) | 15.2 |
+| p1-graven-image-1/tether-knockback | 34.91 | log | 34.67–35.06 (31) | 35.1 (sync) | 35 |
+| p1-graven-image-1/spread-ice-true | 38.05 | log | 37.8–38.19 (31) | 38.3 (sync) | 38.2 |
+| p1-graven-image-1/spread-ice-lie | 38.05 | log | 37.8–38.19 (31) | 38.3 (sync) | 38.2 |
+| p1-graven-image-1/stack-ice-true | 38.05 | log | 37.8–38.19 (31) | 38.3 (sync) | 38.2 |
+| p1-graven-image-1/stack-ice-lie | 38.05 | log | 37.8–38.19 (31) | 38.3 (sync) | 38.2 |
+| p1-graven-image-1/beam-line | 42.27 | log | 42.05–42.44 (30) | 42.5 (sync) | 42.4 |
+| p1-graven-image-1/towers | 45.89 | log | 45.68–46.07 (30) | 46 (sync) | 46 |
+| p1-graven-image-1/trap-pass | 49.51 | log | 49.26–49.68 (29) | 49.7 (sync) | 49.7 |
+| p1-graven-image-1/mystery-magic | 53.46 | log | 53.24–53.63 (29) | 53.7 (sync) | 53.7 |
+| p1-light-of-judgment-1/raidwide | 62.54 | log | 62.32–62.72 (29) | 62.7 (sync) | 62.8 |
+| p1-hyperdrive-1/hits | 65.74 | log | 65.52–65.92 (29) | 65.8 (no-sync) | 66 |
+| p1-graven-image-2/stack-south-1 | 87.42 | log | 87.18–87.62 (25) | 87.2 (sync) | 87.7 |
+| p1-graven-image-2/spread-1 | 91.42 | log | 91.2–91.61 (19) | 91.2 (sync) | 91.8 |
+| p1-graven-image-2/spread-1-dps | 91.42 | log | 91.2–91.61 (19) | 91.2 (sync) | 91.8 |
+| p1-graven-image-2/ruin-half-room | 101.23 | log | 100.92–101.42 (16) | 101.1 (sync) | 101.6 |
+| p1-graven-image-2/stack-north-2 | 105.86 | log | 105.64–106.03 (15) | 105.8 (sync) | 106.2 |
+| p1-graven-image-2/spread-2 | 109.89 | log | 109.68–110.05 (11) | 109.8 (sync) | 110.2 |
+| p1-graven-image-2/spread-2-th | 109.89 | log | 109.68–110.05 (11) | 109.8 (sync) | 110.2 |
+| p1-graven-image-2/trap-pass | 118.18 | log | 117.99–118.24 (7) | 118.1 (sync) | 118.5 |
+| p1-graven-image-2/into-puddles#0 | 119.7 | log | 119.65–119.9 (6) | — | — |
+| p1-graven-image-2/into-puddles | 120.82 | log | 120.64–120.95 (7) | 117 (annotation) | 121.5 |
+| p1-light-of-judgment-2/raidwide | 132.33 | log | 132.06–132.39 (7) | 132.4 (sync) | 132.7 |
+| p1-hyperdrive-2/hits | 135.49 | log | 135.23–135.54 (7) | 135.6 (no-sync) | 135.9 |
+| p1-tele-trouncing/arrows#0 | 151.58 | log | 151.35–151.75 (6) | 151.5 (sync) | 152 |
+| p1-tele-trouncing/arrows#1 | 159.41 | log | 159.18–159.56 (6) | 159.4 (sync) | 159.8 |
+| p1-tele-trouncing/arrows | 162.4 | log | 162.18–162.58 (6) | 162.4 (sync) | 162.8 |
+| p1-tele-trouncing/trap-pass | 167.81 | log | 167.64–167.91 (6) | 170.6 (annotation) | 168.2 |
+| p1-tele-trouncing/tele-spread | 173.45 | log | 173.28–173.6 (6) | 173.4 (sync) | 173.9 |
+| p1-tele-trouncing/confusion#0 | 174.4 | estimate | — | — | — |
+| p1-tele-trouncing/confusion#1 | 174.75 | log | 174.4–175.02 (9) | — | — |
+| p1-tele-trouncing/confusion#2 | 175.76 | log | 175.51–175.99 (5) | — | — |
+| p1-tele-trouncing/confusion#3 | 176.85 | log | 176.53–177.01 (4) | — | — |
+| p1-tele-trouncing/confusion | 177.94 | log | 177.81–178.03 (3) | — | — |
+| p1-tele-trouncing/final-spread | 187.2 | log | 186.88–187.37 (6) | 187.1 (sync) | 187.5 |
+| p1-tele-trouncing/final-stack | 187.2 | log | 186.88–187.37 (6) | 187.1 (sync) | 187.5 |
+| p1-phase-transition/time-up | 197.53 | log | 197.29–197.71 (4) | 197.3 (annotation) | 197.9 |

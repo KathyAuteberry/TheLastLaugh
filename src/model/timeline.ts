@@ -10,7 +10,9 @@ export interface TimingEntry {
   t: number | null;
   until?: number;
   /** "estimate": no source times this moment; `t` is a placement explained in `note`, shown as "≈". */
-  source: "cactbot" | "bmr" | "estimate" | null;
+  source: "log" | "cactbot" | "bmr" | "estimate" | null;
+  /** The owner's in-game log/trace: median over the pulls that reached the moment. */
+  log?: { t: number; min: number; max: number; n: number; event?: string; from?: string; until?: { t: number; min: number; max: number; n: number } };
   ability: string;
   ids: string[];
   cactbot: { t: number; line: "sync" | "no-sync" | "annotation" } | null;
@@ -36,7 +38,7 @@ interface TimelineData {
   end: { t: number; label: string; note?: string };
   ikuya: Record<string, { at: string; gap?: string }>;
   owner: string;
-  motion: { start: number; reaction: number; runSpeed: number; knockbackSeconds: number; note: string };
+  motion: { start: number; reaction: number; runSpeed: number; knockbackSeconds: number; knockbackDelay?: number; note: string };
 }
 export const timeline = timelineRaw as unknown as TimelineData;
 

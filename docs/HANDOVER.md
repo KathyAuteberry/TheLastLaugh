@@ -10,6 +10,7 @@ English interactive guide for Dancing Mad (Ultimate) in FFXIV.
 ## Source hierarchy
 1. Yan Flash defines execution (positions, assignments, resolution order).
 2. Ikuya Mitty defines mitigation.
+   Timing and in-game behaviour (when things hit, jump lengths, knockbacks, where casters stand) come first from the owner's in-game logs and traces (`owner-logs-dmu`; owner, 2026-11-12), then cactbot, then BossMod Reborn, then labelled estimates. Yan still wins on execution and Ikuya on mitigation. Never store player names, actor IDs or raw log lines; only derived numbers.
 3. Secondary sources (pastebin 8HN6chgM, starfallxiv/dmu, Ultimate Uncoiled, Ulti Strats, XIV Mit, consolegameswiki) are for clarification only.
    Never silently merge a conflicting secondary source. Record every disagreement in docs/STRATEGY_DECISIONS.md.
 4. If a source can't be fetched or read, document the limitation. Never invent missing information.

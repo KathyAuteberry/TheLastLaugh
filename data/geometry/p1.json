@@ -285,13 +285,13 @@
             0
           ],
           "kind": "knockback",
-          "label": "Knockback 13 y away from the statue, tethered players only (BossMod Reborn)"
+          "label": "Knockback 13 y away from Pulse Wave's caster, 44 y north of the centre (owner's logs; the statue is drawn on the rim), tethered players only"
         }
       ],
       "knockbackPrep": {
         "from": [
           0,
-          0.995
+          2.2
         ],
         "distance": 0.65,
         "minGap": 0.06,
@@ -319,7 +319,7 @@
             ]
           }
         ],
-        "note": "Pre-knockback spot: the push lands you on your next spot (derived from Yan's spot and the 13 y knockback)."
+        "note": "Pre-knockback spot: the push lands you on your next spot (derived from Yan's spot and the 13 y knockback from Pulse Wave's caster, 44 y north of the centre; owner's logs)."
       },
       "owner": "approved",
       "ownerDate": "2026-11-07",
@@ -2244,10 +2244,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.777,
-                0.81,
-                -0.515,
-                0.189
+                -0.755,
+                0.781,
+                -0.493,
+                0.219
               ],
               "arrows": [
                 "down",
@@ -2257,10 +2257,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.433,
-                0.81,
-                -0.17,
-                0.189
+                -0.455,
+                0.781,
+                -0.192,
+                0.218
               ],
               "arrows": [
                 "left",
@@ -2270,10 +2270,10 @@
             {
               "colour": "red",
               "rect": [
-                0.162,
-                0.806,
-                0.784,
-                0.542
+                0.191,
+                0.783,
+                0.755,
+                0.519
               ],
               "arrows": [
                 "left",
@@ -2283,10 +2283,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.162,
-                0.459,
-                0.784,
-                0.197
+                0.192,
+                0.482,
+                0.754,
+                0.22
               ],
               "arrows": [
                 "right",
@@ -2296,10 +2296,10 @@
             {
               "colour": "red",
               "rect": [
-                0.515,
-                -0.16,
-                0.777,
-                -0.782
+                0.492,
+                -0.19,
+                0.754,
+                -0.752
               ],
               "arrows": [
                 "up",
@@ -2309,10 +2309,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.168,
-                -0.16,
-                0.431,
-                -0.782
+                0.191,
+                -0.19,
+                0.454,
+                -0.752
               ],
               "arrows": [
                 "down",
@@ -2322,10 +2322,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.786,
-                -0.525,
-                -0.162,
-                -0.788
+                -0.756,
+                -0.502,
+                -0.193,
+                -0.765
               ],
               "arrows": [
                 "right",
@@ -2335,10 +2335,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.786,
-                -0.178,
-                -0.164,
-                -0.443
+                -0.757,
+                -0.201,
+                -0.192,
+                -0.466
               ],
               "arrows": [
                 "down",
@@ -2541,10 +2541,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.777,
-                0.81,
-                -0.515,
-                0.189
+                -0.755,
+                0.781,
+                -0.493,
+                0.219
               ],
               "arrows": [
                 "down",
@@ -2554,10 +2554,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.433,
-                0.81,
-                -0.17,
-                0.189
+                -0.455,
+                0.781,
+                -0.192,
+                0.218
               ],
               "arrows": [
                 "left",
@@ -2567,10 +2567,10 @@
             {
               "colour": "red",
               "rect": [
-                0.162,
-                0.806,
-                0.784,
-                0.542
+                0.191,
+                0.783,
+                0.755,
+                0.519
               ],
               "arrows": [
                 "left",
@@ -2580,10 +2580,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.162,
-                0.459,
-                0.784,
-                0.197
+                0.192,
+                0.482,
+                0.754,
+                0.22
               ],
               "arrows": [
                 "right",
@@ -2593,10 +2593,10 @@
             {
               "colour": "red",
               "rect": [
-                0.515,
-                -0.16,
-                0.777,
-                -0.782
+                0.492,
+                -0.19,
+                0.754,
+                -0.752
               ],
               "arrows": [
                 "up",
@@ -2606,10 +2606,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.168,
-                -0.16,
-                0.431,
-                -0.782
+                0.191,
+                -0.19,
+                0.454,
+                -0.752
               ],
               "arrows": [
                 "down",
@@ -2619,10 +2619,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.786,
-                -0.525,
-                -0.162,
-                -0.788
+                -0.756,
+                -0.502,
+                -0.193,
+                -0.765
               ],
               "arrows": [
                 "right",
@@ -2632,10 +2632,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.786,
-                -0.178,
-                -0.164,
-                -0.443
+                -0.757,
+                -0.201,
+                -0.192,
+                -0.466
               ],
               "arrows": [
                 "down",
@@ -2784,10 +2784,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.777,
-                0.81,
-                -0.515,
-                0.189
+                -0.755,
+                0.781,
+                -0.493,
+                0.219
               ],
               "arrows": [
                 "down",
@@ -2797,10 +2797,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.433,
-                0.81,
-                -0.17,
-                0.189
+                -0.455,
+                0.781,
+                -0.192,
+                0.218
               ],
               "arrows": [
                 "left",
@@ -2810,10 +2810,10 @@
             {
               "colour": "red",
               "rect": [
-                0.162,
-                0.806,
-                0.784,
-                0.542
+                0.191,
+                0.783,
+                0.755,
+                0.519
               ],
               "arrows": [
                 "left",
@@ -2823,10 +2823,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.162,
-                0.459,
-                0.784,
-                0.197
+                0.192,
+                0.482,
+                0.754,
+                0.22
               ],
               "arrows": [
                 "right",
@@ -2836,10 +2836,10 @@
             {
               "colour": "red",
               "rect": [
-                0.515,
-                -0.16,
-                0.777,
-                -0.782
+                0.492,
+                -0.19,
+                0.754,
+                -0.752
               ],
               "arrows": [
                 "up",
@@ -2849,10 +2849,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.168,
-                -0.16,
-                0.431,
-                -0.782
+                0.191,
+                -0.19,
+                0.454,
+                -0.752
               ],
               "arrows": [
                 "down",
@@ -2862,10 +2862,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.786,
-                -0.525,
-                -0.162,
-                -0.788
+                -0.756,
+                -0.502,
+                -0.193,
+                -0.765
               ],
               "arrows": [
                 "right",
@@ -2875,10 +2875,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.786,
-                -0.178,
-                -0.164,
-                -0.443
+                -0.757,
+                -0.201,
+                -0.192,
+                -0.466
               ],
               "arrows": [
                 "down",
@@ -2917,7 +2917,7 @@
           "ref": "owner-replay-review"
         }
       ],
-      "note": "Nothing here is measured from a confusion diagram: Yan has none. The first arrow, the chain and the jumps are computed from Yan's tiles (yan-p1-17) and teleport-spread spots (yan-p1-19).",
+      "note": "Nothing here is measured from a confusion diagram: Yan has none. The first arrow, the chain and the jumps are computed from Yan's tiles (yan-p1-17, cells pulled in to 6 y apart so each 6 y warp lands on the next arrow, D-P1-08) and teleport-spread spots (yan-p1-19).",
       "positions": {},
       "shapes": [
         {
@@ -2926,10 +2926,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.777,
-                0.81,
-                -0.515,
-                0.189
+                -0.755,
+                0.781,
+                -0.493,
+                0.219
               ],
               "arrows": [
                 "down",
@@ -2939,10 +2939,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.433,
-                0.81,
-                -0.17,
-                0.189
+                -0.455,
+                0.781,
+                -0.192,
+                0.218
               ],
               "arrows": [
                 "left",
@@ -2952,10 +2952,10 @@
             {
               "colour": "red",
               "rect": [
-                0.162,
-                0.806,
-                0.784,
-                0.542
+                0.191,
+                0.783,
+                0.755,
+                0.519
               ],
               "arrows": [
                 "left",
@@ -2965,10 +2965,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.162,
-                0.459,
-                0.784,
-                0.197
+                0.192,
+                0.482,
+                0.754,
+                0.22
               ],
               "arrows": [
                 "right",
@@ -2978,10 +2978,10 @@
             {
               "colour": "red",
               "rect": [
-                0.515,
-                -0.16,
-                0.777,
-                -0.782
+                0.492,
+                -0.19,
+                0.754,
+                -0.752
               ],
               "arrows": [
                 "up",
@@ -2991,10 +2991,10 @@
             {
               "colour": "blue",
               "rect": [
-                0.168,
-                -0.16,
-                0.431,
-                -0.782
+                0.191,
+                -0.19,
+                0.454,
+                -0.752
               ],
               "arrows": [
                 "down",
@@ -3004,10 +3004,10 @@
             {
               "colour": "red",
               "rect": [
-                -0.786,
-                -0.525,
-                -0.162,
-                -0.788
+                -0.756,
+                -0.502,
+                -0.193,
+                -0.765
               ],
               "arrows": [
                 "right",
@@ -3017,10 +3017,10 @@
             {
               "colour": "blue",
               "rect": [
-                -0.786,
-                -0.178,
-                -0.164,
-                -0.443
+                -0.757,
+                -0.201,
+                -0.192,
+                -0.466
               ],
               "arrows": [
                 "down",
@@ -3077,7 +3077,7 @@
           }
         ],
         "hops": 4,
-        "note": "Confused: walks at the other player in their quadrant, steps into the arrow between them and is teleported along the arrows. Each jump lands on the next arrow of the quadrant; the jump length is read from Yan's tile layout, not from a source.",
+        "note": "Confused: walks at the other player in their quadrant, steps into the arrow between them and is teleported along the arrows. Each arrow warps them 6 y from its centre in its direction (owner's RaidTrace, D-P1-08); landing on another arrow rides on, landing off the arrows ends the ride.",
         "sources": [
           {
             "ref": "azurite-p1",
@@ -3085,6 +3085,9 @@
           },
           {
             "ref": "owner-replay-review"
+          },
+          {
+            "ref": "owner-logs-dmu"
           }
         ]
       },

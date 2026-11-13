@@ -13,7 +13,7 @@ export interface Motion { segments: Partial<Record<Role, Segment[]>>; start: Par
 const dist = (a: Pt, b: Pt) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 
 export function buildMotion(tl: TimedStep[], mechanics: Mechanic[], geometry: Geometry, selections: Record<string, Selection> = {}): Motion {
-  const { start: t0, reaction: R, runSpeed: v, knockbackSeconds: kbT } = timeline.motion;
+  const { start: t0, reaction: R, runSpeed: v, knockbackSeconds: kbT, knockbackDelay: kbD = 0 } = timeline.motion;
   const first = tl[0]?.step.scene?.positions ?? {};
   const motion: Motion = { segments: {}, start: {}, late: [] };
   // Hedge spots are the same for every role of a step; compute once per step.
@@ -64,7 +64,7 @@ export function buildMotion(tl: TimedStep[], mechanics: Mechanic[], geometry: Ge
         }
         if (from) {
           const land = knockLanding(pos!, from, kb.distance);
-          const s = Math.max(cursor, prev.at);
+          const s = Math.max(cursor, prev.at + kbD);
           segs.push({ t0: s, t1: s + kbT, p0: pos!, p1: land, kind: "knock" });
           pos = land; cursor = s + kbT;
         }

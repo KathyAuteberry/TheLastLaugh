@@ -261,7 +261,7 @@ for (const f of readdirSync(root + "data/geometry").filter((x) => x.endsWith(".j
     };
     if (sc.knockbackPrep) {
       const k = sc.knockbackPrep;
-      if (!(inRange(k.from) && k.distance > 0 && k.minGap >= 0 && k.note)) err(f, key, "knockbackPrep needs from, distance, minGap, note");
+      if (!((Array.isArray(k.from) && k.from.length === 2 && k.from.every((v) => Math.abs(v) <= 3)) && k.distance > 0 && k.minGap >= 0 && k.note)) err(f, key, "knockbackPrep needs from, distance, minGap, note");
       checkRoleSel("knockbackPrep", k.roles);
     }
     if (sc.hedge) {
@@ -352,7 +352,7 @@ for (const f of readdirSync(root + "data/geometry").filter((x) => x.endsWith(".j
     geoRows.push(`| ${key} | ${sc.image ?? "—"} | ${methods.filter((m) => m === "auto").length} auto / ${methods.filter((m) => m !== "auto").length} eye-or-copy | ${sc.owner ?? "unreviewed"} |`);
   }
 
-// ---------- Replay timeline (cactbot + BossMod Reborn) ----------
+// ---------- Replay timeline (owner logs, then cactbot + BossMod Reborn) ----------
 const tlRows = [];
 for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".json"))) {
   const tl = read("data/timeline/" + f);
@@ -360,7 +360,8 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
   const phase = read(`data/phases/p${tl.phase}.json`);
   for (const r of tl.sources ?? []) if (!registry.sources[r]) err(f, "sources", `unknown source ref ${r}`);
   if (!tl.end || typeof tl.end.t !== "number") err(f, "end", "needs t");
-  else if (tl.end.source === "bmr" ? tl.end.bmr !== tl.end.t : tl.end.cactbot?.t !== tl.end.t || tl.end.cactbot?.line === "annotation") err(f, "end", "end time does not follow the source rule");
+  else if (tl.end.source === "log" ? tl.end.log?.t !== tl.end.t : tl.end.source === "bmr" ? tl.end.bmr !== tl.end.t : tl.end.cactbot?.t !== tl.end.t || tl.end.cactbot?.line === "annotation") err(f, "end", "end time does not follow the source rule");
+  else if (tl.end.log && tl.end.source !== "log") err(f, "end", "the logs time the end, so they are the source");
   // Every step the app can show, in order (frames before their state), must have exactly one entry.
   const expected = [];
   for (const m of [...phase.mechanics].sort((a, b) => a.order - b.order))
@@ -371,12 +372,21 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
     }
   for (const k of expected) if (!tl.steps[k]) err(f, k, "step has no timeline entry");
   for (const k of Object.keys(tl.steps)) if (!expected.includes(k)) err(f, k, "unknown step");
-  // Source rule: cactbot only with a line naming the ability and BMR within 1 s; otherwise BMR; null = untimed.
+  // Source rule: the owner's logs whenever they time the moment; otherwise cactbot only with a line naming the
+  // ability and BMR within 1 s; otherwise BMR; null = untimed.
+  const okLog = (where, l) => {
+    if (!(typeof l?.t === "number" && l.min <= l.t && l.t <= l.max && Number.isInteger(l.n) && l.n >= 1)) err(f, where, "log needs t, min ≤ t ≤ max and a pull count n");
+  };
   const checkTiming = (where, e) => {
+    if (e.log && e.source !== "log") err(f, where, "the logs time this moment, so they are the source");
     if (e.t === null) { if (e.source !== null) err(f, where, "untimed entry must have source null"); return; }
     if (typeof e.t !== "number" || e.t < Math.min(0, tl.motion?.start ?? 0) || e.t > tl.end.t) err(f, where, "t out of range");
     if (e.until !== undefined && !(e.until >= e.t)) err(f, where, "until before t");
-    if (e.source === "cactbot") {
+    if (e.source === "log") {
+      okLog(where, e.log);
+      if (e.log?.t !== e.t) err(f, where, "source log but log.t differs");
+      if (e.log?.until) { okLog(where + " until", e.log.until); if (e.log.until.t !== e.until) err(f, where, "until differs from log.until.t"); }
+    } else if (e.source === "cactbot") {
       if (!e.cactbot || e.cactbot.t !== e.t) err(f, where, "source cactbot but cactbot.t differs");
       else if (e.cactbot.line === "annotation") err(f, where, "a cactbot annotation (no ability) cannot be the source");
       if (typeof e.bmr === "number" && Math.abs(e.bmr - e.t) > 1) err(f, where, `cactbot and BMR differ by ${Math.abs(e.bmr - e.t).toFixed(1)} s`);
@@ -392,13 +402,18 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
   for (const [i, c] of (tl.casts ?? []).entries()) {
     const where = `casts[${i}] ${c.ability}`;
     if (!c.ability || !c.ids?.length || !(c.length > 0)) err(f, where, "cast needs ability, ids and length");
-    if (!["starts-using", "end-minus-length"].includes(c.how)) err(f, where, "bad how");
+    if (!["log", "starts-using", "end-minus-length"].includes(c.how)) err(f, where, "bad how");
+    if (c.how === "log") {
+      okLog(where + " start", c.log?.start); okLog(where + " end", c.log?.end);
+      if (c.log?.start?.t !== c.start || c.log?.end?.t !== c.end) err(f, where, "start/end must be the log medians");
+      if (Math.abs(c.end - c.start - c.length) > 0.15) err(f, where, "logged castbar and cast length disagree");
+    }
     if (c.how === "end-minus-length" && Math.abs(c.end - c.start - c.length) > 0.05) err(f, where, "start is not end − length");
     if (c.how === "starts-using" && Math.abs(c.end - c.start - c.length) > 0.15) err(f, where, "StartsUsing start and cast length disagree");
-    if (c.cactbot?.t !== c.end) err(f, where, "end must be the cactbot ability time");
+    if (c.how !== "log" && c.cactbot?.t !== c.end) err(f, where, "end must be the cactbot ability time");
     if (typeof c.bmrStart === "number" && Math.abs(c.bmrStart - c.start) > 1) err(f, where, "BossMod Reborn start differs by over 1 s");
     if (c.start < castEnd) err(f, where, "overlaps the previous cast");
-    if (c.start > tl.end.t) err(f, where, "starts after the end of the phase");
+    if (c.start > tl.end.t && !(c.afterEnd && c.note)) err(f, where, "starts after the end of the phase (set afterEnd with a note)");
     castEnd = c.end;
   }
   let last = -1;
@@ -407,10 +422,10 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
     if (!e) continue;
     checkTiming(k, e);
     if (typeof e.t === "number") { if (e.t < last) err(f, k, `out of order (${e.t} after ${last})`); last = e.t; }
-    tlRows.push(`| ${k} | ${e.t ?? "≈"} | ${e.source ?? "—"} | ${e.cactbot ? `${e.cactbot.t} (${e.cactbot.line})` : "—"} | ${e.bmr ?? "—"} |`);
+    tlRows.push(`| ${k} | ${e.t ?? "≈"} | ${e.source ?? "—"} | ${e.log ? `${e.log.min}–${e.log.max} (${e.log.n})` : "—"} | ${e.cactbot ? `${e.cactbot.t} (${e.cactbot.line})` : "—"} | ${e.bmr ?? "—"} |`);
   }
   const mo = tl.motion;
-  if (!(mo && mo.start < 0 && mo.reaction >= 0 && mo.runSpeed > 0 && mo.knockbackSeconds > 0 && mo.note)) err(f, "motion", "needs start < 0, reaction, runSpeed, knockbackSeconds, note");
+  if (!(mo && mo.start < 0 && mo.reaction >= 0 && mo.runSpeed > 0 && mo.knockbackDelay >= 0 && mo.knockbackSeconds > 0 && mo.note)) err(f, "motion", "needs start < 0, reaction, runSpeed, knockbackDelay, knockbackSeconds, note");
   const mechOf = (k) => k.split("/")[0];
   const vgroups = (mid) => geo.variations?.[mid]?.groups ?? [];
   const okRoles = (where, rs, mid) => {
@@ -434,7 +449,7 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
     }
     if (e.knockback) {
       const kb = e.knockback;
-      if (!(kb.distance > 0 && kb.what && kb.source && (kb.from === "nearest-holder" || inRange(kb.from)))) err(f, k, "knockback needs from, distance, what, source");
+      if (!(kb.distance > 0 && kb.what && kb.source && (kb.from === "nearest-holder" || (Array.isArray(kb.from) && kb.from.length === 2 && kb.from.every((v) => Math.abs(v) <= 3))))) err(f, k, "knockback needs from, distance, what, source");
       okRoles(`${k} knockback`, kb.roles, mid);
     }
   }
@@ -452,7 +467,7 @@ for (const f of readdirSync(root + "data/timeline").filter((x) => x.endsWith(".j
     if (gap <= 1.5 && m.gap) err(f, `ikuya/${ev.id}`, "gap note but times agree; remove it");
   }
   for (const id of Object.keys(tl.ikuya ?? {})) if (!ik.events.some((e) => e.id === id)) err(f, `ikuya/${id}`, "unknown Ikuya event");
-  tlRows.unshift(`Owner review: **${tl.owner}**\n\n| Step | t (s) | source | cactbot | BossMod Reborn |\n|---|---|---|---|---|`);
+  tlRows.unshift(`Owner review: **${tl.owner}**\n\n| Step | t (s) | source | logs: range (pulls) | cactbot | BossMod Reborn |\n|---|---|---|---|---|---|`);
 }
 
 // Completion matrix
@@ -474,7 +489,7 @@ writeFileSync(
     mitTable.join("\n") + "\n" +
     `\n## Diagrams (measured scenes)\n\nEach drawn scene and how its positions were measured. A diagram counts only when the owner approved it.\n\n` +
     `| Scene | Yan image | positions | owner |\n|---|---|---|---|\n` + geoRows.join("\n") + "\n" +
-    `\n## Replay timing (cactbot + BossMod Reborn)\n\nWhen each step resolves, in seconds from combat start. ≈ = neither source times it.\n\n` + tlRows.join("\n") + "\n"
+    `\n## Replay timing (owner logs, then cactbot + BossMod Reborn)\n\nWhen each step resolves, in seconds from combat start: the median over the owner's logged pulls, with their range and count. ≈ = no source times it.\n\n` + tlRows.join("\n") + "\n"
 );
 
 if (errors.length) {

@@ -17,7 +17,7 @@ const END = timeline.end.t;
 const START = timeline.motion.start;
 const SPAN = END - START;
 const mechName = (m: Mechanic) => `${m.names.en.value ?? m.names.ja}${m.instance && m.names.en.value?.match(/Ruin|Light|Hyperdrive/) ? ` #${m.instance}` : ""}`;
-const SOURCE_LABEL = { cactbot: "cactbot", bmr: "BossMod Reborn" } as const;
+const SOURCE_LABEL = { log: "in-game logs", cactbot: "cactbot", bmr: "BossMod Reborn" } as const;
 
 /** Ikuya damage events with their press (sheet) and hit (timeline) times. */
 const SPECS = Object.fromEntries(p1.mechanics.map((m) => [m.id, variationsFor(m, geometry)] as const).filter(([, sp]) => sp.groups.length));
@@ -180,8 +180,8 @@ export function ReplayView({ who }: { who: Who }) {
               {cur.timing.source === "estimate"
                 ? `${cur.timing.ability} · timing: estimate (no source times this moment; see the note)`
                 : cur.approx
-                ? "Neither cactbot nor BossMod Reborn times this moment; shown between its neighbours."
-                : <>{cur.timing.ability} · timing: {SOURCE_LABEL[cur.timing.source as "cactbot" | "bmr"]}{cur.timing.bmr !== null && cur.timing.source === "cactbot" && ` (BossMod Reborn ${cur.timing.bmr})`}</>}
+                ? "No source times this moment; shown between its neighbours."
+                : <>{cur.timing.ability} · timing: {SOURCE_LABEL[cur.timing.source as "log" | "cactbot" | "bmr"]}{cur.timing.log && ` (median of ${cur.timing.log.n} pull${cur.timing.log.n === 1 ? "" : "s"}, ${cur.timing.log.min}–${cur.timing.log.max})`}{cur.timing.bmr !== null && cur.timing.source === "cactbot" && ` (BossMod Reborn ${cur.timing.bmr})`}</>}
             </p>
             {cur.timing.note && <p className="mt-1 text-xs text-zinc-500">{cur.timing.note}</p>}
             {who.role && cur.step.state.positions[who.role]?.value && (
@@ -234,7 +234,7 @@ export function ReplayView({ who }: { who: Who }) {
       <MitigationLanes who={who} now={now} start={START} end={END} hits={IKUYA} onSeek={(t) => setNow(t)} />
 
       <p className="note border-t border-white/[0.06] pt-4 text-zinc-500">
-        Timing from <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/OverlayPlugin/cactbot">cactbot</a> (Apache-2.0) and <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/FFXIV-CombatReborn/BossmodReborn">BossMod Reborn</a> (BSD-3-Clause), seconds from the pull. They only set the clock: positions are Yan Flash's, mitigation is Ikuya Mitty's. Ikuya's times are when to press, which can be a little before the hit.
+        Timing from the owner's in-game logs and traces (median over the static's pulls), then <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/OverlayPlugin/cactbot">cactbot</a> (Apache-2.0) and <a className="underline decoration-white/20 underline-offset-2 hover:text-zinc-300" href="https://github.com/FFXIV-CombatReborn/BossmodReborn">BossMod Reborn</a> (BSD-3-Clause), seconds from the pull. They only set the clock: positions are Yan Flash's, mitigation is Ikuya Mitty's. Ikuya's times are when to press, which can be a little before the hit.
       </p>
     </article>
   );
@@ -262,7 +262,7 @@ function SeekBar({ now, onSeek, segments, tl }: { now: number; onSeek: (t: numbe
             <span className="hidden whitespace-nowrap px-1.5 pt-1.5 text-[10px] font-medium text-zinc-400 sm:block">{(s.to - s.from) / SPAN > 0.07 ? mechName(s.mechanic) : ""}</span>
           </div>
         ))}
-        {timeline.casts.map((c) => <div key={c.start} className="absolute top-0 h-1 bg-jester-gold/80" style={{ left: pct(c.start), width: w(Math.min(END, c.end) - c.start) }} title={`Kefka casts ${c.ability}: ${formatClock(c.start)}–${formatClock(c.end)}`} />)}
+        {timeline.casts.filter((c) => c.start < END).map((c) => <div key={c.start} className="absolute top-0 h-1 bg-jester-gold/80" style={{ left: pct(c.start), width: w(Math.min(END, c.end) - c.start) }} title={`Kefka casts ${c.ability}: ${formatClock(c.start)}–${formatClock(c.end)}`} />)}
         {tl.map((s) => <div key={s.step.key} className={`absolute bottom-0 h-2.5 w-px ${s.approx ? "bg-zinc-600" : "bg-zinc-400"}`} style={{ left: pct(s.at) }} />)}
         {IKUYA.map((x) => <div key={x.id} className="absolute bottom-3 h-1.5 w-1.5 -translate-x-1/2 rotate-45 bg-jester-gold" style={{ left: pct(x.hit) }} title={`Ikuya event: press ${formatClock(x.press)}, hit ${formatClock(x.hit)}`} />)}
         <div className="pointer-events-none absolute inset-y-0 w-0.5 -translate-x-1/2 bg-jester-crimson shadow-[0_0_8px_rgba(224,49,79,0.7)]" style={{ left: pct(now) }} />

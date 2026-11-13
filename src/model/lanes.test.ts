@@ -30,8 +30,8 @@ describe("mitigation lanes", () => {
   });
   it("finds the one carry-over that outlasts its Job Guide duration (D-P1-06)", () => {
     const o = overruns(buildLanes({}));
-    expect(o.map((x) => `${x.bar.slot} ${x.bar.entry.ability} ${x.bar.press}→${x.carry.at}`)).toEqual(["WHM Temperance 165→187.1"]);
-    expect(o[0]!.late).toBeCloseTo(2.1, 1);
+    expect(o.map((x) => `${x.bar.slot} ${x.bar.entry.ability} ${x.bar.press}→${x.carry.at}`)).toEqual(["WHM Temperance 165→187.2"]);
+    expect(o[0]!.late).toBeCloseTo(2.2, 1);
   });
 });
 

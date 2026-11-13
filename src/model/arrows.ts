@@ -67,12 +67,16 @@ function segDist(p: Pt, a: Pt, b: Pt): number {
   return Math.hypot(a[0] + u * dx - p[0], a[1] + u * dy - p[1]);
 }
 
+/** Teleport length: every arrow warp lands 6 y (arena radius 20 y = 1) from the arrow's centre, in its direction
+ * (owner's RaidTrace: 31 of 31 warps at 5.97–6.03 y, sideways ≤ 0.03 y, wherever the player entered; D-P1-08). */
+export const TELEPORT_JUMP = 0.3;
+
 /**
  * A confused player's teleports. They walk from `from` at their quadrant partner `partner`; the first arrow on
- * that line is where they step in. Each arrow teleports them in its direction: onto the next arrow cell that way
- * when there is one (Yan's tiles chain four cells per quadrant), otherwise by the average jump of the chain so far.
- * Returns the cells used and the spots: spots[0] = the first arrow, spots[k] = where teleport k lands.
- * The jump length is derived from Yan's layout; no source states it.
+ * that line is where they step in. Each arrow warps them TELEPORT_JUMP from its centre in its direction. When the
+ * landing is within ARROW_RADIUS of an arrow not used yet, that arrow warps them on (after about 1 s of Bind);
+ * otherwise the ride ends there. Returns the cells used and the spots: spots[0] = the first arrow, spots[k] = where
+ * teleport k lands.
  */
 export function teleportChain(tiles: Tiles, from: Pt, partner: Pt, hops: number) {
   const cells = allCells(tiles);
@@ -80,25 +84,18 @@ export function teleportChain(tiles: Tiles, from: Pt, partner: Pt, hops: number)
   if (!first || first.d > ARROW_RADIUS) return undefined;
   const used = [first.c];
   const spots: Pt[] = [first.c.at];
-  const jumps: number[] = [];
   for (let k = 0; k < hops; k++) {
-    const cur = used[k];
-    if (!cur) break; // already off the tiles
+    const cur = used[k]!;
     const v = DIR_VEC[cur.dir];
+    const land: Pt = [cur.at[0] + v[0] * TELEPORT_JUMP, cur.at[1] + v[1] * TELEPORT_JUMP];
+    spots.push(land);
     const next = cells
       .filter((c) => !used.includes(c))
-      .map((c) => { const ox = c.at[0] - cur.at[0], oy = c.at[1] - cur.at[1]; return { c, along: ox * v[0] + oy * v[1], off: Math.abs(ox * v[1] - oy * v[0]) }; })
-      .filter((x) => x.along > 0 && x.off < ARROW_RADIUS && x.along < 0.45)
-      .sort((a, b) => a.along - b.along)[0];
-    if (next) {
-      jumps.push(next.along);
-      spots.push(next.c.at);
-      if (k < hops - 1) used.push(next.c); // the last landing's arrow is not used up
-      continue;
-    }
-    const j = jumps.length ? jumps.reduce((a, b) => a + b, 0) / jumps.length : 0.35;
-    spots.push([cur.at[0] + v[0] * j, cur.at[1] + v[1] * j]);
-    break;
+      .map((c) => ({ c, d: Math.hypot(c.at[0] - land[0], c.at[1] - land[1]) }))
+      .filter((x) => x.d <= ARROW_RADIUS)
+      .sort((a, b) => a.d - b.d)[0];
+    if (!next || k === hops - 1) break; // off the arrows (or out of steps): the ride ends here
+    used.push(next.c);
   }
   return { cells: used, spots };
 }

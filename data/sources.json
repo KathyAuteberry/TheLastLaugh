@@ -124,6 +124,13 @@
       "method": "Quoted by the owner in chat; page not fetched by Claude.",
       "note": "Mechanic behaviour only. Names the Tele-trouncing tether hits: Idyllic Will (small AoE + Sleep) and Indulgent Will (heavy damage + Confused)."
     },
+    "owner-logs-dmu": {
+      "source": "ingame",
+      "title": "Owner's in-game recordings: IINACT log and RaidTrace, 33 P1 pulls (2026-11-11)",
+      "date": "2026-11-11",
+      "note": "The owner's static, 33 progression pulls (6 reach Tele-trouncing, 4 the end of P1). IINACT network log and a RaidTrace trace of the same session, cross-checked with the Duty Recorder replay. Only derived numbers are stored (medians, ranges, counts, positions relative to the arena centre); never player names, IDs or raw lines. Extracted with FluffySim's evidence tooling.",
+      "method": "Times: per pull, seconds from the log's InCombat line; median over the pulls that reached the moment. Positions and warps: RaidTrace actor moves and ActorControl 241 position sets."
+    },
     "cactbot-dmu": {
       "source": "secondary",
       "title": "cactbot raidboss timeline: Dancing Mad (Ultimate)",
